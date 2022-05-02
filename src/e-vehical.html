@@ -1,0 +1,1349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <title>e-vehical</title>
+
+    <!-- fonts googleapis stylesheet -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+
+    <!--animation link-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <!--google font link-->
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@200;400;500;700&display=swap" rel="stylesheet" />
+
+    <!--css link-->
+    <link rel="stylesheet" href="css/main.css" />
+
+    <!-- Tailwind class base mixin -->
+    <style type="text/tailwindcss">
+
+        @layer utilities {
+        .bg-seafoam {
+            background-color: #08D665;
+        }
+        .text-theme {
+          @apply text-white;
+        }
+
+        .btn {
+          @apply py-3 px-7 bg-seafoam text-white rounded-md inline-flex items-center transition duration-500;
+        }
+
+        .btn:hover {
+          @apply bg-opacity-50;
+        }
+
+        .btn span {
+          @apply ml-2;
+        }
+
+        .container {
+          @apply mx-auto px-4;
+        }
+
+        .dropdown:hover .dropdown-hover\:block {
+          display: block;
+        }
+        .scroll-header {
+          @apply bg-white text-black;
+          box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
+        }
+        .Lexend {
+          font-family: "Lexend", sans-serif;
+        }
+        .menu-icon span:first-child{
+			transform: rotate(45deg);
+		}
+	
+		.menu-icon span:last-child{
+			top: 0;
+			transform: rotate(-45deg);
+		}
+		.menu-icon .toggler-line{
+			display: none;
+		}
+		.left .subMenu{
+            right: 101%;
+		}
+
+		.right .subMenu{
+            left: 101%;
+		}
+		.collapse{
+  			max-height: 0;
+  			overflow: hidden;
+			transition-duration: 0.4s;
+		}
+		.collapse.show{
+			max-height: 100%;
+        }
+      }
+    </style>
+</head>
+
+<body>
+    <!-- START : loder -->
+    <div class="preloader"
+        style="position: fixed; display: flex; justify-content: center; align-items: center; width: 100%; height: 100%; background-color: #fff; z-index: 99999999999999;">
+        <img src="img/loder/e-vehical-loder.gif" alt="loder">
+    </div>
+    <!-- END : loder -->
+
+    <!-- START: Header -->
+    <header class="fixed top-0 left-0 w-full text-lg z-50 text-white transition duration-300">
+        <div class="container lg:py-3 py-2 flex items-center justify-between lg:px-7">
+            <a href="index.html" class="block h-14">
+                <img src="img/logo/e-vehical-logo.svg" alt="Logo" class="h-full w-full" />
+            </a>
+            <button type="button" id="menu-btn" class="w-[22px] h-[14px] align-middle relative mx-2 lg:hidden block"
+                aria-controls="mobile-menu" aria-expanded="false" data-mobile-nav="false">
+                <span class="h-[3px] w-full absolute top-0 left-0 bg-seafoam transition duration-300"></span>
+                <span
+                    class="h-[3px] w-full absolute top-1/2 left-0 bg-seafoam transition duration-300 toggler-line"></span>
+                <span class="h-[3px] w-full absolute top-full left-0 bg-seafoam transition duration-300"></span>
+            </button>
+            <div class="lg:flex hidden items-center w-full text-center">
+                <div class="flex justify-between w-full">
+                    <ul class="flex items-center mx-auto">
+                        <li class="group">
+                            <a href="javascript:void(0)" class="xl:px-8 lg:px-5 py-2 text-base">HOME</a>
+                            <div
+                                class="absolute top-[70%] gap-10 bg-white text-black rounded-md text-[14px] text-left shadow-lg hidden group-hover:flex py-4 px-6">
+                                <ul>
+                                    <h5 class="font-bold mb-2">Corporate</h5>
+                                    <li class="hover:text-seafoam transition duration-300 mb-2">
+                                        <a href="javascript:void(0)">Startup</a>
+                                    </li>
+                                    <li class="hover:text-seafoam transition duration-300 mb-2">
+                                        <a href="javascript:void(0)">Business</a>
+                                    </li>
+                                    <li class="hover:text-seafoam transition duration-300 mb-2">
+                                        <a href="javascript:void(0)">Corporate</a>
+                                    </li>
+                                    <li class="hover:text-seafoam transition duration-300 mb-2">
+                                        <a href="javascript:void(0)">Finance</a>
+                                    </li>
+                                    <li class="hover:text-seafoam transition duration-300 mb-2">
+                                        <a href="javascript:void(0)">Application</a>
+                                    </li>
+                                    <li class="hover:text-seafoam transition duration-300 mb-2">
+                                        <a href="javascript:void(0)">Consulting</a>
+                                    </li>
+                                    <li class="hover:text-seafoam transition duration-300 mb-2">
+                                        <a href="javascript:void(0)">Digital agency</a>
+                                    </li>
+                                    <li class="hover:text-seafoam transition duration-300 mb-2">
+                                        <a href="javascript:void(0)">SEO agency</a>
+                                    </li>
+                                    <li class="hover:text-seafoam transition duration-300 mb-2">
+                                        <a href="javascript:void(0)">Event & conference</a>
+                                    </li>
+                                    <li class="hover:text-seafoam transition duration-300">
+                                        <a href="javascript:void(0)">Marketing agency</a>
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <h5 class="font-bold mb-2">Specialized</h5>
+                                    <li class="hover:text-seafoam transition duration-300 mb-2">
+                                        <a href="javascript:void(0)">Restaurant</a>
+                                    </li>
+                                    <li class="hover:text-seafoam transition duration-300 mb-2">
+                                        <a href="javascript:void(0)">Architecture</a>
+                                    </li>
+                                    <li class="hover:text-seafoam transition duration-300 mb-2">
+                                        <a href="javascript:void(0)">Hotel & resort</a>
+                                    </li>
+                                    <li class="hover:text-seafoam transition duration-300 mb-2">
+                                        <a href="javascript:void(0)">Travel agency</a>
+                                    </li>
+                                    <li class="hover:text-seafoam transition duration-300 mb-2">
+                                        <a href="javascript:void(0)">Yoga & meditation</a>
+                                    </li>
+                                    <li class="hover:text-seafoam transition duration-300 mb-2">
+                                        <a href="javascript:void(0)">Gym & fitness</a>
+                                    </li>
+                                    <li class="hover:text-seafoam transition duration-300 mb-2">
+                                        <a href="javascript:void(0)">Spa salon</a>
+                                    </li>
+                                    <li class="hover:text-seafoam transition duration-300 mb-2">
+                                        <a href="javascript:void(0)">Cafe</a>
+                                    </li>
+                                    <li class="hover:text-seafoam transition duration-300 mb-2">
+                                        <a href="javascript:void(0)">Home decor</a>
+                                    </li>
+                                    <li class="hover:text-seafoam transition duration-300">
+                                        <a href="javascript:void(0)">Dentist</a>
+                                    </li>
+                                    <li class="hover:text-seafoam transition duration-300">
+                                        <a href="javascript:void(0)">Interior design</a>
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <h5 class="font-bold mb-2">Portfolio</h5>
+                                    <li class="hover:text-seafoam transition duration-300 mb-2">
+                                        <a href="javascript:void(0)">Design agency</a>
+                                    </li>
+                                    <li class="hover:text-seafoam transition duration-300 mb-2">
+                                        <a href="javascript:void(0)">Web agency</a>
+                                    </li>
+                                    <li class="hover:text-seafoam transition duration-300 mb-2">
+                                        <a href="javascript:void(0)">Creative agency</a>
+                                    </li>
+                                    <li class="hover:text-seafoam transition duration-300 mb-2">
+                                        <a href="javascript:void(0)">Freelancer</a>
+                                    </li>
+                                    <li class="hover:text-seafoam transition duration-300 mb-2">
+                                        <a href="javascript:void(0)">Branding agency</a>
+                                    </li>
+                                    <li class="hover:text-seafoam transition duration-300 mb-2">
+                                        <a href="javascript:void(0)">Photography</a>
+                                    </li>
+                                    <li class="hover:text-seafoam transition duration-300 mb-2">
+                                        <a href="javascript:void(0)">Personal portfolio</a>
+                                    </li>
+                                    <li class="hover:text-seafoam transition duration-300 mb-2">
+                                        <a href="javascript:void(0)">Vertical portfolio</a>
+                                    </li>
+                                    <li class="hover:text-seafoam transition duration-300 mb-2">
+                                        <a href="javascript:void(0)">Interactive portfolio</a>
+                                    </li>
+                                    <li class="hover:text-seafoam transition duration-300">
+                                        <a href="javascript:void(0)">Split portfolio</a>
+                                    </li>
+                                    <li class="hover:text-seafoam transition duration-300">
+                                        <a href="javascript:void(0)">Creative portfolio</a>
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <h5 class="font-bold mb-2">Other</h5>
+                                    <li class="hover:text-seafoam transition duration-300 mb-2">
+                                        <a href="javascript:void(0)">Furniture shop</a>
+                                    </li>
+                                    <li class="hover:text-seafoam transition duration-300 mb-2">
+                                        <a href="javascript:void(0)">Fashion shop</a>
+                                    </li>
+                                    <li class="hover:text-seafoam transition duration-300 mb-2">
+                                        <a href="javascript:void(0)">Magazine</a>
+                                    </li>
+                                    <li class="hover:text-seafoam transition duration-300 mb-2">
+                                        <a href="javascript:void(0)">Lifestyle blog</a>
+                                    </li>
+                                    <li class="hover:text-seafoam transition duration-300 mb-2">
+                                        <a href="javascript:void(0)">Classic blog</a>
+                                    </li>
+                                    <li class="hover:text-seafoam transition duration-300 mb-2">
+                                        <a href="javascript:void(0)">Blog metro</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="group">
+                            <a href="javascript:void(0)" class="xl:px-8 lg:px-5 text-base">ABOUT US</a>
+                            <div
+                                class="absolute top-[75%] gap-10 bg-white text-black rounded-md text-[14px] text-left shadow-lg hidden group-hover:flex py-2">
+                                <ul>
+                                    <li class="dropdown relative right">
+                                        <a href="javascript:void(0)"
+                                            class="hover:text-seafoam transition duration-300 px-6 py-4">Lifestyle
+                                            blog</a>
+                                        <div
+                                            class="hidden dropdown-hover:block bg-white shadow-lg rounded-md absolute top-[0] subMenu py-2">
+                                            <ul>
+                                                <li class="hover:text-seafoam transition duration-300 px-6 py-1">
+                                                    <a href="javascript:void(0)" class="whitespace-nowrap">Furniture
+                                                        shop</a>
+                                                </li>
+                                                <li class="hover:text-seafoam transition duration-300 px-6 py-1">
+                                                    <a href="javascript:void(0)" class="whitespace-nowrap">Fashion
+                                                        shop</a>
+                                                </li>
+                                                <li class="hover:text-seafoam transition duration-300 px-6 py-1">
+                                                    <a href="javascript:void(0)" class="whitespace-nowrap">Magazine</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="relative px-6 py-1 dropdown left">
+                                        <a href="javascript:void(0)"
+                                            class="hover:text-seafoam transition duration-300 whitespace-nowrap">Classic
+                                            blog</a>
+                                        <div
+                                            class="hidden dropdown-hover:block bg-white shadow-lg rounded-md absolute top-[0] subMenu py-2">
+                                            <ul>
+                                                <li class="hover:text-seafoam transition duration-300 px-6 py-1">
+                                                    <a href="javascript:void(0)" class="whitespace-nowrap">Our
+                                                        services</a>
+                                                </li>
+                                                <li class="hover:text-seafoam transition duration-300 px-6 py-1">
+                                                    <a href="javascript:void(0)" class="whitespace-nowrap">What we
+                                                        offer</a>
+                                                </li>
+                                                <li class="hover:text-seafoam transition duration-300 px-6 py-1">
+                                                    <a href="javascript:void(0)" class="whitespace-nowrap">Our
+                                                        process</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="hover:text-seafoam transition duration-300 px-6 py-1">
+                                        <a href="javascript:void(0)" class="whitespace-nowrap">Blog metro</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)" class="xl:px-8 lg:px-5 text-base">SERVICES</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)" class="xl:px-8 lg:px-5 text-base">PAGES</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)" class="xl:px-8 lg:px-5 text-base">BLOG</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)" class="xl:px-8 lg:px-5 text-base">CONTACT</a>
+                        </li>
+                    </ul>
+                    <div class="flex items-center">
+                        <a href="javascript:void(0)"
+                            class="btn border-seafoam border-2 hover:border-2 hover:border-seafoam hover:bg-transparent hover:text-seafoam transition duration-300">Buy
+                            now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="fixed inset-0 sm:w-3/4 bg-white transition duration-700 translate-x-[-110%] px-4 py-3"
+                id="mobile-menu">
+                <span class="absolute top-2 right-2 material-icons sm:hidden text-seafoam" id="closeMenu">close</span>
+                <a href="javascript:void(0)" class="block lg:h-14 h-12">
+                    <img src="img/logo/e-vehical-logo.svg" alt="Logo" class="h-full" />
+                </a>
+                <div class="h-full overflow-auto text-[15px] py-3">
+                    <ul>
+                        <li>
+                            <div>
+                                <button
+                                    class="w-full h-full flex justify-between border-b text-left text-seafoam hover:text-black transition duration-700 px-[15px] py-[9px]"
+                                    data-toggle="collapse">
+                                    <span>HOME</span>
+                                    <span
+                                        class="material-icons transition duration-700 rotate-icon">keyboard_arrow_down</span>
+                                </button>
+                                <div class="collapse transition duration-700">
+                                    <div class="sm:grid grid-cols-2 text-black py-2">
+                                        <ul>
+                                            <h5 class="font-bold px-[15px]">Corporate</h5>
+                                            <li class="hover:text-seafoam transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Startup</a>
+                                            </li>
+                                            <li class="hover:text-seafoam transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Business</a>
+                                            </li>
+                                            <li class="hover:text-seafoam transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Corporate</a>
+                                            </li>
+                                            <li class="hover:text-seafoam transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Finance</a>
+                                            </li>
+                                            <li class="hover:text-seafoam transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Application</a>
+                                            </li>
+                                            <li class="hover:text-seafoam transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Consulting</a>
+                                            </li>
+                                            <li class="hover:text-seafoam transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Digital
+                                                    agency</a>
+                                            </li>
+                                            <li class="hover:text-seafoam transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">SEO agency</a>
+                                            </li>
+                                            <li class="hover:text-seafoam transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Event &amp;
+                                                    conference</a>
+                                            </li>
+                                            <li class="hover:text-seafoam transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Marketing
+                                                    agency</a>
+                                            </li>
+                                        </ul>
+                                        <ul>
+                                            <h5 class="font-bold px-[15px]">Specialized</h5>
+                                            <li class="hover:text-seafoam transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Restaurant</a>
+                                            </li>
+                                            <li class="hover:text-seafoam transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Architecture</a>
+                                            </li>
+                                            <li class="hover:text-seafoam transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Hotel &
+                                                    resort</a>
+                                            </li>
+                                            <li class="hover:text-seafoam transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Travel agency</a>
+                                            </li>
+                                            <li class="hover:text-seafoam transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Yoga &
+                                                    meditation</a>
+                                            </li>
+                                            <li class="hover:text-seafoam transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Gym & fitness</a>
+                                            </li>
+                                            <li class="hover:text-seafoam transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Spa salon
+                                                </a>
+                                            </li>
+                                            <li class="hover:text-seafoam transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Cafe</a>
+                                            </li>
+                                            <li class="hover:text-seafoam transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Home decor</a>
+                                            </li>
+                                            <li class="hover:text-seafoam transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Dentist</a>
+                                            </li>
+                                            <li class="hover:text-seafoam transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Interior
+                                                    design</a>
+                                            </li>
+                                        </ul>
+                                        <ul>
+                                            <h5 class="font-bold px-[15px]">Portfolio</h5>
+                                            <li class="hover:text-seafoam transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Design agency</a>
+                                            </li>
+                                            <li class="hover:text-seafoam transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Web agency</a>
+                                            </li>
+                                            <li class="hover:text-seafoam transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Creative
+                                                    agency</a>
+                                            </li>
+                                            <li class="hover:text-seafoam transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Freelancer</a>
+                                            </li>
+                                            <li class="hover:text-seafoam transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Branding
+                                                    agency</a>
+                                            </li>
+                                            <li class="hover:text-seafoam transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Photography</a>
+                                            </li>
+                                            <li class="hover:text-seafoam transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Personal
+                                                    portfolio</a>
+                                            </li>
+                                            <li class="hover:text-seafoam transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Vertical
+                                                    portfolio</a>
+                                            </li>
+                                            <li class="hover:text-seafoam transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Interactive
+                                                    portfolio</a>
+                                            </li>
+                                            <li class="hover:text-seafoam transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Split
+                                                    portfolio</a>
+                                            </li>
+                                            <li class="hover:text-seafoam transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Creative
+                                                    portfolio</a>
+                                            </li>
+                                        </ul>
+                                        <ul>
+                                            <h5 class="font-bold px-[15px]">Other</h5>
+                                            <li class="hover:text-seafoam transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Furniture
+                                                    shop</a>
+                                            </li>
+                                            <li class="hover:text-seafoam transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Fashion shop</a>
+                                            </li>
+                                            <li class="hover:text-seafoam transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Magazine</a>
+                                            </li>
+                                            <li class="hover:text-seafoam transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Lifestyle
+                                                    blog</a>
+                                            </li>
+                                            <li class="hover:text-seafoam transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Classic blog</a>
+                                            </li>
+                                            <li class="hover:text-seafoam transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Blog metro</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <button
+                                    class="w-full h-full flex justify-between border-b text-left text-seafoam hover:text-black transition duration-700 px-[15px] py-[9px]"
+                                    data-toggle="collapse">
+                                    <span>ABOUT US</span>
+                                    <span
+                                        class="material-icons transition duration-700 rotate-icon">keyboard_arrow_down</span>
+                                </button>
+                                <div class="collapse transition duration-700">
+                                    <div class="text-black">
+                                        <ul>
+                                            <li class="px-[15px] py-[2px]">
+                                                <div>
+                                                    <button
+                                                        class="w-full h-full flex justify-between text-left py-[2px]"
+                                                        data-toggle="collapse">
+                                                        <span
+                                                            class="hover:text-seafoam transition duration-700">Lifestyle
+                                                            blog</span>
+                                                        <span
+                                                            class="material-icons transition duration-700 rotate-icon">keyboard_arrow_down</span>
+                                                    </button>
+                                                    <div class="collapse transition duration-700">
+                                                        <ul>
+                                                            <li
+                                                                class="hover:text-seafoam transition duration-300 px-[15px] py-[2px]">
+                                                                <a href="javascript:void(0)"
+                                                                    class="whitespace-nowrap">Furniture
+                                                                    shop</a>
+                                                            </li>
+                                                            <li
+                                                                class="hover:text-seafoam transition duration-300 px-[15px] py-[2px]">
+                                                                <a href="javascript:void(0)"
+                                                                    class="whitespace-nowrap">Fashion
+                                                                    shop</a>
+                                                            </li>
+                                                            <li
+                                                                class="hover:text-seafoam transition duration-300 px-[15px] py-[2px]">
+                                                                <a href="javascript:void(0)"
+                                                                    class="whitespace-nowrap">Magazine</a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="px-[15px] py-[2px]">
+                                                <div>
+                                                    <button
+                                                        class="w-full h-full flex justify-between text-left py-[2px]"
+                                                        data-toggle="collapse">
+                                                        <span class="hover:text-seafoam transition duration-700">Classic
+                                                            blog</span>
+                                                        <span
+                                                            class="material-icons transition duration-700 rotate-icon">keyboard_arrow_down</span>
+                                                    </button>
+                                                    <div class="collapse transition duration-700">
+                                                        <ul>
+                                                            <li
+                                                                class="hover:text-seafoam transition duration-300 px-[15px] py-[2px]">
+                                                                <a href="javascript:void(0)"
+                                                                    class="whitespace-nowrap">Our
+                                                                    services</a>
+                                                            </li>
+                                                            <li
+                                                                class="hover:text-seafoam transition duration-300 px-[15px] py-[2px]">
+                                                                <a href="javascript:void(0)"
+                                                                    class="whitespace-nowrap">What we
+                                                                    offer</a>
+                                                            </li>
+                                                            <li
+                                                                class="hover:text-seafoam transition duration-300 px-[15px] py-[2px]">
+                                                                <a href="javascript:void(0)"
+                                                                    class="whitespace-nowrap">Our
+                                                                    process</a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="hover:text-seafoam transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Blog metro</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)"
+                                class="block w-full h-full border-b text-seafoam hover:text-black transition duration-700 px-[15px] py-[9px]">SERVICES</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)"
+                                class="block w-full h-full border-b text-seafoam hover:text-black transition duration-700 px-[15px] py-[9px]">PAGES</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)"
+                                class="block w-full h-full border-b text-seafoam hover:text-black transition duration-700 px-[15px] py-[9px]">BLOG</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)"
+                                class="block w-full h-full border-b text-seafoam hover:text-black transition duration-700 px-[15px] py-[9px]">CONTACT</a>
+                        </li>
+
+                        <li class="p-2 mb-6">
+                            <a href="javascript:void(0)" class="btn">Buy now</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!--END: Header-->
+
+    <!--START:Main-->
+    <main>
+        <!--START: Car-Banner-->
+        <section class="lg:h-screen h-[75vh] bg-cover bg-no-repeat pt-[88px] overflow-x-hidden"
+            style="background-image: url('img/e-vehical/car-banner.png')">
+            <div class="container h-full flex items-center xl:px-4 lg:px-7">
+                <div class="xl:max-w-3xl lg:max-w-2xl md:max-w-lg w-full lg:px-3" data-aos="fade-up"
+                    data-aos-duration="500" class="overflow-hidden">
+                    <h1
+                        class="xl:text-[64px] lg:leading-[90px] lg:text-[60px] md:text-[50px] text-[32px] text-white font-bold">
+                        Smarter Chargers For Your
+                        <span class="text-seafoam">Electric Vehicle</span>
+                    </h1>
+                    <p
+                        class="md:my-8 my-5 text-gray-200 leading-8 md:mr-8 xl:text-[24px] lg:text-[20px] lg:leading-[50px] md:text-[20px] md:leading-[40px]">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                        eiusmod tempor incididunt ut labore et dolore magna aliqua
+                    </p>
+                    <div>
+                        <a href="Javascript:void(0)"
+                            class="flex gap-2 items-center text-seafoam hover:text-white transition hover:duration-300 xl:text-[20px] text-[18px]">EXPLORE
+                            MORE
+                            <span class="material-icons">east</span>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!--END: Car-Banner-->
+
+        <!--START: Watch-intro -->
+        <section class="overflow-hidden mt-5 sm:mt-0 md:mb-14 xl:mb-24 mb-10 sm:py-0">
+            <div class="container xl:px-4 lg:px-7">
+                <div class="grid md:grid-cols-2">
+                    <div data-aos="fade-right" data-aos-duration="300"
+                        class="flex items-center w-full h-full py-5 md:py-0 sm:pb-0">
+                        <p
+                            class="xl:text-[34px] font-normal xl:leading-[45px] lg:text-[27px] lg:leading-[40px] md:text-[20px] md:leading-[30px] xl:mr-10 md:mr-[35px]">
+                            Lorem ipsum dolor sit amet, consect adipiscin elit, sed do
+                            eiusmod tempor incididunt ut labore et dolore magna aliqua uis
+                            nostrud exercitation ullamco laboris
+                        </p>
+                    </div>
+                    <div data-aos="fade-left" data-aos-duration="300">
+                        <div class="relative">
+                            <img src="img/e-vehical/watch-intro-img.png" alt="e-vehical"
+                                class="w-full h-full object-cover sm:rounded-bl-3xl sm:rounded-br-3xl rounded-xl md:rounded-tl-none md:rounded-tr-none" />
+                        </div>
+                        <div
+                            class="flex items-center justify-center h-full md:h-auto absolute md:bottom-[7%] xl:-left-[11%] md:-left-[14%] bottom-0">
+                            <div class="rounded-full border-white border-opacity-60 lg:border-[12px] border-[10px]">
+                                <div
+                                    class="bg-seafoam rounded-full flex justify-center items-center xl:w-32 xl:h-32 lg:w-24 lg:h-24 md:w-20 md:h-20 w-14 h-14">
+                                    <div class="xl:w-20 xl:h-20 lg:w-16 lg:h-16 md:h-12 md:w-12 w-10 h-10">
+                                        <img src="img/icons/play-video.svg" alt="e-vehical" class="w-full h-full" />
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="text-white xl:text-[25px] lg:text-[20px] xl:ml-7 ml-2 md:ml-2">WATCH
+                                INTRO</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--END: Watch-intro -->
+
+        <!--START:Best-solution-->
+        <section class="xl:mb-24 md:mb-14 mb-10">
+            <div class="container xl:px-4 lg:px-7">
+                <div class="grid md:grid-cols-2 gap-5 lg:gap-2">
+                    <div class="order-2 md:order-1">
+                        <div
+                            class="relative z-10 after:absolute after:bg-[url(img/e-vehical/green-dotted-design.png)] after:content-[''] after:bg-no-repeat after:bg-cover after:w-[200px] after:h-[200px] after:-z-10 after:-top-20 after:-left-20 2xl:after:block after:hidden">
+                            <div class="mb-3 xl:mb-7 md:mb-5" data-aos="zoom-in-up" data-aos-duration="300">
+                                <img src="img/e-vehical/solution-img-one.png" alt="e-vehical"
+                                    class="w-full h-full object-cover rounded-xl xl:rounded-3xl md:rounded-xl" />
+                            </div>
+                            <div class="grid grid-cols-2 gap-x-3 xl:gap-x-7 md:gap-x-5">
+                                <div data-aos="zoom-in-up" data-aos-duration="400">
+                                    <img src="img/e-vehical/solution-img-two.png" alt="e-vevical"
+                                        class="w-full h-full object-cover rounded-xl xl:rounded-3xl md:rounded-xl" />
+                                </div>
+                                <div data-aos="zoom-in-up" data-aos-duration="500">
+                                    <img src="img/e-vehical/solution-img-three.png" alt="e-vevical"
+                                        class="object-cover rounded-xl xl:rounded-3xl md:rounded-xl" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex justify-end items-center order-1 md:order-2">
+                        <div class="xl:max-w-[35rem] lg:max-w-[28rem]">
+                            <div data-aos="fade-right" data-aos-duration="300">
+                                <div
+                                    class="text-seafoam font-semibold xl:text-[24px] lg:text-[20px] 2xl:mb-7 xl:mb-3 md:mb-0 mb-2">
+                                    ABOUT PERTAEV
+                                </div>
+                                <h2
+                                    class="font-bold leading-8 text-2xl xl:text-[45px] 2xl:leading-[65px] xl:leading-[55px] lg:text-[33px] lg:leading-[43px] md:text-[25px] md:leading-[35px] 2xl:mb-7 xl:mb-3 md:mb-0 mb-2">
+                                    We Provide Best Solutions For Your Electric Vehicle
+                                </h2>
+                                <p
+                                    class="opacity-50 mb-4 xl:text-[24px] xl:leading-[33px] 2xl:mb-7 xl:mb-5 lg:text-[18px] lg:mb-4 md:text-[14px] md:mb-2">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                                    do eiusmod tempor incididunt ut labore
+                                </p>
+                            </div>
+                            <div class="flex items-start" data-aos="fade-right" data-aos-duration="400">
+                                <div
+                                    class="bg-seafoam rounded-lg hover:bg-black transition hover:duration-700 lg:p-5 p-3">
+                                    <div class="flex justify-center items-center">
+                                        <div class="lg:w-[50px] lg:h-[50px] w-[30px] h-[30px]">
+                                            <svg class=" fill-white" viewBox="0 0 54 51" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M21.5603 49.2946C18.6568 48.5924 16.0513 46.9865 14.1191 44.7083C12.187 42.4302 11.0281 39.5974 10.8094 36.6183H12.6803C12.7571 36.6176 12.8323 36.5954 12.8972 36.5543C12.9622 36.5131 13.0143 36.4546 13.0478 36.3854C13.0812 36.3162 13.0947 36.2391 13.0866 36.1626C13.0785 36.0862 13.0493 36.0135 13.0021 35.9528L7.28027 28.6764C7.24165 28.6279 7.19276 28.5886 7.13711 28.5612C7.08147 28.5339 7.02045 28.5192 6.95845 28.5183C6.89634 28.5186 6.83513 28.533 6.77939 28.5604C6.72366 28.5878 6.67485 28.6275 6.63663 28.6764L0.903903 35.9528C0.855208 36.0134 0.82474 36.0866 0.816048 36.1639C0.807357 36.2411 0.8208 36.3193 0.854812 36.3892C0.88932 36.4568 0.941531 36.5139 1.00589 36.5542C1.07024 36.5946 1.14433 36.6167 1.22027 36.6183H3.17845C3.43394 40.3909 5.11481 43.9251 7.88011 46.504C10.6454 49.0829 14.2881 50.5135 18.0694 50.5055C19.2473 50.5092 20.4213 50.37 21.5657 50.091C21.6551 50.0699 21.7346 50.0189 21.7912 49.9465C21.8477 49.8742 21.8778 49.7846 21.8766 49.6928C21.8767 49.6004 21.8454 49.5108 21.788 49.4385C21.7305 49.3662 21.6502 49.3155 21.5603 49.2946ZM9.21117 11.5601C9.27245 11.5958 9.34208 11.6146 9.41299 11.6146C9.52565 11.6141 9.63352 11.569 9.71299 11.4892C11.7737 9.32513 14.4679 7.87079 17.4078 7.33551C20.3477 6.80023 23.3816 7.21161 26.0728 8.51044L25.1346 10.1359C25.097 10.2021 25.0785 10.2775 25.0814 10.3537C25.0843 10.4298 25.1084 10.5036 25.151 10.5668C25.1931 10.6316 25.2532 10.6826 25.324 10.7136C25.3947 10.7446 25.473 10.7543 25.5492 10.7414L34.7128 9.42681C34.7748 9.41797 34.834 9.39523 34.8859 9.36028C34.9379 9.32533 34.9813 9.27908 35.0128 9.22499C35.0431 9.17141 35.0608 9.11165 35.0646 9.05023C35.0684 8.98881 35.0581 8.92733 35.0346 8.87044L31.5983 0.26317C31.5689 0.192757 31.5208 0.131686 31.4593 0.086519C31.3978 0.0413517 31.3252 0.0137938 31.2492 0.00680574C31.1724 0.00155175 31.0958 0.0182526 31.0281 0.0549568C30.9605 0.0916609 30.9048 0.146852 30.8674 0.214079L29.8855 1.91044C27.9356 0.959252 25.8018 0.444404 23.6327 0.40173C21.4636 0.359056 19.3112 0.789581 17.3254 1.66334C15.3396 2.5371 13.568 3.83311 12.134 5.46116C10.7 7.08922 9.63799 9.01021 9.0219 11.0904C8.99722 11.1786 9.0024 11.2725 9.03664 11.3575C9.07087 11.4424 9.13224 11.5136 9.21117 11.5601ZM51.1784 22.551C50.5904 21.5297 49.8817 20.5829 49.0675 19.731C49.0042 19.6647 48.9205 19.6215 48.8297 19.6086C48.739 19.5956 48.6465 19.6135 48.5671 19.6595C48.4878 19.7055 48.4262 19.7768 48.3923 19.862C48.3585 19.9472 48.3542 20.0413 48.3803 20.1292C49.2236 22.9956 49.1355 26.0556 48.1289 28.8688C47.1222 31.6819 45.2488 34.1031 42.7784 35.7837L41.8403 34.1637C41.803 34.0965 41.7474 34.0413 41.6799 34.0046C41.6124 33.9679 41.5359 33.9511 41.4592 33.9562C41.3826 33.9614 41.309 33.9882 41.247 34.0337C41.1851 34.0791 41.1373 34.1412 41.1094 34.2128L37.6621 42.8092C37.6407 42.8676 37.632 42.93 37.6367 42.9921C37.6414 43.0542 37.6594 43.1146 37.6894 43.1692C37.7206 43.2219 37.7633 43.2669 37.8143 43.3009C37.8653 43.3349 37.9232 43.3569 37.9839 43.3655L47.1584 44.691C47.1763 44.6955 47.1946 44.6973 47.213 44.6964C47.2805 44.6963 47.347 44.6799 47.4069 44.6486C47.4667 44.6172 47.5181 44.5719 47.5566 44.5164C47.5997 44.4533 47.6236 44.379 47.6255 44.3026C47.6275 44.2262 47.6073 44.1508 47.5675 44.0855L46.5912 42.3892C49.7301 40.2816 51.9504 37.0595 52.8022 33.3759C53.654 29.6923 53.0735 25.8226 51.1784 22.551ZM26.9935 14.1041C24.5718 14.1041 22.2045 14.8221 20.1909 16.1674C18.1773 17.5127 16.6077 19.4249 15.6807 21.6621C14.7537 23.8994 14.5109 26.3613 14.983 28.7365C15.455 31.1117 16.6208 33.2937 18.3328 35.0065C20.0448 36.7192 22.2262 37.8859 24.6012 38.359C26.9763 38.8321 29.4382 38.5904 31.6759 37.6644C33.9135 36.7384 35.8264 35.1698 37.1726 33.1567C38.5188 31.1437 39.2379 28.7767 39.239 26.355C39.237 23.1074 37.9464 19.9933 35.6505 17.6964C33.3546 15.3996 30.2411 14.1075 26.9935 14.1041ZM32.1154 24.7895L27.0644 34.0132C27.0221 34.0941 26.9587 34.1621 26.8809 34.2101C26.8032 34.2581 26.714 34.2843 26.6226 34.2859C26.5664 34.2862 26.5107 34.2749 26.459 34.2526C26.3446 34.2184 26.2465 34.1436 26.1833 34.0423C26.12 33.941 26.0959 33.8201 26.1154 33.7023L26.9063 27.8768L22.3626 28.1823C22.2723 28.1865 22.1823 28.1677 22.1012 28.1276C22.0201 28.0875 21.9505 28.0275 21.899 27.9532C21.8492 27.8773 21.8205 27.7896 21.8159 27.699C21.8113 27.6084 21.8309 27.5182 21.8728 27.4377L26.5801 18.2855C26.6341 18.178 26.725 18.0935 26.8361 18.0474C26.9473 18.0014 27.0713 17.9968 27.1855 18.0346C27.3019 18.0719 27.401 18.1496 27.465 18.2537C27.5291 18.3577 27.5537 18.4812 27.5346 18.6019L26.579 24.6014L31.6135 24.045C31.7064 24.0347 31.8002 24.0502 31.8848 24.0896C31.9695 24.1291 32.0417 24.191 32.0935 24.2686C32.1444 24.3452 32.1734 24.4342 32.1772 24.526C32.1811 24.6179 32.1597 24.709 32.1154 24.7895Z" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="xl:max-w-lg lg:max-w-sm xl:pl-7 lg:pl-4 md:pl-2 pl-3">
+                                    <div
+                                        class="text-xl font-bold xl:mb-3 xl:text-[35px] lg:text-2xl md:text-xl md:mb-1 mb-2">
+                                        Save More Energy
+                                    </div>
+                                    <p class="text-black opacity-50 xl:text-[24px] lg:text-[18px] md:text-[14px]">
+                                        Lorem ipsum dolor sit amet, consect adipiscing elit, sed
+                                        do eiusmod tempor incididunt labore etect dolore
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="flex items-start 2xl:mt-10 xl:mt-7 lg:mt-5 md:mt-3 mt-5" data-aos="fade-right"
+                                data-aos-duration="400">
+                                <div
+                                    class="bg-seafoam rounded-lg hover:bg-black transition hover:duration-700 lg:p-5 p-3">
+                                    <div class="flex justify-center items-center">
+                                        <div class="lg:w-[50px] lg:h-[50px] w-[30px] h-[30px]">
+                                            <svg class="fill-white" viewBox="0 0 51 52" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M49.7494 19.6555L50.4868 18.5281L49.1626 18.2785C44.4718 17.3959 42.523 13.6393 40.4602 9.66189C38.2894 5.47569 36.0454 1.14789 30.4918 0.103288L30.2302 0.0546875L29.9842 0.155488C27.238 1.28049 25.8454 2.58429 24.0346 4.44429C22.7488 5.76489 21.598 7.39149 20.485 8.96349C19.4122 10.4803 18.3022 12.0487 17.1148 13.2691L16.9168 13.4719H9.07959L6.39699 24.8719H0.0795898V29.0719L4.73379 29.7361L3.07959 33.8719V51.2719H10.2796L10.6786 46.4845L38.68 46.4749L39.0796 51.2719H46.2796V33.8719L44.6254 29.7361L49.2796 29.0719V24.8719H44.539C46.1518 23.8381 47.8348 22.5847 49.7494 19.6555ZM40.5736 27.8179L40.5862 27.8719H40.5208C40.5376 27.8539 40.5556 27.8353 40.5736 27.8179ZM28.3768 30.0253C26.1268 28.0495 24.9574 25.3429 23.7232 22.4887C22.6678 20.0485 21.5836 17.5441 19.762 15.4759C22.9474 16.9573 24.5842 20.0989 26.2954 23.3983C27.328 25.3897 28.3828 27.4105 29.797 29.0977L28.3768 30.0253ZM11.4556 16.4719H18.2206C19.9558 18.3487 20.995 20.7151 22.0708 23.2033C22.7512 24.7771 23.4442 26.3785 24.3382 27.8719H8.77299L11.4556 16.4719ZM9.37959 40.4719C7.55739 40.4719 6.07959 38.9941 6.07959 37.1719C6.07959 35.3497 7.55739 33.8719 9.37959 33.8719C11.2018 33.8719 12.6796 35.3497 12.6796 37.1719C12.6796 38.9941 11.2018 40.4719 9.37959 40.4719ZM32.4796 42.8719H16.8796L16.2796 38.6719H33.0796L32.4796 42.8719ZM39.9796 40.4719C38.1574 40.4719 36.6796 38.9941 36.6796 37.1719C36.6796 35.3497 38.1574 33.8719 39.9796 33.8719C41.8018 33.8719 43.2796 35.3497 43.2796 37.1719C43.2796 38.9941 41.8018 40.4719 39.9796 40.4719ZM42.955 23.7433C40.8538 25.0591 38.6842 26.4193 35.977 31.0507C31.7284 29.9653 29.863 26.3683 27.8932 22.5697C25.9288 18.7813 23.9038 14.8759 19.4188 13.3945C20.3092 12.3289 21.142 11.1523 21.955 10.0039C23.0284 8.48769 24.1378 6.91989 25.3252 5.69949C26.9638 4.01649 28.108 2.91309 30.418 1.92489C34.924 2.89449 36.8374 6.58629 38.8618 10.4899C40.8514 14.3275 42.9028 18.2839 47.5108 19.7209C45.8788 21.9115 44.4526 22.8049 42.955 23.7433Z" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="xl:max-w-lg lg:max-w-sm xl:pl-7 lg:pl-4 md:pl-2 pl-3">
+                                    <div
+                                        class="text-xl font-bold xl:mb-3 xl:text-[35px] lg:text-2xl md:text-xl md:mb-1 mb-2">
+                                        Smart Connected
+                                    </div>
+                                    <p class="text-black opacity-50 xl:text-[24px] lg:text-[18px] md:text-[14px]">
+                                        Lorem ipsum dolor sit amet, consect adipiscing elit, sed
+                                        do eiusmod tempor incididunt labore etect dolore
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--END:Best-solution-->
+
+        <!--START: Professional-->
+        <section class="overflow-hidden xl:mb-14">
+            <div class="container xl:px-4 lg:px-7 lg:mb-10">
+                <div class="grid md:grid-cols-2 gap-10 mb-5 lg:gap-5 md:gap-2">
+                    <div>
+                        <div data-aos="fade-right" data-aos-duration="400" class="px-3 sm:px-0">
+                            <div
+                                class="text-seafoam font-semibold xl:text-[24px] lg:text-lg md:text-base 2xl:mb-7 xl:mb-5 mb-3 ">
+                                WHO WE ARE
+                            </div>
+                            <h2
+                                class="text-2xl font-bold xl:text-[45px] xl:leading-[65px] lg:leading-[50px] xl:mb-7 lg:text-4xl lg:mb-3 md:text-2xl md:mb-3 mb-2">
+                                Professional Electric Vehicle Charging Solution For You
+                            </h2>
+                            <p
+                                class="opacity-50 mb-5 sm:mb-0 xl:text-[24px] xl:leading-[32px] md:mb-10 lg:text-xl md:text-lg">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                                do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                Ut enim ad minim veniam.
+                            </p>
+                        </div>
+                        <div>
+                            <div class="flex sm:gap-5 gap-1 lg:gap-8 md:gap-3">
+                                <div class="relative">
+                                    <div
+                                        class="rounded-full border-[8px] border-gray-400 flex justify-center items-center shadow-[5px_3px_60px_-30px_rgba(0,0,0,0.8)] w-24 h-24 xl:w-36 xl:h-36 lg:w-32 lg:h-32 md:w-28 md:h-28 xl:border-[12px] lg:border-[10px] lg:p-5 md:border-[10px]">
+                                        <div
+                                            class="text-xs p-4 font-semibold text-center lg:text-base md:text-xs md:p-3">
+                                            Fast Charging
+                                        </div>
+                                    </div>
+                                    <svg class="absolute top-0 left-0 lg:w-full lg:h-full rotate-90 xl:top-0 xl:left-0 lg:top-0 lg:left-px md:top-0"
+                                        viewBox="0 0 100 100" data-percent="89" style="stroke-dasharray: 140.681, 999"
+                                        fill="none" stroke="#08D665">
+                                        <circle cx="50" cy="50" r="46" stroke-width="8"></circle>
+                                    </svg>
+                                </div>
+                                <div class="relative">
+                                    <div
+                                        class="rounded-full border-[8px] border-gray-400 flex justify-center items-center shadow-[5px_3px_60px_-30px_rgba(0,0,0,0.8)] w-24 h-24 xl:w-36 xl:h-36 lg:w-32 lg:h-32 md:w-28 md:h-28 xl:border-[12px] lg:border-[10px] lg:p-5 md:border-[10px]">
+                                        <div
+                                            class="text-xs p-4 font-semibold text-center lg:text-base md:text-xs md:p-3">
+                                            Energy Management Systems
+                                        </div>
+                                    </div>
+                                    <svg class="absolute top-0 left-0 lg:w-full lg:h-full rotate-90 xl:top-0 xl:left-0 lg:top-0 lg:left-px md:top-0"
+                                        viewBox="0 0 100 100" data-percent="89" style="stroke-dasharray: 140.681, 999"
+                                        fill="none" stroke="#000000">
+                                        <circle cx="50" cy="50" r="46" stroke-width="8"></circle>
+                                    </svg>
+                                </div>
+                                <div class="relative">
+                                    <div
+                                        class="rounded-full border-[8px] border-gray-400 flex justify-center items-center shadow-[5px_3px_60px_-30px_rgba(0,0,0,0.8)] w-24 h-24 xl:w-36 xl:h-36 lg:w-32 lg:h-32 md:w-28 md:h-28 xl:border-[12px] lg:border-[10px] lg:p-5 md:border-[10px]">
+                                        <div
+                                            class="text-xs p-4 font-semibold text-center lg:text-base md:text-xs md:p-3">
+                                            Energy Storage Systems
+                                        </div>
+                                    </div>
+                                    <svg class="absolute  top-0 left-0 lg:w-full lg:h-full rotate-90 xl:top-0 xl:left-0 lg:top-0 lg:left-px md:top-0"
+                                        viewBox="0 0 100 100" data-percent="89" style="stroke-dasharray: 140.681, 999"
+                                        fill="none" stroke="#08D665">
+                                        <circle cx="50" cy="50" r="46" stroke-width="8"></circle>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div data-aos="flip-left" data-aos-duration="400" class="flex lg:justify-end sm:w-full w-[97%]">
+                        <img src="img/e-vehical/map.png" alt="e-vehical" class="object-contain w-full h-full" />
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--END: Professional-->
+
+        <!--START:Perfomance-->
+        <section class="overflow-hidden bg-black py-8 xl:mb-24 lg:mb-10 md:mb-16">
+            <div class="container h-full xl:px-4 lg:px-7">
+                <div class="text-seafoam font-semibold xl:text-[24px] xl:mb-10 mb-3 lg:text-[20px] md:text-[18px]"
+                    data-aos="fade-up" data-aos-duration="400">
+                    OPEN HORIZONS
+                </div>
+                <div class="grid md:grid-cols-2">
+                    <div class="xl:max-w-lg sm:max-w-xs" data-aos="fade-up" data-aos-duration="400">
+                        <h2
+                            class="text-2xl font-bold text-white xl:text-[48px] xl:leading-[65px] lg:text-4xl lg:leading-[55px] md:leading-[50px] md:text-[40px] mb-5 sm:mb-0">
+                            Perfomance! Hello Open Roads
+                        </h2>
+                    </div>
+                    <div data-aos="fade-up" data-aos-duration="400">
+                        <p class="text-base text-white opacity-80 mb-3 xl:text-[24px] xl:leading-[32px] md:text-lg">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        </p>
+                        <p
+                            class="text-base text-white opacity-80 mb-3 xl:text-[24px] xl:leading-[32px] xl:py-5 md:text-lg md:py-4">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        </p>
+                        <a href="javascript:void(0)"
+                            class="text-white text-base hover:text-seafoam xl:text-[24px] xl:leading-[32px] md:text-lg"><span
+                                class="border-b border-white transition hover:duration-300 lg:border-b-2 md:border-b md:py-1">Find
+                                Out More</span></a>
+                    </div>
+                </div>
+                <div class="my-10 xl:my-20 md:mb-14">
+                    <div
+                        class="relative before:absolute before:content-[''] before:bg-black before:opacity-40 before:w-full before:h-full">
+                        <div class="absolute flex justify-center items-center w-full h-full">
+                            <div data-aos="zoom-in" data-aos-duration="400"
+                                class="border-[3px] border-white rounded-full w-20 h-20 p-2 flex justify-center items-center xl:p-14 lg:w-24 lg:h-24 lg:p-12 md:w-20 md:h-20 md:p-8">
+                                <h5
+                                    class="text-white text-xl font-semibold flex justify-center items-center xl:text-[25px] lg:text-2xl md:text-xl">
+                                    PLAY
+                                </h5>
+                            </div>
+                        </div>
+                        <div class="w-full h-80 sm:h-full">
+                            <img src="img/e-vehical/showroom.png" alt="e-vehical"
+                                class="object-cover w-full h-full rounded-lg md:rounded-2xl" />
+                        </div>
+                    </div>
+                </div>
+                <div class="grid gap-7 xl:grid-cols-3 lg:gap-5 md:grid-cols-2">
+                    <div class="text-center" data-aos="flip-right" data-aos-duration="500">
+                        <div class="mx-auto mb-5 2xl:mb-10 lg:mb-7 w-20 h-20 md:w-24 md:h-24">
+                            <div class="w-full h-full group fill-seafoam group-hover:fill-white">
+                                <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_1033_1740)">
+                                        <path
+                                            class="fill-seafoam group-hover:fill-white transition group-hover:duration-700"
+                                            d="M47.7446 9.74492V86.3271C47.7446 88.6598 45.8538 90.5506 43.5212 90.5506H5.21123C2.87861 90.5506 0.987793 88.6598 0.987793 86.3271V9.74492C0.987793 7.4123 2.87861 5.52148 5.21123 5.52148H43.5212C45.8538 5.52148 47.7446 7.4123 47.7446 9.74492Z" />
+                                        <path class="fill-black"
+                                            d="M41.4063 68.0451V51.6262C41.4063 50.46 40.4608 49.5145 39.2946 49.5145H9.43447C8.26826 49.5145 7.32275 50.46 7.32275 51.6262V68.0451C7.32275 69.2113 8.26826 70.1568 9.43447 70.1568H39.2944C40.4608 70.1568 41.4063 69.2113 41.4063 68.0451ZM41.4095 41.0729V13.9682C41.4095 12.802 40.464 11.8564 39.2978 11.8564H9.43447C8.26826 11.8564 7.32275 12.802 7.32275 13.9682V41.0729C7.32275 42.2391 8.26826 43.1846 9.43447 43.1846H39.2978C40.464 43.1846 41.4095 42.2391 41.4095 41.0729ZM54.502 24.4061V30.6348C54.502 32.3842 53.0839 33.8023 51.3345 33.8023H47.7444V21.2385H51.3345C53.0839 21.2385 54.502 22.6566 54.502 24.4061Z" />
+                                        <path class="fill-black"
+                                            d="M25.4593 17.7207L18.5122 29.0697H23.2558L23.054 37.3197L30.2198 25.8271H25.4593V17.7207Z" />
+                                        <path class="fill-black"
+                                            d="M19.3886 59.8408C19.3886 61.4563 18.0794 62.7551 16.4744 62.7551C14.8589 62.7551 13.5496 61.4564 13.5496 59.8408C13.5496 58.2254 14.8587 56.916 16.4744 56.916C18.0794 56.916 19.3886 58.2252 19.3886 59.8408ZM35.1794 59.8408C35.1794 61.4563 33.8703 62.7551 32.2652 62.7551C30.6498 62.7551 29.3404 61.4564 29.3404 59.8408C29.3404 58.2254 30.6496 56.916 32.2652 56.916C33.8703 56.916 35.1794 58.2252 35.1794 59.8408Z" />
+                                        <path
+                                            class="fill-seafoam group-hover:fill-white transition group-hover:duration-700"
+                                            d="M67.5034 47.8369C66.0741 47.8369 65.206 49.3928 65.9302 50.625C66.1671 51.0283 66.4532 51.3986 66.7792 51.7279C67.7761 52.7248 69.1589 53.3359 70.6704 53.3359H73.4146V50.3988C73.4146 48.984 72.2675 47.8369 70.8526 47.8369H67.5034ZM82.1913 79.225V91.7881C82.1913 93.274 80.9866 94.4787 79.5007 94.4787H71.0267C69.5407 94.4787 68.336 93.274 68.336 91.7881V79.225H82.1913Z" />
+                                        <path class="fill-black"
+                                            d="M99.0123 35.6748H88.2182C85.5633 35.6748 83.1596 37.2086 82.0385 39.6033L75.6346 53.3348L73.9934 56.8596L72.2893 60.51H99.0125V35.6748H99.0123Z" />
+                                        <path
+                                            class="fill-seafoam group-hover:fill-white transition group-hover:duration-700"
+                                            d="M98.9026 54.2607C89.3179 54.567 80.2897 55.4344 73.8837 56.8596C73.2647 57.0031 72.6728 57.1465 72.1077 57.29C69.2019 58.0434 66.7981 60.1959 65.9013 63.057C64.2958 68.1783 64.2151 73.3086 65.6233 78.4479C66.0628 80.0354 67.0403 81.3719 68.3319 82.2598C69.453 83.0311 70.7985 83.4795 72.2245 83.4795H98.9028V54.2607H98.9026Z" />
+                                        <path class="fill-black"
+                                            d="M98.9024 83.4795H72.2329C72.2329 85.9818 74.2688 88.0178 76.7712 88.0178H98.9022L98.9024 83.4795Z" />
+                                        <path class="fill-black"
+                                            d="M81.5073 67.6813C82.5956 67.6813 83.3884 68.7502 83.037 69.7801C82.1606 72.3477 79.723 74.2014 76.864 74.2014H71.7944C70.9093 74.2014 70.1919 73.4838 70.1919 72.5988V71.2932C70.1919 69.2971 71.8077 67.6814 73.8228 67.6814H81.5073V67.6813ZM98.9024 66.4746H96.6647C94.2431 66.4746 91.9919 67.7572 90.7632 69.8381L85.6599 78.4482L85.6509 78.4572H98.9026V66.4746H98.9024Z" />
+                                        <path
+                                            class="fill-seafoam group-hover:fill-white transition group-hover:duration-700"
+                                            d="M41.4063 83.1681H7.32295C6.74775 83.1681 6.28135 83.6346 6.28135 84.2097C6.28135 84.7849 6.74775 85.2514 7.32295 85.2514H41.4063C41.9815 85.2514 42.4479 84.7849 42.4479 84.2097C42.4479 83.6346 41.9815 83.1681 41.4063 83.1681ZM41.4063 76.1558H7.32295C6.74775 76.1558 6.28135 76.6223 6.28135 77.1974C6.28135 77.7726 6.74775 78.239 7.32295 78.239H41.4063C41.9815 78.239 42.4479 77.7726 42.4479 77.1974C42.4479 76.6223 41.9815 76.1558 41.4063 76.1558ZM39.2946 48.4725H9.43467C7.6958 48.4725 6.28115 49.8869 6.28115 51.626V68.0445C6.28115 69.7834 7.6956 71.198 9.43467 71.198H39.2944C41.0333 71.198 42.4479 69.7836 42.4479 68.0445V51.626C42.4479 49.8869 41.0335 48.4725 39.2946 48.4725ZM40.3647 68.0445C40.3647 68.6346 39.8847 69.1146 39.2946 69.1146H9.43467C8.84463 69.1146 8.36455 68.6346 8.36455 68.0445V51.626C8.36455 51.0359 8.84463 50.5558 9.43467 50.5558H39.2944C39.8845 50.5558 40.3645 51.0359 40.3645 51.626V68.0445H40.3647ZM39.2976 10.8145H9.43428C7.69541 10.8145 6.28076 12.2289 6.28076 13.968V41.0726C6.28076 42.8115 7.69521 44.2262 9.43428 44.2262H39.2977C41.0366 44.2262 42.4513 42.8117 42.4513 41.0726V13.968C42.4511 12.2289 41.0366 10.8145 39.2976 10.8145ZM40.3677 41.0726C40.3677 41.6627 39.8876 42.1428 39.2976 42.1428H9.43428C8.84424 42.1428 8.36416 41.6627 8.36416 41.0726V13.968C8.36416 13.3779 8.84424 12.8979 9.43428 12.8979H39.2977C39.8878 12.8979 40.3679 13.3779 40.3679 13.968V41.0726H40.3677Z" />
+                                        <path
+                                            class="fill-seafoam group-hover:fill-white transition group-hover:duration-700"
+                                            d="M30.2198 24.7858H26.5009V17.7212C26.5009 16.6735 25.1181 16.2825 24.5706 17.1774L17.6233 28.5266C17.2007 29.2169 17.6952 30.112 18.5118 30.112H22.1882L22.0128 37.2946C21.9864 38.3505 23.3786 38.7682 23.938 37.8714L31.1038 26.3786C31.5349 25.6874 31.039 24.7858 30.2198 24.7858ZM24.1886 33.5315L24.297 29.096C24.3118 28.5114 23.8405 28.029 23.2558 28.029H20.371L24.4175 21.418V25.8278C24.4175 26.403 24.8839 26.8694 25.4591 26.8694H28.3429L24.1886 33.5315ZM16.4745 55.8751C14.2874 55.8751 12.5083 57.6542 12.5083 59.8413C12.5083 62.0227 14.2874 63.7973 16.4745 63.7973C18.656 63.7973 20.4306 62.0227 20.4306 59.8413C20.4306 57.6542 18.656 55.8751 16.4745 55.8751ZM16.4745 61.7139C15.4364 61.7139 14.5917 60.8737 14.5917 59.8413C14.5917 58.8032 15.4364 57.9585 16.4745 57.9585C17.5069 57.9585 18.3472 58.8032 18.3472 59.8413C18.3472 60.8737 17.5069 61.7139 16.4745 61.7139ZM32.2649 55.8751C30.0778 55.8751 28.2987 57.6542 28.2987 59.8413C28.2987 62.0227 30.0778 63.7973 32.2649 63.7973C34.4464 63.7973 36.221 62.0227 36.221 59.8413C36.221 57.6542 34.4464 55.8751 32.2649 55.8751ZM32.2649 61.7139C31.2269 61.7139 30.3821 60.8737 30.3821 59.8413C30.3821 58.8032 31.2269 57.9585 32.2649 57.9585C33.2974 57.9585 34.1376 58.8032 34.1376 59.8413C34.1376 60.8737 33.2974 61.7139 32.2649 61.7139Z" />
+                                        <path
+                                            class="fill-seafoam group-hover:fill-white transition group-hover:duration-700"
+                                            d="M100.054 35.675C100.054 35.0998 99.5875 34.6334 99.0123 34.6334H88.2179C85.1789 34.6334 82.3832 36.4109 81.0943 39.1631L74.9716 52.293H74.4564V50.3994C74.4564 48.4123 72.84 46.7959 70.8529 46.7959H67.5037C65.2742 46.7959 63.8966 49.2207 65.0324 51.1531C66.2064 53.1504 68.3222 54.3777 70.6705 54.3777C70.7775 54.3777 74.1072 54.3762 74.0003 54.3762L73.2728 55.9361C72.7859 56.051 72.3027 56.166 71.8462 56.2818C68.5478 57.1369 65.8894 59.6133 64.9072 62.7453C64.1806 65.0629 63.773 67.4012 63.6482 69.7467C62.122 69.3143 60.9943 67.924 60.9943 66.2613V32.2002C60.9943 29.1367 58.5726 26.6355 55.5439 26.4926V24.4063C55.5439 22.0854 53.6554 20.1969 51.3345 20.1969H48.7863V9.74473C48.7863 6.8416 46.4242 4.47949 43.521 4.47949H5.21128C2.30815 4.47949 -0.0539551 6.8416 -0.0539551 9.74473V86.3272C-0.0539551 88.9906 1.94116 91.1752 4.51148 91.5215V93.4232C4.51148 94.5799 5.45249 95.5207 6.60894 95.5207H10.0615C11.2181 95.5207 12.1589 94.5797 12.1589 93.4232V91.5922H36.573V93.4232C36.573 94.5799 37.514 95.5207 38.6705 95.5207H42.1234C43.28 95.5207 44.2209 94.5797 44.2209 93.4232V91.5215C46.7912 91.175 48.7863 88.9906 48.7863 86.3272V34.8439H51.3345C53.6554 34.8439 55.5439 32.9555 55.5439 30.6346V28.5895C57.4214 28.7311 58.9109 30.2871 58.9109 32.2002V66.2617C58.9109 69.0693 60.9459 71.4061 63.6171 71.8871C63.6736 74.167 63.9957 76.4502 64.6191 78.7258C65.0623 80.3264 66.016 81.7209 67.2945 82.7486V91.7887C67.2945 93.8465 68.9689 95.5209 71.0267 95.5209H79.5007C81.5586 95.5209 83.233 93.8465 83.233 91.7887V89.06H98.9025C99.4777 89.06 99.9441 88.5936 99.9441 88.0184C99.8873 82.5479 100.048 37.2902 100.054 35.675ZM10.0613 93.4375L6.59448 93.4232V91.5973H10.0705L10.0613 93.4375ZM42.1236 93.4375L38.6564 93.4232V91.5973H42.1328L42.1236 93.4375ZM46.7031 86.3272C46.7031 88.0818 45.2759 89.509 43.5212 89.509H5.21128C3.45659 89.509 2.02944 88.0818 2.02944 86.3272V9.74473C2.02944 7.99004 3.45659 6.56289 5.21128 6.56289H43.5212C45.2759 6.56289 46.7031 7.99004 46.7031 9.74473C46.7031 25.8406 46.7031 70.169 46.7031 86.3272ZM53.4605 30.6346C53.4605 31.8068 52.5068 32.7605 51.3345 32.7605H48.7863V22.2801H51.3345C52.507 22.2801 53.4605 23.2338 53.4605 24.4061V30.6346ZM82.9816 40.0451C83.9281 38.0234 85.9836 36.7168 88.2177 36.7168H97.9705V53.2522C89.3558 53.5604 81.6275 54.3125 75.8201 55.4035L82.9816 40.0451ZM72.373 52.2945H70.6701C69.1111 52.2945 67.6531 51.5002 66.8281 50.0973C66.5115 49.5582 66.8814 48.8791 67.5035 48.8791H70.8527C71.691 48.8791 72.373 49.5611 72.373 50.3994V52.2945ZM66.8947 63.3691C67.6632 60.9176 69.7613 58.9746 72.3638 58.2998C79.9289 56.3775 90.1435 55.6205 97.8607 55.3387V65.4326H96.6644C93.8828 65.4326 91.2777 66.9178 89.8668 69.3068L85.0658 77.4067H66.4457C65.3039 72.7188 65.4433 68.0006 66.8947 63.3691ZM97.8607 82.4383H72.224C70.2662 82.4383 68.3101 81.4447 67.1976 79.4899C70.333 79.4908 55.8398 79.4867 97.8609 79.4984C97.8607 79.6863 97.8607 82.5432 97.8607 82.4383ZM97.8607 77.4065H87.488L91.6597 70.3672C92.6988 68.6084 94.6164 67.5158 96.6646 67.5158H97.8609V77.4065H97.8607ZM81.1496 91.7887C81.1496 92.6981 80.4101 93.4377 79.5005 93.4377H71.0265C70.1171 93.4377 69.3775 92.6982 69.3775 91.7887V83.9629C69.9941 84.2037 70.6322 84.3717 71.2894 84.4506C71.7517 87.0643 74.0271 89.06 76.7712 89.06H81.1494V91.7887H81.1496ZM97.8607 86.9766H76.7714C75.206 86.9766 73.8775 85.9426 73.433 84.5215H97.8607V86.9766Z" />
+                                        <path
+                                            class="fill-seafoam group-hover:fill-white transition group-hover:duration-700"
+                                            d="M71.7942 75.2426H76.8642C80.0989 75.2426 82.9757 73.1826 84.023 70.1162C84.6097 68.3977 83.297 66.6393 81.5073 66.6393H73.8226C71.246 66.6393 69.1499 68.7266 69.1499 71.2926V72.5982C69.1501 74.0564 70.336 75.2426 71.7942 75.2426ZM71.2333 71.2928C71.2333 69.8758 72.395 68.7227 73.8228 68.7227H81.5075C81.8843 68.7227 82.1716 69.0918 82.0517 69.4428C81.2923 71.666 79.2079 73.1592 76.8644 73.1592H71.7944C71.4853 73.1592 71.2335 72.9074 71.2335 72.5982V71.2928H71.2333ZM65.637 10.2746C72.623 10.2746 78.3067 15.9635 78.3071 22.9564C78.3071 23.5316 78.7735 23.998 79.3487 23.998C79.9239 23.998 80.3903 23.5316 80.3903 22.9564C80.3897 14.815 73.7712 8.19141 65.6368 8.19141C65.0616 8.19141 64.5952 8.65781 64.5952 9.23301C64.5952 9.8082 65.0618 10.2746 65.637 10.2746Z" />
+                                        <path
+                                            class="fill-seafoam group-hover:fill-white transition group-hover:duration-700"
+                                            d="M65.6368 15.0307C70.0003 15.0307 73.5499 18.5859 73.5499 22.9559C73.5499 23.5311 74.0163 23.9975 74.5915 23.9975C75.1667 23.9975 75.6331 23.5311 75.6331 22.9559C75.6331 17.4373 71.1487 12.9473 65.6368 12.9473C65.0616 12.9473 64.5952 13.4137 64.5952 13.9889C64.5952 14.5643 65.0616 15.0307 65.6368 15.0307ZM64.9028 22.2186C64.4868 22.6355 64.5128 23.308 64.9028 23.698C65.3161 24.1102 65.9798 24.0889 66.3718 23.698C66.787 23.2828 66.7872 22.6352 66.3718 22.2186C65.9862 21.8334 65.2884 21.8334 64.9028 22.2186Z" />
+                                        <path
+                                            class="fill-seafoam group-hover:fill-white transition group-hover:duration-700"
+                                            d="M68.7934 22.9564C68.7934 23.5316 69.2598 23.998 69.835 23.998C70.4102 23.998 70.8766 23.5316 70.8766 22.9564C70.8766 20.0609 68.5262 17.7051 65.6373 17.7051C65.0621 17.7051 64.5957 18.1715 64.5957 18.7467C64.5957 19.3219 65.0621 19.7883 65.6373 19.7883C67.3773 19.7883 68.7934 21.2092 68.7934 22.9564Z" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_1033_1740">
+                                            <rect width="100" height="100" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="text-white font-semibold 2xl:text-[38px] xl:text-[28px] lg:text-[25px] text-[22px]">
+                            Fast Сharging
+                        </div>
+                        <p
+                            class="text-lg text-white opacity-80 font-light my-1 2xl:my-10 lg:my-7 xl:text-[24px] md:leading-[34px] lg:text-[20px] md:text-[18px]">
+                            Consectetur adipiscing elit, sed do eiusm od tempor incididunt
+                            ut labore.
+                        </p>
+                        <a href="Javascript:void(0)"
+                            class="text-white flex justify-center items-center gap-2 hover:text-seafoam transition hover:duration-300 xl:text-[22px] text-[20px] md:mt-2">Read
+                            More
+                            <span class="material-icons">east</span>
+                        </a>
+                    </div>
+                    <div class="text-center" data-aos="flip-right" data-aos-duration="500">
+                        <div class="mx-auto mb-5 2xl:mb-10 lg:mb-7 w-20 h-20 md:w-24 md:h-24">
+                            <div class="w-full h-full group fill-seafoam group-hover:fill-white">
+                                <svg viewBox="0 0 111 111" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        class="fill-seafoam group-hover:fill-white transition group-hover:duration-700"
+                                        d="M90.1731 43.9568C87.9854 35.9103 80.0344 30.5543 71.4458 31.8175C69.108 19.8298 58.6567 11 46.4927 11C32.4534 11 21.0645 22.5077 21.0645 36.6934C21.0645 39.0556 21.377 41.582 22.0021 43.7926H21.8521C12.4884 43.7926 5 51.3592 5 60.8205C5 70.2819 12.4884 77.8484 21.8521 77.8484H26.3652C26.3652 77.381 26.3652 76.901 26.3652 76.4336V76.2694C26.5152 60.3405 39.3168 47.5822 55.0688 47.5822C70.6707 47.5822 83.6223 60.5047 83.6223 76.2694V76.5852C83.6223 77.0526 83.6223 77.5326 83.6223 78H88.1479C97.5116 78 105 70.4334 105 60.9721C104.85 52.155 98.4492 44.8916 90.1731 43.9568ZM21.8396 54.833C18.5642 54.833 15.9139 57.5109 15.9139 60.8205C15.9139 61.6037 15.1388 62.3995 14.3512 62.3995C13.5636 62.3995 12.7885 61.6163 12.7885 60.8205C12.7885 55.7804 16.839 51.675 21.8396 51.675C22.6147 51.675 23.4023 52.3066 23.4023 53.254C23.4023 54.0371 22.7772 54.833 21.8396 54.833ZM62.5572 36.0745H62.4072C61.6321 36.0745 61.007 35.4429 60.8445 34.6597C59.9069 27.4089 53.8186 21.8888 46.4927 21.8888C45.7176 21.8888 44.93 21.1056 44.93 20.3098C44.93 19.514 45.7051 18.7308 46.4927 18.7308C55.3813 18.7308 62.8697 25.3499 63.9699 34.3439C64.1199 35.2787 63.4948 36.0745 62.5572 36.0745ZM81.5971 48.517C81.447 48.517 81.447 48.517 81.2845 48.517C80.5094 48.517 79.8843 48.0496 79.7218 47.2538C79.0967 44.5758 76.759 42.5294 73.9461 42.5294C73.4836 42.5294 73.0085 42.5294 72.3834 42.681C71.6083 42.8326 70.6707 42.3652 70.5082 41.582C70.3582 40.7988 70.8207 39.8514 71.5958 39.6872C72.3709 39.5356 73.1585 39.3714 73.9336 39.3714C78.1466 39.3714 81.8971 42.3652 82.8222 46.6222C82.9972 47.5822 82.3722 48.3654 81.5971 48.517Z" />
+                                    <path
+                                        class="fill-seafoam group-hover:fill-white transition group-hover:duration-700"
+                                        d="M55.5 72C53.12 72 52 74.2867 52 76.5734C52 78.7133 53.2727 81 55.5 81C57.88 81 59 78.7133 59 76.4266C58.9873 74.2867 57.88 72 55.5 72Z" />
+                                    <path
+                                        class="fill-seafoam group-hover:fill-white transition group-hover:duration-700"
+                                        d="M80 75.5V75.1866C80 61.2581 68.6153 50 54.5812 50C40.6971 50 29.1625 61.4211 29 75.3496V75.5C29 89.5789 40.3847 101 54.5812 101C68.7653 101 80 89.5789 80 75.5ZM48.8076 81.9063C48.1828 82.2198 46.9331 82.5332 45.221 82.5332C41.0096 82.5332 38.3602 79.7124 38.3602 75.4875C38.3602 71.2625 41.322 68.2913 45.5334 68.2913C47.2455 68.2913 48.3453 68.7552 48.8076 68.9181C49.1201 69.0686 49.1201 69.382 49.1201 69.545L48.6577 70.9491C48.6577 71.0996 48.5077 71.2625 48.3453 71.2625C48.1953 71.2625 48.0328 71.2625 47.8829 71.2625C47.258 70.9491 46.4832 70.7987 45.5459 70.7987C42.8966 70.7987 41.1845 72.5162 41.1845 75.337C41.1845 78.1578 42.7466 79.8754 45.396 79.8754C46.3333 79.8754 47.2705 79.7249 47.7329 79.4115C47.8829 79.2611 48.0453 79.2611 48.1953 79.4115C48.3453 79.5619 48.5077 79.5619 48.5077 79.7249L48.8201 80.9786C49.1201 81.5929 48.9576 81.9063 48.8076 81.9063ZM55.0436 82.6962C51.2945 82.6962 48.8076 79.8754 48.8076 75.6504C48.8076 71.4255 51.457 68.4543 55.2061 68.4543C58.9552 68.4543 61.442 71.2751 61.442 75.5C61.592 80.3392 58.3178 82.6962 55.0436 82.6962ZM70.8023 81.2795C70.8023 81.5929 70.4898 81.9063 70.1774 81.9063H63.1541C62.8417 81.9063 62.5293 81.5929 62.5293 81.2795V80.3392C62.5293 80.1888 62.5293 80.0258 62.6792 79.8754L63.9289 78.7847C66.8907 75.9639 67.828 74.8732 67.828 73.469C67.828 72.0649 66.8907 71.9019 66.2659 71.9019C65.3286 71.9019 64.7038 72.3658 64.3913 72.6792C64.2414 72.8296 64.0789 72.8296 63.9289 72.8296C63.779 72.8296 63.6165 72.6792 63.4666 72.5162L63.0042 71.4255C62.8542 71.2751 63.0042 70.9617 63.1541 70.7987C64.0914 70.0214 65.3411 69.545 66.5908 69.545C69.2401 69.545 70.4898 71.4255 70.4898 73.306C70.4898 75.5 68.9277 77.368 66.7408 79.4115H70.1774C70.4898 79.4115 70.8023 79.7249 70.8023 80.0383V81.2795Z" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="text-white font-semibold 2xl:text-[38px] xl:text-[28px] lg:text-[25px] text-[22px]">
+                            Environmental Friendliness
+                        </div>
+                        <p
+                            class="text-lg text-white opacity-80 font-light my-1 2xl:my-10 lg:my-7 xl:text-[24px] md:leading-[34px] lg:text-[20px] md:text-[18px]">
+                            Consectetur adipiscing elit, sed do eiusm od tempor incididunt
+                            ut labore.
+                        </p>
+                        <a href="Javascript:void(0)"
+                            class="flex justify-center items-center gap-2 text-white hover:text-seafoam transition hover:duration-300">
+                            <span class="material-icons">east</span>
+                        </a>
+                    </div>
+                    <div class="xl:col-span-1 md:col-span-2">
+                        <div class="text-center w-full mx-auto lg:max-w-[450px] max-w-[350px] md:mt-10 xl:mt-0"
+                            data-aos="flip-right" data-aos-duration="500">
+                            <div class="mx-auto mb-5 2xl:mb-10 lg:mb-7 w-16 h-16 md:w-24 md:h-24">
+                                <div class="w-full h-full">
+                                    <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path class="fill-seafoam hover:fill-white transition hover:duration-700"
+                                            d="M56.25 68.75V93.75H100L75 6.25H56.25V25H43.75V6.25H25L0 93.75H43.75V68.75H56.25ZM43.75 37.5H56.25V56.25H43.75V37.5Z" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div
+                                class="text-white font-semibold 2xl:text-[38px] xl:text-[28px] lg:text-[25px] text-[22px]">
+                                Endless Possibilities
+                            </div>
+                            <p
+                                class="text-lg text-white opacity-80 font-light my-1 2xl:my-10 lg:my-7 xl:text-[24px] md:leading-[34px] lg:text-[20px] md:text-[18px]">
+                                Consectetur adipiscing elit, sed do eiusm od tempor incididunt
+                                ut labore.
+                            </p>
+                            <a href="Javascript:void(0)"
+                                class="flex justify-center items-center gap-2 text-white hover:text-seafoam transition hover:duration-300">
+                                <span class="material-icons">east</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--END:Perfomance-->
+
+        <!--START:limitless-Technology-->
+        <section class="overflow-hidden mt-5 sm:mt-0">
+            <div class="container xl:px-4 lg:px-7 md:pt-0 pt-5">
+                <div class="grid md:grid-cols-2 gap-5">
+                    <div class="order-2 md:order-1" data-aos="zoom-in" data-aos-duration="400">
+                        <img src="img/e-vehical/technology.png" alt="e-vehical"
+                            class="object-cover rounded w-full h-full  md:rounded-2xl" />
+                    </div>
+                    <div class="flex justify-end items-center order-1 md:order-2" data-aos="fade-up"
+                        data-aos-duration="400">
+                        <div class="xl:max-w-[670px] py-2 lg:max-w-lg  lg:ml-5">
+                            <div
+                                class="text-seafoam text-lg font-semibold 2xl:mb-10 xl:text-[24px] lg:text-[20px] lg:mb-4 mb-2">
+                                NEW OPPORTUNITIES
+                            </div>
+                            <h2
+                                class="font-bold text-3xl leading-[40px] 2xl:mb-10  xl:text-[48px] xl:leading-[65px] lg:text-[40px] lg:leading-[60px] md:text-[35px] lg:mb-4 md:mb-3 mb-2">
+                                Seamless, Limitless Technology
+                            </h2>
+                            <p
+                                class="text-lg opacity-50 2xl:mb-10 xl:text-[24px] xl:leading-[32px] md:text-[18px] mb-5">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua.
+                            </p>
+                            <div class="flex gap-2 sm:gap-5">
+                                <div class="flex items-center">
+                                    <a href="javascript:void(0)"
+                                        class="block rounded-lg bg-seafoam text-white px-5 py-2 text-md border-seafoam border-2 hover:bg-white hover:text-black hover:border-black transition hover:duration-700 xl:text-2xl xl:py-3 xl:px-7 lg:px-5 lg:text-lg md:py-2 md:px-4">View
+                                        More</a>
+                                </div>
+                                <div class="flex items-center">
+                                    <a href="javascript:void(0)"
+                                        class="block rounded-lg bg-seafoam text-white px-5 py-2 text-md border-seafoam border-2 hover:bg-white hover:text-black hover:border-black transition hover:duration-700 xl:text-2xl xl:py-3 xl:px-7 lg:px-5 lg:text-lg md:py-2 md:px-4">Contacts</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--END:limitless-Technology-->
+
+        <!--START:Numerical-->
+        <section class="overflow-hidden">
+            <div class="container p-4 py-10 xl:px-4 xl:py-20 lg:py-10 lg:px-7">
+                <div class="grid md:grid-cols-4 grid-cols-2">
+                    <div class="text-center" data-aos="fade-up" data-aos-duration="300">
+                        <div class="absolute flex justify-center items-center w-full h-full">
+                            <div class="text-black text-[20px] font-semibold xl:text-[34px] lg:text-xl md:text-base">
+                                Projects
+                            </div>
+                        </div>
+                        <h2
+                            class="text-black opacity-10 text-[100px] font-medium Lexend relative z-10 after:absolute after:content-[''] after:border-r-2 after:border-black after:-z-[10] xl:text-[180px] xl:after:h-20 xl:after:w-1 xl:after:top-24 md:after:top-14 md:after:h-12 md:after:right-0">
+                            98
+                        </h2>
+                    </div>
+                    <div class="text-center" data-aos="fade-up" data-aos-duration="400">
+                        <div class="absolute flex justify-center items-center w-full h-full">
+                            <div class="text-black text-[20px] font-semibold xl:text-[34px] lg:text-xl md:text-base">
+                                Peolpe
+                            </div>
+                        </div>
+                        <h2
+                            class="text-black opacity-10 text-[100px] font-medium Lexend relative z-10 after:absolute after:content-[''] after:border-r-2 after:border-black after:-z-[10] xl:text-[180px] xl:after:h-20 xl:after:w-1 xl:after:top-24 md:after:top-14 md:after:h-12 md:after:right-0">
+                            65
+                        </h2>
+                    </div>
+                    <div class="text-center" data-aos="fade-up" data-aos-duration="500">
+                        <div class="absolute flex justify-center items-center w-full h-full">
+                            <div class="text-black text-[20px] font-semibold xl:text-[34px] lg:text-xl md:text-base">
+                                Years
+                            </div>
+                        </div>
+                        <h2
+                            class="text-black opacity-10 text-[100px] font-medium Lexend relative z-10 after:absolute after:content-[''] after:border-r-2 after:border-black after:-z-[10] xl:text-[180px] xl:after:h-20 xl:after:w-1 xl:after:top-24 md:after:top-14 md:after:h-12 md:after:right-0">
+                            10
+                        </h2>
+                    </div>
+                    <div class="text-center" data-aos="fade-up" data-aos-duration="600">
+                        <div class="absolute flex justify-center items-center w-full h-full">
+                            <div class="text-black text-[20px] font-semibold xl:text-[34px] lg:text-xl md:text-base">
+                                Projects
+                            </div>
+                        </div>
+                        <h2 class="text-black opacity-10 text-[100px] xl:text-[180px] font-medium Lexend relative">
+                            15
+                        </h2>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--END:Numerical-->
+    </main>
+    <!--END:Main-->
+
+    <!--START:footer-->
+    <footer class="bg-black xl:pt-10 lg:pt-7 overflow-hidden">
+        <div class="container xl:px-4 lg:px-7">
+            <div>
+                <div
+                    class="grid grid-cols-2 lg:grid-cols-6 md:grid-cols-4 lg:gap-5 md:gap-x-7 border-b border-[#C4C4C4]">
+                    <div class="col-span-2 xl:mx-5 xl:mb-7 mt-5">
+                        <div data-aos="fade-right" data-aos-duration="300">
+                            <a href="javascript:void(0)" class="flex justify-center md:justify-start">
+                                <img src="img/logo/e-vehical-logo.svg" alt="e-vehical" />
+                                <h5
+                                    class="text-white text-2xl ml-4 my-2 font-semibold xl:text-4xl lg:text-3xl md:text-2xl">
+                                    <span class="text-seafoam">Z</span>ooa
+                                </h5>
+                            </a>
+                        </div>
+                        <div data-aos="fade-right" data-aos-duration="300">
+                            <p
+                                class="max-w-sm w-full text-white mb-5 mt-5 opacity-70 xl:text-lg xl:my-8 lg:text-sm md:text-base md:mt-5 md:text-left text-center">
+                                Lorem ipsum dolor sit amet, consectetur a dipiscing elit, sed
+                                do eiusmod.
+                            </p>
+                            <ul>
+                                <li class="mb-3 xl:mb-5 mt-3">
+                                    <a href="javascript:void(0)" class="flex justify-center md:justify-start"
+                                        data-aos="fade-right" data-aos-duration="300">
+                                        <div class="w-9 h-9 xl:w-8 xl:h-8">
+                                            <img src="img/icons/green-location.svg" alt="e-vevical"
+                                                class="w-full h-full xl:px-1 px-2" />
+                                        </div>
+                                        <p
+                                            class="text-white hover:text-seafoam transition hover:duration-300 xl:text-lg lg:text-sm xl:pl-5 md:pl-2 py-2 lg:py-2">
+                                            JI. Ray Puputan No 142
+                                        </p>
+                                    </a>
+                                </li>
+                                <li class="mb-3 xl:mb-5">
+                                    <a href="javascript:void(0)" class="flex justify-center md:justify-start"
+                                        data-aos="fade-right" data-aos-duration="400">
+                                        <div class="w-10 h-10 xl:w-9 xl:h-9">
+                                            <img src="img/icons/green-mail.svg" alt="e-vevical"
+                                                class="w-full h-full xl:px-1 px-2" />
+                                        </div>
+                                        <p
+                                            class="text-white hover:text-seafoam transition hover:duration-300 xl:text-lg lg:text-sm xl:pl-5 md:pl-2 py-2 lg:py-2">
+                                            (+65)81 122 5525
+                                        </p>
+                                    </a>
+                                </li>
+                                <li class="mb-3 xl:mb-5">
+                                    <a href="javascript:void(0)" class="flex justify-center md:justify-start"
+                                        data-aos="fade-right" data-aos-duration="500" data-aos-offset="0">
+                                        <div class="w-9 h-9 xl:w-8 xl:h-8">
+                                            <img src="img/icons/green-phone.svg" alt="e-vevical"
+                                                class="w-full h-full xl:px-1 px-2" />
+                                        </div>
+                                        <p
+                                            class="text-white hover:text-seafoam transition hover:duration-300 xl:text-lg lg:text-sm xl:pl-5 md:pl-2 py-2 lg:py-2">
+                                            Zooa@domain.com
+                                        </p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-span-2 xl:mx-5 xl:mb-7 mt-10 md:mt-5 sm:px-0" data-aos="zoom-in"
+                        data-aos-duration="600">
+                        <div class="grid md:grid-cols-2 gap-3  2xl:gap-5 xl:gap-3 md:text-left text-center">
+                            <div>
+                                <h5
+                                    class="text-xl text-white font-bold relative after:absolute after:content-[''] after:bg-seafoam after:rounded-lg after:h-px after:left-[38%] after:top-8 after:w-24 xl:after:top-12 xl:text-2xl xl:mb-14 xl:after:w-24 xl:after:h-[3px] md:mb-10 mb-7 md:after:top-9  md:after:left-0  md:text-xl md:after:w-20 md:after:h-0.5">
+                                    Quick Links
+                                </h5>
+                                <ul>
+                                    <li class="xl:mb-7 lg:mb-5 mb-4">
+                                        <a href="javascript:void(0)"
+                                            class="text-white hover:text-seafoam transition hover:duration-300 xl:text-lg lg:text-sm md:text-base">About
+                                            Us
+                                        </a>
+                                    </li>
+                                    <li class="xl:mb-7 lg:mb-5 mb-4">
+                                        <a href="javascript:void(0)"
+                                            class="text-white hover:text-seafoam transition hover:duration-300 xl:text-lg lg:text-sm md:text-base">Services</a>
+                                    </li>
+                                    <li class="xl:mb-7 lg:mb-5 mb-4">
+                                        <a href="javascript:void(0)"
+                                            class="text-white hover:text-seafoam transition hover:duration-300 xl:text-lg lg:text-sm md:text-base">EV
+                                            Charging
+                                        </a>
+                                    </li>
+                                    <li class="xl:mb-7 lg:mb-5 mb-4">
+                                        <a href="javascript:void(0)"
+                                            class="text-white hover:text-seafoam transition hover:duration-300 xl:text-lg lg:text-sm md:text-base">Charge
+                                            Point
+                                        </a>
+                                    </li>
+                                    <li class="xl:mb-7 lg:mb-5 mb-4">
+                                        <a href="javascript:void(0)"
+                                            class="text-white hover:text-seafoam transition hover:duration-300 xl:text-lg lg:text-sm md:text-base">Contact
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h5
+                                    class="text-xl text-white font-bold relative after:absolute after:content-[''] after:bg-seafoam after:rounded-lg after:h-px after:top-8 after:w-24 after:left-[38%]  xl:after:top-12 xl:after:w-24 xl:after:h-[3px] xl:text-2xl xl:mb-14 md:mb-10 mb-7 md:text-xl md:after:top-9 md:after:left-0 md:after:w-20 md:after:h-0.5">
+                                    Useful Links
+                                </h5>
+                                <ul>
+                                    <li class="xl:mb-7 lg:mb-5 mb-4">
+                                        <a href="javascript:void(0)"
+                                            class="text-white hover:text-seafoam transition hover:duration-300 xl:text-lg lg:text-sm md:text-base">Privacy
+                                            Policy
+                                        </a>
+                                    </li>
+                                    <li class="xl:mb-7 lg:mb-5 mb-4">
+                                        <a href="javascript:void(0)"
+                                            class="text-white hover:text-seafoam transition hover:duration-300 xl:text-lg lg:text-sm md:text-base">Terms
+                                            and Conditions</a>
+                                    </li>
+                                    <li class="xl:mb-7 lg:mb-5 mb-4">
+                                        <a href="javascript:void(0)"
+                                            class="text-white hover:text-seafoam transition hover:duration-300 xl:text-lg lg:text-sm md:text-base">Disclaimer
+                                        </a>
+                                    </li>
+                                    <li class="xl:mb-7 lg:mb-5 mb-4">
+                                        <a href="javascript:void(0)"
+                                            class="text-white hover:text-seafoam transition hover:duration-300 xl:text-lg lg:text-sm md:text-base">Support
+                                        </a>
+                                    </li>
+                                    <li class="xl:mb-7 lg:mb-5">
+                                        <a href="javascript:void(0)"
+                                            class="text-white hover:text-seafoam transition hover:duration-300 xl:text-lg lg:text-sm md:text-base">FAQ
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-span-2 flex justify-end" data-aos="fade-left" data-aos-duration="500">
+                        <div class=" xl:mx-5 xl:mb-7 lg:my-5 lg:mb-0 mt-10 mb-5">
+                            <h5
+                                class="md:text-left text-center text-xl text-white font-bold relative after:absolute after:content-[''] after:bg-seafoam after:rounded-lg after:h-px after:top-8 after:w-24   after:left-[38%] xl:after:top-12 xl:text-2xl xl:mb-14 md:mb-10 mb-7 xl:after:w-24 xl:after:h-[3px] md:after:top-9 md:after:left-0 md:text-xl md:after:w-20 md:after:h-0.5">
+                                Newsletter
+                            </h5>
+
+                            <div class="flex justify-center md:justify-start">
+                                <div class="flex md:gap-4 gap-2">
+                                    <input type="email" placeholder="Your Email Address"
+                                        class="border rounded-md max-w-[300px] w-full py-2 px-3 2xl:py-4 2xl:px-5 xl:placeholder:text-lg md:placeholder:text-base">
+                                    <a href="javascript:void(0)"
+                                        class="flex justify-center md:justify-start items-center rounded-md w-28 xl:w-36 text-white text-sm bg-seafoam 2xl:py-4 xl:text-lg xl:px-8 xl:py-3 md:px-5 hover:bg-white hover:text-black transition hover:duration-700 md:text-base py-2">SEND</a>
+                                </div>
+                            </div>
+                            <p
+                                class="max-w-sm w-full xl:text-lg text-white opacity-70 my-7 xl:my-10 lg:my-7 lg:text-sm md:text-base md:text-left text-center">
+                                Lorem ipsum dolor sit amet, consectectur adipiscing elit, sed do
+                                eiusmod tempor
+                            </p>
+                            <div class="flex justify-center md:justify-start gap-5 mb-3">
+                                <a href="javascript:void(0)">
+                                    <div
+                                        class="w-full h-full group fill-white hover:fill-seafoam bg-seafoam xl:py-3 xl:px-4 md:px-3 md:py-2 px-3 py-2 rounded-md border-2 border-transparent transition hover:duration-300 hover:bg-white">
+                                        <div class="w-[13px] h-[23px]">
+                                            <svg viewBox="0 0 13 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    class="fill-white group-hover:fill-seafoam transition hover:duration-300"
+                                                    d="M10.01 3.98503H12.125V0.407534C11.101 0.301049 10.0721 0.248476 9.04253 0.250034C5.98253 0.250034 3.89003 2.11753 3.89003 5.53753V8.48503H0.436279V12.49H3.89003V22.75H8.03003V12.49H11.4725L11.99 8.48503H8.03003V5.93129C8.03003 4.75003 8.34503 3.98503 10.01 3.98503Z" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="javascript:void(0)">
+                                    <div
+                                        class="w-full h-full group fill-white hover:fill-seafoam bg-seafoam xl:py-3 xl:px-3 md:px-2 md:py-2 px-2 py-2 rounded-md border-2 border-transparent transition hover:duration-300 hover:bg-white">
+                                        <div class="w-[22px] h-[19px]">
+                                            <svg viewBox="0 0 22 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    class="fill-white group-hover:fill-seafoam transition hover:duration-300"
+                                                    d="M21.8334 2.52548C21.0191 2.89234 20.158 3.13485 19.2767 3.24548C20.2064 2.66872 20.9031 1.76136 21.2376 0.69173C20.3639 1.2318 19.4076 1.61231 18.4101 1.81673C17.7433 1.06587 16.8555 0.566063 15.8857 0.395688C14.916 0.225312 13.9192 0.394008 13.0517 0.875318C12.1842 1.35663 11.4951 2.12333 11.0924 3.05517C10.6898 3.98701 10.5963 5.03129 10.8267 6.02423C9.06029 5.93145 7.33239 5.4538 5.75529 4.62232C4.17819 3.79085 2.78716 2.62414 1.67258 1.19798C1.28165 1.90692 1.07623 2.70978 1.07675 3.52673C1.07536 4.28541 1.25465 5.03267 1.59865 5.70199C1.94265 6.37131 2.44068 6.9419 3.04841 7.36298C2.34206 7.34302 1.65079 7.14619 1.03341 6.78923V6.84548C1.03871 7.90848 1.39741 8.93696 2.04884 9.75694C2.70027 10.5769 3.60444 11.1381 4.60841 11.3455C4.22194 11.4676 3.8207 11.532 3.41675 11.5367C3.13713 11.5333 2.85821 11.507 2.58258 11.458C2.86848 12.3724 3.42176 13.1715 4.16541 13.7442C4.90907 14.3168 5.80612 14.6345 6.73175 14.653C5.16872 15.9302 3.23896 16.6272 1.25008 16.633C0.887961 16.6342 0.526128 16.6117 0.166748 16.5655C2.19738 17.927 4.5638 18.6498 6.98092 18.6467C8.64891 18.6647 10.3036 18.3374 11.8485 17.6838C13.3933 17.0303 14.7972 16.0636 15.9782 14.8403C17.1592 13.617 18.0937 12.1615 18.727 10.559C19.3603 8.95645 19.6798 7.23892 19.6667 5.50673C19.6667 5.31548 19.6667 5.11298 19.6667 4.91048C20.5168 4.25214 21.25 3.44508 21.8334 2.52548Z" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="javascript:void(0)">
+                                    <div
+                                        class="w-full h-full group fill-white hover:fill-seafoam bg-seafoam xl:py-3 xl:px-3 md:px-2 md:py-2 px-2 py-2 rounded-md border-2 border-transparent transition hover:duration-300 hover:bg-white">
+                                        <div class="w-[22px] h-[23px]">
+                                            <svg width="22" height="23" viewBox="0 0 22 23" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    class="fill-white group-hover:fill-seafoam transition hover:duration-300"
+                                                    d="M11.0001 8.71C10.4687 8.71 9.94927 8.87363 9.50745 9.1802C9.06563 9.48677 8.72127 9.92251 8.51793 10.4323C8.31458 10.9421 8.26137 11.5031 8.36504 12.0443C8.4687 12.5855 8.72458 13.0826 9.10032 13.4728C9.47606 13.863 9.95478 14.1287 10.4759 14.2364C10.9971 14.344 11.5373 14.2888 12.0282 14.0776C12.5191 13.8665 12.9387 13.5089 13.234 13.05C13.5292 12.5912 13.6867 12.0518 13.6867 11.5C13.6867 11.1336 13.6173 10.7708 13.4822 10.4323C13.3472 10.0938 13.1493 9.78625 12.8998 9.52717C12.6504 9.2681 12.3542 9.06259 12.0282 8.92238C11.7023 8.78217 11.3529 8.71 11.0001 8.71ZM21.7576 5.95375C21.7519 5.08498 21.5978 4.22414 21.3026 3.41125C21.0851 2.81642 20.7487 2.27623 20.3155 1.82633C19.8822 1.37644 19.3621 1.02706 18.7892 0.80125C18.0065 0.494647 17.1775 0.334669 16.3409 0.32875C14.9434 0.25 14.5317 0.25 11.0001 0.25C7.46841 0.25 7.05675 0.25 5.65925 0.32875C4.82265 0.334669 3.9937 0.494647 3.21091 0.80125C2.63811 1.02706 2.11793 1.37644 1.6847 1.82633C1.25146 2.27623 0.915025 2.81642 0.697581 3.41125C0.402334 4.22414 0.248281 5.08498 0.242581 5.95375C0.166748 7.405 0.166748 7.8325 0.166748 11.5C0.166748 15.1675 0.166748 15.595 0.242581 17.0462C0.254242 17.9181 0.408087 18.7816 0.697581 19.6C0.914062 20.1921 1.25022 20.7292 1.68341 21.175C2.11479 21.6276 2.63609 21.977 3.21091 22.1987C3.9937 22.5054 4.82265 22.6653 5.65925 22.6712C7.05675 22.75 7.46841 22.75 11.0001 22.75C14.5317 22.75 14.9434 22.75 16.3409 22.6712C17.1775 22.6653 18.0065 22.5054 18.7892 22.1987C19.3641 21.977 19.8854 21.6276 20.3167 21.175C20.7499 20.7292 21.0861 20.1921 21.3026 19.6C21.5975 18.7831 21.7516 17.9186 21.7576 17.0462C21.8334 15.595 21.8334 15.1675 21.8334 11.5C21.8334 7.8325 21.8334 7.405 21.7576 5.95375ZM19.0059 14.9537C18.9711 15.648 18.8285 16.3318 18.5834 16.9788C18.3731 17.5184 18.0605 18.0086 17.664 18.4203C17.2676 18.8319 16.7956 19.1566 16.2759 19.375C15.6471 19.6153 14.9849 19.7483 14.3151 19.7688C13.4592 19.7688 13.2317 19.7688 11.0001 19.7688C8.76842 19.7688 8.54091 19.7688 7.68508 19.7688C7.01529 19.7483 6.35311 19.6153 5.72425 19.375C5.18703 19.1677 4.70188 18.8369 4.30508 18.4075C3.91255 18.0039 3.60941 17.5164 3.41675 16.9788C3.18444 16.3264 3.05991 15.6379 3.04841 14.9425C3.04841 14.0538 3.04841 13.8175 3.04841 11.5C3.04841 9.1825 3.04841 8.94625 3.04841 8.0575C3.05991 7.36205 3.18444 6.67362 3.41675 6.02125C3.61639 5.46337 3.93488 4.95956 4.34841 4.5475C4.73878 4.14208 5.20778 3.82761 5.72425 3.625C6.35311 3.38471 7.01529 3.25174 7.68508 3.23125C8.54091 3.23125 8.76842 3.23125 11.0001 3.23125C13.2317 3.23125 13.4592 3.23125 14.3151 3.23125C14.9849 3.25174 15.6471 3.38471 16.2759 3.625C16.8131 3.83232 17.2983 4.16306 17.6951 4.5925C18.0876 4.99609 18.3908 5.48365 18.5834 6.02125C18.8148 6.6743 18.9429 7.36195 18.9626 8.0575C18.9626 8.94625 18.9626 9.1825 18.9626 11.5C18.9626 13.8175 19.0384 14.0538 19.0059 14.9425V14.9537ZM17.2726 6.58375C17.1436 6.22036 16.9402 5.89035 16.6765 5.61649C16.4128 5.34263 16.095 5.13145 15.7451 4.9975C15.2646 4.82454 14.7585 4.74076 14.2501 4.75C13.4051 4.75 13.1667 4.75 11.0001 4.75C8.83342 4.75 8.59508 4.75 7.75008 4.75C7.23904 4.75519 6.73291 4.85421 6.25508 5.0425C5.9105 5.17036 5.59608 5.37293 5.33271 5.63673C5.06935 5.90053 4.86306 6.21952 4.72758 6.5725C4.57026 7.07354 4.4934 7.59804 4.50008 8.125C4.50008 9.0025 4.50008 9.25 4.50008 11.5C4.50008 13.75 4.50008 13.9975 4.50008 14.875C4.51082 15.4051 4.606 15.9297 4.78175 16.4275C4.91073 16.7909 5.1141 17.1209 5.37781 17.3948C5.64153 17.6686 5.95931 17.8798 6.30925 18.0138C6.77147 18.1903 7.25787 18.289 7.75008 18.3062C8.59508 18.3062 8.83342 18.3062 11.0001 18.3062C13.1667 18.3062 13.4051 18.3062 14.2501 18.3062C14.7611 18.3011 15.2673 18.202 15.7451 18.0138C16.095 17.8798 16.4128 17.6686 16.6765 17.3948C16.9402 17.1209 17.1436 16.7909 17.2726 16.4275C17.4539 15.9313 17.5493 15.4057 17.5542 14.875C17.5542 13.9975 17.5542 13.75 17.5542 11.5C17.5542 9.25 17.5542 9.0025 17.5542 8.125C17.5546 7.59377 17.459 7.06719 17.2726 6.5725V6.58375ZM11.0001 15.7975C10.4571 15.7975 9.91953 15.6863 9.41805 15.4702C8.91657 15.254 8.46108 14.9373 8.07766 14.5381C7.69425 14.1389 7.39044 13.6651 7.18365 13.1437C6.97687 12.6224 6.87116 12.0638 6.87258 11.5C6.87258 10.6496 7.11557 9.81823 7.57078 9.11127C8.02598 8.40431 8.67294 7.8535 9.42976 7.52856C10.1866 7.20363 11.0192 7.11918 11.8223 7.28592C12.6253 7.45265 13.3627 7.86307 13.941 8.46521C14.5193 9.06735 14.9126 9.83414 15.071 10.6685C15.2295 11.5029 15.146 12.3673 14.8311 13.1524C14.5162 13.9375 13.9841 14.6079 13.3022 15.0787C12.6202 15.5496 11.819 15.7997 11.0001 15.7975ZM15.3334 8.04625C15.0939 8.01993 14.8723 7.9025 14.7112 7.71659C14.5502 7.53069 14.461 7.28945 14.461 7.03937C14.461 6.7893 14.5502 6.54806 14.7112 6.36216C14.8723 6.17625 15.0939 6.05882 15.3334 6.0325C15.5729 6.05882 15.7945 6.17625 15.9556 6.36216C16.1167 6.54806 16.2058 6.7893 16.2058 7.03937C16.2058 7.28945 16.1167 7.53069 15.9556 7.71659C15.7945 7.9025 15.5729 8.01993 15.3334 8.04625Z"
+                                                    fill="white" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="javascript:void(0)">
+                                    <div
+                                        class="w-full h-full group fill-white hover:fill-seafoam bg-seafoam xl:py-3 xl:px-3 md:px-2 md:py-2 px-2 py-2 rounded-md border-2 border-transparent transition hover:duration-300 hover:bg-white">
+                                        <div class="w-[23px] h-[23px]">
+                                            <svg viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    class="fill-white group-hover:fill-seafoam transition hover:duration-300"
+                                                    d="M21.0286 0.250157H1.97113C1.75691 0.247182 1.5442 0.286436 1.34514 0.365677C1.14609 0.444917 0.964599 0.562593 0.81103 0.711983C0.657461 0.861374 0.534824 1.03955 0.450124 1.23634C0.365423 1.43313 0.320317 1.64468 0.317383 1.85891V21.1414C0.320317 21.3556 0.365423 21.5672 0.450124 21.764C0.534824 21.9608 0.657461 22.1389 0.81103 22.2883C0.964599 22.4377 1.14609 22.5554 1.34514 22.6346C1.5442 22.7139 1.75691 22.7531 1.97113 22.7502H21.0286C21.2429 22.7531 21.4556 22.7139 21.6546 22.6346C21.8537 22.5554 22.0352 22.4377 22.1887 22.2883C22.3423 22.1389 22.4649 21.9608 22.5496 21.764C22.6343 21.5672 22.6794 21.3556 22.6824 21.1414V1.85891C22.6794 1.64468 22.6343 1.43313 22.5496 1.23634C22.4649 1.03955 22.3423 0.861374 22.1887 0.711983C22.0352 0.562593 21.8537 0.444917 21.6546 0.365677C21.4556 0.286436 21.2429 0.247182 21.0286 0.250157ZM7.10113 19.0827H3.72613V8.95766H7.10113V19.0827ZM5.41363 7.54016C4.94818 7.54016 4.50179 7.35526 4.17266 7.02613C3.84353 6.697 3.65863 6.25061 3.65863 5.78516C3.65863 5.3197 3.84353 4.87331 4.17266 4.54419C4.50179 4.21506 4.94818 4.03016 5.41363 4.03016C5.66079 4.00213 5.91108 4.02662 6.14812 4.10203C6.38515 4.17743 6.60359 4.30206 6.78912 4.46774C6.97465 4.63342 7.1231 4.83642 7.22474 5.06345C7.32638 5.29048 7.37892 5.53642 7.37892 5.78516C7.37892 6.0339 7.32638 6.27984 7.22474 6.50686C7.1231 6.73389 6.97465 6.93689 6.78912 7.10258C6.60359 7.26826 6.38515 7.39288 6.14812 7.46829C5.91108 7.5437 5.66079 7.56819 5.41363 7.54016ZM19.2736 19.0827H15.8986V13.6489C15.8986 12.2877 15.4149 11.3989 14.1886 11.3989C13.8091 11.4017 13.4396 11.5207 13.1298 11.74C12.8201 11.9592 12.5849 12.2682 12.4561 12.6252C12.3681 12.8896 12.3299 13.1681 12.3436 13.4464V19.0714H8.96863C8.96863 19.0714 8.96863 9.86891 8.96863 8.94641H12.3436V10.3752C12.6502 9.84315 13.0962 9.40487 13.6334 9.10751C14.1706 8.81015 14.7788 8.66499 15.3924 8.68766C17.6424 8.68766 19.2736 10.1389 19.2736 13.2552V19.0827Z"
+                                                    fill="white" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:flex flex-wrap justify-between xl:py-8 md:py-5 py-5 md:text-left text-center">
+                    <p class="text-white opacity-70 xl:text-lg md:text-sm">
+                        Electric Vehicle & Charging Station Template Kit by Jegtheme
+                    </p>
+                    <p class="text-white opacity-70 xl:text-lg md:text-sm pt-5 md:pt-0">
+                        Copyright © 2021. All rights reserved.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--END:footer-->
+
+    <!-- Script -->
+    <script src=" plugins/tailwindcss/tailwindcss.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/e-vehical.js"></script>
+
+</body>
+
+</html>

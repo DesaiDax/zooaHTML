@@ -1,0 +1,1926 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport"
+		content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+	<title>Zooa - Theme Kit</title>
+
+	<!-- AOS Animation stylesheet -->
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+	<!-- fonts googleapis stylesheet -->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+
+	<!-- swiper stylesheet -->
+	<link rel="stylesheet" href="plugins/swiper/swiper-bundle.min.css">
+
+	<!-- main stylesheet -->
+	<link rel="stylesheet" href="css/main.css" />
+
+	<!-- Tailwind class base mixin -->
+	<style type="text/tailwindcss">
+		@layer utilities {
+			 .bg-lightbeige{
+                background-color: #FD7324;
+            }
+				.text-theme {
+					@apply text-white;
+				}
+
+				.btn {
+					@apply lg:py-3 py-2 lg:px-7 px-4 bg-lightbeige text-white inline-flex items-center transition duration-500;
+				}
+
+				.card{
+					@apply shadow-[0_2px_10px_rgba(0,0,0,0.1)];
+				}
+
+				.btn:hover {
+					@apply opacity-80;
+				}
+
+				.btn span {
+					@apply ml-2;
+				}
+
+				.container {
+					@apply mx-auto px-4;
+				}
+
+	            .dropdown:hover .dropdown-hover\:block {
+					display: block;
+				}
+
+				.position-unset {
+					position: unset;
+				}
+
+				.scroll-header{
+					@apply bg-white text-lightbeige border-b-4 border-lightbeige shadow-lg;
+				}
+				
+				.scroll-header svg path{
+                  fill: #FD7324;
+				}
+
+				.scroll-header{
+					color: #FD7324 !important;
+				}
+
+				.gradient-black{
+					background: linear-gradient(180deg, rgba(196, 196, 196, 0) 0%, rgba(17, 17, 17, 0.54) 48.96%, rgba(0, 0, 0, 0.81) 100%);
+				}
+				.menu-icon span:first-child{
+				   transform: rotate(45deg);
+				}
+	
+				.menu-icon span:last-child{
+				   top: 0;
+				   transform: rotate(-45deg);
+				}
+				.menu-icon .toggler-line{
+					display: none;
+				}
+				.left .subMenu{
+                    right: 101%;
+				}
+
+				.right .subMenu{
+                    left: 101%;
+				}
+				.collapse{
+  					max-height: 0;
+  					overflow: hidden;
+					transition-duration: 0.4s;
+				}
+				.collapse.show{
+					max-height: 100%;
+				}
+			}
+		</style>
+</head>
+
+<body class="bg-[#f8f8f8]">
+	<!-- START : loder -->
+	<div class="preloader"
+		style="position: fixed; display: flex; justify-content: center; align-items: center; width: 100%; height: 100%; background-color: #fff; z-index: 99999999999999;">
+		<img src="img/loder/enterprise-loder.gif" alt="loder">
+	</div>
+	<!-- END : loder -->
+
+	<!-- START: Header -->
+	<header class="fixed top-0 left-0 w-full text-lg z-50 lg:text-theme text-lightbeige transition duration-300">
+		<div class="container lg:py-4 py-2 flex items-center justify-between">
+			<a href="index.html" class="block lg:h-14 h-12">
+				<img src="img/logo/light-beige.svg" alt="Logo" class="h-full w-full" />
+			</a>
+			<button type="button" id="menu-btn" class="w-[22px] h-[14px] align-middle relative mx-2 lg:hidden block"
+				aria-controls="mobile-menu" aria-expanded="false" data-mobile-nav="false">
+				<span class="h-[3px] w-full absolute top-0 left-0 bg-lightbeige transition duration-300"></span>
+				<span
+					class="h-[3px] w-full absolute top-1/2 left-0 bg-lightbeige transition duration-300 toggler-line"></span>
+				<span class="h-[3px] w-full absolute top-full left-0 bg-lightbeige transition duration-300"></span>
+			</button>
+			<div class="lg:flex hidden items-center w-full text-center">
+				<div class="flex justify-between w-full">
+					<ul class="flex items-center mx-auto">
+						<li class="group">
+							<a href="javascript:void(0)" class="px-8 py-4">Home</a>
+							<div
+								class="absolute top-[75%] gap-10 bg-white text-black rounded-md text-[14px] text-left shadow-lg hidden group-hover:flex py-2">
+								<ul>
+									<h5 class="font-bold px-6 mb-2">Corporate</h5>
+									<li class="hover:text-lightbeige transition duration-300 px-6 py-1">
+										<a href="javascript:void(0)" class="whitespace-nowrap">Startup</a>
+									</li>
+									<li class="hover:text-lightbeige transition duration-300 px-6 py-1">
+										<a href="javascript:void(0)" class="whitespace-nowrap">Business</a>
+									</li>
+									<li class="hover:text-lightbeige transition duration-300 px-6 py-1">
+										<a href="javascript:void(0)" class="whitespace-nowrap">Corporate</a>
+									</li>
+									<li class="hover:text-lightbeige transition duration-300 px-6 py-1">
+										<a href="javascript:void(0)" class="whitespace-nowrap">Finance</a>
+									</li>
+									<li class="hover:text-lightbeige transition duration-300 px-6 py-1">
+										<a href="javascript:void(0)" class="whitespace-nowrap">Application</a>
+									</li>
+									<li class="hover:text-lightbeige transition duration-300 px-6 py-1">
+										<a href="javascript:void(0)" class="whitespace-nowrap">Consulting</a>
+									</li>
+									<li class="hover:text-lightbeige transition duration-300 px-6 py-1">
+										<a href="javascript:void(0)" class="whitespace-nowrap">Digital agency</a>
+									</li>
+									<li class="hover:text-lightbeige transition duration-300 px-6 py-1">
+										<a href="javascript:void(0)" class="whitespace-nowrap">SEO agency</a>
+									</li>
+									<li class="hover:text-lightbeige transition duration-300 px-6 py-1">
+										<a href="javascript:void(0)" class="whitespace-nowrap">Event & conference</a>
+									</li>
+									<li class="hover:text-lightbeige transition duration-300 px-6 py-1">
+										<a href="javascript:void(0)" class="whitespace-nowrap">Marketing agency</a>
+									</li>
+								</ul>
+								<ul>
+									<h5 class="font-bold px-6 mb-2">Specialized</h5>
+									<li class="hover:text-lightbeige transition duration-300 px-6 py-1">
+										<a href="javascript:void(0)" class="whitespace-nowrap">Restaurant</a>
+									</li>
+									<li class="hover:text-lightbeige transition duration-300 px-6 py-1">
+										<a href="javascript:void(0)" class="whitespace-nowrap">Architecture</a>
+									</li>
+									<li class="hover:text-lightbeige transition duration-300 px-6 py-1">
+										<a href="javascript:void(0)" class="whitespace-nowrap">Hotel & resort</a>
+									</li>
+									<li class="hover:text-lightbeige transition duration-300 px-6 py-1">
+										<a href="javascript:void(0)" class="whitespace-nowrap">Travel agency</a>
+									</li>
+									<li class="hover:text-lightbeige transition duration-300 px-6 py-1">
+										<a href="javascript:void(0)" class="whitespace-nowrap">Yoga & meditation</a>
+									</li>
+									<li class="hover:text-lightbeige transition duration-300 px-6 py-1">
+										<a href="javascript:void(0)" class="whitespace-nowrap">Gym & fitness</a>
+									</li>
+									<li class="hover:text-lightbeige transition duration-300 px-6 py-1">
+										<a href="javascript:void(0)" class="whitespace-nowrap">Spa salon</a>
+									</li>
+									<li class="hover:text-lightbeige transition duration-300 px-6 py-1">
+										<a href="javascript:void(0)" class="whitespace-nowrap">Cafe</a>
+									</li>
+									<li class="hover:text-lightbeige transition duration-300 px-6 py-1">
+										<a href="javascript:void(0)" class="whitespace-nowrap">Home decor</a>
+									</li>
+									<li class="hover:text-lightbeige transition duration-300 px-6 py-1">
+										<a href="javascript:void(0)" class="whitespace-nowrap">Dentist</a>
+									</li>
+									<li class="hover:text-lightbeige transition duration-300 px-6 py-1">
+										<a href="javascript:void(0)" class="whitespace-nowrap">Interior design</a>
+									</li>
+								</ul>
+								<ul>
+									<h5 class="font-bold px-6 mb-2">Portfolio</h5>
+									<li class="hover:text-lightbeige transition duration-300 px-6 py-1">
+										<a href="javascript:void(0)" class="whitespace-nowrap">Design agency</a>
+									</li>
+									<li class="hover:text-lightbeige transition duration-300 px-6 py-1">
+										<a href="javascript:void(0)" class="whitespace-nowrap">Web agency</a>
+									</li>
+									<li class="hover:text-lightbeige transition duration-300 px-6 py-1">
+										<a href="javascript:void(0)" class="whitespace-nowrap">Creative agency</a>
+									</li>
+									<li class="hover:text-lightbeige transition duration-300 px-6 py-1">
+										<a href="javascript:void(0)" class="whitespace-nowrap">Freelancer</a>
+									</li>
+									<li class="hover:text-lightbeige transition duration-300 px-6 py-1">
+										<a href="javascript:void(0)" class="whitespace-nowrap">Branding agency</a>
+									</li>
+									<li class="hover:text-lightbeige transition duration-300 px-6 py-1">
+										<a href="javascript:void(0)" class="whitespace-nowrap">Photography</a>
+									</li>
+									<li class="hover:text-lightbeige transition duration-300 px-6 py-1">
+										<a href="javascript:void(0)" class="whitespace-nowrap">Personal portfolio</a>
+									</li>
+									<li class="hover:text-lightbeige transition duration-300 px-6 py-1">
+										<a href="javascript:void(0)" class="whitespace-nowrap">Vertical portfolio</a>
+									</li>
+									<li class="hover:text-lightbeige transition duration-300 px-6 py-1">
+										<a href="javascript:void(0)" class="whitespace-nowrap">Interactive portfolio</a>
+									</li>
+									<li class="hover:text-lightbeige transition duration-300 px-6 py-1">
+										<a href="javascript:void(0)" class="whitespace-nowrap">Split portfolio</a>
+									</li>
+									<li class="hover:text-lightbeige transition duration-300 px-6 py-1">
+										<a href="javascript:void(0)" class="whitespace-nowrap">Creative portfolio</a>
+									</li>
+								</ul>
+								<ul>
+									<h5 class="font-bold px-6 mb-2">Other</h5>
+									<li class="hover:text-lightbeige transition duration-300 px-6 py-1">
+										<a href="javascript:void(0)" class="whitespace-nowrap">Furniture shop</a>
+									</li>
+									<li class="hover:text-lightbeige transition duration-300 px-6 py-1">
+										<a href="javascript:void(0)" class="whitespace-nowrap">Fashion shop</a>
+									</li>
+									<li class="hover:text-lightbeige transition duration-300 px-6 py-1">
+										<a href="javascript:void(0)" class="whitespace-nowrap">Magazine</a>
+									</li>
+									<li class="hover:text-lightbeige transition duration-300 px-6 py-1">
+										<a href="javascript:void(0)" class="whitespace-nowrap">Lifestyle blog</a>
+									</li>
+									<li class="hover:text-lightbeige transition duration-300 px-6 py-1">
+										<a href="javascript:void(0)" class="whitespace-nowrap">Classic blog</a>
+									</li>
+									<li class="hover:text-lightbeige transition duration-300 px-6 py-1">
+										<a href="javascript:void(0)" class="whitespace-nowrap">Blog metro</a>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li class="group">
+							<a href="javascript:void(0)" class="px-8 py-4">About</a>
+							<div
+								class="absolute top-[75%] gap-10 bg-white text-black rounded-md text-[14px] text-left shadow-lg hidden group-hover:flex py-2">
+								<ul>
+									<li class="dropdown relative right">
+										<a href="javascript:void(0)"
+											class="hover:text-lightbeige transition duration-300 px-6 py-4">Lifestyle
+											blog</a>
+										<div
+											class="hidden dropdown-hover:block bg-white shadow-lg rounded-md absolute top-[0] subMenu py-2">
+											<ul>
+												<li class="hover:text-lightbeige transition duration-300 px-6 py-1">
+													<a href="javascript:void(0)" class="whitespace-nowrap">Furniture
+														shop</a>
+												</li>
+												<li class="hover:text-lightbeige transition duration-300 px-6 py-1">
+													<a href="javascript:void(0)" class="whitespace-nowrap">Fashion
+														shop</a>
+												</li>
+												<li class="hover:text-lightbeige transition duration-300 px-6 py-1">
+													<a href="javascript:void(0)" class="whitespace-nowrap">Magazine</a>
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li class="relative px-6 py-1 dropdown left">
+										<a href="javascript:void(0)"
+											class="hover:text-lightbeige transition duration-300 whitespace-nowrap">Classic
+											blog</a>
+										<div
+											class="hidden dropdown-hover:block bg-white shadow-lg rounded-md absolute top-[0] subMenu py-2">
+											<ul>
+												<li class="hover:text-lightbeige transition duration-300 px-6 py-1">
+													<a href="javascript:void(0)" class="whitespace-nowrap">Our
+														services</a>
+												</li>
+												<li class="hover:text-lightbeige transition duration-300 px-6 py-1">
+													<a href="javascript:void(0)" class="whitespace-nowrap">What we
+														offer</a>
+												</li>
+												<li class="hover:text-lightbeige transition duration-300 px-6 py-1">
+													<a href="javascript:void(0)" class="whitespace-nowrap">Our
+														process</a>
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li class="hover:text-lightbeige transition duration-300 px-6 py-1">
+										<a href="javascript:void(0)" class="whitespace-nowrap">Blog metro</a>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<a href="javascript:void(0)" class="px-8 py-4">Packages</a>
+						</li>
+						<li>
+							<a href="javascript:void(0)" class="px-8 py-4">Contact Us</a>
+						</li>
+						<li>
+							<a href="javascript:void(0)" class="px-8 py-4">FAQ</a>
+						</li>
+					</ul>
+					<div class="flex items-center">
+						<a href="javascript:void(0)" class="mr-8">
+							<svg width="30" height="29" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M14.072 26.583C6.742 26.583.78 20.62.78 13.292.78 5.963 6.743 0 14.072 0 21.4 0 27.363 5.963 27.363 13.292c0 7.328-5.963 13.291-13.291 13.291Zm0-24.166c-5.996 0-10.876 4.878-10.876 10.875s4.88 10.875 10.876 10.875c5.995 0 10.875-4.878 10.875-10.875S20.067 2.417 14.072 2.417Z"
+									fill="#fff" />
+								<path
+									d="M28.572 29c-.31 0-.62-.118-.855-.354l-5.794-5.794a1.21 1.21 0 0 1 1.71-1.709l5.793 5.794A1.207 1.207 0 0 1 28.572 29Z"
+									fill="#fff" />
+							</svg>
+						</a>
+						<a href="javascript:void(0)" class="btn rounded-md">Buy now</a>
+					</div>
+				</div>
+			</div>
+			<div class="fixed inset-0 sm:w-3/4 bg-white transition duration-700 translate-x-[-110%] px-4 py-3"
+				id="mobile-menu">
+				<span class="absolute top-2 right-2 material-icons sm:hidden" id="closeMenu">close</span>
+				<a href="index.html" class="block lg:h-14 h-12">
+					<img src="img/logo/light-beige.svg" alt="Logo" class="h-full" />
+				</a>
+				<div class="h-full overflow-auto text-[15px] py-3">
+					<ul>
+						<li>
+							<div>
+								<button
+									class="w-full h-full flex justify-between border-b text-left hover:bg-lightbeige hover:text-white transition duration-700 px-[15px] py-[9px]"
+									data-toggle="collapse">
+									<span>Home</span>
+									<span
+										class="material-icons transition duration-700 rotate-icon">keyboard_arrow_down</span>
+								</button>
+								<div class="collapse transition duration-700">
+									<div class="sm:grid grid-cols-2 text-black py-2">
+										<ul>
+											<h5 class="font-bold px-[15px]">Corporate</h5>
+											<li
+												class="hover:text-lightbeige transition duration-300 px-[15px] py-[2px]">
+												<a href="javascript:void(0)" class="whitespace-nowrap">Startup</a>
+											</li>
+											<li
+												class="hover:text-lightbeige transition duration-300 px-[15px] py-[2px]">
+												<a href="javascript:void(0)" class="whitespace-nowrap">Business</a>
+											</li>
+											<li
+												class="hover:text-lightbeige transition duration-300 px-[15px] py-[2px]">
+												<a href="javascript:void(0)" class="whitespace-nowrap">Corporate</a>
+											</li>
+											<li
+												class="hover:text-lightbeige transition duration-300 px-[15px] py-[2px]">
+												<a href="javascript:void(0)" class="whitespace-nowrap">Finance</a>
+											</li>
+											<li
+												class="hover:text-lightbeige transition duration-300 px-[15px] py-[2px]">
+												<a href="javascript:void(0)" class="whitespace-nowrap">Application</a>
+											</li>
+											<li
+												class="hover:text-lightbeige transition duration-300 px-[15px] py-[2px]">
+												<a href="javascript:void(0)" class="whitespace-nowrap">Consulting</a>
+											</li>
+											<li
+												class="hover:text-lightbeige transition duration-300 px-[15px] py-[2px]">
+												<a href="javascript:void(0)" class="whitespace-nowrap">Digital
+													agency</a>
+											</li>
+											<li
+												class="hover:text-lightbeige transition duration-300 px-[15px] py-[2px]">
+												<a href="javascript:void(0)" class="whitespace-nowrap">SEO agency</a>
+											</li>
+											<li
+												class="hover:text-lightbeige transition duration-300 px-[15px] py-[2px]">
+												<a href="javascript:void(0)" class="whitespace-nowrap">Event &amp;
+													conference</a>
+											</li>
+											<li
+												class="hover:text-lightbeige transition duration-300 px-[15px] py-[2px]">
+												<a href="javascript:void(0)" class="whitespace-nowrap">Marketing
+													agency</a>
+											</li>
+										</ul>
+										<ul>
+											<h5 class="font-bold px-[15px]">Specialized</h5>
+											<li
+												class="hover:text-lightbeige transition duration-300 px-[15px] py-[2px]">
+												<a href="javascript:void(0)" class="whitespace-nowrap">Restaurant</a>
+											</li>
+											<li
+												class="hover:text-lightbeige transition duration-300 px-[15px] py-[2px]">
+												<a href="javascript:void(0)" class="whitespace-nowrap">Architecture</a>
+											</li>
+											<li
+												class="hover:text-lightbeige transition duration-300 px-[15px] py-[2px]">
+												<a href="javascript:void(0)" class="whitespace-nowrap">Hotel &
+													resort</a>
+											</li>
+											<li
+												class="hover:text-lightbeige transition duration-300 px-[15px] py-[2px]">
+												<a href="javascript:void(0)" class="whitespace-nowrap">Travel agency</a>
+											</li>
+											<li
+												class="hover:text-lightbeige transition duration-300 px-[15px] py-[2px]">
+												<a href="javascript:void(0)" class="whitespace-nowrap">Yoga &
+													meditation</a>
+											</li>
+											<li
+												class="hover:text-lightbeige transition duration-300 px-[15px] py-[2px]">
+												<a href="javascript:void(0)" class="whitespace-nowrap">Gym & fitness</a>
+											</li>
+											<li
+												class="hover:text-lightbeige transition duration-300 px-[15px] py-[2px]">
+												<a href="javascript:void(0)" class="whitespace-nowrap">Spa salon
+												</a>
+											</li>
+											<li
+												class="hover:text-lightbeige transition duration-300 px-[15px] py-[2px]">
+												<a href="javascript:void(0)" class="whitespace-nowrap">Cafe</a>
+											</li>
+											<li
+												class="hover:text-lightbeige transition duration-300 px-[15px] py-[2px]">
+												<a href="javascript:void(0)" class="whitespace-nowrap">Home decor</a>
+											</li>
+											<li
+												class="hover:text-lightbeige transition duration-300 px-[15px] py-[2px]">
+												<a href="javascript:void(0)" class="whitespace-nowrap">Dentist</a>
+											</li>
+											<li
+												class="hover:text-lightbeige transition duration-300 px-[15px] py-[2px]">
+												<a href="javascript:void(0)" class="whitespace-nowrap">Interior
+													design</a>
+											</li>
+										</ul>
+										<ul>
+											<h5 class="font-bold px-[15px]">Portfolio</h5>
+											<li
+												class="hover:text-lightbeige transition duration-300 px-[15px] py-[2px]">
+												<a href="javascript:void(0)" class="whitespace-nowrap">Design agency</a>
+											</li>
+											<li
+												class="hover:text-lightbeige transition duration-300 px-[15px] py-[2px]">
+												<a href="javascript:void(0)" class="whitespace-nowrap">Web agency</a>
+											</li>
+											<li
+												class="hover:text-lightbeige transition duration-300 px-[15px] py-[2px]">
+												<a href="javascript:void(0)" class="whitespace-nowrap">Creative
+													agency</a>
+											</li>
+											<li
+												class="hover:text-lightbeige transition duration-300 px-[15px] py-[2px]">
+												<a href="javascript:void(0)" class="whitespace-nowrap">Freelancer</a>
+											</li>
+											<li
+												class="hover:text-lightbeige transition duration-300 px-[15px] py-[2px]">
+												<a href="javascript:void(0)" class="whitespace-nowrap">Branding
+													agency</a>
+											</li>
+											<li
+												class="hover:text-lightbeige transition duration-300 px-[15px] py-[2px]">
+												<a href="javascript:void(0)" class="whitespace-nowrap">Photography</a>
+											</li>
+											<li
+												class="hover:text-lightbeige transition duration-300 px-[15px] py-[2px]">
+												<a href="javascript:void(0)" class="whitespace-nowrap">Personal
+													portfolio</a>
+											</li>
+											<li
+												class="hover:text-lightbeige transition duration-300 px-[15px] py-[2px]">
+												<a href="javascript:void(0)" class="whitespace-nowrap">Vertical
+													portfolio</a>
+											</li>
+											<li
+												class="hover:text-lightbeige transition duration-300 px-[15px] py-[2px]">
+												<a href="javascript:void(0)" class="whitespace-nowrap">Interactive
+													portfolio</a>
+											</li>
+											<li
+												class="hover:text-lightbeige transition duration-300 px-[15px] py-[2px]">
+												<a href="javascript:void(0)" class="whitespace-nowrap">Split
+													portfolio</a>
+											</li>
+											<li
+												class="hover:text-lightbeige transition duration-300 px-[15px] py-[2px]">
+												<a href="javascript:void(0)" class="whitespace-nowrap">Creative
+													portfolio</a>
+											</li>
+										</ul>
+										<ul>
+											<h5 class="font-bold px-[15px]">Other</h5>
+											<li
+												class="hover:text-lightbeige transition duration-300 px-[15px] py-[2px]">
+												<a href="javascript:void(0)" class="whitespace-nowrap">Furniture
+													shop</a>
+											</li>
+											<li
+												class="hover:text-lightbeige transition duration-300 px-[15px] py-[2px]">
+												<a href="javascript:void(0)" class="whitespace-nowrap">Fashion shop</a>
+											</li>
+											<li
+												class="hover:text-lightbeige transition duration-300 px-[15px] py-[2px]">
+												<a href="javascript:void(0)" class="whitespace-nowrap">Magazine</a>
+											</li>
+											<li
+												class="hover:text-lightbeige transition duration-300 px-[15px] py-[2px]">
+												<a href="javascript:void(0)" class="whitespace-nowrap">Lifestyle
+													blog</a>
+											</li>
+											<li
+												class="hover:text-lightbeige transition duration-300 px-[15px] py-[2px]">
+												<a href="javascript:void(0)" class="whitespace-nowrap">Classic blog</a>
+											</li>
+											<li
+												class="hover:text-lightbeige transition duration-300 px-[15px] py-[2px]">
+												<a href="javascript:void(0)" class="whitespace-nowrap">Blog metro</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div>
+								<button
+									class="w-full h-full flex justify-between border-b text-left hover:bg-lightbeige hover:text-white transition duration-700 px-[15px] py-[9px]"
+									data-toggle="collapse">
+									<span>About</span>
+									<span
+										class="material-icons transition duration-700 rotate-icon">keyboard_arrow_down</span>
+								</button>
+								<div class="collapse transition duration-700">
+									<div class="text-black">
+										<ul>
+											<li class="px-[15px] py-[2px]">
+												<div>
+													<button
+														class="w-full h-full flex justify-between text-left py-[2px]"
+														data-toggle="collapse">
+														<span
+															class="hover:text-lightbeige transition duration-700">Lifestyle
+															blog</span>
+														<span
+															class="material-icons transition duration-700 rotate-icon">keyboard_arrow_down</span>
+													</button>
+													<div class="collapse transition duration-700">
+														<ul>
+															<li
+																class="hover:text-lightbeige transition duration-300 px-[15px] py-[2px]">
+																<a href="javascript:void(0)"
+																	class="whitespace-nowrap">Furniture
+																	shop</a>
+															</li>
+															<li
+																class="hover:text-lightbeige transition duration-300 px-[15px] py-[2px]">
+																<a href="javascript:void(0)"
+																	class="whitespace-nowrap">Fashion
+																	shop</a>
+															</li>
+															<li
+																class="hover:text-lightbeige transition duration-300 px-[15px] py-[2px]">
+																<a href="javascript:void(0)"
+																	class="whitespace-nowrap">Magazine</a>
+															</li>
+														</ul>
+													</div>
+												</div>
+											</li>
+											<li class="px-[15px] py-[2px]">
+												<div>
+													<button
+														class="w-full h-full flex justify-between text-left py-[2px]"
+														data-toggle="collapse">
+														<span
+															class="hover:text-lightbeige transition duration-700">Classic
+															blog</span>
+														<span
+															class="material-icons transition duration-700 rotate-icon">keyboard_arrow_down</span>
+													</button>
+													<div class="collapse transition duration-700">
+														<ul>
+															<li
+																class="hover:text-lightbeige transition duration-300 px-[15px] py-[2px]">
+																<a href="javascript:void(0)"
+																	class="whitespace-nowrap">Our
+																	services</a>
+															</li>
+															<li
+																class="hover:text-lightbeige transition duration-300 px-[15px] py-[2px]">
+																<a href="javascript:void(0)"
+																	class="whitespace-nowrap">What we
+																	offer</a>
+															</li>
+															<li
+																class="hover:text-lightbeige transition duration-300 px-[15px] py-[2px]">
+																<a href="javascript:void(0)"
+																	class="whitespace-nowrap">Our
+																	process</a>
+															</li>
+														</ul>
+													</div>
+												</div>
+											</li>
+											<li
+												class="hover:text-lightbeige transition duration-300 px-[15px] py-[2px]">
+												<a href="javascript:void(0)" class="whitespace-nowrap">Blog metro</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<a href="javascript:void(0)"
+								class="block w-full h-full border-b hover:bg-lightbeige hover:text-white lightbeige transition duration-700 px-[15px] py-[9px]">Packages</a>
+						</li>
+						<li>
+							<a href="javascript:void(0)"
+								class="block w-full h-full border-b hover:bg-lightbeige hover:text-white lightbeige transition duration-700 px-[15px] py-[9px]">Contact
+								Us</a>
+						</li>
+						<li>
+							<a href="javascript:void(0)"
+								class="block w-full h-full border-b hover:bg-lightbeige hover:text-white lightbeige transition duration-700 px-[15px] py-[9px]">FAQ</a>
+						</li>
+						<li class="p-2 mb-6">
+							<a href="javascript:void(0)" class="btn rounded-md">Buy now</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</header>
+	<!-- END: Header -->
+
+	<!-- START: Main -->
+	<main>
+		<!-- STATRT: Banner -->
+		<section class="h-screen bg-cover bg-no-repeat bg-center sm:pt-[88px] pt-[65px]"
+			style="background-image: url('img/enterprise/banner.png')">
+			<div class="container h-full flex items-center">
+				<div class="xl:w-1/2 lg:w-3/4 w-full">
+					<h1 class="lg:text-5xl sm:text-5xl text-3xl text-white font-semibold" data-aos="fade-up"
+						data-aos-delay="200">
+						<span
+							class="2xl:text-[94px] xl:text-[80px] lg:text-[70px] sm:text-[60px] text-[50px] lg:mb-0 mb-2 font-extrabold text-lightbeige block">Discover</span>The
+						New World.
+					</h1>
+					<p class="text-gray-200 2xl:text-2xl xl:text-xl lg:text-xl sm:text-lg text-md lg:leading-10 sm:leading-8 leading-6 2xl:my-12 xl:my-8 lg:my-8 sm:my-5 my-4"
+						data-aos="fade-up" data-aos-delay="300">
+						Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
+						printer took a galley of type and scrambled it to make a type specimen book.
+					</p>
+					<div data-aos="fade-up" data-aos-delay="400">
+						<a href="Javascript:void(0)" class="btn rounded-md">Explore Now
+							<span class="material-icons">trending_flat</span></a>
+					</div>
+					<div class="rounded-xl backdrop-blur-md p-4 pb-0 bg-[#fff2] xl:mt-12 sm:mt-8 mt-4"
+						data-aos="fade-up" data-aos-delay="500">
+						<div class="border-b sm:flex items-center justify-between sm:pb-4 pb-2">
+							<div class="sm:w-[calc(40%-24px)] sm:mb-0 mb-2">
+								<span class="block text-gray-300 sm:text-lg text-md">From</span>
+								<input type="text" class="sm:text-2xl text-xl text-white font-semibold bg-transparent"
+									value="Madrid Spain" />
+							</div>
+							<button
+								class="bg-gray-200 rounded-full sm:w-12 w-10 sm:h-12 h-10 flex items-center justify-center sm:rotate-0 rotate-90 sm:mb-0 mb-2"><span
+									class="material-icons sm:text-3xl text-2xl">swap_horiz</span></button>
+							<div class="w-[calc(40%-24px)]">
+								<span class="block text-gray-300 sm:text-lg text-md">To</span>
+								<input type="text" class="sm:text-2xl text-xl text-white font-semibold bg-transparent"
+									value="Dublin Ireland" />
+							</div>
+						</div>
+						<div class="flex items-center justify-between flex-wrap sm:gap-5 gap-4">
+							<div class="relative group">
+								<p class="text-lg py-3 px-2 flex items-center justify-center text-white cursor-pointer">
+									Tour <span class="material-icons">expand_more</span></p>
+								<ul
+									class="absolute top-full min-w-[8rem] rounded-md bg-white -mt-2 hidden shadow-xl group-hover:block">
+									<li class="relative dropdown">
+										<a href="javscript:void(0)"
+											class="text-black py-1.5 px-3 rounded-t-md hover:bg-lightbeige hover:text-white block">Single</a>
+										<ul
+											class="absolute top-1/2 left-full min-w-[8rem] rounded-md overflow-hidden bg-white -mt-2 hidden shadow-xl dropdown-hover:block">
+											<li>
+												<a href="javscript:void(0)"
+													class="text-black py-1.5 px-3 hover:bg-lightbeige hover:text-white block">Single1</a>
+											</li>
+											<li><a href="javascript:void(0)"
+													class="text-black py-1.5 px-3 hover:bg-lightbeige hover:text-white block">Return2</a>
+											</li>
+										</ul>
+									</li>
+									<li><a href="javascript:void(0)"
+											class="text-black py-1.5 px-3 rounded-b-md hover:bg-lightbeige hover:text-white block">Return</a>
+									</li>
+								</ul>
+							</div>
+							<div class="relative group">
+								<p class="text-lg py-3 px-2 flex items-center justify-center text-white cursor-pointer">
+									Passengers <span class="material-icons">expand_more</span></p>
+								<ul
+									class="absolute top-full min-w-[8rem] rounded-md overflow-hidden bg-white -mt-2 hidden shadow-xl group-hover:block">
+									<li><a href="javscript:void(0)"
+											class="text-black py-1.5 px-3 hover:bg-lightbeige hover:text-white block">1
+											Passenger</a></li>
+									<li><a href="javascript:void(0)"
+											class="text-black py-1.5 px-3 hover:bg-lightbeige hover:text-white block">2
+											Passengers</a></li>
+									<li><a href="javascript:void(0)"
+											class="text-black py-1.5 px-3 hover:bg-lightbeige hover:text-white block">3
+											Passengers</a></li>
+									<li><a href="javascript:void(0)"
+											class="text-black py-1.5 px-3 hover:bg-lightbeige hover:text-white block">4
+											Passengers</a></li>
+									<li><a href="javascript:void(0)"
+											class="text-black py-1.5 px-3 hover:bg-lightbeige hover:text-white block">5
+											Passengers</a></li>
+								</ul>
+							</div>
+							<div class="relative group">
+								<p class="text-lg py-3 px-2 flex items-center justify-center text-white cursor-pointer">
+									Class <span class="material-icons">expand_more</span></p>
+								<ul
+									class="absolute top-full min-w-[8rem] rounded-md overflow-hidden bg-white -mt-2 hidden shadow-xl group-hover:block">
+									<li><a href="javscript:void(0)"
+											class="text-black py-1.5 px-3 hover:bg-lightbeige hover:text-white block">First
+											Class</a></li>
+									<li><a href="javascript:void(0)"
+											class="text-black py-1.5 px-3 hover:bg-lightbeige hover:text-white block">Second
+											Class</a></li>
+									<li><a href="javascript:void(0)"
+											class="text-black py-1.5 px-3 hover:bg-lightbeige hover:text-white block">Third
+											Class</a></li>
+								</ul>
+							</div>
+							<div class="relative group">
+								<p class="text-lg py-3 px-2 flex items-center justify-center text-white cursor-pointer">
+									Depature <span class="material-icons">expand_more</span></p>
+								<ul
+									class="absolute top-full min-w-[8rem] rounded-md overflow-hidden bg-white -mt-2 hidden shadow-xl group-hover:block">
+									<li><a href="javscript:void(0)"
+											class="text-black py-1.5 px-3 hover:bg-lightbeige hover:text-white block">Single</a>
+									</li>
+									<li><a href="javascript:void(0)"
+											class="text-black py-1.5 px-3 hover:bg-lightbeige hover:text-white block">Return</a>
+									</li>
+								</ul>
+							</div>
+							<div class="relative group">
+								<p class="text-lg py-3 px-2 flex items-center justify-center text-white cursor-pointer">
+									Reture <span class="material-icons">expand_more</span></p>
+								<ul
+									class="absolute top-full min-w-[8rem] rounded-md overflow-hidden bg-white -mt-2 hidden shadow-xl group-hover:block">
+									<li><a href="javscript:void(0)"
+											class="text-black py-1.5 px-3 hover:bg-lightbeige hover:text-white block">Single</a>
+									</li>
+									<li><a href="javascript:void(0)"
+											class="text-black py-1.5 px-3 hover:bg-lightbeige hover:text-white block">Return</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- END: Banner -->
+
+		<!-- START: Discover -->
+		<section class="overflow-hidden">
+			<div class="container xl:py-16 lg:py-12 sm:py-10 py-5">
+				<div class="relative text-center lg:mb-16 sm:mb-10 mb-5">
+					<div data-aos="fade-up">
+						<h1 class="lg:text-[42px] sm:text-[34px] text-[28px] font-bold">Discover Weekly</h1>
+						<p class="text-[#7c7c7c] lg:text-[22px] text-[18px] font-semibold">Explore new travel
+							inspiration updated
+							every Monday</p>
+					</div>
+					<div class="sm:flex hidden absolute top-1/2 right-0" data-aos="fade-left">
+						<div
+							class="swiper-button-prev position-unset shadow-lg w-12 h-12 bg-white hover:bg-lightbeige rounded-full transition duration-700 after:content-['prev'] after:text-[22px] after:text-lightbeige after:transition after:duration-700 after:font-bold hover:after:text-white">
+						</div>
+						<div
+							class="swiper-button-next ml-5 position-unset shadow-lg w-12 h-12 bg-white hover:bg-lightbeige rounded-full transition duration-700 after:content-['next'] after:text-[22px] after:text-lightbeige after:transition after:duration-700 after:font-bold hover:after:text-white">
+						</div>
+					</div>
+				</div>
+				<div>
+					<div class="swiper discover px-3">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide pb-3" data-aos="fade-left" data-aos-delay="100">
+								<div class="card">
+									<div>
+										<img class="w-full lg:h-auto sm:h-[250px] h-[220px] object-cover"
+											src="img/enterprise/nusa-penida.png" alt="img">
+									</div>
+									<div class="px-5 py-3">
+										<div>
+											<p class="text-[22px] whitespace-nowrap font-semibold mb-1">Nusa Penida
+											</p>
+										</div>
+										<div class="flex justify-between">
+											<div class="flex items-center">
+												<div>
+													<img src="img/icons/location.svg" alt="location">
+												</div>
+												<p class="md:text-[18px] text-[16px] ml-2">Penida Island</p>
+											</div>
+											<p class="md:text-[22px] text-[19px] font-bold text-lightbeige">$650</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide pb-3" data-aos="fade-right" data-aos-delay="200">
+								<div class="card">
+									<div>
+										<img class="w-full lg:h-auto sm:h-[250px] h-[220px] object-cover"
+											src="img/enterprise/penida-lsland.png" alt="img">
+									</div>
+									<div class="px-5 py-3">
+										<div>
+											<p class="text-[22px] whitespace-nowrap font-semibold mb-1">Penida
+												Island</p>
+										</div>
+										<div class="flex justify-between">
+											<div class="flex items-center">
+												<div>
+													<img src="img/icons/location.svg" alt="location">
+												</div>
+												<p class="md:text-[18px] text-[16px] ml-2">United States</p>
+											</div>
+											<p class="md:text-[22px] text-[19px] font-bold text-lightbeige">$740</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide pb-3" data-aos="fade-left" data-aos-delay="300">
+								<div class="card">
+									<div>
+										<img class="w-full lg:h-auto sm:h-[250px] h-[220px] object-cover"
+											src="img/enterprise/arches-national-park.png" alt="img">
+									</div>
+									<div class="px-5 py-3">
+										<div>
+											<p class="text-[22px] whitespace-nowrap font-semibold mb-1">Arche
+												national Park</p>
+
+										</div>
+										<div class="flex justify-between">
+											<div class="flex items-center">
+												<div>
+													<img src="img/icons/location.svg" alt="location">
+												</div>
+												<p class="md:text-[18px] text-[16px] ml-2">United States</p>
+											</div>
+											<p class="md:text-[22px] text-[19px] font-bold text-lightbeige">$864</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide pb-3" data-aos="fade-right" data-aos-delay="400">
+								<div class="card">
+									<div>
+										<img class="w-full lg:h-auto sm:h-[250px] h-[220px] object-cover"
+											src="img/enterprise/veligandu-Island-resort.png" alt="img">
+									</div>
+									<div class="px-5 py-3">
+										<div>
+											<p class="text-[22px] whitespace-nowrap font-semibold mb-1">Veligandu
+												Island Resort</p>
+										</div>
+										<div class="flex justify-between">
+											<div class="flex items-center">
+												<div>
+													<img src="img/icons/location.svg" alt="location">
+												</div>
+												<p class="md:text-[18px] text-[16px] ml-2">Maldivesv</p>
+											</div>
+											<p class="md:text-[22px] text-[19px] font-bold text-lightbeige">$941</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide pb-3" data-aos="fade-left" data-aos-delay="200">
+								<div class="card">
+									<div>
+										<img class="w-full lg:h-auto sm:h-[250px] h-[220px] object-cover"
+											src="img/enterprise/nusa-penida.png" alt="img">
+									</div>
+									<div class="px-5 py-3">
+										<div>
+											<p class="text-[22px] whitespace-nowrap font-semibold mb-1">Nusa Penida
+											</p>
+
+										</div>
+										<div class="flex justify-between">
+											<div class="flex items-center">
+												<div>
+													<img src="img/icons/location.svg" alt="location">
+												</div>
+												<p class="md:text-[18px] text-[16px] ml-2">Penida Island</p>
+											</div>
+											<p class="md:text-[22px] text-[19px] font-bold text-lightbeige">$650</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide pb-3" data-aos="fade-right" data-aos-delay="100">
+								<div class="card">
+									<div>
+										<img class="w-full lg:h-auto sm:h-[250px] h-[220px] object-cover"
+											src="img/enterprise/penida-lsland.png" alt="img">
+									</div>
+									<div class="px-5 py-3">
+										<div>
+											<p class="text-[22px] whitespace-nowrap font-semibold mb-1">Penida
+												Island</p>
+
+										</div>
+										<div class="flex justify-between">
+											<div class="flex items-center">
+												<div>
+													<img src="img/icons/location.svg" alt="location">
+												</div>
+												<p class="md:text-[18px] text-[16px] ml-2">United States</p>
+											</div>
+											<p class="md:text-[22px] text-[19px] font-bold text-lightbeige">$740</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide pb-3" data-aos="fade-left" data-aos-delay="100">
+								<div class="card">
+									<div>
+										<img class="w-full lg:h-auto sm:h-[250px] h-[220px] object-cover"
+											src="img/enterprise/arches-national-park.png" alt="img">
+									</div>
+									<div class="px-5 py-3">
+										<div>
+											<p class="text-[22px] whitespace-nowrap font-semibold mb-1">Arche
+												national Park</p>
+										</div>
+										<div class="flex justify-between">
+											<div class="flex items-center">
+												<div>
+													<img src="img/icons/location.svg" alt="location">
+												</div>
+												<p class="md:text-[18px] text-[16px] ml-2">United States</p>
+											</div>
+											<p class="md:text-[22px] text-[19px] font-bold text-lightbeige">$864</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide pb-3" data-aos="fade-right" data-aos-delay="200">
+								<div class="card">
+									<div>
+										<img class="w-full lg:h-auto sm:h-[250px] h-[220px] object-cover"
+											src="img/enterprise/veligandu-Island-resort.png" alt="img">
+									</div>
+									<div class="px-5 py-3">
+										<div>
+											<p class="text-[22px] whitespace-nowrap font-semibold mb-1">Veligandu
+												Island Resort</p>
+										</div>
+										<div class="flex justify-between">
+											<div class="flex items-center">
+												<div>
+													<img src="img/icons/location.svg" alt="location">
+												</div>
+												<p class="md:text-[18px] text-[16px] ml-2">Maldivesv</p>
+											</div>
+											<p class="md:text-[22px] text-[19px] font-bold text-lightbeige">$941</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- END: Discover -->
+
+		<!-- START : Why Choose Us -->
+		<section class="overflow-hidden">
+			<div class="container xl:pb-16 lg:pb-12 sm:pb-10 pb-5">
+				<div class="text-center lg:mb-16 sm:mb-10 mb-5">
+					<h1 class="lg:text-[42px] sm:text-[34px] text-[28px] font-bold" data-aos="fade-up">Why Choose Us
+					</h1>
+				</div>
+				<div class="sm:grid lg:grid-cols-3 sm:grid-cols-2 gap-5">
+					<div data-aos="fade-right" data-aos-delay="200">
+						<div
+							class="text-center max-w-[400px] mx-auto transition duration-700 hover:shadow-[0px_11px_20px_-11px_rgba(0,0,0,0.18)] pb-5 md:mb-0 mb-10">
+							<div
+								class="xl:w-[150px] lg:w-[130px] w-[100px] xl:h-[150px] lg:h-[130px] h-[100px] flex justify-center items-center rounded-full mx-auto shadow-[0px_0px_50px_rgba(251,115,36,0.15)] mb-5">
+								<div class="xl:max-w-[80px] lg:max-w-[70px] max-w-[50px]">
+									<img src="img/enterprise/ticket.png" class="w-full" alt="ticket">
+								</div>
+							</div>
+							<div>
+								<p class="font-bold xl:text-[32px] lg:text-[27px] text-[22px] mb-2">Best Price
+									Guaranteed
+								</p>
+								<p
+									class="text-[#7c7c7c] xl:text-[22px] lg:text-[20px] text-[16px] font-semibold leading-[1.4]">
+									Travel is
+									movem people
+									between distant
+									geographic locations.</p>
+							</div>
+						</div>
+					</div>
+					<div data-aos="fade-up" data-aos-delay="200">
+						<div
+							class="text-center max-w-[400px] mx-auto transition duration-700 hover:shadow-[0px_11px_20px_-11px_rgba(0,0,0,0.18)] pb-5 md:mb-0 mb-10">
+							<div class=" xl:w-[150px] lg:w-[130px] w-[100px] xl:h-[150px] lg:h-[130px] h-[100px] flex justify-center
+							items-center rounded-full mx-auto shadow-[0px_0px_50px_rgba(251,115,36,0.15)] mb-5">
+								<div class="xl:max-w-[80px] lg:max-w-[70px] max-w-[50px]">
+									<img src="img/enterprise/earth.png" class="w-full" alt="earth">
+								</div>
+							</div>
+							<div>
+								<p class="font-bold xl:text-[32px] lg:text-[27px] text-[22px] mb-2">Friendly Guides</p>
+								<p
+									class="text-[#7c7c7c] xl:text-[22px] lg:text-[20px] text-[16px] font-semibold leading-[1.4]">
+									Travel is
+									movem people
+									between
+									distant geographic locations.</p>
+							</div>
+						</div>
+					</div>
+					<div class="lg:col-span-1 col-span-2 " data-aos="fade-left" data-aos-delay="200">
+						<div
+							class="text-center max-w-[400px] mx-auto transition duration-700 hover:shadow-[0px_11px_20px_-11px_rgba(0,0,0,0.18)] pb-5 md:mb-0 mb-10">
+							<div class=" xl:w-[150px] lg:w-[130px] w-[100px] xl:h-[150px] lg:h-[130px] h-[100px] flex justify-center
+						items-center rounded-full mx-auto shadow-[0px_0px_50px_rgba(251,115,36,0.15)] mb-5">
+								<div class="xl:max-w-[80px] lg:max-w-[70px] max-w-[50px]">
+									<img src="img/enterprise/flight-insurance.png" class="w-full" alt="flight">
+								</div>
+							</div>
+							<div>
+								<p class="font-bold xl:text-[32px] lg:text-[27px] text-[22px] mb-2">Travel Insuarence
+								</p>
+								<p
+									class="text-[#7c7c7c] xl:text-[22px] lg:text-[20px] text-[16px] font-semibold leading-[1.4]">
+									Travel is
+									movem people
+									between
+									distant geographic locations.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- END : Why Choose Us -->
+
+		<!-- START : Our Photo Gellary -->
+		<section class="overflow-hidden">
+			<div class="container xl:pb-16 lg:pb-12 sm:pb-12 pb-5">
+				<div class="text-center lg:mb-16 sm:mb-10 mb-5" data-aos="fade-up">
+					<h1 class="lg:text-[42px] sm:text-[34px] text-[28px] font-bold">Our Photo Gellary</h1>
+					<p
+						class="text-[#7c7c7c] lg:text-[22px] text-[18px] font-semibold 2xl:max-w-[930px] xl:max-w-[800px] lg:max-w-[750px] max-w-[600px] leading-[1.4] mx-auto">
+						It is a
+						long
+						established
+						fact that a reader will
+						be the hole world took then we make t
+						out for world best tour It is a long established fact the.</p>
+				</div>
+				<div>
+					<div class="grid lg:grid-cols-6 sm:grid-cols-2 grid-cols-1 gap-4 sm:gap-x-4 gap-x-0">
+						<div class="relative shadow-md lg:col-span-2" data-aos="fade-right" data-aos-delay="100">
+							<img class="w-full lg:h-auto sm:h-[250px] h-[220px] object-cover"
+								src="img/enterprise/australia.png" alt="australia">
+							<div class="absolute bottom-0 left-0 right-0 py-2 px-4 gradient-black">
+								<p
+									class="text-white xl:text-[32px] lg:text-[28px] sm:text-[24px] text-[20px] font-semibold">
+									Australia
+								</p>
+							</div>
+						</div>
+						<div class="relative shadow-md lg:col-span-2" data-aos="fade-up" data-aos-delay="100">
+							<img class="w-full lg:h-auto sm:h-[250px] h-[220px] object-cover"
+								src="img/enterprise/singapore.png" alt="singapore">
+							<div class="absolute bottom-0 left-0 right-0 py-2 px-4 gradient-black">
+								<p
+									class="text-white xl:text-[32px] lg:text-[28px] sm:text-[24px] text-[20px] font-semibold">
+									Singapore
+								</p>
+							</div>
+						</div>
+						<div class="relative shadow-md lg:col-span-2" data-aos="fade-left" data-aos-delay="100">
+							<img class="w-full lg:h-auto sm:h-[250px] h-[220px] object-cover"
+								src="img/enterprise/nepal.png" alt="nepal">
+							<div class="absolute bottom-0 left-0 right-0 py-2 px-4 gradient-black">
+								<p
+									class="text-white xl:text-[32px] lg:text-[28px] sm:text-[24px] text-[20px] font-semibold">
+									Nepal</p>
+							</div>
+						</div>
+						<div class="relative shadow-md lg:col-span-3" data-aos="fade-right" data-aos-delay="200">
+							<img class="w-full lg:h-auto sm:h-[250px] h-[220px] object-cover"
+								src="img/enterprise/london.png" alt="london">
+							<div class="absolute bottom-0 left-0 right-0 py-2 px-4 gradient-black">
+								<p
+									class="text-white xl:text-[32px] lg:text-[28px] sm:text-[24px] text-[20px] font-semibold">
+									London</p>
+							</div>
+						</div>
+						<div class="relative shadow-md lg:col-span-3 sm:col-span-2 lg:w-auto sm:w-1/2 lg:mx-0 sm:mx-auto"
+							data-aos="fade-left" data-aos-delay="200">
+							<img class="w-full lg:h-auto sm:h-[250px] h-[220px] object-cover"
+								src="img/enterprise/thailand.png" alt="thailand">
+							<div class="absolute bottom-0 left-0 right-0 py-2 px-4 gradient-black">
+								<p
+									class="text-white xl:text-[32px] lg:text-[28px] sm:text-[24px] text-[20px] font-semibold">
+									Thailand
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- END : Our Photo Gellary -->
+
+		<!-- START : Traveller Reviews -->
+		<section class="overflow-hidden">
+			<div class="container xl:pb-16 lg:pb-12 sm:pb-10 pb-5">
+				<div class="relative text-center lg:mb-16 sm:mb-10 mb-5">
+					<div data-aos="fade-up">
+						<h1 class="lg:text-[42px] sm:text-[34px] text-[28px] font-bold">Traveller Reviews</h1>
+						<p class="text-[#7c7c7c] lg:text-[22px] text-[18px] font-semibold leading-[1.4] mx-auto">Explore
+							new travel inspiration updated
+							every Monday</p>
+					</div>
+					<div class="sm:flex hidden absolute top-1/2 right-0" data-aos="fade-left">
+						<div
+							class="swiper-button-prev profile-prev position-unset shadow-lg w-12 h-12 bg-white hover:bg-lightbeige rounded-full transition duration-700 after:content-['prev'] after:text-[22px] after:text-lightbeige after:transition after:duration-700 after:font-bold hover:after:text-white">
+						</div>
+						<div
+							class="swiper-button-next profile-next ml-5 position-unset shadow-lg w-12 h-12 bg-white hover:bg-lightbeige rounded-full transition duration-700 after:content-['next'] after:text-[22px] after:text-lightbeige after:transition after:duration-700 after:font-bold hover:after:text-white">
+						</div>
+					</div>
+				</div>
+				<div class="swiper profile px-3">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide pb-3">
+							<div class="grid lg:grid-cols-2 gap-4">
+								<div data-aos="fade-right" data-aos-delay="100">
+									<div
+										class="bg-white hover:shadow-[0_4px_16px_rgba(0,0,0,0.18)] transition duration-700 py-5 px-6">
+										<div class="flex items-center xl:mb-8 lg:mb-5 mb-4">
+											<div
+												class="xl:max-w-[90px] lg:max-w-[80px] sm:max-w-[70px] max-w-[60px] xl:h-[90px] lg:h-[80px] sm:h-[70px] h-[60px] w-full rounded-full overflow-hidden mr-5">
+												<img class="w-full" src="img/enterprise/avatar.png" alt="profile">
+											</div>
+											<div>
+												<p
+													class="font-bold text-lightbeige xl:text-[30px] lg:text-[28px] sm:text-[26px] text-[19px] mb-1">
+													Jerry
+													Harper</p>
+												<div class="flex">
+													<img class="lg:w-6 sm:w-5 w-4 xl:mr-2 lg:mr-1.5 mr-1"
+														src="img/icons/star.svg" alt="star">
+													<img class="lg:w-6 sm:w-5 w-4 xl:mx-2 lg:mx-1.5 mx-1"
+														src="img/icons/star.svg" alt="star">
+													<img class="lg:w-6 sm:w-5 w-4 xl:mx-2 lg:mx-1.5 mx-1"
+														src="img/icons/star.svg" alt="star">
+													<img class="lg:w-6 sm:w-5 w-4 xl:mx-2 lg:mx-1.5 mx-1"
+														src="img/icons/star.svg" alt="star">
+													<img class="lg:w-6 sm:w-5 w-4 xl:mx-2 lg:mx-1.5 mx-1"
+														src="img/icons/star.svg" alt="star">
+												</div>
+											</div>
+										</div>
+										<div>
+											<p
+												class="text-[#7c7c7c] lg:text-[18px] sm:text-[16px] text-[14px] leading-[1.4] lg:mb-5 mb-3">
+												It
+												was important to
+												the economy
+												and
+												society.Sector
+												depended
+												for example) on the merchants dealing with caravans, end-user
+												retailing.</p>
+											<p
+												class="text-[#7c7c7c] lg:text-[18px] sm:text-[16px] text-[14px] font-bold">
+												CEO,
+												Salesforce</p>
+											<p
+												class="text-[#7c7c7c] xl:text-[28px] lg:text-[26px] sm:text-[24px] text-[22px] font-semibold">
+												London
+											</p>
+										</div>
+									</div>
+								</div>
+								<div data-aos="fade-left" data-aos-delay="100">
+									<div
+										class="bg-white hover:shadow-[0_4px_16px_rgba(0,0,0,0.18)] transition duration-700 py-5 px-6">
+										<div class="flex items-center xl:mb-8 lg:mb-5 mb-4">
+											<div
+												class="xl:max-w-[90px] lg:max-w-[80px] sm:max-w-[70px] max-w-[60px] xl:h-[90px] lg:h-[80px] sm:h-[70px] h-[60px] w-full rounded-full overflow-hidden mr-5">
+												<img class="w-full" src="img/enterprise/avatar2.png" alt="profile">
+											</div>
+											<div>
+												<p
+													class="font-bold text-lightbeige xl:text-[30px] lg:text-[28px] sm:text-[26px] text-[19px] mb-1">
+													Atika
+													Jahin</p>
+												<div class="flex">
+													<img class="lg:w-6 sm:w-5 w-4 xl:mr-2 lg:mr-1.5 mr-1"
+														src="img/icons/star.svg" alt="star">
+													<img class="lg:w-6 sm:w-5 w-4 xl:mx-2 lg:mx-1.5 mx-1"
+														src="img/icons/star.svg" alt="star">
+													<img class="lg:w-6 sm:w-5 w-4 xl:mx-2 lg:mx-1.5 mx-1"
+														src="img/icons/star.svg" alt="star">
+													<img class="lg:w-6 sm:w-5 w-4 xl:mx-2 lg:mx-1.5 mx-1"
+														src="img/icons/star.svg" alt="star">
+													<img class="lg:w-6 sm:w-5 w-4 xl:mx-2 lg:mx-1.5 mx-1"
+														src="img/icons/star.svg" alt="star">
+												</div>
+											</div>
+										</div>
+										<div>
+											<p
+												class="text-[#7c7c7c] lg:text-[18px] sm:text-[16px] text-[14px] leading-[1.4] lg:mb-5 mb-3">
+												It
+												was important to
+												the economy
+												and society.Sector depended
+												for example) on the merchants dealing with caravans, end-user
+												retailing.</p>
+											<p
+												class="text-[#7c7c7c] lg:text-[18px] sm:text-[16px] text-[14px] font-bold">
+												Data
+												Scientist, SilverCloud
+											</p>
+											<p
+												class="text-[#7c7c7c] xl:text-[28px] lg:text-[26px] sm:text-[24px] text-[22px] font-semibold">
+												France
+											</p>
+										</div>
+									</div>
+								</div>
+								<div data-aos="fade-right" data-aos-delay="200">
+									<div
+										class="bg-white hover:shadow-[0_4px_16px_rgba(0,0,0,0.18)] transition duration-700 py-5 px-6">
+										<div class="flex items-center xl:mb-8 lg:mb-5 mb-4">
+											<div
+												class="xl:max-w-[90px] lg:max-w-[80px] sm:max-w-[70px] max-w-[60px] xl:h-[90px] lg:h-[80px] sm:h-[70px] h-[60px] w-full rounded-full overflow-hidden mr-5">
+												<img class="w-full" src="img/enterprise/avatar3.png" alt="profile">
+											</div>
+											<div>
+												<p
+													class="font-bold text-lightbeige xl:text-[30px] lg:text-[28px] sm:text-[26px] text-[19px] mb-1">
+													John
+													Carter</p>
+												<div class="flex">
+													<img class="lg:w-6 sm:w-5 w-4 xl:mr-2 lg:mr-1.5 mr-1"
+														src="img/icons/star.svg" alt="star">
+													<img class="lg:w-6 sm:w-5 w-4 xl:mx-2 lg:mx-1.5 mx-1"
+														src="img/icons/star.svg" alt="star">
+													<img class="lg:w-6 sm:w-5 w-4 xl:mx-2 lg:mx-1.5 mx-1"
+														src="img/icons/star.svg" alt="star">
+													<img class="lg:w-6 sm:w-5 w-4 xl:mx-2 lg:mx-1.5 mx-1"
+														src="img/icons/star.svg" alt="star">
+													<img class="lg:w-6 sm:w-5 w-4 xl:mx-2 lg:mx-1.5 mx-1"
+														src="img/icons/star.svg" alt="star">
+												</div>
+											</div>
+										</div>
+										<div>
+											<p
+												class="text-[#7c7c7c] lg:text-[18px] sm:text-[16px] text-[14px] leading-[1.4] lg:mb-5 mb-3">
+												It
+												was important to
+												the economy
+												and society.Sector depended
+												for example) on the merchants dealing with caravans, end-user
+												retailing.</p>
+											<p
+												class="text-[#7c7c7c] lg:text-[18px] sm:text-[16px] text-[14px] font-bold">
+												Manager, Nike
+											</p>
+											<p
+												class="text-[#7c7c7c] xl:text-[28px] lg:text-[26px] sm:text-[24px] text-[22px] font-semibold">
+												Italy</p>
+										</div>
+									</div>
+								</div>
+								<div data-aos="fade-left" data-aos-delay="200">
+									<div
+										class="bg-white hover:shadow-[0_4px_16px_rgba(0,0,0,0.18)] transition duration-700 py-5 px-6">
+										<div class="flex items-center xl:mb-8 lg:mb-5 mb-4">
+											<div
+												class="xl:max-w-[90px] lg:max-w-[80px] sm:max-w-[70px] max-w-[60px] xl:h-[90px] lg:h-[80px] sm:h-[70px] h-[60px] w-full rounded-full overflow-hidden mr-5">
+												<img class="w-full" src="img/enterprise/avatar4.png" alt="profile">
+											</div>
+											<div>
+												<p
+													class="font-bold text-lightbeige xl:text-[30px] lg:text-[28px] sm:text-[26px] text-[19px] mb-1">
+													Jeks
+													Jahin</p>
+												<div class="flex">
+													<img class="lg:w-6 sm:w-5 w-4 xl:mr-2 lg:mr-1.5 mr-1"
+														src="img/icons/star.svg" alt="star">
+													<img class="lg:w-6 sm:w-5 w-4 xl:mx-2 lg:mx-1.5 mx-1"
+														src="img/icons/star.svg" alt="star">
+													<img class="lg:w-6 sm:w-5 w-4 xl:mx-2 lg:mx-1.5 mx-1"
+														src="img/icons/star.svg" alt="star">
+													<img class="lg:w-6 sm:w-5 w-4 xl:mx-2 lg:mx-1.5 mx-1"
+														src="img/icons/star.svg" alt="star">
+													<img class="lg:w-6 sm:w-5 w-4 xl:mx-2 lg:mx-1.5 mx-1"
+														src="img/icons/star.svg" alt="star">
+												</div>
+											</div>
+										</div>
+										<div>
+											<p
+												class="text-[#7c7c7c] lg:text-[18px] sm:text-[16px] text-[14px] leading-[1.4] lg:mb-5 mb-3">
+												It
+												was important to
+												the economy
+												and society.Sector depended
+												for example) on the merchants dealing with caravans, end-user
+												retailing.</p>
+											<p
+												class="text-[#7c7c7c] lg:text-[18px] sm:text-[16px] text-[14px] font-bold">
+												Data
+												Scientist, SilverCloud
+											</p>
+											<p
+												class="text-[#7c7c7c] xl:text-[28px] lg:text-[26px] sm:text-[24px] text-[22px] font-semibold">
+												Thailand
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide pb-3">
+							<div class="grid lg:grid-cols-2 gap-4">
+								<div data-aos="fade-right" data-aos-delay="100">
+									<div
+										class="bg-white hover:shadow-[0_4px_16px_rgba(0,0,0,0.18)] transition duration-700 py-5 px-6">
+										<div class="flex items-center xl:mb-8 lg:mb-5 mb-4">
+											<div
+												class="xl:max-w-[90px] lg:max-w-[80px] sm:max-w-[70px] max-w-[60px] xl:h-[90px] lg:h-[80px] sm:h-[70px] h-[60px] w-full rounded-full overflow-hidden mr-5">
+												<img class="w-full" src="img/enterprise/avatar.png" alt="profile">
+											</div>
+											<div>
+												<p
+													class="font-bold text-lightbeige xl:text-[30px] lg:text-[28px] sm:text-[26px] text-[19px] mb-1">
+													Jerry
+													Harper</p>
+												<div class="flex">
+													<img class="lg:w-6 sm:w-5 w-4 xl:mr-2 lg:mr-1.5 mr-1"
+														src="img/icons/star.svg" alt="star">
+													<img class="lg:w-6 sm:w-5 w-4 xl:mx-2 lg:mx-1.5 mx-1"
+														src="img/icons/star.svg" alt="star">
+													<img class="lg:w-6 sm:w-5 w-4 xl:mx-2 lg:mx-1.5 mx-1"
+														src="img/icons/star.svg" alt="star">
+													<img class="lg:w-6 sm:w-5 w-4 xl:mx-2 lg:mx-1.5 mx-1"
+														src="img/icons/star.svg" alt="star">
+													<img class="lg:w-6 sm:w-5 w-4 xl:mx-2 lg:mx-1.5 mx-1"
+														src="img/icons/star.svg" alt="star">
+												</div>
+											</div>
+										</div>
+										<div>
+											<p
+												class="text-[#7c7c7c] lg:text-[18px] sm:text-[16px] text-[14px] leading-[1.4] lg:mb-5 mb-3">
+												It
+												was important to
+												the economy
+												and
+												society.Sector
+												depended
+												for example) on the merchants dealing with caravans, end-user
+												retailing.</p>
+											<p
+												class="text-[#7c7c7c] lg:text-[18px] sm:text-[16px] text-[14px] font-bold">
+												CEO,
+												Salesforce</p>
+											<p
+												class="text-[#7c7c7c] xl:text-[28px] lg:text-[26px] sm:text-[24px] text-[22px] font-semibold">
+												London
+											</p>
+										</div>
+									</div>
+								</div>
+								<div data-aos="fade-left" data-aos-delay="100">
+									<div
+										class="bg-white hover:shadow-[0_4px_16px_rgba(0,0,0,0.18)] transition duration-700 py-5 px-6">
+										<div class="flex items-center xl:mb-8 lg:mb-5 mb-4">
+											<div
+												class="xl:max-w-[90px] lg:max-w-[80px] sm:max-w-[70px] max-w-[60px] xl:h-[90px] lg:h-[80px] sm:h-[70px] h-[60px] w-full rounded-full overflow-hidden mr-5">
+												<img class="w-full" src="img/enterprise/avatar2.png" alt="profile">
+											</div>
+											<div>
+												<p
+													class="font-bold text-lightbeige xl:text-[30px] lg:text-[28px] sm:text-[26px] text-[19px] mb-1">
+													Atika
+													Jahin</p>
+												<div class="flex">
+													<img class="lg:w-6 sm:w-5 w-4 xl:mr-2 lg:mr-1.5 mr-1"
+														src="img/icons/star.svg" alt="star">
+													<img class="lg:w-6 sm:w-5 w-4 xl:mx-2 lg:mx-1.5 mx-1"
+														src="img/icons/star.svg" alt="star">
+													<img class="lg:w-6 sm:w-5 w-4 xl:mx-2 lg:mx-1.5 mx-1"
+														src="img/icons/star.svg" alt="star">
+													<img class="lg:w-6 sm:w-5 w-4 xl:mx-2 lg:mx-1.5 mx-1"
+														src="img/icons/star.svg" alt="star">
+													<img class="lg:w-6 sm:w-5 w-4 xl:mx-2 lg:mx-1.5 mx-1"
+														src="img/icons/star.svg" alt="star">
+												</div>
+											</div>
+										</div>
+										<div>
+											<p
+												class="text-[#7c7c7c] lg:text-[18px] sm:text-[16px] text-[14px] leading-[1.4] lg:mb-5 mb-3">
+												It
+												was important to
+												the economy
+												and society.Sector depended
+												for example) on the merchants dealing with caravans, end-user
+												retailing.</p>
+											<p
+												class="text-[#7c7c7c] lg:text-[18px] sm:text-[16px] text-[14px] font-bold">
+												Data
+												Scientist, SilverCloud
+											</p>
+											<p
+												class="text-[#7c7c7c] xl:text-[28px] lg:text-[26px] sm:text-[24px] text-[22px] font-semibold">
+												France
+											</p>
+										</div>
+									</div>
+								</div>
+								<div data-aos="fade-right" data-aos-delay="200">
+									<div
+										class="bg-white hover:shadow-[0_4px_16px_rgba(0,0,0,0.18)] transition duration-700 py-5 px-6">
+										<div class="flex items-center xl:mb-8 lg:mb-5 mb-4">
+											<div
+												class="xl:max-w-[90px] lg:max-w-[80px] sm:max-w-[70px] max-w-[60px] xl:h-[90px] lg:h-[80px] sm:h-[70px] h-[60px] w-full rounded-full overflow-hidden mr-5">
+												<img class="w-full" src="img/enterprise/avatar3.png" alt="profile">
+											</div>
+											<div>
+												<p
+													class="font-bold text-lightbeige xl:text-[30px] lg:text-[28px] sm:text-[26px] text-[19px] mb-1">
+													John
+													Carter</p>
+												<div class="flex">
+													<img class="lg:w-6 sm:w-5 w-4 xl:mr-2 lg:mr-1.5 mr-1"
+														src="img/icons/star.svg" alt="star">
+													<img class="lg:w-6 sm:w-5 w-4 xl:mx-2 lg:mx-1.5 mx-1"
+														src="img/icons/star.svg" alt="star">
+													<img class="lg:w-6 sm:w-5 w-4 xl:mx-2 lg:mx-1.5 mx-1"
+														src="img/icons/star.svg" alt="star">
+													<img class="lg:w-6 sm:w-5 w-4 xl:mx-2 lg:mx-1.5 mx-1"
+														src="img/icons/star.svg" alt="star">
+													<img class="lg:w-6 sm:w-5 w-4 xl:mx-2 lg:mx-1.5 mx-1"
+														src="img/icons/star.svg" alt="star">
+												</div>
+											</div>
+										</div>
+										<div>
+											<p
+												class="text-[#7c7c7c] lg:text-[18px] sm:text-[16px] text-[14px] leading-[1.4] lg:mb-5 mb-3">
+												It
+												was important to
+												the economy
+												and society.Sector depended
+												for example) on the merchants dealing with caravans, end-user
+												retailing.</p>
+											<p
+												class="text-[#7c7c7c] lg:text-[18px] sm:text-[16px] text-[14px] font-bold">
+												Manager, Nike
+											</p>
+											<p
+												class="text-[#7c7c7c] xl:text-[28px] lg:text-[26px] sm:text-[24px] text-[22px] font-semibold">
+												Italy</p>
+										</div>
+									</div>
+								</div>
+								<div data-aos="fade-left" data-aos-delay="200">
+									<div
+										class="bg-white hover:shadow-[0_4px_16px_rgba(0,0,0,0.18)] transition duration-700 py-5 px-6">
+										<div class="flex items-center xl:mb-8 lg:mb-5 mb-4">
+											<div
+												class="xl:max-w-[90px] lg:max-w-[80px] sm:max-w-[70px] max-w-[60px] xl:h-[90px] lg:h-[80px] sm:h-[70px] h-[60px] w-full rounded-full overflow-hidden mr-5">
+												<img class="w-full" src="img/enterprise/avatar4.png" alt="profile">
+											</div>
+											<div>
+												<p
+													class="font-bold text-lightbeige xl:text-[30px] lg:text-[28px] sm:text-[26px] text-[19px] mb-1">
+													Jeks
+													Jahin</p>
+												<div class="flex">
+													<img class="lg:w-6 sm:w-5 w-4 xl:mr-2 lg:mr-1.5 mr-1"
+														src="img/icons/star.svg" alt="star">
+													<img class="lg:w-6 sm:w-5 w-4 xl:mx-2 lg:mx-1.5 mx-1"
+														src="img/icons/star.svg" alt="star">
+													<img class="lg:w-6 sm:w-5 w-4 xl:mx-2 lg:mx-1.5 mx-1"
+														src="img/icons/star.svg" alt="star">
+													<img class="lg:w-6 sm:w-5 w-4 xl:mx-2 lg:mx-1.5 mx-1"
+														src="img/icons/star.svg" alt="star">
+													<img class="lg:w-6 sm:w-5 w-4 xl:mx-2 lg:mx-1.5 mx-1"
+														src="img/icons/star.svg" alt="star">
+												</div>
+											</div>
+										</div>
+										<div>
+											<p
+												class="text-[#7c7c7c] lg:text-[18px] sm:text-[16px] text-[14px] leading-[1.4] lg:mb-5 mb-3">
+												It
+												was important to
+												the economy
+												and society.Sector depended
+												for example) on the merchants dealing with caravans, end-user
+												retailing.</p>
+											<p
+												class="text-[#7c7c7c] lg:text-[18px] sm:text-[16px] text-[14px] font-bold">
+												Data
+												Scientist, SilverCloud
+											</p>
+											<p
+												class="text-[#7c7c7c] xl:text-[28px] lg:text-[26px] sm:text-[24px] text-[22px] font-semibold">
+												Thailand
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- END : Traveller Reviews -->
+
+		<!-- START : Subscribe -->
+		<section class="overflow-hidden">
+			<div class="bg-[url('/img/enterprise/subscribe.png')] bg-no-repeat xl:pb-0 lg:mb-12 sm:mb-10 mb-5">
+				<div class="container">
+					<div
+						class="xl:max-w-[800px] max-w-[700px] text-center text-white xl:py-28 lg:py-20 sm:py-16 py-10 mx-auto">
+						<div class="">
+							<p class="xl:text-[42px] lg:text-[40px] sm:text-[36px] text-[26px] font-bold"
+								data-aos="fade-right" data-aos-delay="100">
+								Subscribe to Our
+								Newsletter! To get Latest News of Us.
+							</p>
+							<p class="lg:text-[22px] sm:text-[18px] text-[16px] sm:my-5 my-3" data-aos="fade-left"
+								data-aos-delay="200">Lorem
+								ipsum dolor sit
+								amet, consectetur adipiscing elit, sed do
+								eiusmod
+								tempor
+								incididunt ut labore et dolore magna aliqua.</p>
+						</div>
+						<div class="flex items-center bg-white rounded-sm lg:w-auto sm:w-3/4 p-1 sm:mb-5 mb-3 lg:mx-0 mx-auto"
+							data-aos="fade-right" data-aos-delay="300">
+							<div class="w-full h-full text-black px-4">
+								<input type="email" placeholder="Enter Your Email Address" class="w-full h-full">
+							</div>
+							<button class="btn lg:text-[22px] text-[18px]">Subscribe</button>
+						</div>
+						<p class="lg:text-[22px] sm:text-[18px] text-[16px]" data-aos="fade-left" data-aos-delay="400">
+							Your Email Is
+							Fully Secure With
+							Us. <span class="text-lightbeige">We
+								Don’t Sell</span></p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- END : Subscribe -->
+
+		<!-- START : Offer Packages -->
+		<section class="overflow-hidden">
+			<div class="xl:pb-16 lg:pb-12 sm:pb-10 pb-5">
+				<div class="lg:flex items-start lg:px-0 px-4">
+					<div class="bg-lightbeige text-white w-full 2xl:max-w-[600px] xl:max-w-[460px] lg:max-w-[350px] flex 2xl:justify-center 2xl:p-14 xl:p-10 lg:py-12 py-8 px-8"
+						data-aos="fade-right">
+						<div class="2xl:max-w-[350px] xl:max-w-[340px] lg:max-w-[255px]">
+							<p class="font-bold 2xl:text-[30px] xl:text-[28px] text-[22px] mb-2">Offer Packages from
+								Trips</p>
+							<p class="xl:text-[20px] text-[16px]">Lorem ipsum dolor sit amet, consectetur adipiscing
+								elit, sed do
+								eiusmod
+								tempor
+								incididunt ut labore
+								et dolore magna aliqua.</p>
+						</div>
+					</div>
+					<div
+						class="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-4 sm:gap-x-4 gap-x-0 items-start xl:mt-[80px] lg:mt-[50px] mt-4 2xl:ml-[-100px] xl:ml-[-75px] lg:ml-[-60px]">
+						<div data-aos="fade-right" data-aos-delay="100">
+							<div
+								class="xl:max-w-[390px] lg:max-w-[230px] bg-white transition duration-700 hover:shadow-[0_2px_10px_rgba(0,0,0,0.1)]">
+								<div>
+									<div
+										class="relative shadow-md 2xl:h-[340px] xl:h-[300px] lg:h-[270px] sm:h-[250px] h-[220px]">
+										<img class="w-full h-full object-cover object-right"
+											src="img/enterprise/nepal.png" alt="nepal">
+										<div class="absolute bottom-0 left-0 right-0 py-2 px-4 gradient-black">
+											<p
+												class="text-white 2xl:text-[28px] xl:text-[26px] text-[20px] font-semibold">
+												$700</p>
+										</div>
+									</div>
+									<div class="px-3 xl:py-4 py-2">
+										<p class="xl:text-[22px] text-[16px] text-[#7c7c7c] mb-1">Save upto 30%</p>
+										<div class="flex justify-between items-center">
+											<p
+												class="text-lightbeige 2xl:text-[28px] xl:text-[26px] text-[20px] font-bold leading-[1]">
+												Nepal</p>
+											<a href="javascript:void(0)" class="flex items-center">
+												<p class="text-[#9EA0A0] xl:text-[17px] text-[14px]">Learn More</p>
+												<div class="xl:w-5 w-4 ml-2">
+													<img src="img/icons/right-arrow-gray.svg" alt="arrow"
+														class="w-full">
+												</div>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div data-aos="fade-right" data-aos-delay="200">
+							<div
+								class="xl:max-w-[390px] lg:max-w-[230px] bg-white transition duration-700 hover:shadow-[0_2px_10px_rgba(0,0,0,0.1)] lg:mt-[80px]">
+								<div>
+									<div
+										class="relative shadow-md 2xl:h-[340px] xl:h-[300px] lg:h-[270px] sm:h-[250px] h-[220px]">
+										<img class="w-full h-full object-cover object-right"
+											src="img/enterprise/london.png" alt="london">
+										<div class="absolute bottom-0 left-0 right-0 py-2 px-4 gradient-black">
+											<p
+												class="text-white 2xl:text-[28px] xl:text-[26px] text-[20px] font-semibold">
+												$1557</p>
+										</div>
+									</div>
+									<div class="px-3 xl:py-4 py-2">
+										<p class="xl:text-[22px] text-[16px] text-[#7c7c7c] mb-1">Save upto 32%</p>
+										<div class="flex justify-between items-center">
+											<p
+												class="text-lightbeige 2xl:text-[28px] xl:text-[26px] text-[20px] font-bold leading-[1]">
+												London</p>
+											<a href="javascript:void(0)" class="flex items-center">
+												<p class="text-[#9EA0A0] xl:text-[17px] text-[14px]">Learn More</p>
+												<div class="xl:w-5 w-4 ml-2">
+													<img src="img/icons/right-arrow-gray.svg" alt="arrow"
+														class="w-full">
+												</div>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="lg:col-span-1 sm:col-span-2 lg:w-auto sm:w-1/2 lg:mx-0 sm:mx-auto"
+							data-aos="fade-right" data-aos-delay="300">
+							<div
+								class="xl:max-w-[390px] lg:max-w-[230px] bg-white transition duration-700 hover:shadow-[0_2px_10px_rgba(0,0,0,0.1)] lg:mt-[160px]">
+								<div>
+									<div
+										class="relative shadow-md 2xl:h-[340px] xl:h-[300px] lg:h-[270px] sm:h-[250px] h-[220px]">
+										<img class="w-full h-full object-cover object-right"
+											src="img/enterprise/thailand.png" alt="thailand">
+										<div class="absolute bottom-0 left-0 right-0 py-2 px-4 gradient-black">
+											<p
+												class="text-white 2xl:text-[28px] xl:text-[26px] text-[20px] font-semibold">
+												$2400</p>
+										</div>
+									</div>
+									<div class="px-3 xl:py-4 py-2">
+										<p class="xl:text-[22px] text-[16px] text-[#7c7c7c] mb-1">Save upto 32%</p>
+										<div class="flex justify-between items-center">
+											<p
+												class="text-lightbeige 2xl:text-[28px] xl:text-[26px] text-[20px] font-bold leading-[1]">
+												Thailand</p>
+											<a href="javascript:void(0)" class="flex items-center">
+												<p class="text-[#9EA0A0] xl:text-[17px] text-[14px]">Learn More</p>
+												<div class="xl:w-5 w-4 ml-2">
+													<img src="img/icons/right-arrow-gray.svg" alt="arrow"
+														class="w-full">
+												</div>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- END : Offer Packages -->
+	</main>
+	<!-- END: Main -->
+
+	<!-- START: Footer -->
+	<footer class="overflow-hidden">
+		<div
+			class="bg-[url('/img/enterprise/bg-footer.png')] bg-no-repeat bg-cover text-white h-full w-full z-10 relative before:content:[''] before:absolute before:bg-black before:opacity-50 before:w-full before:h-full before:-z-10">
+			<div class="container">
+				<div
+					class="grid xl:grid-cols-5 lg:grid-cols-4 sm:grid-cols-2 sm:text-left text-center lg:gap-0 gap-5 xl:pt-24 lg:pt-16 pt-5 sm:pb-5 pb-10 xl:px-0 px-4">
+					<div class="xl:col-start-2" data-aos="fade-right">
+						<ul>
+							<p class="lg:text-[24px] text-[20px] lg:px-2 px-1 lg:mb-4 mb-3">COMPANY</p>
+							<li>
+								<a href="#">
+									<p
+										class="lg:text-[18px] text-[16px] hover:text-lightbeige transition duration-300 lg:p-2 p-1 mb-1">
+										About
+										company
+									</p>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<p
+										class="lg:text-[18px] text-[16px] hover:text-lightbeige transition duration-300 lg:p-2 p-1 mb-1">
+										Our
+										services
+									</p>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<p
+										class="lg:text-[18px] text-[16px] hover:text-lightbeige transition duration-300 lg:p-2 p-1 mb-1">
+										Job
+										opportunities
+									</p>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<p
+										class="lg:text-[18px] text-[16px] hover:text-lightbeige transition duration-300 lg:p-2 p-1 mb-1">
+										Contact us</p>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div data-aos="fade-right" data-aos-delay="100">
+						<ul>
+							<p class="lg:text-[24px] text-[20px] lg:px-2 px-1 lg:mb-4 mb-3">CUSTOMER</p>
+							<li>
+								<a href="#">
+									<p
+										class="lg:text-[18px] text-[16px] hover:text-lightbeige transition duration-300 lg:p-2 p-1 mb-1">
+										Client
+										support
+									</p>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<p
+										class="lg:text-[18px] text-[16px] hover:text-lightbeige transition duration-300 lg:p-2 p-1 mb-1">
+										Pricing
+										packages</p>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<p
+										class="lg:text-[18px] text-[16px] hover:text-lightbeige transition duration-300 lg:p-2 p-1 mb-1">
+										Company story
+									</p>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<p
+										class="lg:text-[18px] text-[16px] hover:text-lightbeige transition duration-300 lg:p-2 p-1 mb-1">
+										Latest
+										news
+									</p>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div data-aos="fade-right" data-aos-delay="200">
+						<ul>
+							<p class="lg:text-[24px] text-[20px] lg:px-2 px-1 lg:mb-4 mb-3">RESOURCES</p>
+							<li>
+								<a href="#">
+									<p
+										class="lg:text-[18px] text-[16px] hover:text-lightbeige transition duration-300 lg:p-2 p-1 mb-1">
+										Theme
+										guide
+									</p>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<p
+										class="lg:text-[18px] text-[16px] hover:text-lightbeige transition duration-300 lg:p-2 p-1 mb-1">
+										Support desk
+									</p>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<p
+										class="lg:text-[18px] text-[16px] hover:text-lightbeige transition duration-300 lg:p-2 p-1 mb-1">
+										What
+										we offer
+									</p>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<p
+										class="lg:text-[18px] text-[16px] hover:text-lightbeige transition duration-300 lg:p-2 p-1 mb-1">
+										Company
+										history</p>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div data-aos="fade-right" data-aos-delay="300">
+						<ul>
+							<p class="lg:text-[24px] text-[20px] lg:px-2 px-1 lg:mb-4 mb-3">DESTINATIONS</p>
+							<li>
+								<a href="#">
+									<p
+										class="lg:text-[18px] text-[16px] hover:text-lightbeige transition duration-300 lg:p-2 p-1 mb-1">
+										Theme
+										guide
+									</p>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<p
+										class="lg:text-[18px] text-[16px] hover:text-lightbeige transition duration-300 lg:p-2 p-1 mb-1">
+										Support desk
+									</p>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<p
+										class="lg:text-[18px] text-[16px] hover:text-lightbeige transition duration-300 lg:p-2 p-1 mb-1">
+										What
+										we offer
+									</p>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<p
+										class="lg:text-[18px] text-[16px] hover:text-lightbeige transition duration-300 lg:p-2 p-1 mb-1">
+										Company
+										history
+									</p>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div data-aos="fade-right" data-aos-offset="0" data-aos-delay="400">
+					<a href="index.html"
+						class="flex sm:justify-start justify-center items-center xl:px-0 px-4 sm:mb-0 mb-5">
+						<div class="h-14 mr-3">
+							<img src="img/logo/light-beige.svg" alt="Logo" class="h-full">
+						</div>
+						<p class="text-[32px]"><span class="text-lightbeige">Z</span>ooa</p>
+					</a>
+				</div>
+				<div class="text-center pb-5" data-aos="fade-left" data-aos-offset="0" data-aos-delay="400">
+					<p class="opacity-70">Copyright © 2021 Zooa Theme Kit All Rights Reserved.</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!-- END: Footer -->
+
+	<!-- Script -->
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+	<script src="plugins/swiper/swiper-bundle.min.js"></script>
+	<script src="plugins/tailwindcss/tailwindcss.js"></script>
+	<script src="js/enterprise.js"></script>
+	<script src="js/app.js"></script>
+
+</body>
+
+</html>

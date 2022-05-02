@@ -1,0 +1,1686 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Zooa - Theme Kit</title>
+
+  <!-- fonts googleapis stylesheet -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+
+  <!--google font link-->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+  <!-- swiper stylesheet -->
+  <link rel="stylesheet" href="plugins/swiper/swiper-bundle.min.css" />
+
+  <!--animation link-->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+  <!--css link-->
+  <link rel="stylesheet" href="css/main.css" />
+
+  <!-- Tailwind class base mixin -->
+  <style type="text/tailwindcss">
+    @layer utilities {
+        .bg-indigo {
+          @apply bg-gradient-to-r from-[#9180FF] to-[#FF7878];
+        }
+        .text-indigo {
+          @apply text-transparent bg-clip-text bg-gradient-to-r from-[#9180FF] to-[#FF7878];
+        }
+        .text-theme {
+          color:#C07CC5;
+        }
+        .btn {
+          @apply py-4 px-7 text-indigo bg-white rounded-md inline-flex items-center transition duration-500;
+        }
+        .btn:hover {
+          @apply bg-opacity-50;
+        }
+        .btn span {
+          @apply ml-2;
+        }
+        .container {
+          @apply mx-auto px-4;
+        }
+        .dropdown:hover .dropdown-hover\:block {
+          display: block;
+        }
+        .menu-icon span:first-child {
+          transform: rotate(45deg);
+        }
+        .menu-icon span:last-child {
+          top: 0;
+          transform: rotate(-45deg);
+        }
+        .menu-icon .toggler-line {
+          display: none;
+        }
+        .left .subMenu {
+          right: 101%;
+        }
+        .right .subMenu {
+          left: 101%;
+        }
+        .collapse {
+          max-height: 0;
+          overflow: hidden;
+          transition-duration: 0.4s;
+        }
+        .collapse.show {
+          max-height: 100%;
+        }
+        .scroll-header {
+          @apply shadow-lg;
+        }
+        .path {
+            clip-path: polygon(0% 0%, 100% 0%, 100% 17%, 0% 60%);
+        }
+        .hover-effect{
+          transition:0.3s;
+        }
+      }
+    </style>
+</head>
+
+<body class="font-[Poppins]" styel="width:100%; overflow-x:hidden;">
+  <!-- START : loder -->
+  <div class="preloader" style="
+            position: fixed;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            background-color: #fff;
+            z-index: 99999999999999;
+          ">
+    <img src="img/loder/digital-agency-loder.gif" alt="loder" />
+  </div>
+  <!-- END : loder -->
+  <!-- START: Header -->
+  <header class="fixed top-0 left-0 w-full text-lg z-50 transition duration-300 bg-white">
+    <div class="container lg:py-4 py-2 flex items-center justify-between">
+      <a href="index.html" class="block h-14">
+        <img src="img/logo/digital-agency-logo.svg" alt="Logo" class="h-full w-full" />
+      </a>
+      <button type="button" id="menu-btn" class="w-[22px] h-[14px] align-middle relative mx-2 lg:hidden block"
+        aria-controls="mobile-menu" aria-expanded="false" data-mobile-nav="false">
+        <span class="h-[3px] w-full absolute top-0 left-0 bg-indigo transition duration-300"></span>
+        <span class="h-[3px] w-full absolute top-1/2 left-0 bg-indigo transition duration-300 toggler-line"></span>
+        <span class="h-[3px] w-full absolute top-full left-0 bg-indigo transition duration-300"></span>
+      </button>
+      <div class="lg:flex hidden items-center w-full text-center">
+        <div class="flex justify-between w-full">
+          <ul class="flex items-center mx-auto">
+            <li class="group">
+              <a href="javascript:void(0)"
+                class="xl:px-8 lg:px-4 py-2 text-lg text-indigo font-medium transition">Home</a>
+              <div
+                class="absolute top-[70%] gap-10 bg-white text-black rounded-md text-[14px] text-left shadow-lg hidden group-hover:flex py-4 px-6">
+                <ul>
+                  <h5 class="font-bold mb-2">Corporate</h5>
+                  <li class="hover:text-indigo transition duration-300 mb-2">
+                    <a href="javascript:void(0)">Startup</a>
+                  </li>
+                  <li class="hover:text-indigo transition duration-300 mb-2">
+                    <a href="javascript:void(0)">Business</a>
+                  </li>
+                  <li class="hover:text-indigo transition duration-300 mb-2">
+                    <a href="javascript:void(0)">Corporate</a>
+                  </li>
+                  <li class="hover:text-indigo transition duration-300 mb-2">
+                    <a href="javascript:void(0)">Finance</a>
+                  </li>
+                  <li class="hover:text-indigo transition duration-300 mb-2">
+                    <a href="javascript:void(0)">Application</a>
+                  </li>
+                  <li class="hover:text-indigo transition duration-300 mb-2">
+                    <a href="javascript:void(0)">Consulting</a>
+                  </li>
+                  <li class="hover:text-indigo transition duration-300 mb-2">
+                    <a href="javascript:void(0)">Digital agency</a>
+                  </li>
+                  <li class="hover:text-indigo transition duration-300 mb-2">
+                    <a href="javascript:void(0)">SEO agency</a>
+                  </li>
+                  <li class="hover:text-indigo transition duration-300 mb-2">
+                    <a href="javascript:void(0)">Event & conference</a>
+                  </li>
+                  <li class="hover:text-indigo transition duration-300">
+                    <a href="javascript:void(0)">Marketing agency</a>
+                  </li>
+                </ul>
+                <ul>
+                  <h5 class="font-bold mb-2">Specialized</h5>
+                  <li class="hover:text-indigo transition duration-300 mb-2">
+                    <a href="javascript:void(0)">Restaurant</a>
+                  </li>
+                  <li class="hover:text-indigo transition duration-300 mb-2">
+                    <a href="javascript:void(0)">Architecture</a>
+                  </li>
+                  <li class="hover:text-indigo transition duration-300 mb-2">
+                    <a href="javascript:void(0)">Hotel & resort</a>
+                  </li>
+                  <li class="hover:text-indigo transition duration-300 mb-2">
+                    <a href="javascript:void(0)">Travel agency</a>
+                  </li>
+                  <li class="hover:text-indigo transition duration-300 mb-2">
+                    <a href="javascript:void(0)">Yoga & meditation</a>
+                  </li>
+                  <li class="hover:text-indigo transition duration-300 mb-2">
+                    <a href="javascript:void(0)">Gym & fitness</a>
+                  </li>
+                  <li class="hover:text-indigo transition duration-300 mb-2">
+                    <a href="javascript:void(0)">Spa salon</a>
+                  </li>
+                  <li class="hover:text-indigo transition duration-300 mb-2">
+                    <a href="javascript:void(0)">Cafe</a>
+                  </li>
+                  <li class="hover:text-indigo transition duration-300 mb-2">
+                    <a href="javascript:void(0)">Home decor</a>
+                  </li>
+                  <li class="hover:text-indigo transition duration-300">
+                    <a href="javascript:void(0)">Dentist</a>
+                  </li>
+                  <li class="hover:text-indigo transition duration-300">
+                    <a href="javascript:void(0)">Interior design</a>
+                  </li>
+                </ul>
+                <ul>
+                  <h5 class="font-bold mb-2">Portfolio</h5>
+                  <li class="hover:text-indigo transition duration-300 mb-2">
+                    <a href="javascript:void(0)">Design agency</a>
+                  </li>
+                  <li class="hover:text-indigo transition duration-300 mb-2">
+                    <a href="javascript:void(0)">Web agency</a>
+                  </li>
+                  <li class="hover:text-indigo transition duration-300 mb-2">
+                    <a href="javascript:void(0)">Creative agency</a>
+                  </li>
+                  <li class="hover:text-indigo transition duration-300 mb-2">
+                    <a href="javascript:void(0)">Freelancer</a>
+                  </li>
+                  <li class="hover:text-indigo transition duration-300 mb-2">
+                    <a href="javascript:void(0)">Branding agency</a>
+                  </li>
+                  <li class="hover:text-indigo transition duration-300 mb-2">
+                    <a href="javascript:void(0)">Photography</a>
+                  </li>
+                  <li class="hover:text-indigo transition duration-300 mb-2">
+                    <a href="javascript:void(0)">Personal portfolio</a>
+                  </li>
+                  <li class="hover:text-indigo transition duration-300 mb-2">
+                    <a href="javascript:void(0)">Vertical portfolio</a>
+                  </li>
+                  <li class="hover:text-indigo transition duration-300 mb-2">
+                    <a href="javascript:void(0)">Interactive portfolio</a>
+                  </li>
+                  <li class="hover:text-indigo transition duration-300">
+                    <a href="javascript:void(0)">Split portfolio</a>
+                  </li>
+                  <li class="hover:text-indigo transition duration-300">
+                    <a href="javascript:void(0)">Creative portfolio</a>
+                  </li>
+                </ul>
+                <ul>
+                  <h5 class="font-bold mb-2">Other</h5>
+                  <li class="hover:text-indigo transition duration-300 mb-2">
+                    <a href="javascript:void(0)">Furniture shop</a>
+                  </li>
+                  <li class="hover:text-indigo transition duration-300 mb-2">
+                    <a href="javascript:void(0)">Fashion shop</a>
+                  </li>
+                  <li class="hover:text-indigo transition duration-300 mb-2">
+                    <a href="javascript:void(0)">Magazine</a>
+                  </li>
+                  <li class="hover:text-indigo transition duration-300 mb-2">
+                    <a href="javascript:void(0)">Lifestyle blog</a>
+                  </li>
+                  <li class="hover:text-indigo transition duration-300 mb-2">
+                    <a href="javascript:void(0)">Classic blog</a>
+                  </li>
+                  <li class="hover:text-indigo transition duration-300 mb-2">
+                    <a href="javascript:void(0)">Blog metro</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="group">
+              <a href="javascript:void(0)"
+                class="xl:px-8 lg:px-4 text-lg text-black font-medium hover:text-indigo transition hover:duration-300">About</a>
+              <div
+                class="absolute top-[70%] gap-10 bg-white text-black rounded-md text-[14px] text-left shadow-lg hidden group-hover:flex py-2">
+                <ul>
+                  <li class="dropdown relative right">
+                    <a href="javascript:void(0)" class="hover:text-indigo transition duration-300 px-6 py-4">Lifestyle
+                      blog</a>
+                    <div
+                      class="hidden dropdown-hover:block bg-white shadow-lg rounded-md absolute top-[0] subMenu py-2">
+                      <ul>
+                        <li class="hover:text-indigo transition duration-300 px-6 py-1">
+                          <a href="javascript:void(0)" class="whitespace-nowrap">Furniture
+                            shop</a>
+                        </li>
+                        <li class="hover:text-indigo transition duration-300 px-6 py-1">
+                          <a href="javascript:void(0)" class="whitespace-nowrap">Fashion
+                            shop</a>
+                        </li>
+                        <li class="hover:text-indigo transition duration-300 px-6 py-1">
+                          <a href="javascript:void(0)" class="whitespace-nowrap">Magazine</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="relative px-6 py-1 dropdown left">
+                    <a href="javascript:void(0)"
+                      class="hover:text-indigo transition duration-300 whitespace-nowrap">Classic
+                      blog</a>
+                    <div
+                      class="hidden dropdown-hover:block bg-white shadow-lg rounded-md absolute top-[0] subMenu py-2">
+                      <ul>
+                        <li class="hover:text-indigo transition duration-300 px-6 py-1">
+                          <a href="javascript:void(0)" class="whitespace-nowrap">Our
+                            services</a>
+                        </li>
+                        <li class="hover:text-indigo transition duration-300 px-6 py-1">
+                          <a href="javascript:void(0)" class="whitespace-nowrap">What we
+                            offer</a>
+                        </li>
+                        <li class="hover:text-indigo transition duration-300 px-6 py-1">
+                          <a href="javascript:void(0)" class="whitespace-nowrap">Our
+                            process</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="hover:text-indigo transition duration-300 px-6 py-1">
+                    <a href="javascript:void(0)" class="whitespace-nowrap">Blog metro</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <a href="javascript:void(0)"
+                class="xl:px-8 lg:px-4 text-lg text-black font-medium hover:text-indigo transition hover:duration-300">Portfolio</a>
+            </li>
+            <li>
+              <a href="javascript:void(0)"
+                class="xl:px-8 lg:px-4 text-lg text-black font-medium hover:text-indigo transition hover:duration-300">Blog</a>
+            </li>
+            <li>
+              <a href="javascript:void(0)"
+                class="xl:px-8 lg:px-4 text-lg text-black font-medium hover:text-indigo transition hover:duration-300">Shop</a>
+            </li>
+            <li>
+              <a href="javascript:void(0)"
+                class="xl:px-8 lg:px-4 text-lg text-black font-medium hover:text-indigo transition hover:duration-300">Elements</a>
+            </li>
+          </ul>
+          <div class="relative gap-5">
+            <div
+              class="absolute top-[-10px] right-[100px] bg-white border-0 border-[#C07CC5] flex items-center rounded-full justify-center py-2 px-3"
+              id="search-border">
+              <button class="" id="search-button">
+                <div class="w-8 h-8">
+                  <img src="img/icons/indigo-search.svg" alt="digital-agency" class="w-full h-full" />
+                </div>
+              </button>
+              <input type="search"
+                class="placeholder:text-[16px] placeholder:pl-2 font-semibold w-[0px] placeholder:outline-none placeholder:border-none transition-width duration-700"
+                placeholder="Search" />
+            </div>
+            <div class="mr-16">
+              <img src="img/icons/cart.svg" alt="digital-agency" class="w-full h-full" />
+            </div>
+            <div>
+              <button type="button" class="absolute top-[6px] right-0 w-[22px] h-[14px] align-middle mx-2"
+                aria-controls="mobile-menu" aria-expanded="false" data-mobile-nav="false">
+                <span class="h-[3px] w-full absolute top-0 left-0 bg-black transition duration-300"></span>
+                <span
+                  class="h-[3px] w-full absolute top-1/2 left-0 bg-black transition duration-300 toggler-line"></span>
+                <span class="h-[3px] w-full absolute top-full left-0 bg-black transition duration-300"></span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="fixed inset-0 sm:w-3/4 bg-white transition duration-700 translate-x-[-110%] px-4 py-3"
+        id="mobile-menu">
+        <span class="absolute top-2 right-2 material-icons sm:hidden text-indigo" id="closeMenu">close</span>
+        <a href="index.html" class="block h-14">
+          <img src="img/logo/digital-agency-logo.svg" alt="Logo" class="h-full" />
+        </a>
+        <div class="h-full overflow-auto text-[15px] py-3">
+          <ul>
+            <li>
+              <div>
+                <button
+                  class="w-full h-full flex justify-between border-b text-left text-indigo hover:text-black transition duration-700 px-[15px] py-[9px]"
+                  data-toggle="collapse">
+                  <span>Home</span>
+                  <span class="material-icons transition duration-700 rotate-icon">keyboard_arrow_down</span>
+                </button>
+                <div class="collapse transition duration-700">
+                  <div class="sm:grid grid-cols-2 text-black py-2">
+                    <ul>
+                      <h5 class="font-bold px-[15px]">Corporate</h5>
+                      <li class="hover:text-indigo transition duration-300 px-[15px] py-[2px]">
+                        <a href="javascript:void(0)" class="whitespace-nowrap">Startup</a>
+                      </li>
+                      <li class="hover:text-indigo transition duration-300 px-[15px] py-[2px]">
+                        <a href="javascript:void(0)" class="whitespace-nowrap">Business</a>
+                      </li>
+                      <li class="hover:text-indigo transition duration-300 px-[15px] py-[2px]">
+                        <a href="javascript:void(0)" class="whitespace-nowrap">Corporate</a>
+                      </li>
+                      <li class="hover:text-indigo transition duration-300 px-[15px] py-[2px]">
+                        <a href="javascript:void(0)" class="whitespace-nowrap">Finance</a>
+                      </li>
+                      <li class="hover:text-indigo transition duration-300 px-[15px] py-[2px]">
+                        <a href="javascript:void(0)" class="whitespace-nowrap">Application</a>
+                      </li>
+                      <li class="hover:text-indigo transition duration-300 px-[15px] py-[2px]">
+                        <a href="javascript:void(0)" class="whitespace-nowrap">Consulting</a>
+                      </li>
+                      <li class="hover:text-indigo transition duration-300 px-[15px] py-[2px]">
+                        <a href="javascript:void(0)" class="whitespace-nowrap">Digital
+                          agency</a>
+                      </li>
+                      <li class="hover:text-indigo transition duration-300 px-[15px] py-[2px]">
+                        <a href="javascript:void(0)" class="whitespace-nowrap">SEO agency</a>
+                      </li>
+                      <li class="hover:text-indigo transition duration-300 px-[15px] py-[2px]">
+                        <a href="javascript:void(0)" class="whitespace-nowrap">Event &amp;
+                          conference</a>
+                      </li>
+                      <li class="hover:text-indigo transition duration-300 px-[15px] py-[2px]">
+                        <a href="javascript:void(0)" class="whitespace-nowrap">Marketing
+                          agency</a>
+                      </li>
+                    </ul>
+                    <ul>
+                      <h5 class="font-bold px-[15px]">Specialized</h5>
+                      <li class="hover:text-indigo transition duration-300 px-[15px] py-[2px]">
+                        <a href="javascript:void(0)" class="whitespace-nowrap">Restaurant</a>
+                      </li>
+                      <li class="hover:text-indigo transition duration-300 px-[15px] py-[2px]">
+                        <a href="javascript:void(0)" class="whitespace-nowrap">Architecture</a>
+                      </li>
+                      <li class="hover:text-indigo transition duration-300 px-[15px] py-[2px]">
+                        <a href="javascript:void(0)" class="whitespace-nowrap">Hotel &
+                          resort</a>
+                      </li>
+                      <li class="hover:text-indigo transition duration-300 px-[15px] py-[2px]">
+                        <a href="javascript:void(0)" class="whitespace-nowrap">Travel agency</a>
+                      </li>
+                      <li class="hover:text-indigo transition duration-300 px-[15px] py-[2px]">
+                        <a href="javascript:void(0)" class="whitespace-nowrap">Yoga &
+                          meditation</a>
+                      </li>
+                      <li class="hover:text-indigo transition duration-300 px-[15px] py-[2px]">
+                        <a href="javascript:void(0)" class="whitespace-nowrap">Gym & fitness</a>
+                      </li>
+                      <li class="hover:text-indigo transition duration-300 px-[15px] py-[2px]">
+                        <a href="javascript:void(0)" class="whitespace-nowrap">Spa salon
+                        </a>
+                      </li>
+                      <li class="hover:text-indigo transition duration-300 px-[15px] py-[2px]">
+                        <a href="javascript:void(0)" class="whitespace-nowrap">Cafe</a>
+                      </li>
+                      <li class="hover:text-indigo transition duration-300 px-[15px] py-[2px]">
+                        <a href="javascript:void(0)" class="whitespace-nowrap">Home decor</a>
+                      </li>
+                      <li class="hover:text-indigo transition duration-300 px-[15px] py-[2px]">
+                        <a href="javascript:void(0)" class="whitespace-nowrap">Dentist</a>
+                      </li>
+                      <li class="hover:text-indigo transition duration-300 px-[15px] py-[2px]">
+                        <a href="javascript:void(0)" class="whitespace-nowrap">Interior
+                          design</a>
+                      </li>
+                    </ul>
+                    <ul>
+                      <h5 class="font-bold px-[15px]">Portfolio</h5>
+                      <li class="hover:text-indigo transition duration-300 px-[15px] py-[2px]">
+                        <a href="javascript:void(0)" class="whitespace-nowrap">Design agency</a>
+                      </li>
+                      <li class="hover:text-indigo transition duration-300 px-[15px] py-[2px]">
+                        <a href="javascript:void(0)" class="whitespace-nowrap">Web agency</a>
+                      </li>
+                      <li class="hover:text-indigo transition duration-300 px-[15px] py-[2px]">
+                        <a href="javascript:void(0)" class="whitespace-nowrap">Creative
+                          agency</a>
+                      </li>
+                      <li class="hover:text-indigo transition duration-300 px-[15px] py-[2px]">
+                        <a href="javascript:void(0)" class="whitespace-nowrap">Freelancer</a>
+                      </li>
+                      <li class="hover:text-indigo transition duration-300 px-[15px] py-[2px]">
+                        <a href="javascript:void(0)" class="whitespace-nowrap">Branding
+                          agency</a>
+                      </li>
+                      <li class="hover:text-indigo transition duration-300 px-[15px] py-[2px]">
+                        <a href="javascript:void(0)" class="whitespace-nowrap">Photography</a>
+                      </li>
+                      <li class="hover:text-indigo transition duration-300 px-[15px] py-[2px]">
+                        <a href="javascript:void(0)" class="whitespace-nowrap">Personal
+                          portfolio</a>
+                      </li>
+                      <li class="hover:text-indigo transition duration-300 px-[15px] py-[2px]">
+                        <a href="javascript:void(0)" class="whitespace-nowrap">Vertical
+                          portfolio</a>
+                      </li>
+                      <li class="hover:text-indigo transition duration-300 px-[15px] py-[2px]">
+                        <a href="javascript:void(0)" class="whitespace-nowrap">Interactive
+                          portfolio</a>
+                      </li>
+                      <li class="hover:text-indigo transition duration-300 px-[15px] py-[2px]">
+                        <a href="javascript:void(0)" class="whitespace-nowrap">Split
+                          portfolio</a>
+                      </li>
+                      <li class="hover:text-indigo transition duration-300 px-[15px] py-[2px]">
+                        <a href="javascript:void(0)" class="whitespace-nowrap">Creative
+                          portfolio</a>
+                      </li>
+                    </ul>
+                    <ul>
+                      <h5 class="font-bold px-[15px]">Other</h5>
+                      <li class="hover:text-indigo transition duration-300 px-[15px] py-[2px]">
+                        <a href="javascript:void(0)" class="whitespace-nowrap">Furniture
+                          shop</a>
+                      </li>
+                      <li class="hover:text-indigo transition duration-300 px-[15px] py-[2px]">
+                        <a href="javascript:void(0)" class="whitespace-nowrap">Fashion shop</a>
+                      </li>
+                      <li class="hover:text-indigo transition duration-300 px-[15px] py-[2px]">
+                        <a href="javascript:void(0)" class="whitespace-nowrap">Magazine</a>
+                      </li>
+                      <li class="hover:text-indigo transition duration-300 px-[15px] py-[2px]">
+                        <a href="javascript:void(0)" class="whitespace-nowrap">Lifestyle
+                          blog</a>
+                      </li>
+                      <li class="hover:text-indigo transition duration-300 px-[15px] py-[2px]">
+                        <a href="javascript:void(0)" class="whitespace-nowrap">Classic blog</a>
+                      </li>
+                      <li class="hover:text-indigo transition duration-300 px-[15px] py-[2px]">
+                        <a href="javascript:void(0)" class="whitespace-nowrap">Blog metro</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div>
+                <button
+                  class="w-full h-full flex justify-between border-b text-left text-indigo hover:text-black transition duration-700 px-[15px] py-[9px]"
+                  data-toggle="collapse">
+                  <span>About</span>
+                  <span class="material-icons transition duration-700 rotate-icon">keyboard_arrow_down</span>
+                </button>
+                <div class="collapse transition duration-700">
+                  <div class="text-black">
+                    <ul>
+                      <li class="px-[15px] py-[2px]">
+                        <div>
+                          <button class="w-full h-full flex justify-between text-left py-[2px]" data-toggle="collapse">
+                            <span class="hover:text-indigo transition duration-700">Lifestyle
+                              blog</span>
+                            <span class="material-icons transition duration-700 rotate-icon">keyboard_arrow_down</span>
+                          </button>
+                          <div class="collapse transition duration-700">
+                            <ul>
+                              <li class="hover:text-indigo transition duration-300 px-[15px] py-[2px]">
+                                <a href="javascript:void(0)" class="whitespace-nowrap">Furniture shop</a>
+                              </li>
+                              <li class="hover:text-indigo transition duration-300 px-[15px] py-[2px]">
+                                <a href="javascript:void(0)" class="whitespace-nowrap">Fashion shop</a>
+                              </li>
+                              <li class="hover:text-indigo transition duration-300 px-[15px] py-[2px]">
+                                <a href="javascript:void(0)" class="whitespace-nowrap">Magazine</a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="px-[15px] py-[2px]">
+                        <div>
+                          <button class="w-full h-full flex justify-between text-left py-[2px]" data-toggle="collapse">
+                            <span class="hover:text-indigo transition duration-700">Classic
+                              blog</span>
+                            <span class="material-icons transition duration-700 rotate-icon">keyboard_arrow_down</span>
+                          </button>
+                          <div class="collapse transition duration-700">
+                            <ul>
+                              <li class="hover:text-indigo transition duration-300 px-[15px] py-[2px]">
+                                <a href="javascript:void(0)" class="whitespace-nowrap">Our services</a>
+                              </li>
+                              <li class="hover:text-indigo transition duration-300 px-[15px] py-[2px]">
+                                <a href="javascript:void(0)" class="whitespace-nowrap">What we offer</a>
+                              </li>
+                              <li class="hover:text-indigo transition duration-300 px-[15px] py-[2px]">
+                                <a href="javascript:void(0)" class="whitespace-nowrap">Our process</a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="hover:text-indigo transition duration-300 px-[15px] py-[2px]">
+                        <a href="javascript:void(0)" class="whitespace-nowrap">Blog metro</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <a href="javascript:void(0)"
+                class="block w-full h-full border-b text-indigo hover:text-black transition duration-700 px-[15px] py-[9px]">Services</a>
+            </li>
+            <li>
+              <a href="javascript:void(0)"
+                class="block w-full h-full border-b text-indigo hover:text-black transition duration-700 px-[15px] py-[9px]">Blog</a>
+            </li>
+            <li>
+              <a href="javascript:void(0)"
+                class="block w-full h-full border-b text-indigo hover:text-black transition duration-700 px-[15px] py-[9px]">Pages</a>
+            </li>
+            <li>
+              <a href="javascript:void(0)"
+                class="block w-full h-full border-b text-indigo hover:text-black transition duration-700 px-[15px] py-[9px]">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!--END: Header-->
+
+  <!--START:Main-->
+  <main>
+    <!--START: Banner-->
+    <section
+      class="md:min-h-[970px] min-h-[650px] h-full pt-[88px] relative bg-cover bg-no-repeat bg-[url(img/digital-agency/digital-agency-banner.png)] flex items-center overflow-hidden">
+      <div
+        class="h-full flex items-center w-full z-20 before:absolute before:content-[''] before:w-full before:h-full before:min-h-screen before:bg-[#050028] before:opacity-75 before:-z-20">
+        <div class="">
+          <div class="absolute top-24 left-[-22px] z-10 lg:block hidden" data-aos="fade-right" data-aos-duration="500">
+            <img src="img/digital-agency/digital.svg" alt="h-full w-full" />
+          </div>
+          <div class="absolute bottom-[5px] right-[0px] z-10 lg:block hidden" data-aos="fade-left"
+            data-aos-duration="500" data-aos-offset="0">
+            <img src="img/digital-agency/agency.svg" alt="h-full w-full" />
+          </div>
+        </div>
+        <div class="container h-full flex items-center xl:px-4 lg:px-7">
+          <div class="grid lg:grid-cols-5 items-center">
+            <div class="lg:col-span-2 mr-6">
+              <div class="text-white lg:text-[24px] text-[16px] font-semibold md:mb-7 mb-4" data-aos="fade-up"
+                data-aos-duration="300">TRUST
+                AND
+                CLIENT FOCUS</div>
+              <h1
+                class="text-white 2xl:text-[55px] xl:text-[45px] text-[40px] font-bold 2xl:leading-[80px] xl:leading-[65px] md:mb-7 mb-4"
+                data-aos="fade-up" data-aos-duration="400">
+                Best
+                Digital Agency And Business</h1>
+              <p class="text-white leading-[30px] md:text-[16px] text-[14px] max-w-[600px] md:mb-7 mb-4"
+                data-aos="fade-up" data-aos-duration="500">Get
+                professional & reliable research oriented
+                solutions
+                for Data
+                Science and Machine
+                Learning business
+                needs. Enjoy Stress free decision making</p>
+              <div class="flex gap-5" data-aos="fade-up" data-aos-duration="600">
+                <div class="bg-white">
+                  <a href="javascript:void(0)" class="btn font-semibold">Get Started</a>
+                </div>
+                <div class="bg-white rounded-full">
+                  <span class="material-icons text-indigo text-[30px] px-3.5 py-3 cursor-pointer">play_arrow</span>
+                </div>
+              </div>
+            </div>
+            <div class="lg:col-span-3 flex justify-start">
+              <div class="relative">
+                <div class="lg:h-[600px] md:block hidden">
+                  <img src="img/digital-agency/working-women.png" alt="digital-agency"
+                    class="w-full h-full object-contain" />
+                </div>
+                <span
+                  class="bg-[rgba(255,255,255,.2)] backdrop-blur-2xl 2xl:w-[845px] 2xl:h-[600px] xl:w-[740px] xl:h-[560px] absolute top-[65px] left-[70px] -z-10">
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--END: Banner-->
+
+    <!--START: Logo-->
+    <section
+      class="relative before:w-[100%] before:h-[650px] before:content-[''] before:absolute before:path before:bg-[rgba(34,0,255,0.02)] md:before:block before:hidden">
+      <div class="container">
+        <div class="grid md:grid-cols-6 md:gap-36 gap-20 md:py-32 py-14 overflow-hidden">
+          <div class="flex justify-center" data-aos="fade-up" data-aos-duration="400">
+            <div class="w-[112px] h-[50px] blur-[2px] hover:blur-0 transition duration-300">
+              <img src="img/digital-agency/google-logo.svg" alt="digital-agency" class="w-full h-full object-contain" />
+            </div>
+          </div>
+          <div class="flex justify-center" data-aos="fade-up" data-aos-duration="400">
+            <div class="w-[112px] h-[45px] blur-[2px] hover:blur-0 transition duration-300">
+              <img src="img/digital-agency/rails-logo.svg" alt="digital-agency" class="w-full h-full object-contain" />
+            </div>
+          </div>
+          <div class="flex justify-center" data-aos="fade-up" data-aos-duration="400">
+            <div class="w-[112px] h-[50px] blur-[2px] hover:blur-0 transition duration-300">
+              <img src="img/digital-agency/nuxtjs-logo.svg" alt="digital-agency" class="w-full h-full object-contain" />
+            </div>
+          </div>
+          <div class="flex justify-center" data-aos="fade-up" data-aos-duration="400">
+            <div class="w-[135px] h-[50px] blur-[2px] hover:blur-0 transition duration-300">
+              <img src="img/digital-agency/word-press-logo.svg" alt="digital-agency"
+                class="w-full h-full object-contain" />
+            </div>
+          </div>
+          <div class="flex justify-center" data-aos="fade-up" data-aos-duration="400">
+            <div class="w-[112px] h-[50px] blur-[2px] hover:blur-0 transition duration-300">
+              <img src="img/digital-agency/envato-logo.svg" alt="digital-agency" class="w-full h-full object-contain" />
+            </div>
+          </div>
+          <div class="flex justify-center" data-aos="fade-up" data-aos-duration="400">
+            <div class="w-[112px] h-[50px] blur-[2px] hover:blur-0 transition duration-300">
+              <img src="img/digital-agency/moodle-logo.svg" alt="digital-agency" class="w-full h-full object-contain" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--END: Logo-->
+
+    <!--START :About us-->
+    <section class="lg:mb-20 mb-10 overflow-hidden">
+      <div class="container">
+        <div class="text-theme lg:text-[24px] text-[18px] font-medium tracking-[3px] lg:mb-5 mb-2" data-aos="fade-right"
+          data-aos-duration="300">
+          ABOUT US</div>
+        <div class="grid lg:grid-cols-2">
+          <div>
+            <div
+              class="lg:text-[38px] text-[30px] font-medium lg:leading-[60px] leading-[45px] max-w-[715px] md:mb-5 mb-3"
+              data-aos="fade-right" data-aos-duration="400">Median Digital Marketing, With the
+              Passion of
+              Building
+              Your Brand
+            </div>
+            <p class="leading-[25px] max-w-[700px] opacity-60 md:text-[16px] text-[14px] md:mb-5 mb-3"
+              data-aos="fade-right" data-aos-duration="500">Lorem
+              ipsum dolor sit amet, consectetur adipiscing
+              elit. Duis
+              ut laoreet mi.
+              Pellentesque
+              lorem urna, blandit quis est vel, tempor sodales velit. Ut cursus tempor dolor, sed porta
+              lectus. In eget elemen tum nulla. Cras feugiat diam vehicula nulla interdum, sed tincidunt
+              ante dapibus. Donec mattis nisl est, sit amet sagittis tortor mattis ut. Quisque mattis
+              accumsan neque, a elementum purus sagittis sed. Duis scelerisque ut purus quis
+              dignissim.</p>
+            <p class="leading-[25px] max-w-[700px] opacity-60 md:text-[16px] text-[14px] md:mb-10 mb-5"
+              data-aos="fade-right" data-aos-duration="600">Cras
+              ornare ante nisl, non pharetra felis eleifend
+              et.
+              Phasellus
+              metus nisi,
+              sagittis nec
+              urna vitae, vehicula elementum sem. Suspendisse porta vestibulum scelerisque. Aliquam
+              tincidunt magna eu mollis consequat. Proin in sapien nibh. Proin id cursus mauris.
+              Vivamus rutrum tellus eu enim semper, ut elementum nibh fermentum.</p>
+            <div class="shadow-[0px_0px_15px_rgba(0,0,0,0.1)] md:max-w-[150px] max-w-[140px]" data-aos="fade-right"
+              data-aos-duration="700">
+              <a href="javascript:void(0)" class="text-indigo py-3 px-7 block md:text-[16px] text-[14px] mb-5">OUR
+                STORY</a>
+            </div>
+          </div>
+          <div data-aos="fade-left" data-aos-duration="600">
+            <div class="flex justify-end">
+              <div class="md:max-w-[600px] md:h-[500px] max-w-[450px] h-[400px] relative">
+                <img src="img/digital-agency/office-staff.png" alt="img"
+                  class="w-full h-full md:blur-[3px] md:hover:blur-[0px] transition duration-300" />
+                <div class="absolute top-12 -translate-x-1/2">
+                  <div class="max-w-[300px] h-[400px] md:block hidden">
+                    <img src="img/digital-agency/office-working-women.png" alt="img" class="w-full h-full" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--END : About us-->
+
+    <!--START : Client review-->
+    <section
+      class="mb-20 before:mt-16 relative before:content-[''] before:absolute before:w-full before:h-[76%] before:bg-[rgba(192,124,197,0.08)] before:-z-[1] before:skew-y-[171deg] before:lg:block before:hidden">
+      <div class="container">
+        <div class="grid lg:grid-cols-2 lg:gap-5 overflow-hidden">
+          <div class="2xl:w-[620px] 2xl:h-[540px] xl:w-[600px] xl:h-[520px] md:order-1 order-2 md:mt-0 mt-5"
+            data-aos="zoom-in">
+            <img src="img/digital-agency/happy-client-img.png" alt="images" class="w-full h-full">
+          </div>
+          <div class="md:pt-20 pt-2 md:order-2 order-1">
+            <div class="text-theme md:text-[24px] text-[18px] font-medium tracking-[3px] md:mb-5 mb-2"
+              data-aos="fade-down">CLIENTS REVIEW
+            </div>
+            <div
+              class="md:text-[38px] text-[30px] font-medium md:leading-[60px] leading-[45px] max-w-[400px] md:mb-7 mb-3"
+              data-aos="fade-down">Our Happy
+              Clients says about us.
+            </div>
+            <div data-aos="fade-down">
+              <p class="font-medium opacity-60 leading-[25px] max-w-[630px] md:text-[16px] text-[14px] md:mb-7 mb-4">
+                Best is the
+                most
+                porro
+                quisquam est,
+                qui dolorem
+                are porro quis
+                quam est, qui dolorem ipsum quia dolor sit amet, consectetur</p>
+            </div>
+            <div data-aos="fade-down">
+              <p
+                class="text-[#5184A1] lg:text-[18px] md:text-[16px] text-[14px] font-medium leading-[25px] max-w-[680px] md:mb-5 mb-3">
+                <span class="mr-[8px]">
+                  <img src="img/digital-agency/quote.svg" alt="img" class="inline-block mb-[7px]" />
+                </span> Most of the most porro quisquam est, qui dolorem ipsum quia dolor sit amet consectetur adipisci
+                velit sed quia some more than quick support with expert team
+              </p>
+            </div>
+            <div class="font-normal text-[#C25352] md:text-[18px] md:mb-5 mb-2" data-aos="fade-down">David Layed
+              | <span CEO class="opacity-60 text-black text-base font-normal">CEO & Founder</span></div>
+            <div class="font-normal text-[#C25352] md:text-[18px]" data-aos="fade-down">Prev /<span
+                class="opacity-70 text-black font-normal">/
+                Next</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--END : Client review-->
+
+    <!--START : Feature -->
+    <section class="md:mb-20 mb-10 md:pt-20 overflow-hidden">
+      <div class="container">
+        <div class="grid lg:grid-cols-4 md:gide-cols-2 md:gap-10 gap-5">
+          <div class="flex flex-wrap justify-center">
+            <div class="relative" data-aos="flip-left" data-aos-duration="300">
+              <div
+                class="rounded-full md:border-[14px] border-[10px] border-gray-400 flex justify-center items-center md:w-[225px] md:h-[225px] w-[150px] h-[150px]">
+                <div class="p-4 font-semibold text-center md:text-[55px] text-[30px]">
+                  83%
+                </div>
+              </div>
+              <svg class="absolute top-0 left-0" class="md:w-[225px] md:h-[225px] w-[150px] h-[150px]"
+                viewBox="0 0 241 241" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M233 120.5C233 95.9951 224.999 72.1603 210.213 52.6189C195.427 33.0775 174.665 18.8983 151.083 12.2367C127.501 5.57513 102.389 6.79554 79.5635 15.7124C56.7385 24.6293 37.4492 40.7549 24.6278 61.638C11.8063 82.5211 6.1541 107.019 8.53028 131.409C10.9065 155.798 21.1811 178.745 37.7922 196.76C54.4034 214.776 76.4426 226.875 100.56 231.219C124.676 235.562 149.552 231.912 171.405 220.824"
+                  stroke="url(#paint0_linear_2397_1951)" stroke-width="15" stroke-linecap="round" />
+                <defs>
+                  <linearGradient id="paint0_linear_2397_1951" x1="120.5" y1="8" x2="120.5" y2="233"
+                    gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#9180FF" />
+                    <stop offset="1" stop-color="#FF7878" />
+                  </linearGradient>
+                </defs>
+              </svg>
+            </div>
+            <div class="mx-auto">
+              <div class="md:text-[24px] text-[22px] font-semibold text-center md:my-5 my-3" data-aos="fade-right"
+                data-aos-duration="300">
+                Sketch
+                Skills</div>
+              <div data-aos="fade-left" data-aos-offset="300">
+                <p class="opacity-60 text-center max-w-[300px] leading-[27px] md:text-[16px] text-[14px]">
+                  Lorem ipsum dolor sit amet, consectetuer
+                  adipiscing
+                  elit,
+                  diam nonummy nibhie euismod.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="flex flex-wrap justify-center">
+            <div class="relative" data-aos="flip-left" data-aos-duration="400">
+              <div
+                class="rounded-full md:border-[14px] border-[10px] border-gray-400 flex justify-center items-center md:w-[225px] md:h-[225px] w-[150px] h-[150px]">
+                <div class="p-4 font-semibold text-center md:text-[55px] text-[30px]">
+                  75%
+                </div>
+              </div>
+              <svg class="absolute top-0 left-0" class="md:w-[225px] md:h-[225px] w-[150px] h-[150px]"
+                viewBox="0 0 241 241" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M233 120.5C233 98.2496 226.402 76.4989 214.04 57.9983C201.679 39.4978 184.109 25.0784 163.552 16.5636C142.995 8.04869 120.375 5.82082 98.5523 10.1617C76.7295 14.5025 56.6839 25.2171 40.9505 40.9505C25.2171 56.6839 14.5025 76.7295 10.1617 98.5523C5.82082 120.375 8.04869 142.995 16.5636 163.552C25.0784 184.109 39.4978 201.679 57.9983 214.04C76.4989 226.402 98.2496 233 120.5 233"
+                  stroke="url(#paint0_linear_2397_1957)" stroke-width="15" stroke-linecap="round" />
+                <defs>
+                  <linearGradient id="paint0_linear_2397_1957" x1="120.5" y1="8" x2="120.5" y2="233"
+                    gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#9180FF" />
+                    <stop offset="1" stop-color="#FF7878" />
+                  </linearGradient>
+                </defs>
+              </svg>
+            </div>
+            <div class="mx-auto">
+              <div class="md:text-[24px] text-[22px] font-semibold text-center md:my-5 my-3" data-aos="fade-right"
+                data-aos-duration="300">
+                Design
+                Proposals</div>
+              <div data-aos="fade-left" data-aos-offset="300">
+                <p class="opacity-60 text-center max-w-[300px] leading-[27px] md:text-[16px] text-[14px]">
+                  Lorem ipsum dolor sit amet, consectetuer
+                  adipiscing
+                  elit,
+                  diam nonummy nibhie euismod.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="flex flex-wrap justify-center">
+            <div class="relative" data-aos="flip-left" data-aos-duration="500">
+              <div
+                class="rounded-full md:border-[14px] border-[10px] border-gray-400 flex justify-center items-center md:w-[225px] md:h-[225px] w-[150px] h-[150px]">
+                <div class="p-4 font-semibold text-center md:text-[55px] text-[30px]">
+                  92%
+                </div>
+              </div>
+              <svg class="absolute top-0 left-0" class="md:w-[225px] md:h-[225px] w-[150px] h-[150px]"
+                viewBox="0 0 241 241" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M233 120.5C233 92.819 222.795 66.1095 204.336 45.4813C185.877 24.8531 160.461 11.7544 132.95 8.69121C105.438 5.62799 77.7634 12.8152 55.2193 28.878C32.6751 44.9407 16.8444 68.7513 10.7555 95.7545C4.66671 122.758 8.74728 151.058 22.2166 175.241C35.686 199.425 57.5984 217.793 83.7621 226.833C109.926 235.872 138.504 234.948 164.029 224.238C189.554 213.527 210.235 193.782 222.114 168.78"
+                  stroke="url(#paint0_linear_2397_1963)" stroke-width="15" stroke-linecap="round" />
+                <defs>
+                  <linearGradient id="paint0_linear_2397_1963" x1="120.5" y1="8" x2="120.5" y2="233"
+                    gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#9180FF" />
+                    <stop offset="1" stop-color="#FF7878" />
+                  </linearGradient>
+                </defs>
+              </svg>
+            </div>
+            <div class="mx-auto">
+              <div class="md:text-[24px] text-[22px] font-semibold text-center md:my-5 my-3" data-aos="fade-right"
+                data-aos-duration="300">
+                Plan & Project</div>
+              <div data-aos="fade-left" data-aos-offset="300">
+                <p class="opacity-60 text-center max-w-[300px] leading-[27px] md:text-[16px] text-[14px]">
+                  Lorem ipsum dolor sit amet, consectetuer
+                  adipiscing
+                  elit,
+                  diam nonummy nibhie euismod.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="flex flex-wrap justify-center">
+            <div class="relative" data-aos="flip-left" data-aos-duration="600">
+              <div
+                class="rounded-full md:border-[14px] border-[10px] border-gray-400 flex justify-center items-center md:w-[225px] md:h-[225px] w-[150px] h-[150px]">
+                <div class="p-4 font-semibold text-center md:text-[55px] text-[30px]">
+                  68%
+                </div>
+              </div>
+              <svg class="absolute top-0 left-0" class="md:w-[225px] md:h-[225px] w-[150px] h-[150px]"
+                viewBox="0 0 241 221" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M233 120.5C233 101.178 228.024 82.1825 218.551 65.3425C209.077 48.5026 195.427 34.3863 178.914 24.3539C162.401 14.3215 143.583 8.71106 124.272 8.06326C104.961 7.41546 85.809 11.7521 68.6609 20.6553C51.5129 29.5586 36.9469 42.7283 26.3664 58.8955C15.786 75.0627 9.54782 93.6824 8.25295 112.961C6.95807 132.239 10.6502 151.525 18.9735 168.962C27.2968 186.399 39.9707 201.399 55.7741 212.515"
+                  stroke="url(#paint0_linear_2397_1969)" stroke-width="15" stroke-linecap="round" />
+                <defs>
+                  <linearGradient id="paint0_linear_2397_1969" x1="120.5" y1="8" x2="120.5" y2="233"
+                    gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#9180FF" />
+                    <stop offset="1" stop-color="#FF7878" />
+                  </linearGradient>
+                </defs>
+              </svg>
+            </div>
+            <div class="mx-auto">
+              <div class="md:text-[24px] text-[22px] font-semibold text-center md:my-5 my-3" data-aos="fade-right"
+                data-aos-duration="300">
+                Spread Services</div>
+              <div data-aos="fade-left" data-aos-offset="300">
+                <p class="opacity-60 text-center max-w-[300px] leading-[27px] md:text-[16px] text-[14px]">
+                  Lorem ipsum dolor sit amet, consectetuer
+                  adipiscing
+                  elit,
+                  diam nonummy nibhie euismod.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+    <!--END: Feature -->
+
+    <!--START : Our Team-->
+    <section class="md:mb-20 mb-10 overflow-hidden">
+      <div class="container">
+        <div class="text-center">
+          <div class="text-theme md:text-[24px] text-[18px] font-medium tracking-[3px] mb-2" data-aos="fade-down"
+            data-aos-duration="300">OUR TEAM</div>
+          <div
+            class="md:text-[38px] text-[30px] font-medium md:leading-[60px] leading-[45px] max-w-[300px] mx-auto mb-7"
+            data-aos="fade-down" data-aos-duration="400">People Behind the Screen</div>
+        </div>
+        <div class="grid lg:grid-cols-3 lg:gap-14 pt-10">
+          <div class="bg-[#F2F2F2] hover:bg-indigo group hover-effect">
+            <div class="flex justify-between">
+              <div class="-translate-x-20 translate-y-20">
+                <div class="w-[300px] h-[400px]">
+                  <img src="img/digital-agency/team-people-1.png" alt="img" class="w-full h-full" />
+                </div>
+              </div>
+              <div class="-translate-x-20 translate-y-20">
+                <ul>
+                  <li class="mb-10">
+                    <a href="javascript:void(0)">
+                      <div class="w-[16px] h-[27px]">
+                        <svg viewBox="0 0 16 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path class="fill-black group-hover:fill-white hover-effect"
+                            d="M12.4165 4.38788H15.0253V0.185069C13.7622 0.059972 12.493 -0.00178987 11.2231 3.94696e-05C7.44864 3.94696e-05 4.86758 2.19396 4.86758 6.21175V9.67444H0.607422V14.3795H4.86758V26.4328H9.97421V14.3795H14.2205L14.8588 9.67444H9.97421V6.67432C9.97421 5.2866 10.3628 4.38788 12.4165 4.38788Z" />
+                        </svg>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="mb-10">
+                    <a href="javascript:void(0)">
+                      <div class="w-[27px] h-[23px]">
+                        <svg viewBox="0 0 27 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path class="fill-black group-hover:fill-white hover-effect"
+                            d="M26.4328 3.04905C25.4394 3.48221 24.3888 3.76856 23.3138 3.89918C24.448 3.21818 25.2979 2.14683 25.7059 0.883871C24.6401 1.52155 23.4734 1.97084 22.2564 2.2122C21.443 1.32564 20.3598 0.735492 19.1768 0.534323C17.9937 0.333154 16.7776 0.53234 15.7193 1.10064C14.661 1.66894 13.8203 2.57421 13.3291 3.67448C12.8378 4.77474 12.7238 6.00776 13.005 7.18016C10.8499 7.07061 8.74192 6.50664 6.81789 5.52488C4.89387 4.54312 3.19685 3.16554 1.83708 1.48162C1.36015 2.31869 1.10954 3.26666 1.11018 4.23127C1.10849 5.12707 1.32722 6.00939 1.74689 6.79968C2.16656 7.58997 2.77415 8.2637 3.51557 8.76088C2.65383 8.73731 1.8105 8.50491 1.05731 8.08343V8.14985C1.06377 9.40497 1.50138 10.6193 2.29611 11.5875C3.09084 12.5557 4.19391 13.2183 5.41873 13.4632C4.94724 13.6074 4.45773 13.6834 3.96493 13.689C3.6238 13.685 3.28352 13.6539 2.94726 13.596C3.29606 14.6757 3.97104 15.6192 4.87828 16.2954C5.78552 16.9715 6.87991 17.3466 8.00915 17.3685C6.10229 18.8765 3.74802 19.6995 1.32164 19.7063C0.879864 19.7078 0.438436 19.6812 0 19.6266C2.47732 21.2343 5.3643 22.0877 8.31313 22.084C10.348 22.1053 12.3668 21.7188 14.2514 20.9471C16.1361 20.1754 17.8488 19.034 19.2896 17.5896C20.7305 16.1452 21.8705 14.4267 22.6431 12.5345C23.4157 10.6424 23.8055 8.6144 23.7896 6.56913C23.7896 6.34331 23.7896 6.10421 23.7896 5.86511C24.8266 5.08779 25.7211 4.13486 26.4328 3.04905Z" />
+                        </svg>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="mb-10">
+                    <a href="javascript:void(0)">
+                      <div class="w-[27px] h-[27px]">
+                        <svg viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path class="fill-black group-hover:fill-white hover-effect"
+                            d="M13.2164 10.0481C12.5682 10.0481 11.9345 10.2404 11.3954 10.6005C10.8564 10.9607 10.4363 11.4726 10.1882 12.0715C9.94016 12.6704 9.87526 13.3294 10.0017 13.9652C10.1282 14.601 10.4404 15.1851 10.8988 15.6435C11.3571 16.1018 11.9412 16.414 12.577 16.5405C13.2128 16.667 13.8718 16.602 14.4707 16.354C15.0696 16.1059 15.5815 15.6858 15.9417 15.1468C16.3019 14.6078 16.4941 13.9741 16.4941 13.3258C16.4941 12.8954 16.4093 12.4691 16.2446 12.0715C16.0799 11.6738 15.8384 11.3125 15.5341 11.0081C15.2297 10.7038 14.8684 10.4623 14.4707 10.2976C14.0731 10.1329 13.6468 10.0481 13.2164 10.0481ZM26.3403 6.8101C26.3334 5.78947 26.1454 4.77817 25.7852 3.82319C25.52 3.12438 25.1095 2.48978 24.581 1.96124C24.0524 1.4327 23.4178 1.02226 22.719 0.75698C21.764 0.396784 20.7527 0.208843 19.7321 0.20189C18.0272 0.109375 17.525 0.109375 13.2164 0.109375C8.90787 0.109375 8.40564 0.109375 6.70072 0.20189C5.6801 0.208843 4.66879 0.396784 3.71381 0.75698C3.01501 1.02226 2.3804 1.4327 1.85187 1.96124C1.32333 2.48978 0.912881 3.12438 0.647605 3.82319C0.287409 4.77817 0.0994679 5.78947 0.0925148 6.8101C-8.8623e-08 8.51502 0 9.01724 0 13.3258C0 17.6343 -8.8623e-08 18.1366 0.0925148 19.8415C0.106741 20.8657 0.294428 21.8801 0.647605 22.8416C0.911706 23.5372 1.32181 24.1682 1.8503 24.6919C2.37657 25.2236 3.01254 25.6341 3.71381 25.8946C4.66879 26.2548 5.6801 26.4427 6.70072 26.4497C8.40564 26.5422 8.90787 26.5422 13.2164 26.5422C17.525 26.5422 18.0272 26.5422 19.7321 26.4497C20.7527 26.4427 21.764 26.2548 22.719 25.8946C23.4203 25.6341 24.0563 25.2236 24.5825 24.6919C25.111 24.1682 25.5211 23.5372 25.7852 22.8416C26.1451 21.882 26.333 20.8664 26.3403 19.8415C26.4328 18.1366 26.4328 17.6343 26.4328 13.3258C26.4328 9.01724 26.4328 8.51502 26.3403 6.8101ZM22.9834 17.3832C22.9409 18.1988 22.7669 19.0022 22.4679 19.7622C22.2113 20.3962 21.8299 20.9721 21.3463 21.4557C20.8627 21.9393 20.2868 22.3207 19.6528 22.5773C18.8856 22.8596 18.0778 23.0158 17.2606 23.0399C16.2165 23.0399 15.939 23.0399 13.2164 23.0399C10.4938 23.0399 10.2163 23.0399 9.17219 23.0399C8.35506 23.0158 7.54722 22.8596 6.78002 22.5773C6.12462 22.3337 5.53276 21.9452 5.04867 21.4407C4.5698 20.9665 4.19997 20.3938 3.96493 19.7622C3.68151 18.9958 3.52959 18.187 3.51557 17.37C3.51557 16.3259 3.51557 16.0484 3.51557 13.3258C3.51557 10.6032 3.51557 10.3257 3.51557 9.28157C3.52959 8.46456 3.68151 7.6558 3.96493 6.8894C4.20848 6.234 4.59703 5.64213 5.10154 5.15805C5.57777 4.68176 6.14995 4.31232 6.78002 4.0743C7.54722 3.79201 8.35506 3.63579 9.17219 3.61173C10.2163 3.61173 10.4938 3.61173 13.2164 3.61173C15.939 3.61173 16.2165 3.61173 17.2606 3.61173C18.0778 3.63579 18.8856 3.79201 19.6528 4.0743C20.3082 4.31785 20.9001 4.70641 21.3842 5.21091C21.863 5.68505 22.2329 6.25783 22.4679 6.8894C22.7502 7.65659 22.9064 8.46444 22.9305 9.28157C22.9305 10.3257 22.9305 10.6032 22.9305 13.3258C22.9305 16.0484 23.023 16.3259 22.9834 17.37V17.3832ZM20.8687 7.55022C20.7114 7.12331 20.4633 6.73561 20.1415 6.41389C19.8198 6.09216 19.4321 5.84406 19.0052 5.6867C18.419 5.48351 17.8016 5.38509 17.1813 5.39594C16.1505 5.39594 15.8597 5.39594 13.2164 5.39594C10.5731 5.39594 10.2824 5.39594 9.25149 5.39594C8.62803 5.40204 8.01056 5.51837 7.42763 5.73957C7.00725 5.88978 6.62366 6.12775 6.30236 6.43766C5.98106 6.74757 5.7294 7.12232 5.56411 7.537C5.37218 8.12562 5.27841 8.7418 5.28657 9.36087C5.28657 10.3917 5.28657 10.6825 5.28657 13.3258C5.28657 15.9691 5.28657 16.2598 5.28657 17.2907C5.29967 17.9135 5.41578 18.5298 5.63019 19.1146C5.78755 19.5415 6.03565 19.9292 6.35738 20.2509C6.67911 20.5726 7.0668 20.8207 7.49371 20.9781C8.05761 21.1855 8.65101 21.3015 9.25149 21.3217C10.2824 21.3217 10.5731 21.3217 13.2164 21.3217C15.8597 21.3217 16.1505 21.3217 17.1813 21.3217C17.8048 21.3156 18.4223 21.1993 19.0052 20.9781C19.4321 20.8207 19.8198 20.5726 20.1415 20.2509C20.4633 19.9292 20.7114 19.5415 20.8687 19.1146C21.0899 18.5316 21.2063 17.9142 21.2124 17.2907C21.2124 16.2598 21.2124 15.9691 21.2124 13.3258C21.2124 10.6825 21.2124 10.3917 21.2124 9.36087C21.2127 8.73679 21.0962 8.11816 20.8687 7.537V7.55022ZM13.2164 18.3745C12.554 18.3745 11.8982 18.2438 11.2864 17.9899C10.6746 17.736 10.1189 17.3639 9.65113 16.8949C9.18337 16.426 8.81274 15.8693 8.56046 15.2568C8.30819 14.6444 8.17922 13.9882 8.18096 13.3258C8.18097 12.3267 8.4774 11.3501 9.03274 10.5195C9.58809 9.689 10.3774 9.04191 11.3007 8.66018C12.224 8.27845 13.2397 8.17924 14.2195 8.37512C15.1992 8.571 16.0987 9.05315 16.8043 9.76054C17.5098 10.4679 17.9896 11.3688 18.1829 12.349C18.3762 13.3292 18.2743 14.3447 17.8902 15.267C17.506 16.1893 16.8569 16.9769 16.0249 17.53C15.1929 18.0832 14.2155 18.3771 13.2164 18.3745ZM18.503 9.26835C18.2108 9.23743 17.9404 9.09947 17.7439 8.88107C17.5474 8.66267 17.4387 8.37927 17.4387 8.08548C17.4387 7.79169 17.5474 7.5083 17.7439 7.28989C17.9404 7.07149 18.2108 6.93354 18.503 6.90261C18.7951 6.93354 19.0655 7.07149 19.262 7.28989C19.4585 7.5083 19.5673 7.79169 19.5673 8.08548C19.5673 8.37927 19.4585 8.66267 19.262 8.88107C19.0655 9.09947 18.7951 9.23743 18.503 9.26835Z" />
+                        </svg>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="mb-10">
+                    <a href="javascript:void(0)">
+                      <div class="w-[27px] h-[27px]">
+                        <svg viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path class="fill-black group-hover:fill-white hover-effect"
+                            d="M24.4783 0.567568H1.95454C1.70135 0.564072 1.44995 0.610187 1.21469 0.703277C0.979438 0.796367 0.764934 0.93461 0.583434 1.11011C0.401933 1.28561 0.256991 1.49493 0.156884 1.72612C0.0567779 1.9573 0.00346817 2.20582 0 2.45749V25.1101C0.00346817 25.3618 0.0567779 25.6103 0.156884 25.8415C0.256991 26.0727 0.401933 26.282 0.583434 26.4575C0.764934 26.633 0.979438 26.7712 1.21469 26.8643C1.44995 26.9574 1.70135 27.0035 1.95454 27H24.4783C24.7315 27.0035 24.9829 26.9574 25.2181 26.8643C25.4534 26.7712 25.6679 26.633 25.8494 26.4575C26.0309 26.282 26.1758 26.0727 26.276 25.8415C26.3761 25.6103 26.4294 25.3618 26.4328 25.1101V2.45749C26.4294 2.20582 26.3761 1.9573 26.276 1.72612C26.1758 1.49493 26.0309 1.28561 25.8494 1.11011C25.6679 0.93461 25.4534 0.796367 25.2181 0.703277C24.9829 0.610187 24.7315 0.564072 24.4783 0.567568ZM8.01761 22.6915H4.02875V10.7969H8.01761V22.6915ZM6.02318 9.13169C5.47306 9.13169 4.94548 8.91447 4.55649 8.52782C4.1675 8.14117 3.94897 7.61676 3.94897 7.06995C3.94897 6.52315 4.1675 5.99874 4.55649 5.61209C4.94548 5.22544 5.47306 5.00822 6.02318 5.00822C6.31529 4.97529 6.6111 5.00406 6.89125 5.09265C7.1714 5.18124 7.42957 5.32764 7.64885 5.52228C7.86812 5.71692 8.04357 5.9554 8.16369 6.22211C8.28382 6.48882 8.34591 6.77774 8.34591 7.06995C8.34591 7.36217 8.28382 7.65109 8.16369 7.9178C8.04357 8.18451 7.86812 8.42299 7.64885 8.61763C7.42957 8.81226 7.1714 8.95867 6.89125 9.04726C6.6111 9.13584 6.31529 9.16461 6.02318 9.13169ZM22.4041 22.6915H18.4152V16.3081C18.4152 14.7089 17.8435 13.6649 16.3942 13.6649C15.9457 13.6681 15.5089 13.808 15.1428 14.0655C14.7767 14.3231 14.4988 14.686 14.3466 15.1054C14.2425 15.4161 14.1975 15.7432 14.2136 16.0702V22.6783H10.2248C10.2248 22.6783 10.2248 11.8674 10.2248 10.7837H14.2136V12.4622C14.576 11.8372 15.103 11.3223 15.738 10.973C16.3729 10.6236 17.0917 10.4531 17.8169 10.4797C20.4761 10.4797 22.4041 12.1846 22.4041 15.8455V22.6915Z" />
+                        </svg>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="">
+              <div class="text-[22px] font-semibold text-theme group-hover:text-white hover-effect">Nicolas
+                Williams</div>
+              <div class="text-[18px] font-normal group-hover:text-white hover-effect">Founder & CEO</div>
+            </div>
+          </div>
+          <div class="flex xl:justify-end justify-start" data-aos="fade-left" data-aos-duration="300">
+            <div class="bg-[#F2F2F2] w-[400px] h-[600px] relative hover:bg-indigo group hover-effect">
+              <div class="absolute left-[-50px] top-12">
+                <div>
+                  <img src="img/digital-agency/team-people-1.png" alt="img" class="w-full h-full" />
+                </div>
+              </div>
+              <div class="absolute right-[35px] top-[200px]">
+                <ul>
+                  <li class="mb-10">
+                    <a href="javascript:void(0)">
+                      <div class="w-[16px] h-[27px]">
+                        <svg viewBox="0 0 16 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path class="fill-black group-hover:fill-white hover-effect"
+                            d="M12.4165 4.38788H15.0253V0.185069C13.7622 0.059972 12.493 -0.00178987 11.2231 3.94696e-05C7.44864 3.94696e-05 4.86758 2.19396 4.86758 6.21175V9.67444H0.607422V14.3795H4.86758V26.4328H9.97421V14.3795H14.2205L14.8588 9.67444H9.97421V6.67432C9.97421 5.2866 10.3628 4.38788 12.4165 4.38788Z" />
+                        </svg>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="mb-10">
+                    <a href="javascript:void(0)">
+                      <div class="w-[27px] h-[23px]">
+                        <svg viewBox="0 0 27 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path class="fill-black group-hover:fill-white hover-effect"
+                            d="M26.4328 3.04905C25.4394 3.48221 24.3888 3.76856 23.3138 3.89918C24.448 3.21818 25.2979 2.14683 25.7059 0.883871C24.6401 1.52155 23.4734 1.97084 22.2564 2.2122C21.443 1.32564 20.3598 0.735492 19.1768 0.534323C17.9937 0.333154 16.7776 0.53234 15.7193 1.10064C14.661 1.66894 13.8203 2.57421 13.3291 3.67448C12.8378 4.77474 12.7238 6.00776 13.005 7.18016C10.8499 7.07061 8.74192 6.50664 6.81789 5.52488C4.89387 4.54312 3.19685 3.16554 1.83708 1.48162C1.36015 2.31869 1.10954 3.26666 1.11018 4.23127C1.10849 5.12707 1.32722 6.00939 1.74689 6.79968C2.16656 7.58997 2.77415 8.2637 3.51557 8.76088C2.65383 8.73731 1.8105 8.50491 1.05731 8.08343V8.14985C1.06377 9.40497 1.50138 10.6193 2.29611 11.5875C3.09084 12.5557 4.19391 13.2183 5.41873 13.4632C4.94724 13.6074 4.45773 13.6834 3.96493 13.689C3.6238 13.685 3.28352 13.6539 2.94726 13.596C3.29606 14.6757 3.97104 15.6192 4.87828 16.2954C5.78552 16.9715 6.87991 17.3466 8.00915 17.3685C6.10229 18.8765 3.74802 19.6995 1.32164 19.7063C0.879864 19.7078 0.438436 19.6812 0 19.6266C2.47732 21.2343 5.3643 22.0877 8.31313 22.084C10.348 22.1053 12.3668 21.7188 14.2514 20.9471C16.1361 20.1754 17.8488 19.034 19.2896 17.5896C20.7305 16.1452 21.8705 14.4267 22.6431 12.5345C23.4157 10.6424 23.8055 8.6144 23.7896 6.56913C23.7896 6.34331 23.7896 6.10421 23.7896 5.86511C24.8266 5.08779 25.7211 4.13486 26.4328 3.04905Z" />
+                        </svg>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="mb-10">
+                    <a href="javascript:void(0)">
+                      <div class="w-[27px] h-[27px]">
+                        <svg viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path class="fill-black group-hover:fill-white hover-effect"
+                            d="M13.2164 10.0481C12.5682 10.0481 11.9345 10.2404 11.3954 10.6005C10.8564 10.9607 10.4363 11.4726 10.1882 12.0715C9.94016 12.6704 9.87526 13.3294 10.0017 13.9652C10.1282 14.601 10.4404 15.1851 10.8988 15.6435C11.3571 16.1018 11.9412 16.414 12.577 16.5405C13.2128 16.667 13.8718 16.602 14.4707 16.354C15.0696 16.1059 15.5815 15.6858 15.9417 15.1468C16.3019 14.6078 16.4941 13.9741 16.4941 13.3258C16.4941 12.8954 16.4093 12.4691 16.2446 12.0715C16.0799 11.6738 15.8384 11.3125 15.5341 11.0081C15.2297 10.7038 14.8684 10.4623 14.4707 10.2976C14.0731 10.1329 13.6468 10.0481 13.2164 10.0481ZM26.3403 6.8101C26.3334 5.78947 26.1454 4.77817 25.7852 3.82319C25.52 3.12438 25.1095 2.48978 24.581 1.96124C24.0524 1.4327 23.4178 1.02226 22.719 0.75698C21.764 0.396784 20.7527 0.208843 19.7321 0.20189C18.0272 0.109375 17.525 0.109375 13.2164 0.109375C8.90787 0.109375 8.40564 0.109375 6.70072 0.20189C5.6801 0.208843 4.66879 0.396784 3.71381 0.75698C3.01501 1.02226 2.3804 1.4327 1.85187 1.96124C1.32333 2.48978 0.912881 3.12438 0.647605 3.82319C0.287409 4.77817 0.0994679 5.78947 0.0925148 6.8101C-8.8623e-08 8.51502 0 9.01724 0 13.3258C0 17.6343 -8.8623e-08 18.1366 0.0925148 19.8415C0.106741 20.8657 0.294428 21.8801 0.647605 22.8416C0.911706 23.5372 1.32181 24.1682 1.8503 24.6919C2.37657 25.2236 3.01254 25.6341 3.71381 25.8946C4.66879 26.2548 5.6801 26.4427 6.70072 26.4497C8.40564 26.5422 8.90787 26.5422 13.2164 26.5422C17.525 26.5422 18.0272 26.5422 19.7321 26.4497C20.7527 26.4427 21.764 26.2548 22.719 25.8946C23.4203 25.6341 24.0563 25.2236 24.5825 24.6919C25.111 24.1682 25.5211 23.5372 25.7852 22.8416C26.1451 21.882 26.333 20.8664 26.3403 19.8415C26.4328 18.1366 26.4328 17.6343 26.4328 13.3258C26.4328 9.01724 26.4328 8.51502 26.3403 6.8101ZM22.9834 17.3832C22.9409 18.1988 22.7669 19.0022 22.4679 19.7622C22.2113 20.3962 21.8299 20.9721 21.3463 21.4557C20.8627 21.9393 20.2868 22.3207 19.6528 22.5773C18.8856 22.8596 18.0778 23.0158 17.2606 23.0399C16.2165 23.0399 15.939 23.0399 13.2164 23.0399C10.4938 23.0399 10.2163 23.0399 9.17219 23.0399C8.35506 23.0158 7.54722 22.8596 6.78002 22.5773C6.12462 22.3337 5.53276 21.9452 5.04867 21.4407C4.5698 20.9665 4.19997 20.3938 3.96493 19.7622C3.68151 18.9958 3.52959 18.187 3.51557 17.37C3.51557 16.3259 3.51557 16.0484 3.51557 13.3258C3.51557 10.6032 3.51557 10.3257 3.51557 9.28157C3.52959 8.46456 3.68151 7.6558 3.96493 6.8894C4.20848 6.234 4.59703 5.64213 5.10154 5.15805C5.57777 4.68176 6.14995 4.31232 6.78002 4.0743C7.54722 3.79201 8.35506 3.63579 9.17219 3.61173C10.2163 3.61173 10.4938 3.61173 13.2164 3.61173C15.939 3.61173 16.2165 3.61173 17.2606 3.61173C18.0778 3.63579 18.8856 3.79201 19.6528 4.0743C20.3082 4.31785 20.9001 4.70641 21.3842 5.21091C21.863 5.68505 22.2329 6.25783 22.4679 6.8894C22.7502 7.65659 22.9064 8.46444 22.9305 9.28157C22.9305 10.3257 22.9305 10.6032 22.9305 13.3258C22.9305 16.0484 23.023 16.3259 22.9834 17.37V17.3832ZM20.8687 7.55022C20.7114 7.12331 20.4633 6.73561 20.1415 6.41389C19.8198 6.09216 19.4321 5.84406 19.0052 5.6867C18.419 5.48351 17.8016 5.38509 17.1813 5.39594C16.1505 5.39594 15.8597 5.39594 13.2164 5.39594C10.5731 5.39594 10.2824 5.39594 9.25149 5.39594C8.62803 5.40204 8.01056 5.51837 7.42763 5.73957C7.00725 5.88978 6.62366 6.12775 6.30236 6.43766C5.98106 6.74757 5.7294 7.12232 5.56411 7.537C5.37218 8.12562 5.27841 8.7418 5.28657 9.36087C5.28657 10.3917 5.28657 10.6825 5.28657 13.3258C5.28657 15.9691 5.28657 16.2598 5.28657 17.2907C5.29967 17.9135 5.41578 18.5298 5.63019 19.1146C5.78755 19.5415 6.03565 19.9292 6.35738 20.2509C6.67911 20.5726 7.0668 20.8207 7.49371 20.9781C8.05761 21.1855 8.65101 21.3015 9.25149 21.3217C10.2824 21.3217 10.5731 21.3217 13.2164 21.3217C15.8597 21.3217 16.1505 21.3217 17.1813 21.3217C17.8048 21.3156 18.4223 21.1993 19.0052 20.9781C19.4321 20.8207 19.8198 20.5726 20.1415 20.2509C20.4633 19.9292 20.7114 19.5415 20.8687 19.1146C21.0899 18.5316 21.2063 17.9142 21.2124 17.2907C21.2124 16.2598 21.2124 15.9691 21.2124 13.3258C21.2124 10.6825 21.2124 10.3917 21.2124 9.36087C21.2127 8.73679 21.0962 8.11816 20.8687 7.537V7.55022ZM13.2164 18.3745C12.554 18.3745 11.8982 18.2438 11.2864 17.9899C10.6746 17.736 10.1189 17.3639 9.65113 16.8949C9.18337 16.426 8.81274 15.8693 8.56046 15.2568C8.30819 14.6444 8.17922 13.9882 8.18096 13.3258C8.18097 12.3267 8.4774 11.3501 9.03274 10.5195C9.58809 9.689 10.3774 9.04191 11.3007 8.66018C12.224 8.27845 13.2397 8.17924 14.2195 8.37512C15.1992 8.571 16.0987 9.05315 16.8043 9.76054C17.5098 10.4679 17.9896 11.3688 18.1829 12.349C18.3762 13.3292 18.2743 14.3447 17.8902 15.267C17.506 16.1893 16.8569 16.9769 16.0249 17.53C15.1929 18.0832 14.2155 18.3771 13.2164 18.3745ZM18.503 9.26835C18.2108 9.23743 17.9404 9.09947 17.7439 8.88107C17.5474 8.66267 17.4387 8.37927 17.4387 8.08548C17.4387 7.79169 17.5474 7.5083 17.7439 7.28989C17.9404 7.07149 18.2108 6.93354 18.503 6.90261C18.7951 6.93354 19.0655 7.07149 19.262 7.28989C19.4585 7.5083 19.5673 7.79169 19.5673 8.08548C19.5673 8.37927 19.4585 8.66267 19.262 8.88107C19.0655 9.09947 18.7951 9.23743 18.503 9.26835Z" />
+                        </svg>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="mb-10">
+                    <a href="javascript:void(0)">
+                      <div class="w-[27px] h-[27px]">
+                        <svg viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path class="fill-black group-hover:fill-white hover-effect"
+                            d="M24.4783 0.567568H1.95454C1.70135 0.564072 1.44995 0.610187 1.21469 0.703277C0.979438 0.796367 0.764934 0.93461 0.583434 1.11011C0.401933 1.28561 0.256991 1.49493 0.156884 1.72612C0.0567779 1.9573 0.00346817 2.20582 0 2.45749V25.1101C0.00346817 25.3618 0.0567779 25.6103 0.156884 25.8415C0.256991 26.0727 0.401933 26.282 0.583434 26.4575C0.764934 26.633 0.979438 26.7712 1.21469 26.8643C1.44995 26.9574 1.70135 27.0035 1.95454 27H24.4783C24.7315 27.0035 24.9829 26.9574 25.2181 26.8643C25.4534 26.7712 25.6679 26.633 25.8494 26.4575C26.0309 26.282 26.1758 26.0727 26.276 25.8415C26.3761 25.6103 26.4294 25.3618 26.4328 25.1101V2.45749C26.4294 2.20582 26.3761 1.9573 26.276 1.72612C26.1758 1.49493 26.0309 1.28561 25.8494 1.11011C25.6679 0.93461 25.4534 0.796367 25.2181 0.703277C24.9829 0.610187 24.7315 0.564072 24.4783 0.567568ZM8.01761 22.6915H4.02875V10.7969H8.01761V22.6915ZM6.02318 9.13169C5.47306 9.13169 4.94548 8.91447 4.55649 8.52782C4.1675 8.14117 3.94897 7.61676 3.94897 7.06995C3.94897 6.52315 4.1675 5.99874 4.55649 5.61209C4.94548 5.22544 5.47306 5.00822 6.02318 5.00822C6.31529 4.97529 6.6111 5.00406 6.89125 5.09265C7.1714 5.18124 7.42957 5.32764 7.64885 5.52228C7.86812 5.71692 8.04357 5.9554 8.16369 6.22211C8.28382 6.48882 8.34591 6.77774 8.34591 7.06995C8.34591 7.36217 8.28382 7.65109 8.16369 7.9178C8.04357 8.18451 7.86812 8.42299 7.64885 8.61763C7.42957 8.81226 7.1714 8.95867 6.89125 9.04726C6.6111 9.13584 6.31529 9.16461 6.02318 9.13169ZM22.4041 22.6915H18.4152V16.3081C18.4152 14.7089 17.8435 13.6649 16.3942 13.6649C15.9457 13.6681 15.5089 13.808 15.1428 14.0655C14.7767 14.3231 14.4988 14.686 14.3466 15.1054C14.2425 15.4161 14.1975 15.7432 14.2136 16.0702V22.6783H10.2248C10.2248 22.6783 10.2248 11.8674 10.2248 10.7837H14.2136V12.4622C14.576 11.8372 15.103 11.3223 15.738 10.973C16.3729 10.6236 17.0917 10.4531 17.8169 10.4797C20.4761 10.4797 22.4041 12.1846 22.4041 15.8455V22.6915Z" />
+                        </svg>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="absolute bottom-5 left-5">
+                <div class="text-[22px] font-semibold text-theme group-hover:text-white hover-effect">Nicolas
+                  Williams</div>
+                <div class="text-[18px] font-normal group-hover:text-white hover-effect">Founder & CEO</div>
+              </div>
+            </div>
+          </div>
+          <div class="flex xl:justify-end justify-start" data-aos="fade-left" data-aos-duration="400">
+            <div class="bg-[#F2F2F2] w-[400px] h-[600px] relative hover:bg-indigo group transition duration-300">
+              <div class="absolute left-[-50px] top-12">
+                <div>
+                  <img src="img/digital-agency/team-people-2.png" alt="img" class="w-full h-full" />
+                </div>
+              </div>
+              <div class="absolute right-[35px] top-[200px]">
+                <ul>
+                  <li class="mb-10">
+                    <a href="javascript:void(0)">
+                      <div class="w-[16px] h-[27px]">
+                        <svg viewBox="0 0 16 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path class="fill-black group-hover:fill-white transition duration-300"
+                            d="M12.4165 4.38788H15.0253V0.185069C13.7622 0.059972 12.493 -0.00178987 11.2231 3.94696e-05C7.44864 3.94696e-05 4.86758 2.19396 4.86758 6.21175V9.67444H0.607422V14.3795H4.86758V26.4328H9.97421V14.3795H14.2205L14.8588 9.67444H9.97421V6.67432C9.97421 5.2866 10.3628 4.38788 12.4165 4.38788Z" />
+                        </svg>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="mb-10">
+                    <a href="javascript:void(0)">
+                      <div class="w-[27px] h-[23px]">
+                        <svg viewBox="0 0 27 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path class="fill-black group-hover:fill-white transition duration-300"
+                            d="M26.4328 3.04905C25.4394 3.48221 24.3888 3.76856 23.3138 3.89918C24.448 3.21818 25.2979 2.14683 25.7059 0.883871C24.6401 1.52155 23.4734 1.97084 22.2564 2.2122C21.443 1.32564 20.3598 0.735492 19.1768 0.534323C17.9937 0.333154 16.7776 0.53234 15.7193 1.10064C14.661 1.66894 13.8203 2.57421 13.3291 3.67448C12.8378 4.77474 12.7238 6.00776 13.005 7.18016C10.8499 7.07061 8.74192 6.50664 6.81789 5.52488C4.89387 4.54312 3.19685 3.16554 1.83708 1.48162C1.36015 2.31869 1.10954 3.26666 1.11018 4.23127C1.10849 5.12707 1.32722 6.00939 1.74689 6.79968C2.16656 7.58997 2.77415 8.2637 3.51557 8.76088C2.65383 8.73731 1.8105 8.50491 1.05731 8.08343V8.14985C1.06377 9.40497 1.50138 10.6193 2.29611 11.5875C3.09084 12.5557 4.19391 13.2183 5.41873 13.4632C4.94724 13.6074 4.45773 13.6834 3.96493 13.689C3.6238 13.685 3.28352 13.6539 2.94726 13.596C3.29606 14.6757 3.97104 15.6192 4.87828 16.2954C5.78552 16.9715 6.87991 17.3466 8.00915 17.3685C6.10229 18.8765 3.74802 19.6995 1.32164 19.7063C0.879864 19.7078 0.438436 19.6812 0 19.6266C2.47732 21.2343 5.3643 22.0877 8.31313 22.084C10.348 22.1053 12.3668 21.7188 14.2514 20.9471C16.1361 20.1754 17.8488 19.034 19.2896 17.5896C20.7305 16.1452 21.8705 14.4267 22.6431 12.5345C23.4157 10.6424 23.8055 8.6144 23.7896 6.56913C23.7896 6.34331 23.7896 6.10421 23.7896 5.86511C24.8266 5.08779 25.7211 4.13486 26.4328 3.04905Z" />
+                        </svg>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="mb-10">
+                    <a href="javascript:void(0)">
+                      <div class="w-[27px] h-[27px]">
+                        <svg viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path class="fill-black group-hover:fill-white transition duration-300"
+                            d="M13.2164 10.0481C12.5682 10.0481 11.9345 10.2404 11.3954 10.6005C10.8564 10.9607 10.4363 11.4726 10.1882 12.0715C9.94016 12.6704 9.87526 13.3294 10.0017 13.9652C10.1282 14.601 10.4404 15.1851 10.8988 15.6435C11.3571 16.1018 11.9412 16.414 12.577 16.5405C13.2128 16.667 13.8718 16.602 14.4707 16.354C15.0696 16.1059 15.5815 15.6858 15.9417 15.1468C16.3019 14.6078 16.4941 13.9741 16.4941 13.3258C16.4941 12.8954 16.4093 12.4691 16.2446 12.0715C16.0799 11.6738 15.8384 11.3125 15.5341 11.0081C15.2297 10.7038 14.8684 10.4623 14.4707 10.2976C14.0731 10.1329 13.6468 10.0481 13.2164 10.0481ZM26.3403 6.8101C26.3334 5.78947 26.1454 4.77817 25.7852 3.82319C25.52 3.12438 25.1095 2.48978 24.581 1.96124C24.0524 1.4327 23.4178 1.02226 22.719 0.75698C21.764 0.396784 20.7527 0.208843 19.7321 0.20189C18.0272 0.109375 17.525 0.109375 13.2164 0.109375C8.90787 0.109375 8.40564 0.109375 6.70072 0.20189C5.6801 0.208843 4.66879 0.396784 3.71381 0.75698C3.01501 1.02226 2.3804 1.4327 1.85187 1.96124C1.32333 2.48978 0.912881 3.12438 0.647605 3.82319C0.287409 4.77817 0.0994679 5.78947 0.0925148 6.8101C-8.8623e-08 8.51502 0 9.01724 0 13.3258C0 17.6343 -8.8623e-08 18.1366 0.0925148 19.8415C0.106741 20.8657 0.294428 21.8801 0.647605 22.8416C0.911706 23.5372 1.32181 24.1682 1.8503 24.6919C2.37657 25.2236 3.01254 25.6341 3.71381 25.8946C4.66879 26.2548 5.6801 26.4427 6.70072 26.4497C8.40564 26.5422 8.90787 26.5422 13.2164 26.5422C17.525 26.5422 18.0272 26.5422 19.7321 26.4497C20.7527 26.4427 21.764 26.2548 22.719 25.8946C23.4203 25.6341 24.0563 25.2236 24.5825 24.6919C25.111 24.1682 25.5211 23.5372 25.7852 22.8416C26.1451 21.882 26.333 20.8664 26.3403 19.8415C26.4328 18.1366 26.4328 17.6343 26.4328 13.3258C26.4328 9.01724 26.4328 8.51502 26.3403 6.8101ZM22.9834 17.3832C22.9409 18.1988 22.7669 19.0022 22.4679 19.7622C22.2113 20.3962 21.8299 20.9721 21.3463 21.4557C20.8627 21.9393 20.2868 22.3207 19.6528 22.5773C18.8856 22.8596 18.0778 23.0158 17.2606 23.0399C16.2165 23.0399 15.939 23.0399 13.2164 23.0399C10.4938 23.0399 10.2163 23.0399 9.17219 23.0399C8.35506 23.0158 7.54722 22.8596 6.78002 22.5773C6.12462 22.3337 5.53276 21.9452 5.04867 21.4407C4.5698 20.9665 4.19997 20.3938 3.96493 19.7622C3.68151 18.9958 3.52959 18.187 3.51557 17.37C3.51557 16.3259 3.51557 16.0484 3.51557 13.3258C3.51557 10.6032 3.51557 10.3257 3.51557 9.28157C3.52959 8.46456 3.68151 7.6558 3.96493 6.8894C4.20848 6.234 4.59703 5.64213 5.10154 5.15805C5.57777 4.68176 6.14995 4.31232 6.78002 4.0743C7.54722 3.79201 8.35506 3.63579 9.17219 3.61173C10.2163 3.61173 10.4938 3.61173 13.2164 3.61173C15.939 3.61173 16.2165 3.61173 17.2606 3.61173C18.0778 3.63579 18.8856 3.79201 19.6528 4.0743C20.3082 4.31785 20.9001 4.70641 21.3842 5.21091C21.863 5.68505 22.2329 6.25783 22.4679 6.8894C22.7502 7.65659 22.9064 8.46444 22.9305 9.28157C22.9305 10.3257 22.9305 10.6032 22.9305 13.3258C22.9305 16.0484 23.023 16.3259 22.9834 17.37V17.3832ZM20.8687 7.55022C20.7114 7.12331 20.4633 6.73561 20.1415 6.41389C19.8198 6.09216 19.4321 5.84406 19.0052 5.6867C18.419 5.48351 17.8016 5.38509 17.1813 5.39594C16.1505 5.39594 15.8597 5.39594 13.2164 5.39594C10.5731 5.39594 10.2824 5.39594 9.25149 5.39594C8.62803 5.40204 8.01056 5.51837 7.42763 5.73957C7.00725 5.88978 6.62366 6.12775 6.30236 6.43766C5.98106 6.74757 5.7294 7.12232 5.56411 7.537C5.37218 8.12562 5.27841 8.7418 5.28657 9.36087C5.28657 10.3917 5.28657 10.6825 5.28657 13.3258C5.28657 15.9691 5.28657 16.2598 5.28657 17.2907C5.29967 17.9135 5.41578 18.5298 5.63019 19.1146C5.78755 19.5415 6.03565 19.9292 6.35738 20.2509C6.67911 20.5726 7.0668 20.8207 7.49371 20.9781C8.05761 21.1855 8.65101 21.3015 9.25149 21.3217C10.2824 21.3217 10.5731 21.3217 13.2164 21.3217C15.8597 21.3217 16.1505 21.3217 17.1813 21.3217C17.8048 21.3156 18.4223 21.1993 19.0052 20.9781C19.4321 20.8207 19.8198 20.5726 20.1415 20.2509C20.4633 19.9292 20.7114 19.5415 20.8687 19.1146C21.0899 18.5316 21.2063 17.9142 21.2124 17.2907C21.2124 16.2598 21.2124 15.9691 21.2124 13.3258C21.2124 10.6825 21.2124 10.3917 21.2124 9.36087C21.2127 8.73679 21.0962 8.11816 20.8687 7.537V7.55022ZM13.2164 18.3745C12.554 18.3745 11.8982 18.2438 11.2864 17.9899C10.6746 17.736 10.1189 17.3639 9.65113 16.8949C9.18337 16.426 8.81274 15.8693 8.56046 15.2568C8.30819 14.6444 8.17922 13.9882 8.18096 13.3258C8.18097 12.3267 8.4774 11.3501 9.03274 10.5195C9.58809 9.689 10.3774 9.04191 11.3007 8.66018C12.224 8.27845 13.2397 8.17924 14.2195 8.37512C15.1992 8.571 16.0987 9.05315 16.8043 9.76054C17.5098 10.4679 17.9896 11.3688 18.1829 12.349C18.3762 13.3292 18.2743 14.3447 17.8902 15.267C17.506 16.1893 16.8569 16.9769 16.0249 17.53C15.1929 18.0832 14.2155 18.3771 13.2164 18.3745ZM18.503 9.26835C18.2108 9.23743 17.9404 9.09947 17.7439 8.88107C17.5474 8.66267 17.4387 8.37927 17.4387 8.08548C17.4387 7.79169 17.5474 7.5083 17.7439 7.28989C17.9404 7.07149 18.2108 6.93354 18.503 6.90261C18.7951 6.93354 19.0655 7.07149 19.262 7.28989C19.4585 7.5083 19.5673 7.79169 19.5673 8.08548C19.5673 8.37927 19.4585 8.66267 19.262 8.88107C19.0655 9.09947 18.7951 9.23743 18.503 9.26835Z" />
+                        </svg>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="mb-10">
+                    <a href="javascript:void(0)">
+                      <div class="w-[27px] h-[27px]">
+                        <svg viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path class="fill-black group-hover:fill-white transition duration-300"
+                            d="M24.4783 0.567568H1.95454C1.70135 0.564072 1.44995 0.610187 1.21469 0.703277C0.979438 0.796367 0.764934 0.93461 0.583434 1.11011C0.401933 1.28561 0.256991 1.49493 0.156884 1.72612C0.0567779 1.9573 0.00346817 2.20582 0 2.45749V25.1101C0.00346817 25.3618 0.0567779 25.6103 0.156884 25.8415C0.256991 26.0727 0.401933 26.282 0.583434 26.4575C0.764934 26.633 0.979438 26.7712 1.21469 26.8643C1.44995 26.9574 1.70135 27.0035 1.95454 27H24.4783C24.7315 27.0035 24.9829 26.9574 25.2181 26.8643C25.4534 26.7712 25.6679 26.633 25.8494 26.4575C26.0309 26.282 26.1758 26.0727 26.276 25.8415C26.3761 25.6103 26.4294 25.3618 26.4328 25.1101V2.45749C26.4294 2.20582 26.3761 1.9573 26.276 1.72612C26.1758 1.49493 26.0309 1.28561 25.8494 1.11011C25.6679 0.93461 25.4534 0.796367 25.2181 0.703277C24.9829 0.610187 24.7315 0.564072 24.4783 0.567568ZM8.01761 22.6915H4.02875V10.7969H8.01761V22.6915ZM6.02318 9.13169C5.47306 9.13169 4.94548 8.91447 4.55649 8.52782C4.1675 8.14117 3.94897 7.61676 3.94897 7.06995C3.94897 6.52315 4.1675 5.99874 4.55649 5.61209C4.94548 5.22544 5.47306 5.00822 6.02318 5.00822C6.31529 4.97529 6.6111 5.00406 6.89125 5.09265C7.1714 5.18124 7.42957 5.32764 7.64885 5.52228C7.86812 5.71692 8.04357 5.9554 8.16369 6.22211C8.28382 6.48882 8.34591 6.77774 8.34591 7.06995C8.34591 7.36217 8.28382 7.65109 8.16369 7.9178C8.04357 8.18451 7.86812 8.42299 7.64885 8.61763C7.42957 8.81226 7.1714 8.95867 6.89125 9.04726C6.6111 9.13584 6.31529 9.16461 6.02318 9.13169ZM22.4041 22.6915H18.4152V16.3081C18.4152 14.7089 17.8435 13.6649 16.3942 13.6649C15.9457 13.6681 15.5089 13.808 15.1428 14.0655C14.7767 14.3231 14.4988 14.686 14.3466 15.1054C14.2425 15.4161 14.1975 15.7432 14.2136 16.0702V22.6783H10.2248C10.2248 22.6783 10.2248 11.8674 10.2248 10.7837H14.2136V12.4622C14.576 11.8372 15.103 11.3223 15.738 10.973C16.3729 10.6236 17.0917 10.4531 17.8169 10.4797C20.4761 10.4797 22.4041 12.1846 22.4041 15.8455V22.6915Z" />
+                        </svg>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="absolute bottom-5 left-5">
+                <div class="text-[22px] font-semibold text-theme group-hover:text-white transition duration-300">
+                  Stephen
+                  Flemming</div>
+                <div class="text-[18px] font-normal group-hover:text-white transition duration-300">Marketing Head
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="flex xl:justify-end justify-start" data-aos="fade-left" data-aos-duration="500">
+            <div class="bg-[#F2F2F2] w-[400px] h-[600px] relative hover:bg-indigo group transition duration-300">
+              <div class="absolute left-[-50px] top-12">
+                <div>
+                  <img src="img/digital-agency/team-people-3.png" alt="img" class="w-full h-full" />
+                </div>
+              </div>
+              <div class="absolute right-[35px] top-[200px]">
+                <ul>
+                  <li class="mb-10">
+                    <a href="javascript:void(0)">
+                      <div class="w-[16px] h-[27px]">
+                        <svg viewBox="0 0 16 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path class="fill-black group-hover:fill-white transition duration-300"
+                            d="M12.4165 4.38788H15.0253V0.185069C13.7622 0.059972 12.493 -0.00178987 11.2231 3.94696e-05C7.44864 3.94696e-05 4.86758 2.19396 4.86758 6.21175V9.67444H0.607422V14.3795H4.86758V26.4328H9.97421V14.3795H14.2205L14.8588 9.67444H9.97421V6.67432C9.97421 5.2866 10.3628 4.38788 12.4165 4.38788Z" />
+                        </svg>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="mb-10">
+                    <a href="javascript:void(0)">
+                      <div class="w-27[px] h-[23px]">
+                        <svg viewBox="0 0 27 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path class="fill-black group-hover:fill-white transition duration-300"
+                            d="M26.4328 3.04905C25.4394 3.48221 24.3888 3.76856 23.3138 3.89918C24.448 3.21818 25.2979 2.14683 25.7059 0.883871C24.6401 1.52155 23.4734 1.97084 22.2564 2.2122C21.443 1.32564 20.3598 0.735492 19.1768 0.534323C17.9937 0.333154 16.7776 0.53234 15.7193 1.10064C14.661 1.66894 13.8203 2.57421 13.3291 3.67448C12.8378 4.77474 12.7238 6.00776 13.005 7.18016C10.8499 7.07061 8.74192 6.50664 6.81789 5.52488C4.89387 4.54312 3.19685 3.16554 1.83708 1.48162C1.36015 2.31869 1.10954 3.26666 1.11018 4.23127C1.10849 5.12707 1.32722 6.00939 1.74689 6.79968C2.16656 7.58997 2.77415 8.2637 3.51557 8.76088C2.65383 8.73731 1.8105 8.50491 1.05731 8.08343V8.14985C1.06377 9.40497 1.50138 10.6193 2.29611 11.5875C3.09084 12.5557 4.19391 13.2183 5.41873 13.4632C4.94724 13.6074 4.45773 13.6834 3.96493 13.689C3.6238 13.685 3.28352 13.6539 2.94726 13.596C3.29606 14.6757 3.97104 15.6192 4.87828 16.2954C5.78552 16.9715 6.87991 17.3466 8.00915 17.3685C6.10229 18.8765 3.74802 19.6995 1.32164 19.7063C0.879864 19.7078 0.438436 19.6812 0 19.6266C2.47732 21.2343 5.3643 22.0877 8.31313 22.084C10.348 22.1053 12.3668 21.7188 14.2514 20.9471C16.1361 20.1754 17.8488 19.034 19.2896 17.5896C20.7305 16.1452 21.8705 14.4267 22.6431 12.5345C23.4157 10.6424 23.8055 8.6144 23.7896 6.56913C23.7896 6.34331 23.7896 6.10421 23.7896 5.86511C24.8266 5.08779 25.7211 4.13486 26.4328 3.04905Z" />
+                        </svg>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="mb-10">
+                    <a href="javascript:void(0)">
+                      <div class="w-[27px] h-[27px]">
+                        <svg viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path class="fill-black group-hover:fill-white transition duration-300"
+                            d="M13.2164 10.0481C12.5682 10.0481 11.9345 10.2404 11.3954 10.6005C10.8564 10.9607 10.4363 11.4726 10.1882 12.0715C9.94016 12.6704 9.87526 13.3294 10.0017 13.9652C10.1282 14.601 10.4404 15.1851 10.8988 15.6435C11.3571 16.1018 11.9412 16.414 12.577 16.5405C13.2128 16.667 13.8718 16.602 14.4707 16.354C15.0696 16.1059 15.5815 15.6858 15.9417 15.1468C16.3019 14.6078 16.4941 13.9741 16.4941 13.3258C16.4941 12.8954 16.4093 12.4691 16.2446 12.0715C16.0799 11.6738 15.8384 11.3125 15.5341 11.0081C15.2297 10.7038 14.8684 10.4623 14.4707 10.2976C14.0731 10.1329 13.6468 10.0481 13.2164 10.0481ZM26.3403 6.8101C26.3334 5.78947 26.1454 4.77817 25.7852 3.82319C25.52 3.12438 25.1095 2.48978 24.581 1.96124C24.0524 1.4327 23.4178 1.02226 22.719 0.75698C21.764 0.396784 20.7527 0.208843 19.7321 0.20189C18.0272 0.109375 17.525 0.109375 13.2164 0.109375C8.90787 0.109375 8.40564 0.109375 6.70072 0.20189C5.6801 0.208843 4.66879 0.396784 3.71381 0.75698C3.01501 1.02226 2.3804 1.4327 1.85187 1.96124C1.32333 2.48978 0.912881 3.12438 0.647605 3.82319C0.287409 4.77817 0.0994679 5.78947 0.0925148 6.8101C-8.8623e-08 8.51502 0 9.01724 0 13.3258C0 17.6343 -8.8623e-08 18.1366 0.0925148 19.8415C0.106741 20.8657 0.294428 21.8801 0.647605 22.8416C0.911706 23.5372 1.32181 24.1682 1.8503 24.6919C2.37657 25.2236 3.01254 25.6341 3.71381 25.8946C4.66879 26.2548 5.6801 26.4427 6.70072 26.4497C8.40564 26.5422 8.90787 26.5422 13.2164 26.5422C17.525 26.5422 18.0272 26.5422 19.7321 26.4497C20.7527 26.4427 21.764 26.2548 22.719 25.8946C23.4203 25.6341 24.0563 25.2236 24.5825 24.6919C25.111 24.1682 25.5211 23.5372 25.7852 22.8416C26.1451 21.882 26.333 20.8664 26.3403 19.8415C26.4328 18.1366 26.4328 17.6343 26.4328 13.3258C26.4328 9.01724 26.4328 8.51502 26.3403 6.8101ZM22.9834 17.3832C22.9409 18.1988 22.7669 19.0022 22.4679 19.7622C22.2113 20.3962 21.8299 20.9721 21.3463 21.4557C20.8627 21.9393 20.2868 22.3207 19.6528 22.5773C18.8856 22.8596 18.0778 23.0158 17.2606 23.0399C16.2165 23.0399 15.939 23.0399 13.2164 23.0399C10.4938 23.0399 10.2163 23.0399 9.17219 23.0399C8.35506 23.0158 7.54722 22.8596 6.78002 22.5773C6.12462 22.3337 5.53276 21.9452 5.04867 21.4407C4.5698 20.9665 4.19997 20.3938 3.96493 19.7622C3.68151 18.9958 3.52959 18.187 3.51557 17.37C3.51557 16.3259 3.51557 16.0484 3.51557 13.3258C3.51557 10.6032 3.51557 10.3257 3.51557 9.28157C3.52959 8.46456 3.68151 7.6558 3.96493 6.8894C4.20848 6.234 4.59703 5.64213 5.10154 5.15805C5.57777 4.68176 6.14995 4.31232 6.78002 4.0743C7.54722 3.79201 8.35506 3.63579 9.17219 3.61173C10.2163 3.61173 10.4938 3.61173 13.2164 3.61173C15.939 3.61173 16.2165 3.61173 17.2606 3.61173C18.0778 3.63579 18.8856 3.79201 19.6528 4.0743C20.3082 4.31785 20.9001 4.70641 21.3842 5.21091C21.863 5.68505 22.2329 6.25783 22.4679 6.8894C22.7502 7.65659 22.9064 8.46444 22.9305 9.28157C22.9305 10.3257 22.9305 10.6032 22.9305 13.3258C22.9305 16.0484 23.023 16.3259 22.9834 17.37V17.3832ZM20.8687 7.55022C20.7114 7.12331 20.4633 6.73561 20.1415 6.41389C19.8198 6.09216 19.4321 5.84406 19.0052 5.6867C18.419 5.48351 17.8016 5.38509 17.1813 5.39594C16.1505 5.39594 15.8597 5.39594 13.2164 5.39594C10.5731 5.39594 10.2824 5.39594 9.25149 5.39594C8.62803 5.40204 8.01056 5.51837 7.42763 5.73957C7.00725 5.88978 6.62366 6.12775 6.30236 6.43766C5.98106 6.74757 5.7294 7.12232 5.56411 7.537C5.37218 8.12562 5.27841 8.7418 5.28657 9.36087C5.28657 10.3917 5.28657 10.6825 5.28657 13.3258C5.28657 15.9691 5.28657 16.2598 5.28657 17.2907C5.29967 17.9135 5.41578 18.5298 5.63019 19.1146C5.78755 19.5415 6.03565 19.9292 6.35738 20.2509C6.67911 20.5726 7.0668 20.8207 7.49371 20.9781C8.05761 21.1855 8.65101 21.3015 9.25149 21.3217C10.2824 21.3217 10.5731 21.3217 13.2164 21.3217C15.8597 21.3217 16.1505 21.3217 17.1813 21.3217C17.8048 21.3156 18.4223 21.1993 19.0052 20.9781C19.4321 20.8207 19.8198 20.5726 20.1415 20.2509C20.4633 19.9292 20.7114 19.5415 20.8687 19.1146C21.0899 18.5316 21.2063 17.9142 21.2124 17.2907C21.2124 16.2598 21.2124 15.9691 21.2124 13.3258C21.2124 10.6825 21.2124 10.3917 21.2124 9.36087C21.2127 8.73679 21.0962 8.11816 20.8687 7.537V7.55022ZM13.2164 18.3745C12.554 18.3745 11.8982 18.2438 11.2864 17.9899C10.6746 17.736 10.1189 17.3639 9.65113 16.8949C9.18337 16.426 8.81274 15.8693 8.56046 15.2568C8.30819 14.6444 8.17922 13.9882 8.18096 13.3258C8.18097 12.3267 8.4774 11.3501 9.03274 10.5195C9.58809 9.689 10.3774 9.04191 11.3007 8.66018C12.224 8.27845 13.2397 8.17924 14.2195 8.37512C15.1992 8.571 16.0987 9.05315 16.8043 9.76054C17.5098 10.4679 17.9896 11.3688 18.1829 12.349C18.3762 13.3292 18.2743 14.3447 17.8902 15.267C17.506 16.1893 16.8569 16.9769 16.0249 17.53C15.1929 18.0832 14.2155 18.3771 13.2164 18.3745ZM18.503 9.26835C18.2108 9.23743 17.9404 9.09947 17.7439 8.88107C17.5474 8.66267 17.4387 8.37927 17.4387 8.08548C17.4387 7.79169 17.5474 7.5083 17.7439 7.28989C17.9404 7.07149 18.2108 6.93354 18.503 6.90261C18.7951 6.93354 19.0655 7.07149 19.262 7.28989C19.4585 7.5083 19.5673 7.79169 19.5673 8.08548C19.5673 8.37927 19.4585 8.66267 19.262 8.88107C19.0655 9.09947 18.7951 9.23743 18.503 9.26835Z" />
+                        </svg>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="mb-10">
+                    <a href="javascript:void(0)">
+                      <div class="w-[27px] h-[27px]">
+                        <svg viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path class="fill-black group-hover:fill-white transition duration-300"
+                            d="M24.4783 0.567568H1.95454C1.70135 0.564072 1.44995 0.610187 1.21469 0.703277C0.979438 0.796367 0.764934 0.93461 0.583434 1.11011C0.401933 1.28561 0.256991 1.49493 0.156884 1.72612C0.0567779 1.9573 0.00346817 2.20582 0 2.45749V25.1101C0.00346817 25.3618 0.0567779 25.6103 0.156884 25.8415C0.256991 26.0727 0.401933 26.282 0.583434 26.4575C0.764934 26.633 0.979438 26.7712 1.21469 26.8643C1.44995 26.9574 1.70135 27.0035 1.95454 27H24.4783C24.7315 27.0035 24.9829 26.9574 25.2181 26.8643C25.4534 26.7712 25.6679 26.633 25.8494 26.4575C26.0309 26.282 26.1758 26.0727 26.276 25.8415C26.3761 25.6103 26.4294 25.3618 26.4328 25.1101V2.45749C26.4294 2.20582 26.3761 1.9573 26.276 1.72612C26.1758 1.49493 26.0309 1.28561 25.8494 1.11011C25.6679 0.93461 25.4534 0.796367 25.2181 0.703277C24.9829 0.610187 24.7315 0.564072 24.4783 0.567568ZM8.01761 22.6915H4.02875V10.7969H8.01761V22.6915ZM6.02318 9.13169C5.47306 9.13169 4.94548 8.91447 4.55649 8.52782C4.1675 8.14117 3.94897 7.61676 3.94897 7.06995C3.94897 6.52315 4.1675 5.99874 4.55649 5.61209C4.94548 5.22544 5.47306 5.00822 6.02318 5.00822C6.31529 4.97529 6.6111 5.00406 6.89125 5.09265C7.1714 5.18124 7.42957 5.32764 7.64885 5.52228C7.86812 5.71692 8.04357 5.9554 8.16369 6.22211C8.28382 6.48882 8.34591 6.77774 8.34591 7.06995C8.34591 7.36217 8.28382 7.65109 8.16369 7.9178C8.04357 8.18451 7.86812 8.42299 7.64885 8.61763C7.42957 8.81226 7.1714 8.95867 6.89125 9.04726C6.6111 9.13584 6.31529 9.16461 6.02318 9.13169ZM22.4041 22.6915H18.4152V16.3081C18.4152 14.7089 17.8435 13.6649 16.3942 13.6649C15.9457 13.6681 15.5089 13.808 15.1428 14.0655C14.7767 14.3231 14.4988 14.686 14.3466 15.1054C14.2425 15.4161 14.1975 15.7432 14.2136 16.0702V22.6783H10.2248C10.2248 22.6783 10.2248 11.8674 10.2248 10.7837H14.2136V12.4622C14.576 11.8372 15.103 11.3223 15.738 10.973C16.3729 10.6236 17.0917 10.4531 17.8169 10.4797C20.4761 10.4797 22.4041 12.1846 22.4041 15.8455V22.6915Z" />
+                        </svg>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="absolute bottom-5 left-5">
+                <div class="text-[22px] font-semibold text-theme group-hover:text-white transition duration-300">
+                  Thomas
+                  Morgan</div>
+                <div class="text-[18px] font-normal group-hover:text-white transition duration-300">HR Head</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--END : Our Team-->
+
+    <!--START: Our Blog -->
+    <section class="mb-3 overflow-hidden">
+      <div class="container">
+        <div class="text-center">
+          <div class="text-theme lg:text-[24px] text-[18px] font-medium tracking-[3px] mb-2" data-aos="fade-right"
+            data-aos-duration="400">OUR Blog</div>
+          <div
+            class="lg:text-[38px] text-[30px] font-medium lg:leading-[60px] leading-[45px] max-w-[850px] mx-auto lg:mb-10 mb-7"
+            data-aos="fade-left" data-aos-duration="400">We Do Awesome Contribute For
+            Our Clients. Check Some Of Letest News.</div>
+        </div>
+        <div class="grid lg:grid-cols-3 grid-cols-1 md:gap-10">
+          <div data-aos="fade-right" data-aos-duration="300">
+            <div
+              class="2xl:max-h-[317px] xl:max-h-[265px] lg:max-h-[205px] md:max-h-[310px] max-h-[200px] overflow-hidden overflow-hidden">
+              <img src="img/digital-agency/our-blog-img-1.png" alt="images" class="object-bottom" />
+            </div>
+            <div class="lg:-translate-y-28 -translate-y-12 max-w-[440px]">
+              <div class="flex items-center justify-end">
+                <div class="flex items-center gap-3 md:p-4 p-2 bg-indigo">
+                  <img src="img/icons/calendar.svg" alt="img" class="" />
+                  <div class="text-white md:text-base text-[14px]">09 September 2021</div>
+                </div>
+              </div>
+              <div class="bg-white shadow-[0px_2px_16px_rgba(0,0,0,0.12)] lg:p-8 p-5">
+                <div class="flex md:flex-nowrap flex-wrap gap-2 justify-between mb-5">
+                  <div class="flex items-center">
+                    <div class="w-7 h-7">
+                      <img src="img/icons/blog-man.svg" alt="image" class="w-full h-full" />
+                    </div>
+                    <div class="opacity-60 ml-3">BY KUTUBUL ALAM</div>
+                  </div>
+                  <div class="flex items-center md:ml-5">
+                    <div class="md:w-8 md:h-8 w-7 h-7 md:ml ml-1">
+                      <img src="img/icons/blog-folder.svg" alt="image" class="w-full h-full" />
+                    </div>
+                    <div class="opacity-60 ml-3">CMS THEMES</div>
+                  </div>
+                </div>
+                <div class="lg:text-[22px] text-[18px] font-medium tracking-wider md:mb-5 mb-2">What Is Digital
+                  Marketing?</div>
+                <p class="opacity-50 max-w-[300px] md:leading-[30px] leading-[25px] md:text-base text-[14px]">Morbi
+                  Dapibus In Mauris A
+                  Eleifend. Quisque Laoreet
+                  Ex,
+                  In Maximus
+                  Diam Facilisis.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div data-aos="fade-right" data-aos-duration="400">
+            <div class="max-h-[330px]">
+              <img src="img/digital-agency/our-blog-img-2.png" alt="images" class="w-full h-full" />
+            </div>
+            <div class="lg:-translate-y-28 -translate-y-12 max-w-[440px]">
+              <div class="flex items-center justify-end">
+                <div class="flex items-center gap-3 md:p-4 p-2 bg-indigo">
+                  <img src="img/icons/calendar.svg" alt="img" class="" />
+                  <div class="text-white md:text-base text-[14px]">09 September 2021</div>
+                </div>
+              </div>
+              <div class="bg-white shadow-[0px_2px_16px_rgba(0,0,0,0.12)] lg:p-8 p-5">
+                <div class="flex md:flex-nowrap flex-wrap gap-2 justify-between mb-5">
+                  <div class="flex items-center">
+                    <div class="w-7 h-7">
+                      <img src="img/icons/blog-man.svg" alt="image" class="w-full h-full" />
+                    </div>
+                    <div class="opacity-60 ml-3">BY KUTUBUL ALAM</div>
+                  </div>
+                  <div class="flex items-center md:ml-5">
+                    <div class="md:w-8 md:h-8 w-7 h-7 md:ml ml-1">
+                      <img src="img/icons/blog-folder.svg" alt="image" class="w-full h-full" />
+                    </div>
+                    <div class="opacity-60 ml-3">CMS THEMES</div>
+                  </div>
+                </div>
+                <div class="lg:text-[22px] text-[18px] font-medium tracking-wider md:mb-5 mb-2">UNDERSTANDING MARKETING
+                </div>
+                <p class="opacity-50 max-w-[300px] md:leading-[30px] leading-[25px] md:text-base text-[14px]">Morbi
+                  Dapibus In Mauris A Eleifend. Quisque Laoreet
+                  Ex,
+                  In Maximus
+                  Diam Facilisis.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div data-aos="fade-right" data-aos-duration="500">
+            <div class="max-h-[330px]">
+              <img src="img/digital-agency/our-blog-img-3.png" alt="images" class="w-full h-full" />
+            </div>
+            <div class="lg:-translate-y-28 -translate-y-12 max-w-[440px]">
+              <div class="flex items-center justify-end">
+                <div class="flex items-center gap-3 md:p-4 p-2 bg-indigo">
+                  <img src="img/icons/calendar.svg" alt="img" class="" />
+                  <div class="text-white md:text-base text-[14px]">09 September 2021</div>
+                </div>
+              </div>
+              <div class="bg-white shadow-[0px_2px_16px_rgba(0,0,0,0.12)] lg:p-8 p-5">
+                <div class="flex md:flex-nowrap flex-wrap gap-2 justify-between mb-5">
+                  <div class="flex items-center">
+                    <div class="w-7 h-7">
+                      <img src="img/icons/blog-man.svg" alt="image" class="w-full h-full" />
+                    </div>
+                    <div class="opacity-60 ml-3">BY KUTUBUL ALAM</div>
+                  </div>
+                  <div class="flex items-center md:ml-5">
+                    <div class="md:w-8 md:h-8 w-7 h-7 md:ml ml-1">
+                      <img src="img/icons/blog-folder.svg" alt="image" class="w-full h-full" />
+                    </div>
+                    <div class="opacity-60 ml-3">CMS THEMES</div>
+                  </div>
+                </div>
+                <div class="lg:text-[22px] text-[18px] font-medium tracking-wider md:mb-5 mb-2">DIGITAL MARKETING
+                  CHANNELS</div>
+                <p class="opacity-50 max-w-[300px] md:leading-[30px] leading-[25px] md:text-base text-[14px]">Morbi
+                  Dapibus In Mauris A Eleifend. Quisque Laoreet
+                  Ex,
+                  In Maximus
+                  Diam Facilisis.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--END : Our Blog-->
+
+    <!--START: Our Latest News -->
+    <section class="mb-10 overflow-hidden">
+      <div class="container">
+        <div class="text-center md:pt-10">
+          <div class="text-theme md:text-[24px] text-[18px] font-medium tracking-[3px] mb-2" data-aos="fade-right"
+            data-aos-duration="400">Our Latest News</div>
+          <div
+            class="md:text-[38px] text-[30px] font-medium md:leading-[60px] leading-[45px] max-w-[850px] mx-auto mb-10"
+            data-aos="fade-left" data-aos-duration="400">READ FROM OUR BLOG</div>
+        </div>
+        <div class="grid lg:grid-cols-3 lg:gap-10 md:mb-0 mb-5">
+          <div class="lg:col-span-2 shadow-[0px_2px_20px_rgba(0,0,0,0.1)] mb-7" data-aos="fade-right"
+            data-aos-duration="300">
+            <div class="relative">
+              <img src="img/digital-agency/latest-news-img-1.png" alt="img" class="" />
+              <div class="bg-[#1A1A1A] text-white md:text-[30px] text-[20px] p-3 absolute top-10 left-10 text-center">
+                20 <br> Oct
+              </div>
+            </div>
+            <div class="md:p-10 p-5 bg-white">
+              <div class="md:text-[34px] text-[28px] font-semibold max-w-[800px] md:mb-5 mb-2" data-aos="fade-left"
+                data-aos-duration="400">It
+                is a long established fact that a reader will
+                be Standard
+                Part
+              </div>
+              <div data-aos="fade-left" data-aos-duration="600">
+                <p class="opacity-60 md:leading-[35px] leading-[30px] text-[14px]">A wonderful serenity has taken
+                  possssion
+                  of my entire souing like
+                  these sweet
+                  mornng spring whch enjoy
+                  with my whole heart I am alone, and feel the charm of existenceths spot whch was create For the bliss
+                  of
+                  souls like mineing am so happy my dear frend so absori bed in the exquste sens of mere. A wonderful
+                  serenity has taken posseson of my entire soung like these sweet mornngs spring whch enjoy …</p>
+              </div>
+              <div class="flex justify-between items-center mt-7 mb-1">
+                <div class="flex gap-5 justify-center items-center">
+                  <img src="img/digital-agency/themedraft-img.png" alt="img" class="" />
+                  <div class="md:text-[16px] text-[14px]">ThemeDraft</div>
+                </div>
+                <div>
+                  <a href="javascript:void(0)"
+                    class="font-medium flex justify-center items-center gap-3 group hover:text-theme transition duration-300 md:text-[16px] text-[14px]">
+                    Read More
+                    <div class="md:w-[16px] md:h-[14px] w-[14px] h-[14px]">
+                      <svg viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path class="stroke-black group-hover:stroke-[#C07CC5] transition duration-300"
+                          d="M8.5 1L14.5 7L8.5 13" stroke="black" stroke-width="2" stroke-miterlimit="10"
+                          stroke-linecap="round" stroke-linejoin="round" />
+                        <path class="stroke-black group-hover:stroke-[#C07CC5] transition duration-300"
+                          d="M1.5 1L7.5 7L1.5 13" stroke="black" stroke-width="2" stroke-miterlimit="10"
+                          stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="grid gap-10">
+              <div class="shadow-[0px_2px_20px_rgba(0,0,0,0.1)]" data-aos="fade-down" data-aos-duration="300">
+                <div class="h-[210px] relative">
+                  <img src="img/digital-agency/latest-news-img-2.png" alt="image" class="w-full h-full" />
+                  <div
+                    class="bg-[#1A1A1A] text-white text-center md:text-[30px] text-[20px] p-3 absolute top-10 left-10">
+                    20 <br>
+                    Oct
+                  </div>
+                </div>
+                <div class="md:text-[34px] text-[28px] font-semibold p-5">It is a long established fact that a reader
+                  will be Standard
+                  Part
+                </div>
+              </div>
+              <div class="shadow-[0px_2px_20px_rgba(0,0,0,0.1)]" data-aos="fade-up" data-aos-duration="300">
+                <div class="h-[210px] relative">
+                  <img src="img/digital-agency/latest-news-img-3.png" alt="image" class="w-full h-full" />
+                  <div
+                    class="bg-[#1A1A1A] text-white text-center md:text-[30px] text-[20px] p-3 absolute top-10 left-10">
+                    20 <br>
+                    Oct
+                  </div>
+                </div>
+                <div class="md:text-[34px] text-[28px] font-semibold p-5">It is a long established fact that a reader
+                  will be
+                  Standard
+                  Part
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--END : Our Latest News-->
+  </main>
+  <!--END: Main-->
+
+  <!--START : Footer-->
+  <footer class="overflow-hidden">
+    <span class="relative after:absolute after:content-[''] after:z-[-1] after:top-[300px] after:left-[150px] after:w-[300px] after:h-[200px] after:rounded-full after:bg-[rgba(192,124,197,1)]
+       after:blur-[200px] xl:block hidden"></span>
+    <div class="absolute right-44 xl:block hidden">
+      <span class="relative before:absolute before:content-[''] before:z-[-1] before:top-[300px] before:right-0 before:w-[300px] before:h-[200px] before:rounded-full before:bg-[rgba(192,124,197,1)]
+        before:blur-[200px]"></span>
+    </div>
+    <div class="container">
+      <div class="md:grid xl:grid-cols-5 lg:grid-cols-5 grid-cols-2 gap-1 xl:py-20 py-5">
+        <div class="lg:col-span-2 xl:ml-10" data-aos="fade-left" data-aos-duration="300">
+          <div class="flex 2xl:mb-10 xl:mb-7 lg:mb-6 md:mb-10 mb-4 lg:justify-start justify-center">
+            <img src="img/logo/digital-agency-logo.svg" alt="finance" />
+            <div class="text-black text-[35px] font-semibold md:ml-5 ml-3">
+              <span class="text-theme">Z</span>ooa
+            </div>
+          </div>
+          <p
+            class="text-black opacity-60 max-w-[480px] xl:leading-[30px] leading-[25px] lg:text-left text-center xl:text-[16px] text-[14px] xl:mb-10 md:mb-6 mb-5">
+            Sed perspiciatis
+            unde omnis natus error
+            voluptatem
+            accusan doloreqe laudantium totam aperiam eaque
+            sipsa quae abillo inventore</p>
+          <label
+            class="flex items-center justify-center bg-white xl:w-2/3 lg:w-3/4 w-full shadow-[0px_6px_25px_rgba(0,0,0,0.1)] py-2 px-2"
+            for="digital-input">
+            <div class="w-full h-full text-black px-4">
+              <input type="email" placeholder="Enter Your Mail" class="w-full h-full placeholder:text-[14px]"
+                id="digital-input" name="footer-input">
+            </div>
+            <button
+              class="bg-indigo font-semibold text-white uppercase tracking-wider 2xl:text-[18px] xl:text-[16px] text-[14px] xl:py-3 py-2 px-4 hover:opacity-80 transition duration-300">Subscribe
+            </button>
+          </label>
+        </div>
+        <div class="flex xl:justify-start justify-center lg:text-left text-center md:mt-0 mt-10" data-aos="fade-left"
+          data-aos-duration="400">
+          <ul>
+            <p class="xl:text-[26px] md:text-[22px] text-[20px] font-semibold lg:mb-10 mb-5">Quick Links</p>
+            <li>
+              <a href="javascript:void(0)">
+                <p
+                  class="xl:text-[16px] text-[14px] font-medium text-[#505050] md:mb-5 mb-3 hover:text-theme transition duration-300">
+                  Our Services
+                </p>
+              </a>
+            </li>
+            <li>
+              <a href="javascript:void(0)">
+                <p
+                  class="xl:text-[16px] text-[14px] font-medium text-[#505050] md:mb-5 mb-3 hover:text-theme transition duration-300">
+                  Meet Our Team
+                </p>
+              </a>
+            </li>
+            <li>
+              <a href="javascript:void(0)">
+                <p
+                  class="xl:text-[16px] text-[14px] font-medium text-[#505050] md:mb-5 mb-3 hover:text-theme transition duration-300">
+                  Our Portfolio
+                </p>
+              </a>
+            </li>
+            <li>
+              <a href="javascript:void(0)">
+                <p
+                  class="xl:text-[16px] text-[14px] font-medium text-[#505050] md:mb-5 mb-3 hover:text-theme transition duration-300">
+                  Contact
+                </p>
+              </a>
+            </li>
+            <li>
+              <a href="javascript:void(0)">
+                <p
+                  class="xl:text-[16px] text-[14px] font-medium text-[#505050] md:mb-5 mb-3 hover:text-theme transition duration-300">
+                  Help
+                </p>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="flex xl:justify-start justify-center lg:text-left text-center lg:mt-0 md:mt-10 mt-5"
+          data-aos="fade-left" data-aos-duration="500">
+          <ul>
+            <p class="xl:text-[26px] md:text-[22px] text-[20px] font-semibold lg:mb-10 mb-5">Categories</p>
+            <li>
+              <a href="javascript:void(0)">
+                <p
+                  class="xl:text-[16px] text-[14px] font-medium text-[#505050] md:mb-5 mb-3 hover:text-theme transition duration-300">
+                  About Company
+                </p>
+              </a>
+            </li>
+            <li>
+              <a href="javascript:void(0)">
+                <p
+                  class="xl:text-[16px] text-[14px] font-medium text-[#505050] md:mb-5 mb-3 hover:text-theme transition duration-300">
+                  Contact Us
+                </p>
+              </a>
+            </li>
+            <li>
+              <a href="javascript:void(0)">
+                <p
+                  class="xl:text-[16px] text-[14px] font-medium text-[#505050] md:mb-5 mb-3 hover:text-theme transition duration-300">
+                  Privacy Policy
+                </p>
+              </a>
+            </li>
+            <li>
+              <a href="javascript:void(0)">
+                <p
+                  class="xl:text-[16px] text-[14px] font-medium text-[#505050] md:mb-5 mb-3 hover:text-theme transition duration-300">
+                  Terms & Conditions
+                </p>
+              </a>
+            </li>
+            <li>
+              <a href="javascript:void(0)">
+                <p
+                  class="xl:text-[16px] text-[14px] font-medium text-[#505050] md:mb-5 mb-3 hover:text-theme transition duration-300">
+                  Mission & Vision
+                </p>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="flex lg:justify-start justify-center lg:text-left text-center lg:mt-0 md:mt-10 mt-5">
+          <div data-aos="fade-left" data-aos-duration="600">
+            <p class="xl:text-[26px] md:text-[22px] text-[20px] font-semibold lg:mb-5 mb-0">Follow Us</p>
+            <ul
+              class="flex items-center lg:justify-start justify-center xl:gap-7 lg:gap-4 gap-5 md:pt-5 pt-3 md:mb-10 mb-5">
+              <li>
+                <a href="javascript:void(0)">
+                  <div class="xl:w-[16px] xl:h-[31px] w-[14px] h-[25px]">
+                    <svg viewBox="0 0 16 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path class="fill-[#3C6FC1] hover:fill-black transition duration-300"
+                        d="M13.0501 5.7587H15.7917V1.1212C14.4643 0.983167 13.1305 0.915017 11.7959 0.917036C7.82923 0.917036 5.11673 3.33787 5.11673 7.7712V11.592H0.639648V16.7837H5.11673V30.0837H10.4834V16.7837H14.9459L15.6167 11.592H10.4834V8.28162C10.4834 6.75037 10.8917 5.7587 13.0501 5.7587Z"
+                        fill="#3C6FC1" />
+                    </svg>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="javascript:void(0)">
+                  <div class="xl:w-[33px] xl:h-[23px] w-[25px] h-[18px]">
+                    <svg viewBox="0 0 33 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path class="fill-[#FF2E2E] hover:fill-black transition duration-300"
+                        d="M32.5417 8.16033C32.6139 6.07295 32.1574 4.00119 31.2147 2.13742C30.575 1.37266 29.6874 0.856576 28.7063 0.679082C24.6485 0.31089 20.574 0.15998 16.5001 0.226999C12.441 0.156938 8.38111 0.302978 4.33758 0.664499C3.53815 0.809919 2.79834 1.18489 2.20841 1.74367C0.895913 2.95408 0.75008 5.02492 0.604246 6.77492C0.39266 9.92136 0.39266 13.0785 0.604246 16.2249C0.646436 17.2099 0.793092 18.1876 1.04175 19.1416C1.21759 19.8781 1.57334 20.5596 2.07716 21.1249C2.6711 21.7133 3.42814 22.1096 4.25008 22.2624C7.39412 22.6505 10.5621 22.8113 13.7292 22.7437C18.8334 22.8166 23.3105 22.7437 28.6042 22.3353C29.4464 22.1919 30.2247 21.7951 30.8355 21.1978C31.2438 20.7894 31.5487 20.2894 31.7251 19.7395C32.2466 18.1391 32.5028 16.4642 32.4834 14.7812C32.5417 13.9645 32.5417 9.03533 32.5417 8.16033ZM13.2042 15.6562V6.62908L21.8376 11.1645C19.4167 12.5062 16.223 14.0228 13.2042 15.6562Z"
+                        fill="#FF2E2E" />
+                    </svg>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="javascript:void(0)">
+                  <div class="xl:w-[31px] xl:h-[25px] w-[25px] h-[20px]">
+                    <svg viewBox="0 0 31 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path class="fill-[#5FD3ED] hover:fill-black transition duration-300"
+                        d="M30.0834 3.45791C28.9872 3.93346 27.828 4.24783 26.6418 4.39124C27.8933 3.64358 28.8311 2.46738 29.2813 1.08082C28.1053 1.78092 26.8179 2.27417 25.4751 2.53916C24.5775 1.56582 23.3823 0.917922 22.0769 0.697065C20.7715 0.476208 19.4296 0.694888 18.2619 1.31881C17.0941 1.94273 16.1664 2.9366 15.6244 4.14454C15.0823 5.35249 14.9566 6.70618 15.2667 7.99332C12.8888 7.87305 10.5628 7.25388 8.43979 6.17604C6.31676 5.0982 4.44423 3.58579 2.94383 1.73707C2.41757 2.65607 2.14105 3.69681 2.14175 4.75582C2.13988 5.7393 2.38123 6.70797 2.84431 7.5756C3.30738 8.44324 3.97782 9.1829 4.79591 9.72874C3.84505 9.70287 2.9145 9.44772 2.08341 8.98499V9.05791C2.09054 10.4359 2.57341 11.7691 3.45033 12.832C4.32726 13.895 5.54441 14.6224 6.89592 14.8912C6.37566 15.0496 5.83552 15.133 5.29175 15.1392C4.91534 15.1348 4.53986 15.1006 4.16883 15.0371C4.5537 16.2224 5.29849 17.2583 6.29957 18.0006C7.30064 18.7429 8.50821 19.1547 9.75425 19.1787C7.65017 20.8343 5.05241 21.7379 2.37508 21.7454C1.88761 21.747 1.40053 21.7178 0.916748 21.6579C3.65029 23.4229 6.83585 24.3598 10.0897 24.3558C12.335 24.3791 14.5626 23.9548 16.6421 23.1076C18.7217 22.2604 20.6116 21.0073 22.2014 19.4215C23.7913 17.8358 25.0492 15.9491 25.9017 13.8717C26.7543 11.7944 27.1843 9.56792 27.1668 7.32249C27.1668 7.07457 27.1668 6.81207 27.1668 6.54957C28.3111 5.69617 29.2981 4.64998 30.0834 3.45791Z"
+                        fill="#5FD3ED" />
+                    </svg>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="javascript:void(0)">
+                  <div class="xl:w-[31px] xl:h-[31px] w-[25px] h-[25px]">
+                    <svg viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path class="fill-[#C189DB] hover:fill-black transition duration-300"
+                        d="M15.5001 11.8837C14.7848 11.8837 14.0855 12.0958 13.4908 12.4932C12.896 12.8906 12.4325 13.4554 12.1587 14.1163C11.885 14.7771 11.8134 15.5043 11.9529 16.2059C12.0925 16.9075 12.4369 17.5519 12.9427 18.0577C13.4485 18.5635 14.0929 18.908 14.7945 19.0475C15.4961 19.187 16.2233 19.1154 16.8841 18.8417C17.545 18.568 18.1098 18.1044 18.5072 17.5096C18.9046 16.9149 19.1167 16.2156 19.1167 15.5003C19.1167 15.0254 19.0232 14.5551 18.8414 14.1163C18.6597 13.6775 18.3933 13.2788 18.0575 12.943C17.7216 12.6071 17.3229 12.3407 16.8841 12.159C16.4453 11.9772 15.975 11.8837 15.5001 11.8837ZM29.9813 8.31074C29.9737 7.18456 29.7663 6.06866 29.3688 5.01491C29.0761 4.24383 28.6232 3.54359 28.04 2.96039C27.4568 2.37719 26.7566 1.92429 25.9855 1.63158C24.9318 1.23413 23.8159 1.02675 22.6897 1.01908C20.8084 0.916992 20.2542 0.916992 15.5001 0.916992C10.7459 0.916992 10.1917 0.916992 8.3105 1.01908C7.18431 1.02675 6.06842 1.23413 5.01467 1.63158C4.24359 1.92429 3.54334 2.37719 2.96014 2.96039C2.37694 3.54359 1.92404 4.24383 1.63133 5.01491C1.23388 6.06866 1.0265 7.18456 1.01883 8.31074C0.916748 10.192 0.916748 10.7462 0.916748 15.5003C0.916748 20.2545 0.916748 20.8087 1.01883 22.6899C1.03453 23.8201 1.24163 24.9394 1.63133 26.0003C1.92275 26.7679 2.37527 27.4641 2.95842 28.042C3.53911 28.6287 4.24086 29.0816 5.01467 29.3691C6.06842 29.7665 7.18431 29.9739 8.3105 29.9816C10.1917 30.0837 10.7459 30.0837 15.5001 30.0837C20.2542 30.0837 20.8084 30.0837 22.6897 29.9816C23.8159 29.9739 24.9318 29.7665 25.9855 29.3691C26.7593 29.0816 27.4611 28.6287 28.0418 28.042C28.6249 27.4641 29.0774 26.7679 29.3688 26.0003C29.7659 24.9414 29.9732 23.8208 29.9813 22.6899C30.0834 20.8087 30.0834 20.2545 30.0834 15.5003C30.0834 10.7462 30.0834 10.192 29.9813 8.31074ZM26.2772 19.9774C26.2304 20.8774 26.0383 21.7638 25.7084 22.6024C25.4253 23.302 25.0044 23.9374 24.4708 24.4711C23.9372 25.0047 23.3017 25.4256 22.6022 25.7087C21.7556 26.0202 20.8642 26.1925 19.9626 26.2191C18.8105 26.2191 18.5042 26.2191 15.5001 26.2191C12.4959 26.2191 12.1897 26.2191 11.0376 26.2191C10.1359 26.1925 9.24454 26.0202 8.398 25.7087C7.67482 25.4399 7.02174 25.0112 6.48758 24.4545C5.95918 23.9313 5.5511 23.2993 5.29175 22.6024C4.97902 21.7567 4.81138 20.8643 4.79591 19.9628C4.79591 18.8107 4.79591 18.5045 4.79591 15.5003C4.79591 12.4962 4.79591 12.1899 4.79591 11.0378C4.81138 10.1363 4.97902 9.24391 5.29175 8.39824C5.56049 7.67506 5.98923 7.02198 6.54592 6.48783C7.0714 5.96228 7.70276 5.55463 8.398 5.29199C9.24454 4.9805 10.1359 4.80813 11.0376 4.78158C12.1897 4.78158 12.4959 4.78158 15.5001 4.78158C18.5042 4.78158 18.8105 4.78158 19.9626 4.78158C20.8642 4.80813 21.7556 4.9805 22.6022 5.29199C23.3254 5.56074 23.9784 5.98948 24.5126 6.54616C25.041 7.06933 25.4491 7.70135 25.7084 8.39824C26.0199 9.24479 26.1923 10.1362 26.2188 11.0378C26.2188 12.1899 26.2188 12.4962 26.2188 15.5003C26.2188 18.5045 26.3209 18.8107 26.2772 19.9628V19.9774ZM23.9438 9.12741C23.7702 8.65634 23.4964 8.22856 23.1414 7.87355C22.7864 7.51855 22.3586 7.24479 21.8876 7.07116C21.2408 6.84696 20.5595 6.73835 19.8751 6.75033C18.7376 6.75033 18.4167 6.75033 15.5001 6.75033C12.5834 6.75033 12.2626 6.75033 11.1251 6.75033C10.4371 6.75705 9.75581 6.88542 9.11258 7.12949C8.64873 7.29524 8.22547 7.55782 7.87093 7.89979C7.5164 8.24175 7.23871 8.65526 7.05633 9.11283C6.84455 9.76232 6.74108 10.4422 6.75008 11.1253C6.75008 12.2628 6.75008 12.5837 6.75008 15.5003C6.75008 18.417 6.75008 18.7378 6.75008 19.8753C6.76454 20.5625 6.89266 21.2425 7.12925 21.8878C7.30288 22.3589 7.57664 22.7867 7.93164 23.1417C8.28664 23.4967 8.71443 23.7704 9.1855 23.9441C9.80772 24.1729 10.4625 24.3009 11.1251 24.3232C12.2626 24.3232 12.5834 24.3232 15.5001 24.3232C18.4167 24.3232 18.7376 24.3232 19.8751 24.3232C20.563 24.3165 21.2444 24.1882 21.8876 23.9441C22.3586 23.7704 22.7864 23.4967 23.1414 23.1417C23.4964 22.7867 23.7702 22.3589 23.9438 21.8878C24.1879 21.2446 24.3163 20.5633 24.323 19.8753C24.323 18.7378 24.323 18.417 24.323 15.5003C24.323 12.5837 24.323 12.2628 24.323 11.1253C24.3234 10.4367 24.1948 9.75409 23.9438 9.11283V9.12741ZM15.5001 21.0712C14.7692 21.0712 14.0455 20.927 13.3704 20.6468C12.6954 20.3667 12.0822 19.9561 11.5661 19.4386C11.0499 18.9211 10.641 18.3069 10.3626 17.6311C10.0842 16.9553 9.94191 16.2312 9.94383 15.5003C9.94384 14.3979 10.2709 13.3203 10.8837 12.4038C11.4965 11.4874 12.3674 10.7734 13.3862 10.3522C14.405 9.93096 15.5258 9.82149 16.6069 10.0376C17.6879 10.2538 18.6805 10.7858 19.459 11.5663C20.2375 12.3469 20.7669 13.3409 20.9802 14.4225C21.1935 15.5041 21.0811 16.6246 20.6572 17.6423C20.2334 18.66 19.5171 19.529 18.599 20.1394C17.681 20.7498 16.6025 21.074 15.5001 21.0712ZM21.3334 11.0232C21.011 10.9891 20.7127 10.8369 20.4959 10.5959C20.279 10.3549 20.1591 10.0422 20.1591 9.71803C20.1591 9.39386 20.279 9.08115 20.4959 8.84016C20.7127 8.59917 21.011 8.44695 21.3334 8.41283C21.6558 8.44695 21.9541 8.59917 22.171 8.84016C22.3878 9.08115 22.5078 9.39386 22.5078 9.71803C22.5078 10.0422 22.3878 10.3549 22.171 10.5959C21.9541 10.8369 21.6558 10.9891 21.3334 11.0232Z"
+                        fill="#C189DB" />
+                    </svg>
+                  </div>
+                </a>
+              </li>
+            </ul>
+            <div class="flex xl:gap-5 gap-3">
+              <div class="xl:w-16 xl:h-16 lg:w-14 lg:h-14 md:w-16 md:h-16 w-12 h-12">
+                <img src="img/icons/headphone.svg" alt="images" class="w-full h-full" />
+              </div>
+              <div>
+                <div class="mb-2 xl:text-[16px] lg:text-[14px] md:text-[16px] text-[12px] font-medium">8:30 AM - 9:30 PM
+                </div>
+                <div class="xl:text-[20px] lg:text-[16px] md:text-[24px] text-[18px] font-semibold">+5 695 023 520</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="border-t-[1px] border-[#E4E4E4]"></div>
+    <div class="container">
+      <div class="md:flex justify-between items-center">
+        <div class="lg:my-2 md:my-5 my-3 xl:ml-10 cursor-pointer md:text-left text-center xl:text-[16px] text-[14px]">
+          © Copyrights, 2022 Bdevs
+        </div>
+        <div class="mr-4">
+          <ul class="flex lg:my-2 md:my-5 my-2 justify-center items-center gap-3">
+            <li>
+              <a href="javascript:void(0)">
+                <img src="img/digital-agency/master-card-img.svg" alt="image">
+              </a>
+            </li>
+            <li>
+              <a href="javascript:void(0)">
+                <img src="img/digital-agency/visa-img.svg" alt="image">
+              </a>
+            </li>
+            <li>
+              <a href="javascript:void(0)">
+                <img src="img/digital-agency/paypal-logo-img.svg" alt="image">
+              </a>
+            </li>
+            <li>
+              <a href="javascript:void(0)">
+                <img src="img/digital-agency/discover-bank-img.svg" alt="image">
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+  </footer>
+
+  <!--END : Footer-->
+
+  <!-- Script -->
+  <script src="plugins/tailwindcss/tailwindcss.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="plugins/swiper/swiper-bundle.min.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/digital-agency.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,1331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <title>Zooa - Theme Kit</title>
+
+    <!-- fonts googleapis stylesheet -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <!-- aos-animation link -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- google-font link -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- external css -->
+    <link rel="stylesheet" href="css/main.css" />
+
+    <!-- Tailwind class base mixin -->
+    <style type="text/tailwindcss">
+        @layer utilities {
+                .bg-lapis {
+                    background-color: #3399FF;
+                }
+    			.text-theme {
+    				@apply text-white;
+    			}
+    
+    			.btn {
+    				@apply py-3 px-7 
+                    bg-lapis text-white rounded-md inline-flex items-center transition duration-500;
+    			}
+    
+    			.btn:hover {
+    				@apply opacity-80;
+    			}
+    
+    			.btn span {
+    				@apply ml-2;
+    			}
+    
+    			.container {
+    				@apply mx-auto px-2;
+    			}
+    
+    			.dropdown:hover .dropdown-hover\:block {
+    				display: block;
+    			}
+                .scroll-header{
+                    @apply bg-[#ffffffe6] shadow-lg font-semibold;
+                }
+                .menu-icon span:first-child{
+				   transform: rotate(45deg);
+				}	
+				.menu-icon span:last-child{
+				   top: 0;
+				   transform: rotate(-45deg);
+				}
+				.menu-icon .toggler-line{
+					display: none;
+				}
+				.left .subMenu{
+                    right: 101%;
+				}
+				.right .subMenu{
+                    left: 101%;
+				}
+				.collapse{
+  					max-height: 0;
+  					overflow: hidden;
+					transition-duration: 0.4s;
+				}
+				.collapse.show{
+					max-height: 100%;
+				}
+                .Montserrat{
+                    font-family: 'Montserrat', sans-serif;
+                }
+            }
+    </style>
+</head>
+
+<body class="bg-[#e5e5e54d]">
+    <!-- START : loder -->
+    <div class="preloader"
+        style="position: fixed; display: flex; justify-content: center; align-items: center; width: 100%; height: 100%; background-color: #fff; z-index: 99999999999999;">
+        <img src="img/loder/corporate-loder.gif" alt="loder">
+    </div>
+    <!-- END : loder -->
+
+    <!-- START: Header -->
+    <header class="fixed top-0 left-0 w-full text-lg z-50 text-black transition duration-300 bg-white">
+        <div class="container lg:py-5 py-2 flex items-center justify-between">
+            <a href="index.html" class="block lg:h-14 h-12">
+                <img src="img/logo/corporate-logo.svg" alt="Logo" class="h-full" />
+            </a>
+            <button type="button" id="menu-btn" class="w-[22px] h-[14px] align-middle relative mx-2 lg:hidden block"
+                aria-controls="mobile-menu" aria-expanded="false" data-mobile-nav="false">
+                <span class="h-[3px] w-full absolute top-0 left-0 bg-lapis transition duration-300"></span>
+                <span
+                    class="h-[3px] w-full absolute top-1/2 left-0 bg-lapis transition duration-300 toggler-line"></span>
+                <span class="h-[3px] w-full absolute top-full left-0 bg-lapis transition duration-300"></span>
+            </button>
+            <div class="lg:flex hidden items-center w-full text-center">
+                <div class="flex justify-between w-full">
+                    <ul class="flex items-center mx-auto">
+                        <li class="group">
+                            <a href="javascript:void(0)"
+                                class="px-8 py-4 text-black font-bold underline decoration-2 decoration-[#000000] transition duration-300">Home</a>
+                            <div
+                                class="absolute top-[75%] gap-10 bg-white text-black rounded-md text-[14px] text-left shadow-lg hidden group-hover:flex py-2">
+                                <ul>
+                                    <h5 class="font-bold px-6 mb-2">Corporate</h5>
+                                    <li class="hover:text-lapis transition duration-300 px-6 py-1">
+                                        <a href="javascript:void(0)" class="whitespace-nowrap">Startup</a>
+                                    </li>
+                                    <li class="hover:text-lapis transition duration-300 px-6 py-1">
+                                        <a href="javascript:void(0)" class="whitespace-nowrap">Business</a>
+                                    </li>
+                                    <li class="hover:text-lapis transition duration-300 px-6 py-1">
+                                        <a href="javascript:void(0)" class="whitespace-nowrap">Corporate</a>
+                                    </li>
+                                    <li class="hover:text-lapis transition duration-300 px-6 py-1">
+                                        <a href="javascript:void(0)" class="whitespace-nowrap">Finance</a>
+                                    </li>
+                                    <li class="hover:text-lapis transition duration-300 px-6 py-1">
+                                        <a href="javascript:void(0)" class="whitespace-nowrap">Application</a>
+                                    </li>
+                                    <li class="hover:text-lapis transition duration-300 px-6 py-1">
+                                        <a href="javascript:void(0)" class="whitespace-nowrap">Consulting</a>
+                                    </li>
+                                    <li class="hover:text-lapis transition duration-300 px-6 py-1">
+                                        <a href="javascript:void(0)" class="whitespace-nowrap">Digital agency</a>
+                                    </li>
+                                    <li class="hover:text-lapis transition duration-300 px-6 py-1">
+                                        <a href="javascript:void(0)" class="whitespace-nowrap">SEO agency</a>
+                                    </li>
+                                    <li class="hover:text-lapis transition duration-300 px-6 py-1">
+                                        <a href="javascript:void(0)" class="whitespace-nowrap">Event & conference</a>
+                                    </li>
+                                    <li class="hover:text-lapis transition duration-300 px-6 py-1">
+                                        <a href="javascript:void(0)" class="whitespace-nowrap">Marketing agency</a>
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <h5 class="font-bold px-6 mb-2">Specialized</h5>
+                                    <li class="hover:text-lapis transition duration-300 px-6 py-1">
+                                        <a href="javascript:void(0)" class="whitespace-nowrap">Restaurant</a>
+                                    </li>
+                                    <li class="hover:text-lapis transition duration-300 px-6 py-1">
+                                        <a href="javascript:void(0)" class="whitespace-nowrap">Architecture</a>
+                                    </li>
+                                    <li class="hover:text-lapis transition duration-300 px-6 py-1">
+                                        <a href="javascript:void(0)" class="whitespace-nowrap">Hotel & resort</a>
+                                    </li>
+                                    <li class="hover:text-lapis transition duration-300 px-6 py-1">
+                                        <a href="javascript:void(0)" class="whitespace-nowrap">Travel agency</a>
+                                    </li>
+                                    <li class="hover:text-lapis transition duration-300 px-6 py-1">
+                                        <a href="javascript:void(0)" class="whitespace-nowrap">Yoga & meditation</a>
+                                    </li>
+                                    <li class="hover:text-lapis transition duration-300 px-6 py-1">
+                                        <a href="javascript:void(0)" class="whitespace-nowrap">Gym & fitness</a>
+                                    </li>
+                                    <li class="hover:text-lapis transition duration-300 px-6 py-1">
+                                        <a href="javascript:void(0)" class="whitespace-nowrap">Spa salon</a>
+                                    </li>
+                                    <li class="hover:text-lapis transition duration-300 px-6 py-1">
+                                        <a href="javascript:void(0)" class="whitespace-nowrap">Cafe</a>
+                                    </li>
+                                    <li class="hover:text-lapis transition duration-300 px-6 py-1">
+                                        <a href="javascript:void(0)" class="whitespace-nowrap">Home decor</a>
+                                    </li>
+                                    <li class="hover:text-lapis transition duration-300 px-6 py-1">
+                                        <a href="javascript:void(0)" class="whitespace-nowrap">Dentist</a>
+                                    </li>
+                                    <li class="hover:text-lapis transition duration-300 px-6 py-1">
+                                        <a href="javascript:void(0)" class="whitespace-nowrap">Interior design</a>
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <h5 class="font-bold px-6 mb-2">Portfolio</h5>
+                                    <li class="hover:text-lapis transition duration-300 px-6 py-1">
+                                        <a href="javascript:void(0)" class="whitespace-nowrap">Design agency</a>
+                                    </li>
+                                    <li class="hover:text-lapis transition duration-300 px-6 py-1">
+                                        <a href="javascript:void(0)" class="whitespace-nowrap">Web agency</a>
+                                    </li>
+                                    <li class="hover:text-lapis transition duration-300 px-6 py-1">
+                                        <a href="javascript:void(0)" class="whitespace-nowrap">Creative agency</a>
+                                    </li>
+                                    <li class="hover:text-lapis transition duration-300 px-6 py-1">
+                                        <a href="javascript:void(0)" class="whitespace-nowrap">Freelancer</a>
+                                    </li>
+                                    <li class="hover:text-lapis transition duration-300 px-6 py-1">
+                                        <a href="javascript:void(0)" class="whitespace-nowrap">Branding agency</a>
+                                    </li>
+                                    <li class="hover:text-lapis transition duration-300 px-6 py-1">
+                                        <a href="javascript:void(0)" class="whitespace-nowrap">Photography</a>
+                                    </li>
+                                    <li class="hover:text-lapis transition duration-300 px-6 py-1">
+                                        <a href="javascript:void(0)" class="whitespace-nowrap">Personal portfolio</a>
+                                    </li>
+                                    <li class="hover:text-lapis transition duration-300 px-6 py-1">
+                                        <a href="javascript:void(0)" class="whitespace-nowrap">Vertical portfolio</a>
+                                    </li>
+                                    <li class="hover:text-lapis transition duration-300 px-6 py-1">
+                                        <a href="javascript:void(0)" class="whitespace-nowrap">Interactive portfolio</a>
+                                    </li>
+                                    <li class="hover:text-lapis transition duration-300 px-6 py-1">
+                                        <a href="javascript:void(0)" class="whitespace-nowrap">Split portfolio</a>
+                                    </li>
+                                    <li class="hover:text-lapis transition duration-300 px-6 py-1">
+                                        <a href="javascript:void(0)" class="whitespace-nowrap">Creative portfolio</a>
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <h5 class="font-bold px-6 mb-2">Other</h5>
+                                    <li class="hover:text-lapis transition duration-300 px-6 py-1">
+                                        <a href="javascript:void(0)" class="whitespace-nowrap">Furniture shop</a>
+                                    </li>
+                                    <li class="hover:text-lapis transition duration-300 px-6 py-1">
+                                        <a href="javascript:void(0)" class="whitespace-nowrap">Fashion shop</a>
+                                    </li>
+                                    <li class="hover:text-lapis transition duration-300 px-6 py-1">
+                                        <a href="javascript:void(0)" class="whitespace-nowrap">Magazine</a>
+                                    </li>
+                                    <li class="hover:text-lapis transition duration-300 px-6 py-1">
+                                        <a href="javascript:void(0)" class="whitespace-nowrap">Lifestyle blog</a>
+                                    </li>
+                                    <li class="hover:text-lapis transition duration-300 px-6 py-1">
+                                        <a href="javascript:void(0)" class="whitespace-nowrap">Classic blog</a>
+                                    </li>
+                                    <li class="hover:text-lapis transition duration-300 px-6 py-1">
+                                        <a href="javascript:void(0)" class="whitespace-nowrap">Blog metro</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="group">
+                            <a href="javascript:void(0)"
+                                class="px-8 py-4 text-[#00000080] font-semibold hover:text-black hover:underline hover:decoration-2 hover:decoration-[#000000] transition duration-300">Product</a>
+                            <div
+                                class="absolute top-[75%] gap-10 bg-white text-black rounded-md text-[14px] text-left shadow-lg hidden group-hover:flex py-2">
+                                <ul>
+                                    <li class="dropdown relative right">
+                                        <a href="javascript:void(0)"
+                                            class="hover:text-lapis transition duration-300 px-6 py-4">Lifestyle
+                                            blog</a>
+                                        <div
+                                            class="hidden dropdown-hover:block bg-white shadow-lg rounded-md absolute top-[0] subMenu py-2">
+                                            <ul>
+                                                <li class="hover:text-lapis transition duration-300 px-6 py-1">
+                                                    <a href="javascript:void(0)" class="whitespace-nowrap">Furniture
+                                                        shop</a>
+                                                </li>
+                                                <li class="hover:text-lapis transition duration-300 px-6 py-1">
+                                                    <a href="javascript:void(0)" class="whitespace-nowrap">Fashion
+                                                        shop</a>
+                                                </li>
+                                                <li class="hover:text-lapis transition duration-300 px-6 py-1">
+                                                    <a href="javascript:void(0)" class="whitespace-nowrap">Magazine</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="relative px-6 py-1 dropdown left">
+                                        <a href="javascript:void(0)"
+                                            class="hover:text-lapis transition duration-300 whitespace-nowrap">Classic
+                                            blog</a>
+                                        <div
+                                            class="hidden dropdown-hover:block bg-white shadow-lg rounded-md absolute top-[0] subMenu py-2">
+                                            <ul>
+                                                <li class="hover:text-lapis transition duration-300 px-6 py-1">
+                                                    <a href="javascript:void(0)" class="whitespace-nowrap">Our
+                                                        services</a>
+                                                </li>
+                                                <li class="hover:text-lapis transition duration-300 px-6 py-1">
+                                                    <a href="javascript:void(0)" class="whitespace-nowrap">What we
+                                                        offer</a>
+                                                </li>
+                                                <li class="hover:text-lapis transition duration-300 px-6 py-1">
+                                                    <a href="javascript:void(0)" class="whitespace-nowrap">Our
+                                                        process</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="hover:text-lapis transition duration-300 px-6 py-1">
+                                        <a href="javascript:void(0)" class="whitespace-nowrap">Blog metro</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)"
+                                class="px-8 py-4 text-[#00000080] font-semibold hover:text-black hover:underline hover:decoration-2 hover:decoration-[#000000] transition duration-300">Pricing</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)"
+                                class="px-8 py-4 text-[#00000080] font-semibold hover:text-black hover:underline hover:decoration-2 hover:decoration-[#000000] transition duration-300">Contact
+                                Us</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)"
+                                class="px-8 py-4 text-[#00000080] font-semibold hover:text-black hover:underline hover:decoration-2 hover:decoration-[#000000] transition duration-300">FAQ</a>
+                        </li>
+                    </ul>
+                    <div class="flex items-center">
+                        <a href="javascript:void(0)" class="mr-8">
+                            <svg width="30" height="29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M14.072 26.583C6.742 26.583.78 20.62.78 13.292.78 5.963 6.743 0 14.072 0 21.4 0 27.363 5.963 27.363 13.292c0 7.328-5.963 13.291-13.291 13.291Zm0-24.166c-5.996 0-10.876 4.878-10.876 10.875s4.88 10.875 10.876 10.875c5.995 0 10.875-4.878 10.875-10.875S20.067 2.417 14.072 2.417Z"
+                                    fill="#7B7B7B" />
+                                <path
+                                    d="M28.572 29c-.31 0-.62-.118-.855-.354l-5.794-5.794a1.21 1.21 0 0 1 1.71-1.709l5.793 5.794A1.207 1.207 0 0 1 28.572 29Z"
+                                    fill="#7B7B7B" />
+                            </svg>
+                        </a>
+                        <a href="javascript:void(0)" class="btn font-semibold">Register</a>
+                    </div>
+                </div>
+            </div>
+            <div class="fixed inset-0 sm:w-3/4 bg-white transition duration-700 translate-x-[-110%] px-4 py-3"
+                id="mobile-menu">
+                <span class="absolute top-2 right-2 material-icons sm:hidden text-lapis" id="closeMenu">close</span>
+                <a href="index.html" class="block lg:h-14 h-12">
+                    <img src="img/logo/corporate-logo.svg" alt="Logo" class="h-full" />
+                </a>
+                <div class="h-full overflow-auto text-[15px] py-3">
+                    <ul>
+                        <li>
+                            <div>
+                                <button
+                                    class="w-full h-full flex justify-between border-b text-left hover:bg-lapis hover:text-white transition duration-700 px-[15px] py-[9px] text-lapis"
+                                    data-toggle="collapse">
+                                    <span>Home</span>
+                                    <span
+                                        class="material-icons transition duration-700 rotate-icon">keyboard_arrow_down</span>
+                                </button>
+                                <div class="collapse transition duration-700">
+                                    <div class="sm:grid grid-cols-2 text-black py-2">
+                                        <ul>
+                                            <h5 class="font-bold px-[15px]">Corporate</h5>
+                                            <li class="hover:text-lapis transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Startup</a>
+                                            </li>
+                                            <li class="hover:text-lapis transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Business</a>
+                                            </li>
+                                            <li class="hover:text-lapis transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Corporate</a>
+                                            </li>
+                                            <li class="hover:text-lapis transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Finance</a>
+                                            </li>
+                                            <li class="hover:text-lapis transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Application</a>
+                                            </li>
+                                            <li class="hover:text-lapis transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Consulting</a>
+                                            </li>
+                                            <li class="hover:text-lapis transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Digital
+                                                    agency</a>
+                                            </li>
+                                            <li class="hover:text-lapis transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">SEO agency</a>
+                                            </li>
+                                            <li class="hover:text-lapis transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Event &amp;
+                                                    conference</a>
+                                            </li>
+                                            <li class="hover:text-lapis transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Marketing
+                                                    agency</a>
+                                            </li>
+                                        </ul>
+                                        <ul>
+                                            <h5 class="font-bold px-[15px]">Specialized</h5>
+                                            <li class="hover:text-lapis transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Restaurant</a>
+                                            </li>
+                                            <li class="hover:text-lapis transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Architecture</a>
+                                            </li>
+                                            <li class="hover:text-lapis transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Hotel &
+                                                    resort</a>
+                                            </li>
+                                            <li class="hover:text-lapis transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Travel agency</a>
+                                            </li>
+                                            <li class="hover:text-lapis transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Yoga &
+                                                    meditation</a>
+                                            </li>
+                                            <li class="hover:text-lapis transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Gym & fitness</a>
+                                            </li>
+                                            <li class="hover:text-lapis transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Spa salon
+                                                </a>
+                                            </li>
+                                            <li class="hover:text-lapis transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Cafe</a>
+                                            </li>
+                                            <li class="hover:text-lapis transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Home decor</a>
+                                            </li>
+                                            <li class="hover:text-lapis transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Dentist</a>
+                                            </li>
+                                            <li class="hover:text-lapis transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Interior
+                                                    design</a>
+                                            </li>
+                                        </ul>
+                                        <ul>
+                                            <h5 class="font-bold px-[15px]">Portfolio</h5>
+                                            <li class="hover:text-lapis transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Design agency</a>
+                                            </li>
+                                            <li class="hover:text-lapis transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Web agency</a>
+                                            </li>
+                                            <li class="hover:text-lapis transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Creative
+                                                    agency</a>
+                                            </li>
+                                            <li class="hover:text-lapis transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Freelancer</a>
+                                            </li>
+                                            <li class="hover:text-lapis transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Branding
+                                                    agency</a>
+                                            </li>
+                                            <li class="hover:text-lapis transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Photography</a>
+                                            </li>
+                                            <li class="hover:text-lapis transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Personal
+                                                    portfolio</a>
+                                            </li>
+                                            <li class="hover:text-lapis transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Vertical
+                                                    portfolio</a>
+                                            </li>
+                                            <li class="hover:text-lapis transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Interactive
+                                                    portfolio</a>
+                                            </li>
+                                            <li class="hover:text-lapis transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Split
+                                                    portfolio</a>
+                                            </li>
+                                            <li class="hover:text-lapis transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Creative
+                                                    portfolio</a>
+                                            </li>
+                                        </ul>
+                                        <ul>
+                                            <h5 class="font-bold px-[15px]">Other</h5>
+                                            <li class="hover:text-lapis transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Furniture
+                                                    shop</a>
+                                            </li>
+                                            <li class="hover:text-lapis transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Fashion shop</a>
+                                            </li>
+                                            <li class="hover:text-lapis transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Magazine</a>
+                                            </li>
+                                            <li class="hover:text-lapis transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Lifestyle
+                                                    blog</a>
+                                            </li>
+                                            <li class="hover:text-lapis transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Classic blog</a>
+                                            </li>
+                                            <li class="hover:text-lapis transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Blog metro</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <button
+                                    class="w-full h-full flex justify-between text-lapis border-b text-left hover:bg-lapis hover:text-white transition duration-700 px-[15px] py-[9px]"
+                                    data-toggle="collapse">
+                                    <span>About</span>
+                                    <span
+                                        class="material-icons transition duration-700 rotate-icon">keyboard_arrow_down</span>
+                                </button>
+                                <div class="collapse transition duration-700">
+                                    <div class="text-black">
+                                        <ul>
+                                            <li class="px-[15px] py-[2px]">
+                                                <div>
+                                                    <button
+                                                        class="w-full h-full flex justify-between text-left py-[2px]"
+                                                        data-toggle="collapse">
+                                                        <span class="hover:text-lapis transition duration-700">Lifestyle
+                                                            blog</span>
+                                                        <span
+                                                            class="material-icons transition duration-700 rotate-icon">keyboard_arrow_down</span>
+                                                    </button>
+                                                    <div class="collapse transition duration-700">
+                                                        <ul>
+                                                            <li
+                                                                class="hover:text-lapis transition duration-300 px-[15px] py-[2px]">
+                                                                <a href="javascript:void(0)"
+                                                                    class="whitespace-nowrap">Furniture
+                                                                    shop</a>
+                                                            </li>
+                                                            <li
+                                                                class="hover:text-lapis transition duration-300 px-[15px] py-[2px]">
+                                                                <a href="javascript:void(0)"
+                                                                    class="whitespace-nowrap">Fashion
+                                                                    shop</a>
+                                                            </li>
+                                                            <li
+                                                                class="hover:text-lapis transition duration-300 px-[15px] py-[2px]">
+                                                                <a href="javascript:void(0)"
+                                                                    class="whitespace-nowrap">Magazine</a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="px-[15px] py-[2px]">
+                                                <div>
+                                                    <button
+                                                        class="w-full h-full flex justify-between text-left py-[2px]"
+                                                        data-toggle="collapse">
+                                                        <span class="hover:text-lapis transition duration-700">Classic
+                                                            blog</span>
+                                                        <span
+                                                            class="material-icons transition duration-700 rotate-icon">keyboard_arrow_down</span>
+                                                    </button>
+                                                    <div class="collapse transition duration-700">
+                                                        <ul>
+                                                            <li
+                                                                class="hover:text-lapis transition duration-300 px-[15px] py-[2px]">
+                                                                <a href="javascript:void(0)"
+                                                                    class="whitespace-nowrap">Our
+                                                                    services</a>
+                                                            </li>
+                                                            <li
+                                                                class="hover:text-lapis transition duration-300 px-[15px] py-[2px]">
+                                                                <a href="javascript:void(0)"
+                                                                    class="whitespace-nowrap">What
+                                                                    we
+                                                                    offer</a>
+                                                            </li>
+                                                            <li
+                                                                class="hover:text-lapis transition duration-300 px-[15px] py-[2px]">
+                                                                <a href="javascript:void(0)"
+                                                                    class="whitespace-nowrap">Our
+                                                                    process</a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="hover:text-lapis transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Blog metro</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)"
+                                class="block w-full h-full border-b hover:bg-lapis hover:text-white text-lapis transition duration-700 px-[15px] py-[9px]">Packages</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)"
+                                class="block w-full h-full border-b hover:bg-lapis hover:text-white text-lapis transition duration-700 px-[15px] py-[9px]">Contact
+                                Us</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)"
+                                class="block w-full h-full border-b hover:bg-lapis hover:text-white text-lapis transition duration-700 px-[15px] py-[9px]">FAQ</a>
+                        </li>
+                        <li class="p-2 mb-6">
+                            <a href="javascript:void(0)" class="btn font-semibold">Register</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!--END: Header-->
+
+    <!--START: Main-->
+    <main class="overflow-hidden">
+        <!--START: banner-->
+        <section
+            class="before:content-[''] before:absolute before:w-full before:h-full before:bg-white before:-z-[1] before:skew-y-[176deg] lg:h-screen md:h-[65vh] h-[80vh] pt-[60px] lg:pt-[88px] before:lg:block before:hidden ">
+            <div class="grid lg:grid-cols-2 bg-white items-center h-full w-full overflow-hidden xl:pb-0 pb-20 pt-10">
+                <div class="container lg:px-7 xl:px-4 flex justify-center" data-aos="fade-down" data-aos-duration="500">
+                    <div class="max-w-[570px] px-3">
+                        <div class="max-w-2xl">
+                            <h1
+                                class="xl:text-[64px] md:text-[50px] text-[40px] leading-[1.2] text-[#3A3A3A] font-bold mb-5">
+                                Let's
+                                Design Your Business</h1>
+                            <p class="md:text-[20px] text-[19px] md:leading-8 leading-7 text-[#808080] mb-5">We know how
+                                large
+                                objects will act,
+                                but things on a small scale just do not act that way.</p>
+                        </div>
+                        <div class="flex gap-5 mb-5">
+                            <div class="bg-[#F2F2F2] rounded-md w-full xl:px-8 px-5 py-2">
+                                <input type="text" placeholder="Find you want..."
+                                    class="border-0 bg-transparent placeholder:text-[#808080] h-full w-full">
+                            </div>
+                            <a href="javascript:void(0)"
+                                class="2xl:p-5 md:p-4 p-3 bg-lapis hover:opacity-80 text-white rounded-md inline-flex items-center transition duration-500">
+                                <img src="img/icons/right-send-arrow.svg" alt="right-arrow"
+                                    class="p-0.5 object-cover h-full w-full" />
+                            </a>
+                        </div>
+                        <a href="javascript:void(0)"
+                            class="text-lapis font-semibold text-base flex items-center gap-1">Learn More
+                            <div class="h-[24px] w-[24px]">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#3399FF">
+                                    <path d="M0 0h24v24H0V0z" fill="none" />
+                                    <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6-6-6z" />
+                                </svg>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="lg:block hidden" data-aos="zoom-out" data-aos-duration="500">
+                    <img src="img/corporate/western-business.png" alt="weatern-img"
+                        class="drop-shadow-[0px_0px_25px_rgba(0,0,0,0.2)] w-full h-full" />
+                </div>
+            </div>
+        </section>
+        <div class="container lg:px-7 xl:px-4">
+            <div
+                class="flex justify-center mt-10 md:mt-0 xl:translate-y-6 lg:-translate-y-14 md:-translate-y-1/2 -translate-y-1/4">
+                <div
+                    class="lg:max-w-7xl md:max-w-5xl md:w-full w-[250px] grid md:grid-cols-4 items-center rounded-3xl bg-white shadow-[0px_0px_119px_rgba(0,0,0,0.1)] lg:py-4 py-2">
+                    <div class="flex items-center justify-center gap-5 lg:py-9 py-5 px-4" data-aos="fade-left"
+                        data-aos-delay="100" data-aos-offset="0">
+                        <div class="lg:w-[50px] lg:h-[50px] w-[40px] h-[40px]">
+                            <img src="img/icons/clarity-users-line.svg" alt="users"
+                                class="h-full w-full object-contain" />
+                        </div>
+                        <div class="max-w-[8rem]">
+                            <h5 class="lg:text-2xl text-[22px] text-[#252B42] font-bold Montserrat">1.5k</h5>
+                            <p class="text-[#737373] font-bold lg:text-sm text-[13px]">HAPPY CUSTOMERS</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-center gap-5 lg:py-9 py-5 px-4 md:border-x-2 pr-[50px] pl-4"
+                        data-aos="fade-left" data-aos-delay="200" data-aos-offset="0">
+                        <div class="lg:w-[50px] lg:h-[50px] w-[40px] h-[40px]">
+                            <img src="img/icons/bluehome-fill.svg" alt="users" class="h-full w-full object-contain" />
+                        </div>
+                        <div class="max-w-[8rem]">
+                            <h5 class="lg:text-2xl text-[22px] text-[#252B42] font-bold Montserrat">3k</h5>
+                            <p class="text-[#737373] font-bold lg:text-sm text-[13px]">CASES DONE</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-center gap-5 lg:py-9 py-5 px-4 md:border-r-2"
+                        data-aos="fade-left" data-aos-delay="300" data-aos-offset="0">
+                        <div class="lg:w-[50px] lg:h-[50px] w-[40px] h-[40px]">
+                            <img src="img/icons/carbon-notebook.svg" alt="users" class="h-full w-full object-contain" />
+                        </div>
+                        <div class="max-w-[8rem]">
+                            <h5 class="lg:text-2xl text-[22px] text-[#252B42] font-bold Montserrat">45</h5>
+                            <p class="text-[#737373] font-bold lg:text-sm text-[13px]">AWARD WINNING</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-center gap-5 lg:py-9 py-5 px-4" data-aos="fade-left"
+                        data-aos-delay="400" data-aos-offset="0">
+                        <div class="lg:w-[50px] lg:h-[50px] w-[40px] h-[40px]">
+                            <img src="img/icons/countries-worldwide.svg" alt="users"
+                                class="w-full h-full object-contain" />
+                        </div>
+                        <div class="max-w-[8rem]">
+                            <h5 class="lg:text-2xl text-[22px] text-[#252B42] font-bold Montserrat">12+</h5>
+                            <p class="text-[#737373] font-bold lg:text-sm text-[13px]">COUNTRIES WORLDWIDE</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- START: Consulting-->
+        <section class="2xl:mb-20 lg:mb-24 mb-14 mt-0 md:-mt-4 lg:mt-0">
+            <div class="container overflow-hidden">
+                <h3 class="xl:text-[42px] lg:text-[39px] md:text-[34px] text-[30px] font-bold max-w-lg text-center mx-auto md:mb-10 text-[#3A3A3A] xl:pt-24 lg:pt-10 pb-5"
+                    data-aos="zoom-in" data-aos-delay="300">
+                    Improving Consulting Business</h3>
+                <div class="grid md:grid-cols-2 xl:grid-cols-4 gap-5 md:my-5 mt-4 px-4">
+                    <div data-aos="fade-up" data-aos-delay="100">
+                        <div
+                            class="rounded-xl transition duration-700 hover:bg-lapis bg-white 2xl:px-10 xl:px-7 md:px-10 px-5 2xl:py-16 xl:py-6 py-8 group lg:mb-14 shadow-[0px_0px_38px_rgba(0,0,0,0.1)]">
+                            <div class="xl:w-[68px] md:w-[60px] md:h-[50px] w-[50px] h-[40px] mb-8">
+                                <svg class="fill-[#3399FF] transition duration-700 group-hover:fill-white"
+                                    viewBox="0 0 68 59" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_1211_2022)">
+                                        <path
+                                            d="M60.3339 13.0622H53.1519V5.83922C53.1519 4.56213 52.6475 3.33734 51.7495 2.43429C50.8516 1.53125 49.6338 1.02393 48.3639 1.02393H19.6361C18.3662 1.02393 17.1484 1.53125 16.2505 2.43429C15.3526 3.33734 14.8481 4.56213 14.8481 5.83922V13.0622H7.66615C5.76138 13.0622 3.93462 13.8232 2.58774 15.1777C1.24086 16.5323 0.484192 18.3695 0.484192 20.2851V53.9922C0.484192 55.2693 0.988638 56.4941 1.88656 57.3971C2.78448 58.3002 4.00232 58.8075 5.27217 58.8075H62.7279C63.9977 58.8075 65.2155 58.3002 66.1135 57.3971C67.0114 56.4941 67.5158 55.2693 67.5158 53.9922V20.2851C67.5158 18.3695 66.7592 16.5323 65.4123 15.1777C64.0654 13.8232 62.2386 13.0622 60.3339 13.0622ZM19.6361 5.83922H48.3639V13.0622H19.6361V5.83922ZM62.7279 53.9922H5.27217V32.3234H24.4241V44.3616H43.576V32.3234H62.7279V53.9922ZM29.212 32.3234H38.788V39.5463H29.212V32.3234ZM5.27217 27.5081V20.2851C5.27217 19.6466 5.52439 19.0342 5.97335 18.5827C6.42231 18.1311 7.03123 17.8775 7.66615 17.8775H60.3339C60.9688 17.8775 61.5777 18.1311 62.0267 18.5827C62.4756 19.0342 62.7279 19.6466 62.7279 20.2851V27.5081H5.27217Z" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_1211_2022">
+                                            <rect width="68" height="58" fill="white"
+                                                transform="translate(0 0.915527)" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </div>
+                            <h5 class="text-2xl group-hover:text-white transition duration-700 font-bold mb-4">Business
+                                Growing</h5>
+                            <p
+                                class="text-base text-[rgba(0,0,0,0.6)] group-hover:text-white transition duration-700 font-semibold max-w-sm mb-7">
+                                Duis aute irure dolor in
+                                reprehender it in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+                                sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+                                est
+                                laborum."</p>
+                            <a href="javascript:void(0)"
+                                class="border-2 text-[rgba(0,0,0,0.6)] transition duration-700 group-hover:text-white group-hover:border-white border-lapis font-bold rounded-full xl:py-5 md:py-3 py-3 xl:px-[50px] md:px-[25px] px-[30px] items-center justify-center flex gap-2 max-w-fit">
+                                More
+                                <div class="h-[12px] w-[19px]">
+                                    <svg class="fill-[#666666] group-hover:fill-[#FFFFFF] stroke-[#666666] transition duration-700 group-hover:stroke-[#FFFFFF]"
+                                        viewBox="0 0 19 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M13.0262 10.9581C12.8627 10.7945 12.868 10.536 13.0262 10.3618L16.5297 6.4363H1.51341C1.28125 6.4363 1.09131 6.24635 1.09131 6.0142C1.09131 5.78204 1.28125 5.59209 1.51341 5.59209H16.5297L13.0315 1.66655C12.8785 1.48715 12.8627 1.23917 13.0262 1.0756C13.1898 0.912038 13.4747 0.901486 13.6277 1.07033C13.6277 1.07033 17.8065 5.66069 17.8488 5.71345C17.891 5.76621 17.9754 5.86118 17.9754 6.0142C17.9754 6.16721 17.891 6.27273 17.8488 6.31494C17.8065 6.35715 13.6277 10.9581 13.6277 10.9581C13.5486 11.0372 13.4378 11.0794 13.327 11.0794C13.2162 11.0794 13.1107 11.0372 13.0262 10.9581Z"
+                                            stroke-width="0.5" />
+                                    </svg>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div data-aos="fade-down" data-aos-delay="200">
+                        <div
+                            class="rounded-xl transition duration-700 hover:bg-lapis bg-white 2xl:px-10 xl:px-7 md:px-10 px-5 2xl:py-16 xl:py-6 py-8 group lg:mt-14 shadow-[0px_0px_38px_rgba(0,0,0,0.1)]">
+                            <div class="xl:w-[68px] md:w-[60px] md:h-[50px] w-[50px] h-[40px] mb-8">
+                                <svg class="fill-[#3399FF] transition duration-700 group-hover:fill-white"
+                                    viewBox="0 0 63 62" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M59.7287 12.6877V2.95438C59.7287 1.6095 58.6287 0.522949 57.2672 0.522949H5.26911C3.90762 0.522949 2.80766 1.6095 2.80766 2.95438V12.6877C1.52309 12.7637 0.500048 13.8199 0.500048 15.1116V25.1184C0.495122 26.9575 0.872107 28.7781 1.6077 30.4676C1.93846 31.2426 2.34614 31.972 2.80766 32.6635V58.8774C2.80766 60.2147 3.90762 61.3088 5.26911 61.3088H57.2672C58.6287 61.3088 59.7287 60.2223 59.7287 58.8774V32.6635C60.1975 31.9703 60.5992 31.2351 60.9286 30.4676C61.6594 28.7732 62.0363 26.9724 62.0363 25.1184V15.1116C62.0363 13.8199 61.0133 12.7637 59.7287 12.6877ZM8.34592 5.99368H54.1904V12.6801H8.34592V5.99368ZM36.1911 55.8457H26.3453V47.9359H36.1911V55.8457ZM54.2212 55.8457H41.114V45.5045C41.114 44.1596 40.014 43.073 38.6525 43.073H23.8838C22.5223 43.073 21.4224 44.1596 21.4224 45.5045V55.8457H8.34592V37.4428C8.56899 37.5491 8.79975 37.6555 9.0382 37.7467C10.7535 38.4609 12.5765 38.818 14.4534 38.818C16.3302 38.818 18.1456 38.4609 19.8686 37.7467C20.9301 37.306 21.93 36.7437 22.8454 36.0675C22.8608 36.0599 22.8762 36.0599 22.8916 36.0675C23.8097 36.7466 24.8096 37.3106 25.8684 37.7467C27.5837 38.4609 29.4067 38.818 31.2836 38.818C33.1604 38.818 34.9757 38.4609 36.6987 37.7467C37.7602 37.306 38.7602 36.7437 39.6756 36.0675C39.6909 36.0599 39.7063 36.0599 39.7217 36.0675C40.6399 36.7466 41.6398 37.3106 42.6985 37.7467C44.4139 38.4609 46.2369 38.818 48.1137 38.818C49.9906 38.818 51.8059 38.4609 53.5289 37.7467C53.7597 37.6479 53.9904 37.5491 54.2212 37.4428V55.8457ZM56.498 25.1184C56.498 29.6622 52.7289 33.3473 48.0906 33.3473C44.9523 33.3473 42.2139 31.6681 40.7678 29.1759C40.5448 28.796 40.1448 28.5604 39.6986 28.5604H39.6525C39.214 28.5604 38.8064 28.796 38.5833 29.1759C37.8453 30.4472 36.7798 31.5028 35.4949 32.2355C34.2101 32.9682 32.7517 33.3518 31.2682 33.3473C28.1375 33.3473 25.4068 31.6757 23.9607 29.1911C23.73 28.8036 23.3146 28.5604 22.8608 28.5604C22.407 28.5604 21.9839 28.8036 21.7608 29.1911C21.0185 30.4575 19.9516 31.5085 18.6674 32.2381C17.3833 32.9677 15.9272 33.3503 14.4457 33.3473C9.80741 33.3473 6.03831 29.6622 6.03831 25.1184V18.1888C6.03831 18.166 6.05369 18.1508 6.07677 18.1508H56.4596C56.4827 18.1508 56.498 18.166 56.498 18.1888V25.1184Z" />
+                                </svg>
+                            </div>
+                            <h5 class="text-2xl transition duration-700 group-hover:text-white font-bold mb-4">Digital
+                                Marketing</h5>
+                            <p
+                                class="text-base transition duration-700 text-[rgba(0,0,0,0.6)] group-hover:text-white max-w-sm font-semibold mb-7">
+                                Duis aute irure dolor in
+                                reprehender it in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+                                sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+                                est
+                                laborum."</p>
+                            <a href="javascript:void(0)"
+                                class="border-2 text-[rgba(0,0,0,0.6)] transition duration-700 group-hover:text-white group-hover:border-white border-lapis font-bold rounded-full xl:py-5 md:py-3 py-3 xl:px-[50px] md:px-[25px] px-[30px] items-center justify-center flex gap-2 max-w-fit">
+                                More
+                                <div class="h-[12px] w-[19px]">
+                                    <svg class="fill-[#666666] group-hover:fill-[#FFFFFF] stroke-[#666666] transition duration-700 group-hover:stroke-[#FFFFFF]"
+                                        viewBox="0 0 19 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M13.0262 10.9581C12.8627 10.7945 12.868 10.536 13.0262 10.3618L16.5297 6.4363H1.51341C1.28125 6.4363 1.09131 6.24635 1.09131 6.0142C1.09131 5.78204 1.28125 5.59209 1.51341 5.59209H16.5297L13.0315 1.66655C12.8785 1.48715 12.8627 1.23917 13.0262 1.0756C13.1898 0.912038 13.4747 0.901486 13.6277 1.07033C13.6277 1.07033 17.8065 5.66069 17.8488 5.71345C17.891 5.76621 17.9754 5.86118 17.9754 6.0142C17.9754 6.16721 17.891 6.27273 17.8488 6.31494C17.8065 6.35715 13.6277 10.9581 13.6277 10.9581C13.5486 11.0372 13.4378 11.0794 13.327 11.0794C13.2162 11.0794 13.1107 11.0372 13.0262 10.9581Z"
+                                            stroke-width="0.5" />
+                                    </svg>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div data-aos="fade-up" data-aos-delay="300">
+                        <div
+                            class="rounded-xl transition duration-700 hover:bg-lapis bg-white 2xl:px-10 xl:px-7 md:px-10 group px-5 2xl:py-16 xl:py-6 py-8 shadow-[0px_0px_38px_rgba(0,0,0,0.1)]">
+                            <div class="xl:w-[68px] md:w-[60px] md:h-[50px] w-[50px] h-[40px] mb-8">
+                                <svg class="transition duration-700 group-hover:fill-white fill-[#3399FF]"
+                                    viewBox="0 0 70 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M62.9274 18.1528C62.0881 18.1589 61.2568 18.3211 60.4733 18.6313L52.102 11.5682C52.308 10.7982 52.4546 9.9994 52.4546 9.15744C52.4546 4.17043 48.5657 0.162109 43.7273 0.162109C38.8889 0.162109 35 4.17043 35 9.15744C35 10.5823 35.3491 11.91 35.9146 13.1046L25.7595 25.475C25.353 25.3965 24.9407 25.3544 24.5272 25.349C23.9023 25.349 23.3123 25.457 22.7398 25.6153L13.7926 16.3933C13.9497 15.8068 14.0544 15.1987 14.0544 14.5546C14.0544 10.5679 10.9405 7.35837 7.07252 7.35837C3.20456 7.35837 0.0906525 10.5679 0.0906525 14.5546C0.0906525 18.5414 3.20456 21.7509 7.07252 21.7509C7.69739 21.7509 8.28736 21.6429 8.85987 21.4846L17.8071 30.7066C17.6393 31.3044 17.5512 31.923 17.5453 32.5453C17.5453 36.532 20.6592 39.7415 24.5272 39.7415C28.3951 39.7415 31.509 36.532 31.509 32.5453C31.509 31.6925 31.3415 30.8901 31.0797 30.1309L41.2487 17.7462C42.0412 17.9837 42.8615 18.1528 43.7273 18.1528C45.105 18.1449 46.461 17.7983 47.6825 17.1417L56.0573 24.2048C55.9916 24.5827 55.9542 24.9652 55.9456 25.349C55.9456 29.3358 59.0595 32.5453 62.9274 32.5453C66.7954 32.5453 69.9093 29.3358 69.9093 25.349C69.9093 21.3623 66.7954 18.1528 62.9274 18.1528Z" />
+                                </svg>
+                            </div>
+                            <h5 class="text-2xl font-bold mb-4 transition duration-700 group-hover:text-white">National
+                                top 50 firms
+                            </h5>
+                            <p
+                                class="text-base text-[rgba(0,0,0,0.6)] transition duration-700 max-w-sm font-semibold mb-7 group-hover:text-white">
+                                Duis
+                                aute
+                                irure dolor in reprehender it in voluptate velit esse cillum dolore eu fugiat nulla
+                                pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                                deserunt
+                                mollit anim id est
+                                laborum."</p>
+                            <a href="javascript:void(0)"
+                                class="border-2 text-[rgba(0,0,0,0.6)] transition duration-700 group-hover:text-white border-lapis group-hover:border-white font-bold rounded-full xl:py-5 md:py-3 py-3 xl:px-[50px] md:px-[25px] px-[30px] items-center justify-center flex gap-2 max-w-fit">
+                                More
+                                <div class="h-[12px] w-[19px]">
+                                    <svg class="fill-[#666666] group-hover:fill-[#FFFFFF] stroke-[#666666] transition duration-700 group-hover:stroke-[#FFFFFF]"
+                                        viewBox="0 0 19 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M13.0262 10.9581C12.8627 10.7945 12.868 10.536 13.0262 10.3618L16.5297 6.4363H1.51341C1.28125 6.4363 1.09131 6.24635 1.09131 6.0142C1.09131 5.78204 1.28125 5.59209 1.51341 5.59209H16.5297L13.0315 1.66655C12.8785 1.48715 12.8627 1.23917 13.0262 1.0756C13.1898 0.912038 13.4747 0.901486 13.6277 1.07033C13.6277 1.07033 17.8065 5.66069 17.8488 5.71345C17.891 5.76621 17.9754 5.86118 17.9754 6.0142C17.9754 6.16721 17.891 6.27273 17.8488 6.31494C17.8065 6.35715 13.6277 10.9581 13.6277 10.9581C13.5486 11.0372 13.4378 11.0794 13.327 11.0794C13.2162 11.0794 13.1107 11.0372 13.0262 10.9581Z"
+                                            stroke-width="0.5" />
+                                    </svg>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div data-aos="fade-down" data-aos-delay="400">
+                        <div
+                            class="rounded-xl transition duration-700 hover:bg-lapis bg-white 2xl:px-10 xl:px-7 md:px-10 px-5 2xl:py-16 xl:py-6 py-8 group lg:mt-14 shadow-[0px_0px_38px_rgba(0,0,0,0.1)]">
+                            <div class="xl:w-[68px] md:w-[60px] md:h-[50px] w-[50px] h-[40px] mb-8">
+                                <svg class="fill-[#3399FF] group-hover:fill-white transition duration-700"
+                                    viewBox="0 0 48 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_1211_1980)">
+                                        <path d="M29.142 8.62402H41.1398V12.0693H29.142V8.62402Z"
+                                            class="fill-[#3399FF] group-hover:fill-white transition duration-100" />
+                                        <path d="M29.142 17.2373H41.1398V20.6826H29.142V17.2373Z"
+                                            class="fill-[#3399FF] group-hover:fill-white transition duration-100" />
+                                        <path d="M29.142 25.8506H41.1398V29.2959H29.142V25.8506Z"
+                                            class="fill-[#3399FF] group-hover:fill-white transition duration-100" />
+                                        <path
+                                            d="M44.5679 0.0112305H3.43235C2.52347 0.0121426 1.65209 0.375424 1.00942 1.02135C0.366745 1.66727 0.00529441 2.54307 0.0043869 3.45655V34.4644C0.00529441 35.3779 0.366745 36.2537 1.00942 36.8996C1.65209 37.5455 2.52347 37.9088 3.43235 37.9097H44.5679C45.4766 37.9084 46.3477 37.5449 46.9903 36.8991C47.6329 36.2533 47.9945 35.3777 47.9958 34.4644V3.45655C47.9949 2.54307 47.6335 1.66727 46.9908 1.02135C46.3481 0.375424 45.4767 0.0121426 44.5679 0.0112305ZM3.43235 3.45655H22.2861V34.4644H3.43235V3.45655ZM25.7141 34.4644V3.45655H44.5679L44.5713 34.4644H25.7141Z" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_1211_1980">
+                                            <rect width="48" height="37.92" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </div>
+                            <h5 class="text-2xl group-hover:text-white transition duration-700 font-bold mb-4">Digital
+                                Marketing</h5>
+                            <p
+                                class="text-base text-[rgba(0,0,0,0.6)] transition duration-700 group-hover:text-white max-w-sm font-semibold mb-7">
+                                Duis aute irure dolor in
+                                reprehender it in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+                                sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+                                est
+                                laborum."</p>
+                            <a href="javascript:void(0)"
+                                class="border-2 text-[rgba(0,0,0,0.6)] transition duration-700 group-hover:text-white border-lapis group-hover:border-white font-bold rounded-full xl:py-5 md:py-3 py-3 xl:px-[50px] md:px-[25px] px-[30px] items-center justify-center flex gap-2 max-w-fit">
+                                More
+                                <div class="h-[12px] w-[19px]">
+                                    <svg class="fill-[#666666] group-hover:fill-[#FFFFFF] stroke-[#666666] transition duration-700 group-hover:stroke-[#FFFFFF]"
+                                        viewBox="0 0 19 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M13.0262 10.9581C12.8627 10.7945 12.868 10.536 13.0262 10.3618L16.5297 6.4363H1.51341C1.28125 6.4363 1.09131 6.24635 1.09131 6.0142C1.09131 5.78204 1.28125 5.59209 1.51341 5.59209H16.5297L13.0315 1.66655C12.8785 1.48715 12.8627 1.23917 13.0262 1.0756C13.1898 0.912038 13.4747 0.901486 13.6277 1.07033C13.6277 1.07033 17.8065 5.66069 17.8488 5.71345C17.891 5.76621 17.9754 5.86118 17.9754 6.0142C17.9754 6.16721 17.891 6.27273 17.8488 6.31494C17.8065 6.35715 13.6277 10.9581 13.6277 10.9581C13.5486 11.0372 13.4378 11.0794 13.327 11.0794C13.2162 11.0794 13.1107 11.0372 13.0262 10.9581Z"
+                                            stroke-width="0.5" />
+                                    </svg>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- END: Consulting -->
+
+        <!-- START: Service -->
+        <section
+            class="realtive overflow-hidden before:content-[''] before:absolute before:w-full xl:before:h-[95%] lg:before:h-[100%] before:h-[108%] before:bg-white before:-z-[1] before:skew-y-[176deg] before:lg:block before:hidden bg-white lg:bg-transparent flex justify-center items-center">
+            <div class="container md:px-7 xl:px-4">
+                <div class="xl:my-20 lg:my-24 md:my-14 my-10">
+                    <h3 class="xl:text-[42px] lg:text-[39px] md:text-[34px] text-[30px] leading-tight font-bold lg:max-w-lg max-w-md text-center mx-auto md:mb-8 mb-5 mt-4"
+                        data-aos="fade-up" data-aos-delay="100">We are providing
+                        best business service.</h3>
+                    <p class="xl:text-xl lg:text-[22px] md:text-xl text-[19px] font-normal text-[#737373] lg:max-w-3xl md:max-w-xl max-w-sm text-center mx-auto lg:mb-10 mb-5 md:leading-[35px] leading-[30px]"
+                        data-aos="fade-up" data-aos-delay="200">Problems trying
+                        to resolve the conflict between the two major realms
+                        of Classical physics: Newtonian mechanics</p>
+                    <div class="grid lg:grid-cols-2 gap-8 justify-between items-center xl:mt-16 lg:mt-10 md:mt-12 mt-8"
+                        data-aos="fade-up" data-aos-delay="300">
+                        <div
+                            class="relative before:absolute before:content-[''] before:rounded-3xl before:bg-black before:opacity-50 before:h-full before:w-full ">
+                            <div class="w-full h-full flex justify-center items-center absolute" data-aos="zoom-out"
+                                data-aos-delay="300">
+                                <div class="bg-lapis rounded-full pl-1 xl:w-24 xl:h-24 lg:h-20 lg:w-20 md:h-24 md:w-24 h-16 w-16 flex justify-center items-center">
+                                    <div class="md:h-20 md:w-20 h-14 w-14">
+                                        <img src="img/icons/play-video.svg" alt="play" class="h-full w-full" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="xl:h-[450px] lg:h-[400px] sm:h-full h-[300px]">
+                                <img src="img/corporate/office-group.png" alt="staff"
+                                    class="rounded-3xl object-cover w-full h-full" />
+                            </div>
+                        </div>
+                        <div class="xl:ml-10 ml-3">
+                            <h4 class="xl:text-[34px] lg:text-[33px] text-[29px] font-bold lg:mb-6 mb-3">Most
+                                trusted in
+                                our field</h4>
+                            <p class="xl:text-xl lg:text-[18px] text-[17px] leading-normal lg:max-w-[34rem] md:max-w-[45rem] font-normal text-[rgba(0,0,0,0.6)] lg:mb-9 mb-5">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                                do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                                laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            <div class="flex gap-5 md:mb-6 mb-3">
+                                <div class="h-8 w-8 mt-1">
+                                    <img src="img/icons/users.svg" alt="users" class="h-full w-full" />
+                                </div>
+                                <div class="">
+                                    <h5 class="xl:text-2xl text-[22px] text-xl font-semibold max-w-[360px]">the quick
+                                        fox jumps over the lazy
+                                        dog</h5>
+                                    <p class="xl:text-lg font-normal text-[rgba(0,0,0,0.5)] mt-2">Things on a very
+                                        small scale...</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-5">
+                                <div class="h-8 w-8 mt-1">
+                                    <img src="img/icons/half-compass.svg" alt="compass" class="h-full w-full" />
+                                </div>
+                                <div class="">
+                                    <h5 class="xl:text-2xl text-[22px] text-xl font-semibold mb-2 max-w-[360px]">the
+                                        quick fox jumps over the
+                                        lazy
+                                        dog</h5>
+                                    <p class="xl:text-lg font-normal text-[rgba(0,0,0,0.5)]">Things on a very small
+                                        scale
+                                        ...</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- END: Service -->
+
+        <!-- START: Reviews -->
+        <section class="lg:pt-8 lg:pb-0 py-5 overflow-hidden">
+            <div class="container lg:px-7 xl:px-4">
+                <div class="2xl:my-20 xl:my-20 lg:mt-20 xl:mb-10 lg:mb-0 md:my-10 my-5">
+                    <div data-aos="zoom-in-down" data-aos-delau="200">
+                        <h3
+                            class="xl:text-[42px] lg:text-[39px] md:text-[34px] text-[30px] leading-tight font-bold max-w-xl text-center mx-auto mb-5">
+                            What Clients
+                            Say
+                            Reviews</h3>
+                        <p
+                            class="xl:text-xl lg:text-[22px] md:text-xl text-[19px] font-normal text-[#737373] lg:max-w-3xl md:max-w-xl max-w-sm text-center mx-auto xl:mb-14 lg:mb-8 mb-4 md:leading-[35px] leading-[30px]">
+                            Problems
+                            trying
+                            to resolve the conflict between the two major realms of Classical physics: Newtonian
+                            mechanics
+                        </p>
+                    </div>
+                    <div class="grid xl:grid-cols-2 gap-4">
+                        <div>
+                            <div class="grid xl:grid-cols-1 md:grid-cols-2 xl:gap-7 lg:gap-10 gap-5 mt-5">
+                                <div class="rounded-2xl active:bg-white hover:bg-white transition duration-700 max-w-[39rem] md:p-4 p-2 active:shadow-[0px_5px_40px_rgba(0,0,0,0.1)] hover:shadow-[0px_5px_40px_rgba(0,0,0,0.1)]"
+                                    data-aos="fade-right" data-aos-delay="100">
+                                    <div class="flex lg:gap-5 md:gap-3 gap-2">
+                                        <img src="img/corporate/jeffrey-keenan.png" alt="customers"
+                                            class="rounded-xl object-contain m-2" />
+                                        <div class="lg:m-5 m-3">
+                                            <h5 class="lg:text-2xl text-xl font-bold mb-3">Jeffrey Keenan</h5>
+                                            <p class="lg:text-lg font-normal text-[rgba(0,0,0,0.6)]">Sales Manager,
+                                                Slack
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="rounded-2xl active:bg-white hover:bg-white transition duration-700 max-w-[39rem] md:p-4 p-2 hover:shadow-[0px_5px_40px_rgba(0,0,0,0.1)]"
+                                    data-aos="fade-right" data-aos-delay="200">
+                                    <div class="flex lg:gap-5 md:gap-3 gap-2">
+                                        <img src="img/corporate/john-reeves.png" alt="customers"
+                                            class="rounded-xl object-contain m-2" />
+                                        <div class="lg:m-5 m-3">
+                                            <h5 class="lg:text-2xl text-xl font-bold mb-3">John Reeves</h5>
+                                            <p class="lg:text-lg font-normal text-[rgba(0,0,0,0.6)]">Hend of Sales,
+                                                Asana
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="rounded-2xl active:bg-white hover:bg-white transition duration-700 max-w-[39rem] md:p-4 p-2 hover:shadow-[0px_5px_40px_rgba(0,0,0,0.1)]"
+                                    data-aos="fade-right" data-aos-delay="300">
+                                    <div class="flex lg:gap-5 md:gap-3 gap-2">
+                                        <img src="img/corporate/luke-harper.png" alt="customers"
+                                            class="rounded-xl object-contain m-2" />
+                                        <div class="lg:m-5 m-3">
+                                            <h5 class="lg:text-2xl text-xl font-bold mb-3">Luke Harper</h5>
+                                            <p class="lg:text-lg font-normal text-[rgba(0,0,0,0.6)]">Sale Team Lead,
+                                                Sketch
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="rounded-2xl active:bg-white hover:bg-white transition duration-700 max-w-[39rem] md:p-4 p-2 active:shadow-[5px_10px_25px_10px_rgba(0,0,0,0.1)] hover:shadow-[5px_10px_25px_10px_rgba(0,0,0,0.1)]"
+                                    data-aos="fade-right" data-aos-delay="400">
+                                    <div class="flex lg:gap-5 md:gap-3 gap-2">
+                                        <img src="img/corporate/ryoji-iwata.png" alt="customers"
+                                            class="rounded-xl object-contain m-2" />
+                                        <div class="lg:m-5 m-3">
+                                            <h5 class="lg:text-2xl text-xl font-bold mb-3">Ryoji Iwata</h5>
+                                            <p class="lg:text-lg font-normal text-[rgba(0,0,0,0.6)]">Manager, Hend of
+                                                Sketch
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lg:mx-0 mx-4" data-aos="fade-left" data-aos-delay="200">
+                            <h4 class="lg:text-[34px] text-[29px] font-bold my-4">It was a great expirience!</h4>
+                            <ul class="flex gap-2">
+                                <li><img src="img/icons/fill-star.svg" alt="star" /></li>
+                                <li><img src="img/icons/fill-star.svg" alt="star" /></li>
+                                <li><img src="img/icons/fill-star.svg" alt="star" /></li>
+                                <li><img src="img/icons/fill-star.svg" alt="star" /></li>
+                                <li><img src="img/icons/unfill-star.svg" alt="star" /></li>
+                            </ul>
+                            <p
+                                class="font-normal text-[rgba(0,0,0,0.7)] lg:text-[18px] md:mt-7 mt-5 2xl:mb-7 mb-5 2xl:leading-[35px] xl:leading-[30px] leading-relaxed">
+                                Sed ut
+                                perspiciatis unde
+                                omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem
+                                aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
+                                dicta sunt explicabo.Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit
+                                aut fugit,sed quiaconsequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+                                Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur,adipisci
+                                velit,sed quia non numquam eiu modi tempora incidunt ut labore et dolore magnam aliquam
+                                quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis
+                                suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure
+                                reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum
+                                qui dolorem eum fugiat quovoluptas nulla pariatur.</p>
+                            <p
+                                class="font-normal text-[rgba(0,0,0,0.7)] lg:text-[18px] 2xl:leading-[35px] xl:leading-[30px] leading-relaxed xl:mb-20 lg:mb-10">
+                                Lorem ipsum dolor sit
+                                amet,
+                                consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                                aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                                aliquip ex eacommodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                                velit esse cillum dolor eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                                proident, sunt in culpa qu officia deserunt mollit anim id est laborum.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- END: Reviews -->
+
+        <!-- START: Practice Advice -->
+        <section
+            class="realtive flex justify-center items-center overflow-hidden before:content-[''] before:absolute before:w-full 2xl:before:h-[85%] xl:before:h-[90%] lg:before:h-[80%] before:bg-white before:-z-[1] before:skew-y-[176deg] before:lg:block before:hidden bg-white lg:bg-transparent">
+            <div class="container lg:px-7 xl:px-4">
+                <div class="2xl:py-16 lg:py-24 lg:my-0 md:my-14 my-10">
+                    <div data-aos="fade-down" data-aos-delay="300">
+                        <h3
+                            class="xl:text-[42px] lg:text-[39px] md:text-[34px] text-[30px] leading-tight font-bold max-w-xl text-center mx-auto xl:pt-0 lg:pt-14 mb-5">
+                            Practice
+                            Advice
+                        </h3>
+                        <p
+                            class="xl:text-xl lg:text-[22px] md:text-xl text-[19px] text-[#737373] lg:max-w-3xl md:max-w-xl max-w-sm text-center mx-auto mb-5 md:leading-[35px] leading-[30px]">
+                            Problems
+                            trying
+                            to resolve the conflict between the two major realms of Classical physics: Newtonian
+                            mechanics
+                        </p>
+                    </div>
+                    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-5 lg:pt-10 pt-5">
+                        <div class="hover:bg-white hover:shadow-[0px_0px_20px_rgba(0,0,0,0.1)] transition duration-700 flex flex-col justify-between"
+                            data-aos-delay="100" data-aos="fade-left">
+                            <div class="xl:p-9 p-5">
+                                <h5
+                                    class="2xl:text-2xl xl:text-xl text-[20px] text-[#252B42] font-bold mb-3 md:max-w-[12rem] max-w-[16rem] word-wrap Montserrat">
+                                    A
+                                    single
+                                    source
+                                    of truth</h5>
+                                <p class="2xl:text-lg text-[#737373] font-medium text-[rgba(0,0,0,0.6)] Montserrat">
+                                    Newton
+                                    thought that light was made up of particles, but then it was discovered</p>
+                            </div>
+                            <div class="">
+                                <img src="img/corporate/advice.png" alt="advice" />
+                            </div>
+                        </div>
+                        <div class="hover:bg-white hover:shadow-[0px_0px_20px_rgba(0,0,0,0.1)] transition duration-700 flex flex-col justify-between"
+                            data-aos-delay="200" data-aos="fade-left">
+                            <div class="xl:p-9 p-5">
+                                <h5
+                                    class="2xl:text-2xl xl:text-xl text-[20px] text-[#252B42] font-bold mb-3 md:max-w-[12rem] max-w-[16rem] word-wrap Montserrat">
+                                    Fastest way
+                                    to
+                                    organize</h5>
+                                <p class="2xl:text-lg text-[#737373] font-medium text-[rgba(0,0,0,0.6)] Montserrat">
+                                    “Quantum
+                                    mechanics” is the description of the behaviour of matter</p>
+                            </div>
+                            <div class="">
+                                <img src="img/corporate/advice1.png" alt="advice" />
+                            </div>
+                        </div>
+                        <div class="hover:bg-white hover:shadow-[0px_0px_20px_rgba(0,0,0,0.1)] transition duration-700 flex flex-col justify-between"
+                            data-aos-delay="300" data-aos="fade-left">
+                            <div class="xl:p-9 p-5">
+                                <h5
+                                    class="2xl:text-2xl xl:text-xl text-[20px] text-[#252B42] font-bold mb-3 md:max-w-[12rem] max-w-[16rem] word-wrap Montserrat">
+                                    Fastest way
+                                    to
+                                    take action</h5>
+                                <p class="2xl:text-lg text-[#737373] font-medium text-[rgba(0,0,0,0.6)] Montserrat">
+                                    They
+                                    describe a universe consisting of bodies moving</p>
+                            </div>
+                            <div class="">
+                                <img src="img/corporate/advice2.png" alt="advice" />
+                            </div>
+                        </div>
+                        <div class="hover:bg-white hover:shadow-[0px_0px_20px_rgba(0,0,0,0.1)] transition duration-700 flex flex-col justify-between"
+                            data-aos-delay="400" data-aos="fade-left">
+                            <div class="xl:p-9 p-5">
+                                <h5
+                                    class="2xl:text-2xl xl:text-xl text-[20px] text-[#252B42] font-bold mb-3 md:max-w-[12rem] max-w-[16rem] word-wrap Montserrat">
+                                    Work better
+                                    together</h5>
+                                <p class="2xl:text-lg text-[#737373] font-medium text-[rgba(0,0,0,0.6)] Montserrat">
+                                    They
+                                    finally
+                                    obtained a consistent description of the behaviour</p>
+                            </div>
+                            <div class="">
+                                <img src="img/corporate/advice3.png" alt="advice" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- END: Practice Advice -->
+
+        <!-- START: Talk -->
+        <section
+            class="flex justify-center items-center 2xl:pt-28 xl:pt-10 lg:pt-0 pt-5 overflow-hidden xl:mx-0 lg:mx-7 mx-0">
+            <div
+                class="lg:max-w-[83rem] max-w-[50rem] border border-transparent h-full bg-white 2xl:mb-24 xl:mb-14 lg:mb-16 md:mb-12 mb-10 xl:mt-12 lg:mt-10 md:mt-12 mt-8">
+                <div class="grid lg:grid-cols-5 gap-5">
+                    <div class="lg:py-24 md:py-10 py-6 xl:pl-20 lg:pl-10 lg:pr-0 px-4 lg:col-span-3"
+                        data-aos="fade-right" data-aos-delay="400">
+                        <h3
+                            class="xl:text-[42px] lg:text-[39px] md:text-[34px] text-[30px] leading-tight font-bold mx-auto lg:mb-8 mb-2 mt-4 max-w-lg">
+                            Let’s Talk
+                            Here
+                        </h3>
+                        <p
+                            class="lg:text-lg text-[17px] font-normal text-[#8791A6] mx-auto lg:mb-14 md:mb-10 mb-5 max-w-lg">
+                            Far far away,
+                            behind the word mountains, far from the countries Vokalia and Consonantia, there live the
+                            blind texts.</p>
+                        <div class="mx-auto max-w-lg">
+                            <input type="text" placeholder="Your Name"
+                                class="placeholder:text-[#8791A6]  border border-[#F2F2F2] bg-[#FBFBFB] max-w-[35rem] mx-auto xl:p-5 md:p-4 p-2.5 w-full focus:outline-0 mb-3 rounded-xl" />
+                            <input type="email" placeholder="Email Address"
+                                class="placeholder:text-[#8791A6]  border bg-[#FBFBFB] border-[#F2F2F2] max-w-[35rem] mx-auto xl:p-5 md:p-4 p-2.5 w-full focus:outline-0 mb-3 rounded-xl">
+                            <textarea
+                                class="form-control placeholder:text-[#8791A6]  border bg-[#FBFBFB] border-[#F2F2F2] max-w-[35rem] mx-auto xl:p-5 md:p-4 p-2.5 w-full focus:outline-0 mb-2 rounded-xl"
+                                placeholder="Message" rows="4"></textarea>
+                            <button type="button"
+                                class="focus:outline-0 xl:p-5 md:p-3 p-2 w-full mb-3 lg:text-xl text-[18px] bg-lapis max-w-[35rem] font-bold text-white rounded-xl border border-[#0057FF]">Send</button>
+                        </div>
+                    </div>
+                    <div class="lg:col-span-2" data-aos="fade-left" data-aos-delay="400">
+                        <img src="img/corporate/talking-room.png" alt="talking-room" class="h-full w-full" />
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- END: Talk -->
+    </main>
+    <!--END: Main-->
+
+    <!-- START: Footer -->
+    <footer class="bg-lapis lg:pt-14 pt-10 overflow-hidden">
+        <div class="container">
+            <div class="grid lg:grid-cols-6 gap-7 lg:gap-0 xl:pb-10 pb-5">
+                <div class="lg:col-span-2 text-center" data-aos="zoom-out-up" data-aos-delay="200">
+                    <div class="flex justify-center items-center mb-3">
+                        <div class="xl:w-[5.5rem] xl:h-[5.5rem] w-[4.5rem] h-[4.5rem]">
+                            <img src="img/logo/white-corporate-logo.svg" alt="footer-logo" class="w-full h-full" />
+                        </div>
+                    </div>
+                    <p class="text-white opacity-80 xl:text-lg">A better way to build.</p>
+                </div>
+                <div class="lg:col-span-4">
+                    <div class="grid md:grid-cols-2 lg:grid-cols-4 lg:gap-0 gap-4">
+                        <div class="lg:text-left text-center" data-aos="fade-left" data-aos-delay="100">
+                            <p
+                                class="2xl:text-[20px] text-[18px] tracking-[0.25rem] text-white font-extrabold lg:mb-6 mb-3">
+                                SERVICES
+                            </p>
+                            <ul class="">
+                                <li class="lg:mb-4 mb-2"><a href="javascript:void(0)"
+                                        class="text-white opacity-80 xl:text-lg">Help
+                                        Center
+                                    </a></li>
+                                <li class="lg:mb-4 mb-2"><a href="javascript:void(0)"
+                                        class="text-white opacity-80 xl:text-lg">Press</a>
+                                </li>
+                                <li class="lg:mb-4 mb-2"><a href="javascript:void(0)"
+                                        class="text-white opacity-80 xl:text-lg">About
+                                        us</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="lg:text-left text-center" data-aos="fade-left" data-aos-delay="200">
+                            <p
+                                class="2xl:text-[20px] text-[18px] tracking-[0.25rem] text-white font-extrabold lg:mb-6 mb-3">
+                                PRODUCTS
+                            </p>
+                            <ul>
+                                <li class="lg:mb-4 mb-2"><a href="javascript:void(0)"
+                                        class="text-white opacity-80 xl:text-lg">Homepage
+                                    </a></li>
+                                <li class="lg:mb-4 mb-2"><a href="javascript:void(0)"
+                                        class="text-white opacity-80 xl:text-lg">Pages</a>
+                                </li>
+                                <li class="lg:mb-4 mb-2"><a href="javascript:void(0)"
+                                        class="text-white opacity-80 xl:text-lg">Legal</a>
+                                </li>
+                                <li class="lg:mb-4 mb-2"><a href="javascript:void(0)"
+                                        class="text-white opacity-80 xl:text-lg">Terms</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="lg:text-left text-center" data-aos="fade-left" data-aos-delay="300">
+                            <p
+                                class="2xl:text-[20px] text-[18px] tracking-[0.25rem] text-white font-extrabold lg:mb-6 mb-3">
+                                SERVICES
+                            </p>
+                            <ul>
+                                <li class="lg:mb-4 mb-2"><a href="javascript:void(0)"
+                                        class="text-white opacity-80 xl:text-lg">Help
+                                        Center
+                                    </a></li>
+                                <li class="lg:mb-4 mb-2"><a href="javascript:void(0)"
+                                        class="text-white opacity-80 xl:text-lg">Press</a>
+                                </li>
+                                <li class="lg:mb-4 mb-2"><a href="javascript:void(0)"
+                                        class="text-white opacity-80 xl:text-lg">About
+                                        us</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="lg:text-left text-center" data-aos="fade-left" data-aos-delay="400">
+                            <p
+                                class="2xl:text-[20px] text-[18px] tracking-[0.25rem] text-white font-extrabold lg:mb-6 mb-3">
+                                CONNECT
+                            </p>
+                            <ul>
+                                <li class="lg:mb-4 mb-2"><a href="javascript:void(0)"
+                                        class="text-white opacity-80 xl:text-lg">Help
+                                        Center</a></li>
+                                <li class="lg:mb-4 mb-2"><a href="javascript:void(0)"
+                                        class="text-white opacity-80 xl:text-lg">Press</a>
+                                </li>
+                                <li class="lg:mb-4 mb-2"><a href="javascript:void(0)"
+                                        class="text-white opacity-80 xl:text-lg">About
+                                        us</a>
+                                </li>
+                                <li class="lg:mb-4 mb-2"><a href="javascript:void(0)"
+                                        class="text-white opacity-80 xl:text-lg">Pages</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="grid md:grid-cols-3 lg:gap-0 gap-5 pt-5 2xl:pb-10 pb-5 xl:mx-36 lg:mx-12 mx-10">
+                <div class="col-span-2 md:flex items-center md:gap-10 lg:gap-14" data-aos="fade-right"
+                    data-aos-delay="100" data-aos-offset="0">
+                    <div class="md:text-left text-center md:mb-0 mb-2">
+                        <p class="text-white opacity-80 xl:text-[15px] text-[14px]">© 2020 GoodThemes</p>
+                    </div>
+                    <div class="md:text-left text-center md:mb-0 mb-2">
+                        <a href="javascript:void(0)" class="text-white opacity-80 xl:text-[15px] text-[14px]">Privacy
+                            Policy</a>
+                    </div>
+                    <div class="md:text-left text-center md:mb-0 mb-2">
+                        <a href="javascript:void(0)" class="text-white opacity-80 xl:text-[15px] text-[14px]">Terms of
+                            Service</a>
+                    </div>
+                </div>
+                <div class="md:col-span-1 col-span-2 flex md:justify-end justify-center" data-aos="fade-left"
+                    data-aos-delay="100" data-aos-offset="0">
+                    <ul class="flex gap-4">
+                        <li>
+                            <a href="javascript:void(0)">
+                                <img src="img/icons/white-instagram.svg" alt="footer-icon" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)">
+                                <img src="img/icons/white-facebook.svg" alt="footer-icon" />
+                            </a>
+                        </li>
+                        <li class="mt-1">
+                            <a href="javascript:void(0)">
+                                <img src="img/icons/white-twitter.svg" alt="footer-icon" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)">
+                                <img src="img/icons/white-pintrest.svg" alt="footer-icon" />
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- END: Footer -->
+    <!-- Script -->
+    <script src="plugins/tailwindcss/tailwindcss.js"></script>
+    <script src="js/app.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/corporate.js"></script>
+</body>
+
+</html>

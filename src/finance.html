@@ -1,0 +1,1838 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Zooa - Theme Kit</title>
+
+    <!-- fonts googleapis stylesheet -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+
+    <!--google font link-->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+
+    <!-- swiper stylesheet -->
+    <link rel="stylesheet" href="plugins/swiper/swiper-bundle.min.css" />
+
+    <!--animation link-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <!--css link-->
+    <link rel="stylesheet" href="css/main.css" />
+
+    <!-- Tailwind class base mixin -->
+    <style type="text/tailwindcss">
+        @layer utilities {
+        .bg-cobaltblue {
+          background-color: #004ad9;
+        }
+        .text-theme {
+          @apply text-white;
+        }
+        .btn {
+          @apply py-3 px-7 bg-cobaltblue text-white rounded-md inline-flex items-center transition duration-500;
+        }
+        .btn:hover {
+          @apply bg-opacity-50;
+        }
+        .btn span {
+          @apply ml-2;
+        }
+        .container {
+          @apply mx-auto px-4;
+        }
+        .dropdown:hover .dropdown-hover\:block {
+          display: block;
+        }
+        .menu-icon span:first-child {
+          transform: rotate(45deg);
+        }
+        .menu-icon span:last-child {
+          top: 0;
+          transform: rotate(-45deg);
+        }
+        .menu-icon .toggler-line {
+          display: none;
+        }
+        .left .subMenu {
+          right: 101%;
+        }
+        .right .subMenu {
+          left: 101%;
+        }
+        .collapse {
+          max-height: 0;
+          overflow: hidden;
+          transition-duration: 0.4s;
+        }
+        .collapse.show {
+          max-height: 100%;
+        }
+        .font-poppins {
+          font-family: "Poppins", sans-serif;
+        }
+      }
+    </style>
+</head>
+
+<body>
+    <!-- START : loder -->
+    <div class="preloader" style="
+        position: fixed;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        background-color: #fff;
+        z-index: 99999999999999;
+      ">
+        <img src="img/loder/finance-loder.gif" alt="loder" />
+    </div>
+    <!-- END : loder -->
+    <!-- START: Header -->
+    <header class="fixed top-0 left-0 w-full text-lg z-50 transition duration-300 bg-cobaltblue">
+        <div class="container lg:py-4 py-2 flex items-center justify-between lg:px-7">
+            <a href="index.html" class="block h-14">
+                <img src="img/logo/finance-logo.svg" alt="Logo" class="h-full w-full" />
+            </a>
+            <button type="button" id="menu-btn" class="w-[22px] h-[14px] align-middle relative mx-2 lg:hidden block"
+                aria-controls="mobile-menu" aria-expanded="false" data-mobile-nav="false">
+                <span class="h-[3px] w-full absolute top-0 left-0 bg-white transition duration-300"></span>
+                <span
+                    class="h-[3px] w-full absolute top-1/2 left-0 bg-white transition duration-300 toggler-line"></span>
+                <span class="h-[3px] w-full absolute top-full left-0 bg-white transition duration-300"></span>
+            </button>
+            <div class="lg:flex hidden items-center w-full text-center">
+                <div class="flex justify-between w-full">
+                    <ul class="flex items-center mx-auto">
+                        <li class="group">
+                            <a href="javascript:void(0)"
+                                class="xl:px-8 lg:px-4 py-2 text-lg text-white font-bold transition">Home</a>
+                            <div
+                                class="absolute top-[70%] gap-10 bg-white text-black rounded-md text-[14px] text-left shadow-lg hidden group-hover:flex py-4 px-6">
+                                <ul>
+                                    <h5 class="font-bold mb-2">Corporate</h5>
+                                    <li class="hover:text-cobaltblue transition duration-300 mb-2">
+                                        <a href="javascript:void(0)">Startup</a>
+                                    </li>
+                                    <li class="hover:text-cobaltblue transition duration-300 mb-2">
+                                        <a href="javascript:void(0)">Business</a>
+                                    </li>
+                                    <li class="hover:text-cobaltblue transition duration-300 mb-2">
+                                        <a href="javascript:void(0)">Corporate</a>
+                                    </li>
+                                    <li class="hover:text-cobaltblue transition duration-300 mb-2">
+                                        <a href="javascript:void(0)">Finance</a>
+                                    </li>
+                                    <li class="hover:text-cobaltblue transition duration-300 mb-2">
+                                        <a href="javascript:void(0)">Application</a>
+                                    </li>
+                                    <li class="hover:text-cobaltblue transition duration-300 mb-2">
+                                        <a href="javascript:void(0)">Consulting</a>
+                                    </li>
+                                    <li class="hover:text-cobaltblue transition duration-300 mb-2">
+                                        <a href="javascript:void(0)">Digital agency</a>
+                                    </li>
+                                    <li class="hover:text-cobaltblue transition duration-300 mb-2">
+                                        <a href="javascript:void(0)">SEO agency</a>
+                                    </li>
+                                    <li class="hover:text-cobaltblue transition duration-300 mb-2">
+                                        <a href="javascript:void(0)">Event & conference</a>
+                                    </li>
+                                    <li class="hover:text-cobaltblue transition duration-300">
+                                        <a href="javascript:void(0)">Marketing agency</a>
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <h5 class="font-bold mb-2">Specialized</h5>
+                                    <li class="hover:text-cobaltblue transition duration-300 mb-2">
+                                        <a href="javascript:void(0)">Restaurant</a>
+                                    </li>
+                                    <li class="hover:text-cobaltblue transition duration-300 mb-2">
+                                        <a href="javascript:void(0)">Architecture</a>
+                                    </li>
+                                    <li class="hover:text-cobaltblue transition duration-300 mb-2">
+                                        <a href="javascript:void(0)">Hotel & resort</a>
+                                    </li>
+                                    <li class="hover:text-cobaltblue transition duration-300 mb-2">
+                                        <a href="javascript:void(0)">Travel agency</a>
+                                    </li>
+                                    <li class="hover:text-cobaltblue transition duration-300 mb-2">
+                                        <a href="javascript:void(0)">Yoga & meditation</a>
+                                    </li>
+                                    <li class="hover:text-cobaltblue transition duration-300 mb-2">
+                                        <a href="javascript:void(0)">Gym & fitness</a>
+                                    </li>
+                                    <li class="hover:text-cobaltblue transition duration-300 mb-2">
+                                        <a href="javascript:void(0)">Spa salon</a>
+                                    </li>
+                                    <li class="hover:text-cobaltblue transition duration-300 mb-2">
+                                        <a href="javascript:void(0)">Cafe</a>
+                                    </li>
+                                    <li class="hover:text-cobaltblue transition duration-300 mb-2">
+                                        <a href="javascript:void(0)">Home decor</a>
+                                    </li>
+                                    <li class="hover:text-cobaltblue transition duration-300">
+                                        <a href="javascript:void(0)">Dentist</a>
+                                    </li>
+                                    <li class="hover:text-cobaltblue transition duration-300">
+                                        <a href="javascript:void(0)">Interior design</a>
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <h5 class="font-bold mb-2">Portfolio</h5>
+                                    <li class="hover:text-cobaltblue transition duration-300 mb-2">
+                                        <a href="javascript:void(0)">Design agency</a>
+                                    </li>
+                                    <li class="hover:text-cobaltblue transition duration-300 mb-2">
+                                        <a href="javascript:void(0)">Web agency</a>
+                                    </li>
+                                    <li class="hover:text-cobaltblue transition duration-300 mb-2">
+                                        <a href="javascript:void(0)">Creative agency</a>
+                                    </li>
+                                    <li class="hover:text-cobaltblue transition duration-300 mb-2">
+                                        <a href="javascript:void(0)">Freelancer</a>
+                                    </li>
+                                    <li class="hover:text-cobaltblue transition duration-300 mb-2">
+                                        <a href="javascript:void(0)">Branding agency</a>
+                                    </li>
+                                    <li class="hover:text-cobaltblue transition duration-300 mb-2">
+                                        <a href="javascript:void(0)">Photography</a>
+                                    </li>
+                                    <li class="hover:text-cobaltblue transition duration-300 mb-2">
+                                        <a href="javascript:void(0)">Personal portfolio</a>
+                                    </li>
+                                    <li class="hover:text-cobaltblue transition duration-300 mb-2">
+                                        <a href="javascript:void(0)">Vertical portfolio</a>
+                                    </li>
+                                    <li class="hover:text-cobaltblue transition duration-300 mb-2">
+                                        <a href="javascript:void(0)">Interactive portfolio</a>
+                                    </li>
+                                    <li class="hover:text-cobaltblue transition duration-300">
+                                        <a href="javascript:void(0)">Split portfolio</a>
+                                    </li>
+                                    <li class="hover:text-cobaltblue transition duration-300">
+                                        <a href="javascript:void(0)">Creative portfolio</a>
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <h5 class="font-bold mb-2">Other</h5>
+                                    <li class="hover:text-cobaltblue transition duration-300 mb-2">
+                                        <a href="javascript:void(0)">Furniture shop</a>
+                                    </li>
+                                    <li class="hover:text-cobaltblue transition duration-300 mb-2">
+                                        <a href="javascript:void(0)">Fashion shop</a>
+                                    </li>
+                                    <li class="hover:text-cobaltblue transition duration-300 mb-2">
+                                        <a href="javascript:void(0)">Magazine</a>
+                                    </li>
+                                    <li class="hover:text-cobaltblue transition duration-300 mb-2">
+                                        <a href="javascript:void(0)">Lifestyle blog</a>
+                                    </li>
+                                    <li class="hover:text-cobaltblue transition duration-300 mb-2">
+                                        <a href="javascript:void(0)">Classic blog</a>
+                                    </li>
+                                    <li class="hover:text-cobaltblue transition duration-300 mb-2">
+                                        <a href="javascript:void(0)">Blog metro</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="group">
+                            <a href="javascript:void(0)"
+                                class="xl:px-8 lg:px-4 text-lg text-white opacity-80 font-bold hover:opacity-100 transition hover:duration-300">About</a>
+                            <div
+                                class="absolute top-[75%] gap-10 bg-white text-black rounded-md text-[14px] text-left shadow-lg hidden group-hover:flex py-2">
+                                <ul>
+                                    <li class="dropdown relative right">
+                                        <a href="javascript:void(0)"
+                                            class="hover:text-cobaltblue transition duration-300 px-6 py-4">Lifestyle
+                                            blog</a>
+                                        <div
+                                            class="hidden dropdown-hover:block bg-white shadow-lg rounded-md absolute top-[0] subMenu py-2">
+                                            <ul>
+                                                <li class="hover:text-cobaltblue transition duration-300 px-6 py-1">
+                                                    <a href="javascript:void(0)" class="whitespace-nowrap">Furniture
+                                                        shop</a>
+                                                </li>
+                                                <li class="hover:text-cobaltblue transition duration-300 px-6 py-1">
+                                                    <a href="javascript:void(0)" class="whitespace-nowrap">Fashion
+                                                        shop</a>
+                                                </li>
+                                                <li class="hover:text-cobaltblue transition duration-300 px-6 py-1">
+                                                    <a href="javascript:void(0)" class="whitespace-nowrap">Magazine</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="relative px-6 py-1 dropdown left">
+                                        <a href="javascript:void(0)"
+                                            class="hover:text-cobaltblue transition duration-300 whitespace-nowrap">Classic
+                                            blog</a>
+                                        <div
+                                            class="hidden dropdown-hover:block bg-white shadow-lg rounded-md absolute top-[0] subMenu py-2">
+                                            <ul>
+                                                <li class="hover:text-cobaltblue transition duration-300 px-6 py-1">
+                                                    <a href="javascript:void(0)" class="whitespace-nowrap">Our
+                                                        services</a>
+                                                </li>
+                                                <li class="hover:text-cobaltblue transition duration-300 px-6 py-1">
+                                                    <a href="javascript:void(0)" class="whitespace-nowrap">What we
+                                                        offer</a>
+                                                </li>
+                                                <li class="hover:text-cobaltblue transition duration-300 px-6 py-1">
+                                                    <a href="javascript:void(0)" class="whitespace-nowrap">Our
+                                                        process</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="hover:text-cobaltblue transition duration-300 px-6 py-1">
+                                        <a href="javascript:void(0)" class="whitespace-nowrap">Blog metro</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)"
+                                class="xl:px-8 lg:px-4 text-lg text-white opacity-80 font-bold hover:opacity-100 transition hover:duration-300">services</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)"
+                                class="xl:px-8 lg:px-4 text-lg text-white opacity-80 font-bold hover:opacity-100 transition hover:duration-300">Blog</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)"
+                                class="xl:px-8 lg:px-4 text-lg text-white opacity-80 font-bold hover:opacity-100 transition hover:duration-300">Pages</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)"
+                                class="xl:px-8 lg:px-4 text-lg text-white opacity-80 font-bold hover:opacity-100 transition hover:duration-300">Contact</a>
+                        </li>
+                    </ul>
+                    <div class="relative gap-5">
+                        <div
+                            class="absolute top-[-12px] right-[180px] flex items-center justify-center rounded-full py-3 px-4 bg-white ">
+                            <button class="w-[20px]" id="search-button">
+                                <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M19.4358 17.8975L15.7525 14.225C16.9409 12.711 17.5857 10.8414 17.5833 8.91667C17.5833 7.20257 17.075 5.52695 16.1227 4.10173C15.1704 2.6765 13.8169 1.56567 12.2333 0.909715C10.6496 0.253755 8.90706 0.0821262 7.22589 0.416531C5.54472 0.750937 4.00047 1.57636 2.78841 2.78841C1.57636 4.00047 0.750937 5.54472 0.416531 7.22589C0.0821262 8.90706 0.253755 10.6496 0.909715 12.2333C1.56567 13.8169 2.6765 15.1704 4.10173 16.1227C5.52695 17.075 7.20257 17.5833 8.91667 17.5833C10.8414 17.5857 12.711 16.9409 14.225 15.7525L17.8975 19.4358C17.9982 19.5374 18.118 19.618 18.25 19.673C18.3821 19.728 18.5237 19.7563 18.6667 19.7563C18.8097 19.7563 18.9513 19.728 19.0833 19.673C19.2153 19.618 19.3351 19.5374 19.4358 19.4358C19.5374 19.3351 19.618 19.2153 19.673 19.0833C19.728 18.9513 19.7563 18.8097 19.7563 18.6667C19.7563 18.5237 19.728 18.3821 19.673 18.25C19.618 18.118 19.5374 17.9982 19.4358 17.8975ZM2.41667 8.91667C2.41667 7.63109 2.79789 6.37438 3.51212 5.30546C4.22635 4.23655 5.24151 3.40342 6.42923 2.91145C7.61695 2.41948 8.92388 2.29076 10.1848 2.54157C11.4456 2.79237 12.6038 3.41144 13.5129 4.32048C14.4219 5.22952 15.041 6.38771 15.2918 7.64858C15.5426 8.90946 15.4139 10.2164 14.9219 11.4041C14.4299 12.5918 13.5968 13.607 12.5279 14.3212C11.459 15.0355 10.2022 15.4167 8.91667 15.4167C7.19276 15.4167 5.53946 14.7319 4.32048 13.5129C3.10149 12.2939 2.41667 10.6406 2.41667 8.91667Z"
+                                        fill="#004AD9" />
+                                </svg>
+                            </button>
+                            <input type="search"
+                                class="placeholder:text-cobaltblue placeholder:pl-2 font-semibold w-[200px]  transition-width duration-700"
+                                placeholder="Search" />
+                        </div>
+                        <div>
+                            <a href="javascript:void(0)"
+                                class="bg-white border-2 border-white text-cobaltblue font-semibold py-3 xl:px-7 lg:px-5 w-full rounded-full hover:border-white hover:bg-transparent hover:text-white transition duration-500">Get
+                                A Quote</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="fixed inset-0 sm:w-3/4 bg-white transition duration-700 translate-x-[-110%] px-4 py-3"
+                id="mobile-menu">
+                <span class="absolute top-2 right-2 material-icons sm:hidden text-cobaltblue"
+                    id="closeMenu">close</span>
+                <a href="javascript:void(0)" class="block lg:h-14 h-12">
+                    <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path class="fill-cobaltblue"
+                            d="M49.9889 24.2745C49.9592 23.2048 49.8592 22.1383 49.6896 21.0817C47.8558 9.5255 37.9997 0.508016 26.0415 0.0231747C21.6526 -0.166355 17.2918 0.809337 13.402 2.85112L13.5327 2.98182C15.6622 5.11144 18.6966 6.00605 21.6688 5.49998C22.7692 5.31441 23.8831 5.22099 24.9989 5.22069C28.6045 5.22341 32.1411 6.21006 35.2274 8.07433C38.3137 9.93859 40.8328 12.6098 42.5132 15.8001C44.0016 18.6382 44.7795 21.7951 44.7802 24.9999C44.7841 27.8167 44.1847 30.6017 43.0223 33.1674H48.6364C49.6207 30.3092 50.079 27.2962 49.9889 24.2745ZM30.4722 44.2669C29.8742 44.2669 29.2776 44.3234 28.6902 44.4355C27.2052 44.7151 25.6933 44.8247 24.1835 44.7622C19.4473 44.5672 14.9407 42.6688 11.4925 39.4161C9.91063 37.9291 8.58032 36.1956 7.55334 34.2828C6.14173 31.6466 5.34866 28.7236 5.23424 25.7354C5.11982 22.7472 5.68704 19.7722 6.89292 17.0357C7.92599 14.6905 9.40528 12.5686 11.2484 10.7881H4.43334C1.3713 15.2106 -0.178162 20.505 0.0163041 25.8807C0.470396 38.9849 11.1556 49.6089 24.2592 49.988C28.7003 50.1261 33.0976 49.0736 36.9949 46.9396C36.1371 46.0867 35.1193 45.4115 34 44.9529C32.8807 44.4943 31.6818 44.2611 30.4722 44.2669Z" />
+                        <path class="fill-cobaltblue"
+                            d="M0.10377 27.2453H5.35593C5.28678 26.6388 5.23674 26.027 5.22445 25.4064C5.16685 22.6861 5.67225 19.9833 6.70889 17.4677C7.74554 14.9521 9.29106 12.6779 11.2484 10.7881H4.43334C1.3713 15.2106 -0.178162 20.505 0.0163041 25.8807C0.0321666 26.3392 0.0634436 26.7933 0.10377 27.2453Z" />
+                        <path class="fill-cobaltblue"
+                            d="M48.6365 33.1681H43.0224C44.7325 29.3819 45.2102 25.1541 44.3881 21.0817H49.6896C49.8592 22.1383 49.9592 23.2048 49.9889 24.2745C50.0791 27.2964 49.6209 30.3096 48.6365 33.1681Z" />
+                        <path class="fill-cobaltblue"
+                            d="M48.6366 33.168C47.8767 35.367 46.8113 37.4481 45.4718 39.3504L45.4581 39.416H16.058L32.8842 17.2183H28.3187L11.4921 39.416H6.30824L7.22693 34.6781L7.55356 34.2827L21.8788 17.0357H1.29949C2.0446 14.816 3.09965 12.7126 4.43334 10.7881L43.6999 10.7881L42.6818 15.5839L42.5134 15.8007L28.976 33.168H48.6366Z" />
+                        <path class="fill-cobaltblue"
+                            d="M28.3187 17.2183L21.5552 26.1427H14.3135L21.8787 17.0354L28.3187 17.2183Z" />
+                    </svg>
+                </a>
+                <div class="h-full overflow-auto text-[15px] py-3">
+                    <ul>
+                        <li>
+                            <div>
+                                <button
+                                    class="w-full h-full flex justify-between border-b text-left text-cobaltblue hover:text-black transition duration-700 px-[15px] py-[9px]"
+                                    data-toggle="collapse">
+                                    <span>Home</span>
+                                    <span
+                                        class="material-icons transition duration-700 rotate-icon">keyboard_arrow_down</span>
+                                </button>
+                                <div class="collapse transition duration-700">
+                                    <div class="sm:grid grid-cols-2 text-black py-2">
+                                        <ul>
+                                            <h5 class="font-bold px-[15px]">Corporate</h5>
+                                            <li
+                                                class="hover:text-cobaltblue transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Startup</a>
+                                            </li>
+                                            <li
+                                                class="hover:text-cobaltblue transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Business</a>
+                                            </li>
+                                            <li
+                                                class="hover:text-cobaltblue transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Corporate</a>
+                                            </li>
+                                            <li
+                                                class="hover:text-cobaltblue transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Finance</a>
+                                            </li>
+                                            <li
+                                                class="hover:text-cobaltblue transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Application</a>
+                                            </li>
+                                            <li
+                                                class="hover:text-cobaltblue transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Consulting</a>
+                                            </li>
+                                            <li
+                                                class="hover:text-cobaltblue transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Digital
+                                                    agency</a>
+                                            </li>
+                                            <li
+                                                class="hover:text-cobaltblue transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">SEO agency</a>
+                                            </li>
+                                            <li
+                                                class="hover:text-cobaltblue transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Event &amp;
+                                                    conference</a>
+                                            </li>
+                                            <li
+                                                class="hover:text-cobaltblue transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Marketing
+                                                    agency</a>
+                                            </li>
+                                        </ul>
+                                        <ul>
+                                            <h5 class="font-bold px-[15px]">Specialized</h5>
+                                            <li
+                                                class="hover:text-cobaltblue transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Restaurant</a>
+                                            </li>
+                                            <li
+                                                class="hover:text-cobaltblue transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Architecture</a>
+                                            </li>
+                                            <li
+                                                class="hover:text-cobaltblue transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Hotel &
+                                                    resort</a>
+                                            </li>
+                                            <li
+                                                class="hover:text-cobaltblue transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Travel agency</a>
+                                            </li>
+                                            <li
+                                                class="hover:text-cobaltblue transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Yoga &
+                                                    meditation</a>
+                                            </li>
+                                            <li
+                                                class="hover:text-cobaltblue transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Gym & fitness</a>
+                                            </li>
+                                            <li
+                                                class="hover:text-cobaltblue transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Spa salon
+                                                </a>
+                                            </li>
+                                            <li
+                                                class="hover:text-cobaltblue transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Cafe</a>
+                                            </li>
+                                            <li
+                                                class="hover:text-cobaltblue transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Home decor</a>
+                                            </li>
+                                            <li
+                                                class="hover:text-cobaltblue transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Dentist</a>
+                                            </li>
+                                            <li
+                                                class="hover:text-cobaltblue transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Interior
+                                                    design</a>
+                                            </li>
+                                        </ul>
+                                        <ul>
+                                            <h5 class="font-bold px-[15px]">Portfolio</h5>
+                                            <li
+                                                class="hover:text-cobaltblue transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Design agency</a>
+                                            </li>
+                                            <li
+                                                class="hover:text-cobaltblue transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Web agency</a>
+                                            </li>
+                                            <li
+                                                class="hover:text-cobaltblue transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Creative
+                                                    agency</a>
+                                            </li>
+                                            <li
+                                                class="hover:text-cobaltblue transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Freelancer</a>
+                                            </li>
+                                            <li
+                                                class="hover:text-cobaltblue transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Branding
+                                                    agency</a>
+                                            </li>
+                                            <li
+                                                class="hover:text-cobaltblue transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Photography</a>
+                                            </li>
+                                            <li
+                                                class="hover:text-cobaltblue transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Personal
+                                                    portfolio</a>
+                                            </li>
+                                            <li
+                                                class="hover:text-cobaltblue transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Vertical
+                                                    portfolio</a>
+                                            </li>
+                                            <li
+                                                class="hover:text-cobaltblue transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Interactive
+                                                    portfolio</a>
+                                            </li>
+                                            <li
+                                                class="hover:text-cobaltblue transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Split
+                                                    portfolio</a>
+                                            </li>
+                                            <li
+                                                class="hover:text-cobaltblue transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Creative
+                                                    portfolio</a>
+                                            </li>
+                                        </ul>
+                                        <ul>
+                                            <h5 class="font-bold px-[15px]">Other</h5>
+                                            <li
+                                                class="hover:text-cobaltblue transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Furniture
+                                                    shop</a>
+                                            </li>
+                                            <li
+                                                class="hover:text-cobaltblue transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Fashion shop</a>
+                                            </li>
+                                            <li
+                                                class="hover:text-cobaltblue transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Magazine</a>
+                                            </li>
+                                            <li
+                                                class="hover:text-cobaltblue transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Lifestyle
+                                                    blog</a>
+                                            </li>
+                                            <li
+                                                class="hover:text-cobaltblue transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Classic blog</a>
+                                            </li>
+                                            <li
+                                                class="hover:text-cobaltblue transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Blog metro</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <button
+                                    class="w-full h-full flex justify-between border-b text-left text-cobaltblue hover:text-black transition duration-700 px-[15px] py-[9px]"
+                                    data-toggle="collapse">
+                                    <span>About</span>
+                                    <span
+                                        class="material-icons transition duration-700 rotate-icon">keyboard_arrow_down</span>
+                                </button>
+                                <div class="collapse transition duration-700">
+                                    <div class="text-black">
+                                        <ul>
+                                            <li class="px-[15px] py-[2px]">
+                                                <div>
+                                                    <button
+                                                        class="w-full h-full flex justify-between text-left py-[2px]"
+                                                        data-toggle="collapse">
+                                                        <span
+                                                            class="hover:text-cobaltblue transition duration-700">Lifestyle
+                                                            blog</span>
+                                                        <span
+                                                            class="material-icons transition duration-700 rotate-icon">keyboard_arrow_down</span>
+                                                    </button>
+                                                    <div class="collapse transition duration-700">
+                                                        <ul>
+                                                            <li
+                                                                class="hover:text-cobaltblue transition duration-300 px-[15px] py-[2px]">
+                                                                <a href="javascript:void(0)"
+                                                                    class="whitespace-nowrap">Furniture shop</a>
+                                                            </li>
+                                                            <li
+                                                                class="hover:text-cobaltblue transition duration-300 px-[15px] py-[2px]">
+                                                                <a href="javascript:void(0)"
+                                                                    class="whitespace-nowrap">Fashion shop</a>
+                                                            </li>
+                                                            <li
+                                                                class="hover:text-cobaltblue transition duration-300 px-[15px] py-[2px]">
+                                                                <a href="javascript:void(0)"
+                                                                    class="whitespace-nowrap">Magazine</a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="px-[15px] py-[2px]">
+                                                <div>
+                                                    <button
+                                                        class="w-full h-full flex justify-between text-left py-[2px]"
+                                                        data-toggle="collapse">
+                                                        <span
+                                                            class="hover:text-cobaltblue transition duration-700">Classic
+                                                            blog</span>
+                                                        <span
+                                                            class="material-icons transition duration-700 rotate-icon">keyboard_arrow_down</span>
+                                                    </button>
+                                                    <div class="collapse transition duration-700">
+                                                        <ul>
+                                                            <li
+                                                                class="hover:text-cobaltblue transition duration-300 px-[15px] py-[2px]">
+                                                                <a href="javascript:void(0)"
+                                                                    class="whitespace-nowrap">Our services</a>
+                                                            </li>
+                                                            <li
+                                                                class="hover:text-cobaltblue transition duration-300 px-[15px] py-[2px]">
+                                                                <a href="javascript:void(0)"
+                                                                    class="whitespace-nowrap">What we offer</a>
+                                                            </li>
+                                                            <li
+                                                                class="hover:text-cobaltblue transition duration-300 px-[15px] py-[2px]">
+                                                                <a href="javascript:void(0)"
+                                                                    class="whitespace-nowrap">Our process</a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li
+                                                class="hover:text-cobaltblue transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Blog metro</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)"
+                                class="block w-full h-full border-b text-cobaltblue hover:text-black transition duration-700 px-[15px] py-[9px]">Services</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)"
+                                class="block w-full h-full border-b text-cobaltblue hover:text-black transition duration-700 px-[15px] py-[9px]">Blog</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)"
+                                class="block w-full h-full border-b text-cobaltblue hover:text-black transition duration-700 px-[15px] py-[9px]">Pages</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)"
+                                class="block w-full h-full border-b text-cobaltblue hover:text-black transition duration-700 px-[15px] py-[9px]">Contact</a>
+                        </li>
+                        <li class="p-2 mb-6 mt-5">
+                            <a href="javascript:void(0)"
+                                class="bg-cobaltblue text-white text-base font-semibold px-5 py-3 rounded-full">Get A
+                                Quote</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!--END: Header-->
+
+    <!--START:Main-->
+    <main>
+        <!--START: Banner-->
+        <section class="lg:h-screen md:h-[70vh] h-[60vh] mt-[88px] relative before:content-[''] before:absolute xl:before:w-[57%] lg:before:w-[47%] before:h-full before:min-h-[125%] before:top-[-200px] before:left-[28px] before:shadow-[40px_10px_50px_rgba(0,0,0,0.2)]
+             before:bg-white before:border-r-white before:rounded-tr-[46%] before:rounded-br-[65%] overflow-hidden">
+            <div class="grid lg:grid-cols-5 h-full">
+                <div
+                    class="lg:col-span-2 flex lg:justify-end justify-center items-center w-full 2xl:ml-0 xl:ml-24 lg:ml-8">
+                    <div data-aos="fade-up" data-aos-duration="700">
+                        <div class="relative z-10 lg:ml-0 mx-5">
+                            <div class="font-semibold font-poppins lg:mb-10 mb-5 md:text-[64px] text-[45px]">
+                                Financial
+                                <div
+                                    class="text-center md:max-w-md max-w-xs font-semibold font-poppins relative before:content-[''] before:absolute before:border before:bg-cobaltblue xl:before:w-[100px] lg:before:w-[80px] md:before:w-[100px] before:w-[60px]  before:rounded-xl before:h-[6px] before:top-1/2 before:left-0 md:text-[48px] text-[35px]">
+                                    Advisory
+                                </div>
+                            </div>
+                            <p
+                                class="opacity-80 font-semibold xl:max-w-[520px] max-w-2xl leading-[32px] md:text-[24px] text-[20px] lg:mb-16 mb-8">
+                                Transforming distribution and marketing with key capabilities
+                                in customer insight and analytics.
+                            </p>
+                            <div class="max-w-[230px] w-full">
+                                <a href="javascript:void(0)"
+                                    class="flex justify-start bg-cobaltblue border-2 border-cobaltblue rounded-full px-5 py-3 text-white md:text-lg shadow-[0px_2px_10px_rgba(0, 0, 0, 0.25)] group hover:border-cobaltblue hover:border-2 hover:bg-transparent hover:text-cobaltblue transition duration-500">Contact
+                                    Us Now
+                                    <span class="flex items-center justify-center ml-2">
+                                        <div class="w-[38px] h-[15px]">
+                                            <svg viewBox="0 0 38 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    class="fill-white group-hover:fill-cobaltblue transition duration-500"
+                                                    d="M29.791 14.3833L37.2502 7.32861L29.7501 0.235352L29.791 14.3833Z" />
+                                                <path
+                                                    class="fill-white group-hover:fill-cobaltblue transition duration-500"
+                                                    d="M32.4743 9.29572L14.7617 9.30273L14.7644 4.47383L32.477 4.46681L32.4743 9.29572Z" />
+                                                <path
+                                                    class="stroke-white group-hover:stroke-cobaltblue transition duration-500"
+                                                    opacity="0.5" d="M1.00244 4.48008L1.00015 9.18896" />
+                                                <path
+                                                    class="stroke-white group-hover:stroke-cobaltblue transition duration-500"
+                                                    opacity="0.8" d="M6.00244 4.48023L6 9.18896" />
+                                                <path
+                                                    class="stroke-white group-hover:stroke-cobaltblue transition duration-500"
+                                                    d="M11.0024 4.48023L11 9.18896" />
+                                            </svg>
+                                        </div>
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-span-3 h-full hidden lg:block">
+                    <img src="img/finance/finance-banner.png" class="w-full h-full object-cover" alt="finance" />
+                </div>
+            </div>
+        </section>
+        <!--END: Banner-->
+
+        <!--START: Features -->
+        <section>
+            <div class="container">
+                <div
+                    class="bg-[#F4F8FF] h-full w-full mx-auto 2xl:p-20 xl:p-14 lg:py-14 md:py-0 py-10 rounded-[35px] lg:translate-y-[-110px] md:translate-y-[-80px] lg:max-w-full md:max-w-[630px]">
+                    <div
+                        class="grid lg:grid-cols-2 grid-cols-1 overflow-hidden gap-5 lg:gap-3 xl:px-0 lg:px-5 lg:p-0 md:p-10 p-5">
+                        <div class="sm:flex lg:mb-0 md:mb-7 mb-3" data-aos="fade-right" data-aos-duration="500"
+                            data-aos-offset="0">
+                            <div class="sm:justify-start flex justify-center md:mb-0 mb-3">
+                                <div
+                                    class="bg-white rounded-full flex justify-center items-center mr-5 group hover:bg-cobaltblue xl:h-24 xl:w-24 w-20 h-20 transition duration-300">
+                                    <div class="w-[46px] h-[46px]">
+                                        <svg viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                class="fill-cobaltblur group-hover:fill-white transition group-hover:duration-300"
+                                                d="M22.9999 0.0834961C18.4674 0.0834961 14.0367 1.42753 10.2681 3.94565C6.49948 6.46377 3.5622 10.0429 1.82769 14.2303C0.0931815 18.4178 -0.360645 23.0256 0.5236 27.471C1.40784 31.9164 3.59045 35.9997 6.7954 39.2047C10.0004 42.4096 14.0837 44.5922 18.5291 45.4765C22.9745 46.3607 27.5823 45.9069 31.7698 44.1724C35.9572 42.4379 39.5363 39.5006 42.0544 35.732C44.5726 31.9634 45.9166 27.5326 45.9166 23.0002C45.9166 16.9223 43.5022 11.0933 39.2045 6.79563C34.9068 2.49792 29.0778 0.0834961 22.9999 0.0834961ZM31.3333 25.0835H22.9999C22.4474 25.0835 21.9175 24.864 21.5268 24.4733C21.1361 24.0826 20.9166 23.5527 20.9166 23.0002V10.5002C20.9166 9.94763 21.1361 9.41772 21.5268 9.02702C21.9175 8.63632 22.4474 8.41683 22.9999 8.41683C23.5525 8.41683 24.0824 8.63632 24.4731 9.02702C24.8638 9.41772 25.0833 9.94763 25.0833 10.5002V20.9168H31.3333C31.8858 20.9168 32.4157 21.1363 32.8064 21.527C33.1971 21.9177 33.4166 22.4476 33.4166 23.0002C33.4166 23.5527 33.1971 24.0826 32.8064 24.4733C32.4157 24.864 31.8858 25.0835 31.3333 25.0835Z"
+                                                fill="#004AD9" />
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <h5
+                                    class="font-bold lg:tracking-[2px] md:tracking-[1px] lg:text-[24px] md:text-[20px] text-[22px] lg:mb-5 md:mb-3 mb-2 md:text-left text-center">
+                                    ON TIME SERVICE
+                                </h5>
+                                <p class=" text-[18px] leading-[30px] opacity-60 tracking-[0.8px] xl:max-w-[400px]
+                                    lg:max-w-[360px] md:text-left text-center">
+                                    Transforming distribution and marketing with key
+                                    capabilities in customer insight and analytics.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="sm:flex justify-end lg:mb-0 md:mb-7 mb-3" data-aos="fade-left"
+                            data-aos-duration="500">
+                            <div class="sm:justify-start flex justify-center md:mb-0 mb-3">
+                                <div
+                                    class="bg-white rounded-full flex justify-center items-center mr-5 group hover:bg-cobaltblue xl:h-24 xl:w-24 w-20 h-20 transition duration-300">
+                                    <div class="w-[34px] h-[42px]">
+                                        <svg viewBox="0 0 34 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                class="fill-cobaltblur group-hover:fill-white transition group-hover:duration-300"
+                                                d="M12.5176 28.3953C15.5169 28.1536 18.53 28.1536 21.5293 28.3953C23.1626 28.4905 24.7881 28.6948 26.3956 29.007C29.8741 29.7113 32.1451 30.8605 33.1184 32.714C33.8493 34.1605 33.8493 35.8826 33.1184 37.3292C32.1451 39.1827 29.9642 40.406 26.3596 41.0362C24.7533 41.3601 23.1274 41.5706 21.4932 41.6664C19.9793 41.8332 18.4653 41.8332 16.9333 41.8332H14.1757C13.599 41.759 13.0402 41.722 12.4995 41.722C10.8653 41.6379 9.23901 41.4335 7.6332 41.1103C4.15467 40.4431 1.88372 39.2568 0.91045 37.4033C0.534734 36.6853 0.336656 35.8832 0.333469 35.0679C0.325868 34.2476 0.517955 33.4383 0.892426 32.714C1.84767 30.8605 4.11862 29.6557 7.6332 29.007C9.24609 28.6904 10.8779 28.486 12.5176 28.3953ZM17.0054 0.166504C23.0475 0.166504 27.9456 5.20363 27.9456 11.4172C27.9456 17.6309 23.0475 22.668 17.0054 22.668C10.9633 22.668 6.06516 17.6309 6.06516 11.4172C6.06516 5.20363 10.9633 0.166504 17.0054 0.166504Z"
+                                                fill="#004AD9" />
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <h5
+                                    class="font-bold lg:tracking-[2px] md:tracking-[1px] lg:text-[24px] md:text-[20px] text-[22px] lg:mb-5 md:mb-3 mb-2 md:text-left text-center">
+                                    PROFESSIONAL TEAM
+                                </h5>
+                                <p class=" text-[18px] leading-[30px] opacity-60 tracking-[0.8px] xl:max-w-[400px]
+                                    lg:max-w-[360px] md:text-left text-center">
+                                    Transforming distribution and marketing with key
+                                    capabilities in customer insight and analytics.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="lg:col-span-2 mx-auto sm:flex lg:mt-10 lg:mb-0 md:mb-7 mb-3" data-aos="fade-up"
+                            data-aos-duration="500">
+                            <div class="sm:justify-start flex justify-center md:mb-0 mb-3">
+                                <div
+                                    class="bg-white rounded-full flex justify-center items-center mr-5 group hover:bg-cobaltblue xl:h-24 xl:w-24 w-20 h-20 transition duration-300">
+                                    <div class="w-[36px] h-[27px]">
+                                        <svg viewBox="0 0 36 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                class="fill-cobaltblur group-hover:fill-white transition group-hover:duration-300"
+                                                d="M11.7501 21.75L4.45841 14.4583C3.64591 13.6458 2.35425 13.6458 1.54175 14.4583C0.729248 15.2708 0.729248 16.5625 1.54175 17.375L10.2709 26.1042C11.0834 26.9167 12.3959 26.9167 13.2084 26.1042L35.2917 4.04167C36.1042 3.22917 36.1042 1.9375 35.2917 1.125C34.4792 0.3125 33.1876 0.3125 32.3751 1.125L11.7501 21.75Z"
+                                                fill="#004AD9" />
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <h5
+                                    class="font-bold lg:tracking-[2px] md:tracking-[1px] lg:text-[24px] md:text-[20px] text-[22px] lg:mb-5 md:mb-3 mb-2 md:text-left text-center">
+                                    FASTEST SOLUTION
+                                </h5>
+                                <p
+                                    class="text-[18px] leading-[30px] opacity-60 tracking-[0.8px] xl:max-w-[400px] lg:max-w-[360px] md:text-left text-center">
+                                    Transforming distribution and marketing with key
+                                    capabilities in customer insight and analytics.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--END: Features -->
+
+        <!--START:Big-Name-->
+        <section class="lg:mt-0 lg:pb-5 md:mb-16 mb-10 md:mt-0 mt-10 overflow-hidden">
+            <div class="container">
+                <div class="grid lg:grid-cols-2 gide-cols-1 gap-5">
+                    <div class="xl:pr-10 xl:drop-shadow-[60px_60px_15px_rgba(244,248,255,1)] lg:drop-shadow-[40px_40px_15px_rgba(244,248,255,1)] lg::order-1 order-2"
+                        data-aos="zoom-in" data-aos-duration="500">
+                        <div class="flex items-start">
+                            <div class="md:h-full h-[300px]">
+                                <img src="img/finance/two-partners-working.png" alt="finance"
+                                    class="w-full h-full md:object-contain" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="xl:ml-8 lg:ml-7 lg:order-2 order-1" data-aos="fade-left" data-aos-duration="600">
+                        <h5 class="relative before:absolute before:cotent:[''] before:w-[6px] before:h-[6px] before:bg-cobaltblue 2xl:before:top-[14px] before:rounded-full xl:mb-5 lg:mb-2 mb-2
+                             before:top-[10px]">
+                            <span
+                                class="text-cobaltblue font-bold 2xl:text-[24px] 2xl:tracking-[4px] xl:text-[20px] lg:text-[18px] md:text-[20px] text-[18px] md:tracking-[2px] ml-4">BIG
+                                NAME
+                                CUSTOMERS</span>
+                        </h5>
+                        <h3
+                            class="font-bold 2xl:text-[48px] 2xl:leading-[60px] xl:text-[40px] lg:text-[32px] md:text-[35px] text-[32px] xl:mb-5 mb-2">
+                            Serving 50% Of <br />
+                            Global 2000 Companies
+                        </h3>
+                        <p
+                            class="opacity-70 max-w-[750px] 2xl:text-[24px] 2xl:leading-[40px] xl:leading-[30px] lg:leading-[25px] xl:text-[20px] lg:text-[18px] md:text-[20px] text-[18px] 2xl:mb-8 mb-3">
+                            A wonderful serenity has taken possession of my entire soul, like these sweet mornings
+                            of
+                            spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in
+                            this spot, which was created for the bliss of souls like mine. More than 25 years of
+                            experience working in the industry has enabled us to build our services and solutions in
+                            strategy, consulting, digital.
+                        </p>
+                        <a href="javascript:void(0)"
+                            class="text-cobaltblue border-b-2 border-cobaltblue 2xl:text-[24px] xl:text-[20px] lg:text-[18px] md:text-[20px] text-[20px] font-bold">More
+                            About
+                            Us</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--END:Big-Name-->
+
+        <!--START: Proffesional-->
+        <section class="overflow-hidden xl:my-14 md:my-10 my-7">
+            <div class="container">
+                <div class="relative">
+                    <div data-aos="zoom-in-down" data-aos-duration="500">
+                        <h5 class="relative before:absolute before:cotent:[''] before:w-[6px] before:h-[6px] before:bg-cobaltblue 2xl:before:top-[14px] before:rounded-full
+                             xl:before:top-[12px] before:top-[10px] xl:mb-5 lg:mb-4 mb-2">
+                            <span
+                                class="text-cobaltblue font-bold 2xl:tracking-[4px] 2xl:text-[24px] xl:text-[20px] md:text-[20px] text-[18px] md:tracking-[2px] ml-4">PROFESSIONAL
+                                TEAM</span>
+                        </h5>
+                    </div>
+                    <div class="sm:flex">
+                        <div data-aos="zoom-in-down" data-aos-duration="700">
+                            <h3
+                                class="font-bold 2xl:leading-[60px] 2xl:text-[48px] xl:text-[40px] text-[25px] md:mb-2 mb-10">
+                                MEET OUR SPECIALIST
+                            </h3>
+                        </div>
+                        <div class="flex absolute md:top-1/2 top-24 right-0">
+                            <div
+                                class="group fill-black hover:fill-white swiper-button-prev relative bg-white shadow-lg md:w-14 md:h-14 w-12 h-12 rounded-md md:rounded-xl transition duration-700 after:absolute after:content-[''] after:text-[22px] after:font-bold after:transition after:duration-700 hover:bg-cobaltblue">
+                                <div class="md:w-[22px] md:h-[18px] w-[20px] h-[15px]">
+                                    <svg viewBox="0 0 22 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            class="fill-black group-hover:fill-white hover:transition hover:duration-700"
+                                            d="M20.7496 7.9165L3.8648 7.91651L9.59888 2.18242C9.70132 2.08224 9.78286 1.96272 9.83879 1.83081C9.89473 1.69889 9.92393 1.55718 9.92472 1.4139C9.92551 1.27062 9.89787 1.1286 9.84339 0.996074C9.78892 0.863548 9.70869 0.743145 9.60737 0.641836C9.50604 0.540525 9.38562 0.460323 9.25309 0.405872C9.12055 0.351423 8.97853 0.323803 8.83525 0.324617C8.69196 0.325431 8.55026 0.354663 8.41836 0.410617C8.28645 0.466571 8.16695 0.548135 8.06678 0.650591L0.483445 8.23392C0.280351 8.43708 0.166259 8.71258 0.166259 8.99984C0.166259 9.2871 0.280351 9.5626 0.483445 9.76576L8.06678 17.3491C8.16727 17.4499 8.28669 17.5298 8.41819 17.5843C8.54968 17.6388 8.69064 17.6667 8.83297 17.6665C9.0472 17.6665 9.2566 17.6029 9.43471 17.4839C9.61282 17.3648 9.75164 17.1956 9.83362 16.9977C9.91559 16.7998 9.93705 16.582 9.89527 16.3719C9.85348 16.1618 9.75034 15.9688 9.59888 15.8173L3.8648 10.0832L20.7496 10.0832C21.037 10.0832 21.3125 9.96903 21.5157 9.76587C21.7188 9.56271 21.833 9.28716 21.833 8.99984C21.833 8.71252 21.7188 8.43697 21.5157 8.23381C21.3125 8.03064 21.037 7.9165 20.7496 7.9165Z"
+                                            fill="black" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div
+                                class="group fill-black hover:fill-white swiper-button-next ml-10 relative bg-white shadow-lg md:w-14 md:h-14 w-12 h-12 rounded-md md:rounded-xl transition duration-700 after:absolute after:content-[''] after:text-[22px] after:font-bold after:transition after:duration-700 hover:bg-cobaltblue">
+                                <div class="md:w-[22px] md:h-[18px] w-[20px] h-[15px]">
+                                    <svg viewBox="0 0 22 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            class="fill-black group-hover:fill-white hover:transition hover:duration-700"
+                                            d="M1.25037 10.0835L18.1352 10.0835L12.4011 15.8176C12.2987 15.9178 12.2171 16.0373 12.1612 16.1692C12.1053 16.3011 12.0761 16.4428 12.0753 16.5861C12.0745 16.7294 12.1021 16.8714 12.1566 17.0039C12.2111 17.1365 12.2913 17.2569 12.3926 17.3582C12.494 17.4595 12.6144 17.5397 12.7469 17.5941C12.8794 17.6486 13.0215 17.6762 13.1648 17.6754C13.308 17.6746 13.4497 17.6453 13.5816 17.5894C13.7136 17.5334 13.8331 17.4519 13.9332 17.3494L21.5166 9.76608C21.7196 9.56292 21.8337 9.28742 21.8337 9.00016C21.8337 8.7129 21.7196 8.4374 21.5166 8.23425L13.9332 0.650914C13.8327 0.550121 13.7133 0.470189 13.5818 0.415715C13.4503 0.361241 13.3094 0.333299 13.167 0.333497C12.9528 0.333542 12.7434 0.397103 12.5653 0.516145C12.3872 0.635186 12.2484 0.804363 12.1664 1.00229C12.0844 1.20021 12.063 1.418 12.1047 1.62811C12.1465 1.83823 12.2497 2.03124 12.4011 2.18275L18.1352 7.91683L1.25037 7.91683C0.963049 7.91683 0.687498 8.03097 0.484333 8.23413C0.28117 8.43729 0.167034 8.71284 0.167034 9.00016C0.167034 9.28748 0.281169 9.56303 0.484333 9.76619C0.687498 9.96936 0.963049 10.0835 1.25037 10.0835Z"
+                                            fill="black" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper Proffesional px-2 py-7">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div data-aos="fade-left" data-aos-duration="400">
+                            <div
+                                class="p-5 bg-white border-white border rounded-3xl shadow-[0px_4px_20px_rgba(0,0,0,0.08)] 2xl:max-w-[560px] 2xl:max-h-[270px] md:max-w-[570px] md:max-h-[285px] max-w-[300px] md:mx-0 w-full h-full md:block flex mx-auto">
+                                <div class="grid md:grid-cols-3 grid-cols-1">
+                                    <div class="flex justify-center lg:mb-0 mb-3">
+                                        <div class="md:w-full md:h-full w-[200px] h-[230px]">
+                                            <img src="img/finance/floyd-miles.png" alt="finance"
+                                                class="w-full h-full rounded-xl" />
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="col-span-2 flex flex-col justify-between md:text-left text-center md:pl-5">
+                                        <h5 class="text-[24px] font-bold">Floyd Miles</h5>
+                                        <div class="text-cobaltblue text-[18px] font-semibold">
+                                            User Researcher
+                                        </div>
+                                        <p class="text-[16px] text-black opacity-50 2xl:my-0 my-2">
+                                            Providing insight-driven transformation to investment
+                                            banks, wealth and asset managers, exchanges,
+                                        </p>
+                                        <div class="flex gap-4 md:justify-start justify-center">
+                                            <a href="javascript:void(0)"
+                                                class="bg-white w-8 h-8 flex justify-center items-center rounded-md shadow-[0px_2px_6px_rgba(0,0,0,0.08)] group hover:bg-cobaltblue">
+                                                <div class="w-[9px] h-[18px]">
+                                                    <svg viewBox="0 0 9 18" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            class="fill-[#3C5A9A] group-hover:fill-white transition duration-500"
+                                                            d="M5.84172 17.9977V9.78892H8.4952L8.89246 6.58983H5.84172V4.54731C5.84172 3.62112 6.08944 2.98987 7.3686 2.98987L9 2.98909V0.127873C8.71772 0.0890279 7.74938 0.00195312 6.62278 0.00195312C4.27066 0.00195312 2.66034 1.49274 2.66034 4.23064V6.58992H0V9.78901H2.66026V17.9978L5.84172 17.9977Z"
+                                                            fill="#3C5A9A" />
+                                                    </svg>
+                                                </div>
+                                            </a>
+                                            <a href="javascript:void(0)"
+                                                class="bg-white w-8 h-8 flex justify-center items-center rounded-md shadow-[0px_2px_6px_rgba(0,0,0,0.08)] group hover:bg-cobaltblue">
+                                                <div class="w-[15px] h-[14px]">
+                                                    <svg viewBox="0 0 15 14" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            class="fill-[#03A9F4] group-hover:fill-white transition duration-500"
+                                                            d="M15 2.31769C14.4358 2.56378 13.839 2.72734 13.2281 2.80331C13.8719 2.4214 14.3532 1.81665 14.5809 1.10363C13.9781 1.46113 13.3186 1.71288 12.6309 1.848C12.2093 1.39779 11.662 1.0848 11.0601 0.949683C10.4583 0.814566 9.82973 0.863573 9.2561 1.09034C8.68247 1.3171 8.1903 1.71114 7.84352 2.22125C7.49675 2.73137 7.3114 3.33399 7.31156 3.95081C7.31156 4.19456 7.33219 4.42894 7.38281 4.65206C6.15945 4.59208 4.96252 4.27458 3.87028 3.7203C2.77804 3.16602 1.81509 2.38745 1.04437 1.4355C0.649518 2.11224 0.527446 2.91404 0.703016 3.67763C0.878585 4.44122 1.33859 5.10918 1.98937 5.5455C1.50259 5.53245 1.02607 5.40255 0.6 5.16675V5.2005C0.600816 5.91059 0.846249 6.59872 1.29498 7.14906C1.74372 7.69939 2.36836 8.07832 3.06375 8.22206C2.80067 8.2914 2.52955 8.32544 2.2575 8.32331C2.06211 8.32679 1.86692 8.30919 1.67531 8.27081C1.87401 8.88115 2.25702 9.41488 2.77162 9.79852C3.28622 10.1822 3.90709 10.3968 4.54875 10.413C3.46026 11.2643 2.11779 11.7261 0.735938 11.7246C0.48375 11.7246 0.241875 11.7133 0 11.6824C1.40614 12.5885 3.0447 13.0678 4.7175 13.0624C10.3763 13.0624 13.47 8.37488 13.47 4.31175C13.47 4.17581 13.4653 4.04456 13.4587 3.91425C14.0653 3.48018 14.5876 2.93914 15 2.31769Z"
+                                                            fill="#03A9F4" />
+                                                    </svg>
+                                                </div>
+                                            </a>
+                                            <a href="javascript:void(0)"
+                                                class="bg-white w-8 h-8 flex justify-center items-center rounded-md shadow-[0px_2px_6px_rgba(0,0,0,0.08)] group hover:bg-cobaltblue">
+                                                <div class="w-[13px] h-[13px]">
+                                                    <svg viewBox="0 0 13 13" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            class="fill=[#1976D2] group-hover:fill-white transition duration-500"
+                                                            d="M0 4.0625H2.90712V13H0V4.0625ZM10.8258 4.16731C10.7949 4.15756 10.7656 4.147 10.7331 4.13806C10.6941 4.12923 10.6548 4.12164 10.6153 4.11531C10.4437 4.08022 10.2689 4.06252 10.0937 4.0625C8.39881 4.0625 7.32387 5.29506 6.96962 5.77119V4.0625H4.0625V13H6.96962V8.125C6.96962 8.125 9.16663 5.06512 10.0937 7.3125V13H13V6.96881C12.9988 6.32705 12.7847 5.70383 12.3912 5.19684C11.9977 4.68985 11.4471 4.32775 10.8258 4.16731Z"
+                                                            fill="#1976D2" />
+                                                        <path
+                                                            class="fill=[#1976D2] group-hover:fill-white transition duration-500"
+                                                            d="M1.42188 2.84375C2.20715 2.84375 2.84375 2.20715 2.84375 1.42188C2.84375 0.636595 2.20715 0 1.42188 0C0.636595 0 0 0.636595 0 1.42188C0 2.20715 0.636595 2.84375 1.42188 2.84375Z"
+                                                            fill="#1976D2" />
+                                                    </svg>
+                                                </div>
+                                            </a>
+                                            <a href="javascript:void(0)"
+                                                class="bg-white w-8 h-8 flex justify-center items-center rounded-md shadow-[0px_2px_6px_rgba(0,0,0,0.08)] group hover:bg-cobaltblue">
+                                                <div class="w-[15px] h-[15px]">
+                                                    <svg viewBox="0 0 15 15" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <g clip-path="url(#clip0_1236_2711)">
+                                                            <path
+                                                                class="fill-[url(#paint0_linear_1236_2711)] group-hover:fill-white transition duration-500"
+                                                                d="M10.3125 0H4.6875C3.4443 0 2.25201 0.49386 1.37294 1.37294C0.49386 2.25201 0 3.4443 0 4.6875L0 10.3125C0 11.5557 0.49386 12.748 1.37294 13.6271C2.25201 14.5061 3.4443 15 4.6875 15H10.3125C11.5557 15 12.748 14.5061 13.6271 13.6271C14.5061 12.748 15 11.5557 15 10.3125V4.6875C15 3.4443 14.5061 2.25201 13.6271 1.37294C12.748 0.49386 11.5557 0 10.3125 0V0ZM13.5938 10.3125C13.5938 12.1219 12.1219 13.5938 10.3125 13.5938H4.6875C2.87812 13.5938 1.40625 12.1219 1.40625 10.3125V4.6875C1.40625 2.87812 2.87812 1.40625 4.6875 1.40625H10.3125C12.1219 1.40625 13.5938 2.87812 13.5938 4.6875V10.3125Z"
+                                                                fill="url(#paint0_linear_1236_2711)" />
+                                                            <path
+                                                                class="fill-[url(#paint0_linear_1236_2711)] group-hover:fill-white transition duration-500"
+                                                                d="M7.5 3.75C6.50544 3.75 5.55161 4.14509 4.84835 4.84835C4.14509 5.55161 3.75 6.50544 3.75 7.5C3.75 8.49456 4.14509 9.44839 4.84835 10.1517C5.55161 10.8549 6.50544 11.25 7.5 11.25C8.49456 11.25 9.44839 10.8549 10.1517 10.1517C10.8549 9.44839 11.25 8.49456 11.25 7.5C11.25 6.50544 10.8549 5.55161 10.1517 4.84835C9.44839 4.14509 8.49456 3.75 7.5 3.75ZM7.5 9.84375C6.87863 9.84301 6.28292 9.59584 5.84354 9.15646C5.40416 8.71708 5.15699 8.12137 5.15625 7.5C5.15625 6.20719 6.20812 5.15625 7.5 5.15625C8.79187 5.15625 9.84375 6.20719 9.84375 7.5C9.84375 8.79187 8.79187 9.84375 7.5 9.84375Z"
+                                                                fill="url(#paint1_linear_1236_2711)" />
+                                                            <path
+                                                                class="fill-[url(#paint0_linear_1236_2711)] group-hover:fill-white transition duration-500"
+                                                                d="M11.5312 3.96861C11.8072 3.96861 12.0309 3.7449 12.0309 3.46893C12.0309 3.19296 11.8072 2.96924 11.5312 2.96924C11.2552 2.96924 11.0315 3.19296 11.0315 3.46893C11.0315 3.7449 11.2552 3.96861 11.5312 3.96861Z"
+                                                                fill="url(#paint2_linear_1236_2711)" />
+                                                        </g>
+                                                        <defs>
+                                                            <linearGradient id="paint0_linear_1236_2711" x1="1.3725"
+                                                                y1="13.6275" x2="13.6275" y2="1.3725"
+                                                                gradientUnits="userSpaceOnUse">
+                                                                <stop stop-color="#FFC107" />
+                                                                <stop offset="0.507" stop-color="#F44336" />
+                                                                <stop offset="0.99" stop-color="#9C27B0" />
+                                                            </linearGradient>
+                                                            <linearGradient id="paint1_linear_1236_2711" x1="4.84875"
+                                                                y1="10.1512" x2="10.1512" y2="4.84875"
+                                                                gradientUnits="userSpaceOnUse">
+                                                                <stop stop-color="#FFC107" />
+                                                                <stop offset="0.507" stop-color="#F44336" />
+                                                                <stop offset="0.99" stop-color="#9C27B0" />
+                                                            </linearGradient>
+                                                            <linearGradient id="paint2_linear_1236_2711" x1="11.1777"
+                                                                y1="3.82236" x2="11.8846" y2="3.11549"
+                                                                gradientUnits="userSpaceOnUse">
+                                                                <stop stop-color="#FFC107" />
+                                                                <stop offset="0.507" stop-color="#F44336" />
+                                                                <stop offset="0.99" stop-color="#9C27B0" />
+                                                            </linearGradient>
+                                                            <clipPath id="clip0_1236_2711">
+                                                                <rect width="15" height="15" fill="white" />
+                                                            </clipPath>
+                                                        </defs>
+                                                    </svg>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div data-aos="fade-left" data-aos-duration="400">
+                            <div
+                                class="p-5 bg-white border-white border rounded-3xl shadow-[0px_4px_20px_rgba(0,0,0,0.08)] 2xl:max-w-[560px] 2xl:max-h-[270px] md:max-w-[570px] md:max-h-[285px] max-w-[300px] md:mx-0 w-full h-full md:block flex mx-auto">
+                                <div class="grid md:grid-cols-3 grid-cols-1">
+                                    <div class="flex justify-center lg:mb-0 mb-3">
+                                        <div class="md:w-full md:h-full w-[200px] h-[230px]">
+                                            <img src="img/finance/marvin-mackinney.png" alt="finance"
+                                                class="w-full h-full rounded-xl" />
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="col-span-2 flex flex-col justify-between md:text-left text-center md:pl-5">
+                                        <h5 class="text-[24px] font-bold">Marvin McKinney</h5>
+                                        <div class="text-cobaltblue text-[18px] font-semibold">
+                                            Business Advisor
+                                        </div>
+                                        <p class="text-[16px] text-black opacity-50 2xl:my-0 my-2">
+                                            Providing insight-driven transformation to investment
+                                            banks, wealth and asset managers, exchanges,
+                                        </p>
+                                        <div class="flex gap-4 md:justify-start justify-center">
+                                            <a href="javascript:void(0)"
+                                                class="bg-white w-8 h-8 flex justify-center items-center rounded-md shadow-[0px_2px_6px_rgba(0,0,0,0.08)] group hover:bg-cobaltblue">
+                                                <div class="w-[9px] h-[18px]">
+                                                    <svg viewBox="0 0 9 18" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            class="fill-[#3C5A9A] group-hover:fill-white transition duration-500"
+                                                            d="M5.84172 17.9977V9.78892H8.4952L8.89246 6.58983H5.84172V4.54731C5.84172 3.62112 6.08944 2.98987 7.3686 2.98987L9 2.98909V0.127873C8.71772 0.0890279 7.74938 0.00195312 6.62278 0.00195312C4.27066 0.00195312 2.66034 1.49274 2.66034 4.23064V6.58992H0V9.78901H2.66026V17.9978L5.84172 17.9977Z"
+                                                            fill="#3C5A9A" />
+                                                    </svg>
+                                                </div>
+                                            </a>
+                                            <a href="javascript:void(0)"
+                                                class="bg-white w-8 h-8 flex justify-center items-center rounded-md shadow-[0px_2px_6px_rgba(0,0,0,0.08)] group hover:bg-cobaltblue">
+                                                <div class="w-[15px] h-[14px]">
+                                                    <svg viewBox="0 0 15 14" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            class="fill-[#03A9F4] group-hover:fill-white transition duration-500"
+                                                            d="M15 2.31769C14.4358 2.56378 13.839 2.72734 13.2281 2.80331C13.8719 2.4214 14.3532 1.81665 14.5809 1.10363C13.9781 1.46113 13.3186 1.71288 12.6309 1.848C12.2093 1.39779 11.662 1.0848 11.0601 0.949683C10.4583 0.814566 9.82973 0.863573 9.2561 1.09034C8.68247 1.3171 8.1903 1.71114 7.84352 2.22125C7.49675 2.73137 7.3114 3.33399 7.31156 3.95081C7.31156 4.19456 7.33219 4.42894 7.38281 4.65206C6.15945 4.59208 4.96252 4.27458 3.87028 3.7203C2.77804 3.16602 1.81509 2.38745 1.04437 1.4355C0.649518 2.11224 0.527446 2.91404 0.703016 3.67763C0.878585 4.44122 1.33859 5.10918 1.98937 5.5455C1.50259 5.53245 1.02607 5.40255 0.6 5.16675V5.2005C0.600816 5.91059 0.846249 6.59872 1.29498 7.14906C1.74372 7.69939 2.36836 8.07832 3.06375 8.22206C2.80067 8.2914 2.52955 8.32544 2.2575 8.32331C2.06211 8.32679 1.86692 8.30919 1.67531 8.27081C1.87401 8.88115 2.25702 9.41488 2.77162 9.79852C3.28622 10.1822 3.90709 10.3968 4.54875 10.413C3.46026 11.2643 2.11779 11.7261 0.735938 11.7246C0.48375 11.7246 0.241875 11.7133 0 11.6824C1.40614 12.5885 3.0447 13.0678 4.7175 13.0624C10.3763 13.0624 13.47 8.37488 13.47 4.31175C13.47 4.17581 13.4653 4.04456 13.4587 3.91425C14.0653 3.48018 14.5876 2.93914 15 2.31769Z"
+                                                            fill="#03A9F4" />
+                                                    </svg>
+                                                </div>
+                                            </a>
+                                            <a href="javascript:void(0)"
+                                                class="bg-white w-8 h-8 flex justify-center items-center rounded-md shadow-[0px_2px_6px_rgba(0,0,0,0.08)] group hover:bg-cobaltblue">
+                                                <div class="w-[13px] h-[13px]">
+                                                    <svg viewBox="0 0 13 13" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            class="fill=[#1976D2] group-hover:fill-white transition duration-500"
+                                                            d="M0 4.0625H2.90712V13H0V4.0625ZM10.8258 4.16731C10.7949 4.15756 10.7656 4.147 10.7331 4.13806C10.6941 4.12923 10.6548 4.12164 10.6153 4.11531C10.4437 4.08022 10.2689 4.06252 10.0937 4.0625C8.39881 4.0625 7.32387 5.29506 6.96962 5.77119V4.0625H4.0625V13H6.96962V8.125C6.96962 8.125 9.16663 5.06512 10.0937 7.3125V13H13V6.96881C12.9988 6.32705 12.7847 5.70383 12.3912 5.19684C11.9977 4.68985 11.4471 4.32775 10.8258 4.16731Z"
+                                                            fill="#1976D2" />
+                                                        <path
+                                                            class="fill=[#1976D2] group-hover:fill-white transition duration-500"
+                                                            d="M1.42188 2.84375C2.20715 2.84375 2.84375 2.20715 2.84375 1.42188C2.84375 0.636595 2.20715 0 1.42188 0C0.636595 0 0 0.636595 0 1.42188C0 2.20715 0.636595 2.84375 1.42188 2.84375Z"
+                                                            fill="#1976D2" />
+                                                    </svg>
+                                                </div>
+                                            </a>
+                                            <a href="javascript:void(0)"
+                                                class="bg-white w-8 h-8 flex justify-center items-center rounded-md shadow-[0px_2px_6px_rgba(0,0,0,0.08)] group hover:bg-cobaltblue">
+                                                <div class="w-[15px] h-[15px]">
+                                                    <svg viewBox="0 0 15 15" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <g clip-path="url(#clip0_1236_2711)">
+                                                            <path
+                                                                class="fill-[url(#paint0_linear_1236_2711)] group-hover:fill-white transition duration-500"
+                                                                d="M10.3125 0H4.6875C3.4443 0 2.25201 0.49386 1.37294 1.37294C0.49386 2.25201 0 3.4443 0 4.6875L0 10.3125C0 11.5557 0.49386 12.748 1.37294 13.6271C2.25201 14.5061 3.4443 15 4.6875 15H10.3125C11.5557 15 12.748 14.5061 13.6271 13.6271C14.5061 12.748 15 11.5557 15 10.3125V4.6875C15 3.4443 14.5061 2.25201 13.6271 1.37294C12.748 0.49386 11.5557 0 10.3125 0V0ZM13.5938 10.3125C13.5938 12.1219 12.1219 13.5938 10.3125 13.5938H4.6875C2.87812 13.5938 1.40625 12.1219 1.40625 10.3125V4.6875C1.40625 2.87812 2.87812 1.40625 4.6875 1.40625H10.3125C12.1219 1.40625 13.5938 2.87812 13.5938 4.6875V10.3125Z"
+                                                                fill="url(#paint0_linear_1236_2711)" />
+                                                            <path
+                                                                class="fill-[url(#paint0_linear_1236_2711)] group-hover:fill-white transition duration-500"
+                                                                d="M7.5 3.75C6.50544 3.75 5.55161 4.14509 4.84835 4.84835C4.14509 5.55161 3.75 6.50544 3.75 7.5C3.75 8.49456 4.14509 9.44839 4.84835 10.1517C5.55161 10.8549 6.50544 11.25 7.5 11.25C8.49456 11.25 9.44839 10.8549 10.1517 10.1517C10.8549 9.44839 11.25 8.49456 11.25 7.5C11.25 6.50544 10.8549 5.55161 10.1517 4.84835C9.44839 4.14509 8.49456 3.75 7.5 3.75ZM7.5 9.84375C6.87863 9.84301 6.28292 9.59584 5.84354 9.15646C5.40416 8.71708 5.15699 8.12137 5.15625 7.5C5.15625 6.20719 6.20812 5.15625 7.5 5.15625C8.79187 5.15625 9.84375 6.20719 9.84375 7.5C9.84375 8.79187 8.79187 9.84375 7.5 9.84375Z"
+                                                                fill="url(#paint1_linear_1236_2711)" />
+                                                            <path
+                                                                class="fill-[url(#paint0_linear_1236_2711)] group-hover:fill-white transition duration-500"
+                                                                d="M11.5312 3.96861C11.8072 3.96861 12.0309 3.7449 12.0309 3.46893C12.0309 3.19296 11.8072 2.96924 11.5312 2.96924C11.2552 2.96924 11.0315 3.19296 11.0315 3.46893C11.0315 3.7449 11.2552 3.96861 11.5312 3.96861Z"
+                                                                fill="url(#paint2_linear_1236_2711)" />
+                                                        </g>
+                                                        <defs>
+                                                            <linearGradient id="paint0_linear_1236_2711" x1="1.3725"
+                                                                y1="13.6275" x2="13.6275" y2="1.3725"
+                                                                gradientUnits="userSpaceOnUse">
+                                                                <stop stop-color="#FFC107" />
+                                                                <stop offset="0.507" stop-color="#F44336" />
+                                                                <stop offset="0.99" stop-color="#9C27B0" />
+                                                            </linearGradient>
+                                                            <linearGradient id="paint1_linear_1236_2711" x1="4.84875"
+                                                                y1="10.1512" x2="10.1512" y2="4.84875"
+                                                                gradientUnits="userSpaceOnUse">
+                                                                <stop stop-color="#FFC107" />
+                                                                <stop offset="0.507" stop-color="#F44336" />
+                                                                <stop offset="0.99" stop-color="#9C27B0" />
+                                                            </linearGradient>
+                                                            <linearGradient id="paint2_linear_1236_2711" x1="11.1777"
+                                                                y1="3.82236" x2="11.8846" y2="3.11549"
+                                                                gradientUnits="userSpaceOnUse">
+                                                                <stop stop-color="#FFC107" />
+                                                                <stop offset="0.507" stop-color="#F44336" />
+                                                                <stop offset="0.99" stop-color="#9C27B0" />
+                                                            </linearGradient>
+                                                            <clipPath id="clip0_1236_2711">
+                                                                <rect width="15" height="15" fill="white" />
+                                                            </clipPath>
+                                                        </defs>
+                                                    </svg>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div data-aos="fade-left" data-aos-duration="500">
+                            <div
+                                class="p-5 bg-white border-white border rounded-3xl shadow-[0px_4px_20px_rgba(0,0,0,0.08)] 2xl:max-w-[560px] 2xl:max-h-[270px] md:max-w-[570px] md:max-h-[285px] max-w-[300px] md:mx-0 w-full h-full md:block flex mx-auto">
+                                <div class="grid md:grid-cols-3 grid-cols-1">
+                                    <div class="flex justify-center lg:mb-0 mb-3">
+                                        <div class="md:w-full md:h-full w-[200px] h-[230px]">
+                                            <img src="img/finance/devon-lane.png" alt="finance"
+                                                class="w-full h-full rounded-xl" />
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="col-span-2 flex flex-col justify-between md:text-left text-center md:pl-5">
+                                        <h5 class="text-[24px] font-bold">Devon Lane</h5>
+                                        <div class="text-cobaltblue text-[18px] font-semibold">
+                                            consulting Specialist
+                                        </div>
+                                        <p class="text-[16px] text-black opacity-50 2xl:my-0 my-2">
+                                            Providing insight-driven transformation to investment
+                                            banks, wealth and asset managers, exchanges,
+                                        </p>
+                                        <div class="flex gap-4 md:justify-start justify-center">
+                                            <a href="javascript:void(0)"
+                                                class="bg-white w-8 h-8 flex justify-center items-center rounded-md shadow-[0px_2px_6px_rgba(0,0,0,0.08)] group hover:bg-cobaltblue">
+                                                <div class="w-[9px] h-[18px]">
+                                                    <svg viewBox="0 0 9 18" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            class="fill-[#3C5A9A] group-hover:fill-white transition duration-500"
+                                                            d="M5.84172 17.9977V9.78892H8.4952L8.89246 6.58983H5.84172V4.54731C5.84172 3.62112 6.08944 2.98987 7.3686 2.98987L9 2.98909V0.127873C8.71772 0.0890279 7.74938 0.00195312 6.62278 0.00195312C4.27066 0.00195312 2.66034 1.49274 2.66034 4.23064V6.58992H0V9.78901H2.66026V17.9978L5.84172 17.9977Z"
+                                                            fill="#3C5A9A" />
+                                                    </svg>
+                                                </div>
+                                            </a>
+                                            <a href="javascript:void(0)"
+                                                class="bg-white w-8 h-8 flex justify-center items-center rounded-md shadow-[0px_2px_6px_rgba(0,0,0,0.08)] group hover:bg-cobaltblue">
+                                                <div class="w-[15px] h-[14px]">
+                                                    <svg viewBox="0 0 15 14" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            class="fill-[#03A9F4] group-hover:fill-white transition duration-500"
+                                                            d="M15 2.31769C14.4358 2.56378 13.839 2.72734 13.2281 2.80331C13.8719 2.4214 14.3532 1.81665 14.5809 1.10363C13.9781 1.46113 13.3186 1.71288 12.6309 1.848C12.2093 1.39779 11.662 1.0848 11.0601 0.949683C10.4583 0.814566 9.82973 0.863573 9.2561 1.09034C8.68247 1.3171 8.1903 1.71114 7.84352 2.22125C7.49675 2.73137 7.3114 3.33399 7.31156 3.95081C7.31156 4.19456 7.33219 4.42894 7.38281 4.65206C6.15945 4.59208 4.96252 4.27458 3.87028 3.7203C2.77804 3.16602 1.81509 2.38745 1.04437 1.4355C0.649518 2.11224 0.527446 2.91404 0.703016 3.67763C0.878585 4.44122 1.33859 5.10918 1.98937 5.5455C1.50259 5.53245 1.02607 5.40255 0.6 5.16675V5.2005C0.600816 5.91059 0.846249 6.59872 1.29498 7.14906C1.74372 7.69939 2.36836 8.07832 3.06375 8.22206C2.80067 8.2914 2.52955 8.32544 2.2575 8.32331C2.06211 8.32679 1.86692 8.30919 1.67531 8.27081C1.87401 8.88115 2.25702 9.41488 2.77162 9.79852C3.28622 10.1822 3.90709 10.3968 4.54875 10.413C3.46026 11.2643 2.11779 11.7261 0.735938 11.7246C0.48375 11.7246 0.241875 11.7133 0 11.6824C1.40614 12.5885 3.0447 13.0678 4.7175 13.0624C10.3763 13.0624 13.47 8.37488 13.47 4.31175C13.47 4.17581 13.4653 4.04456 13.4587 3.91425C14.0653 3.48018 14.5876 2.93914 15 2.31769Z"
+                                                            fill="#03A9F4" />
+                                                    </svg>
+                                                </div>
+                                            </a>
+                                            <a href="javascript:void(0)"
+                                                class="bg-white w-8 h-8 flex justify-center items-center rounded-md shadow-[0px_2px_6px_rgba(0,0,0,0.08)] group hover:bg-cobaltblue">
+                                                <div class="w-[13px] h-[13px]">
+                                                    <svg viewBox="0 0 13 13" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            class="fill=[#1976D2] group-hover:fill-white transition duration-500"
+                                                            d="M0 4.0625H2.90712V13H0V4.0625ZM10.8258 4.16731C10.7949 4.15756 10.7656 4.147 10.7331 4.13806C10.6941 4.12923 10.6548 4.12164 10.6153 4.11531C10.4437 4.08022 10.2689 4.06252 10.0937 4.0625C8.39881 4.0625 7.32387 5.29506 6.96962 5.77119V4.0625H4.0625V13H6.96962V8.125C6.96962 8.125 9.16663 5.06512 10.0937 7.3125V13H13V6.96881C12.9988 6.32705 12.7847 5.70383 12.3912 5.19684C11.9977 4.68985 11.4471 4.32775 10.8258 4.16731Z"
+                                                            fill="#1976D2" />
+                                                        <path
+                                                            class="fill=[#1976D2] group-hover:fill-white transition duration-500"
+                                                            d="M1.42188 2.84375C2.20715 2.84375 2.84375 2.20715 2.84375 1.42188C2.84375 0.636595 2.20715 0 1.42188 0C0.636595 0 0 0.636595 0 1.42188C0 2.20715 0.636595 2.84375 1.42188 2.84375Z"
+                                                            fill="#1976D2" />
+                                                    </svg>
+                                                </div>
+                                            </a>
+                                            <a href="javascript:void(0)"
+                                                class="bg-white w-8 h-8 flex justify-center items-center rounded-md shadow-[0px_2px_6px_rgba(0,0,0,0.08)] group hover:bg-cobaltblue">
+                                                <div class="w-[15px] h-[15px]">
+                                                    <svg viewBox="0 0 15 15" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <g clip-path="url(#clip0_1236_2711)">
+                                                            <path
+                                                                class="fill-[url(#paint0_linear_1236_2711)] group-hover:fill-white transition duration-500"
+                                                                d="M10.3125 0H4.6875C3.4443 0 2.25201 0.49386 1.37294 1.37294C0.49386 2.25201 0 3.4443 0 4.6875L0 10.3125C0 11.5557 0.49386 12.748 1.37294 13.6271C2.25201 14.5061 3.4443 15 4.6875 15H10.3125C11.5557 15 12.748 14.5061 13.6271 13.6271C14.5061 12.748 15 11.5557 15 10.3125V4.6875C15 3.4443 14.5061 2.25201 13.6271 1.37294C12.748 0.49386 11.5557 0 10.3125 0V0ZM13.5938 10.3125C13.5938 12.1219 12.1219 13.5938 10.3125 13.5938H4.6875C2.87812 13.5938 1.40625 12.1219 1.40625 10.3125V4.6875C1.40625 2.87812 2.87812 1.40625 4.6875 1.40625H10.3125C12.1219 1.40625 13.5938 2.87812 13.5938 4.6875V10.3125Z"
+                                                                fill="url(#paint0_linear_1236_2711)" />
+                                                            <path
+                                                                class="fill-[url(#paint0_linear_1236_2711)] group-hover:fill-white transition duration-500"
+                                                                d="M7.5 3.75C6.50544 3.75 5.55161 4.14509 4.84835 4.84835C4.14509 5.55161 3.75 6.50544 3.75 7.5C3.75 8.49456 4.14509 9.44839 4.84835 10.1517C5.55161 10.8549 6.50544 11.25 7.5 11.25C8.49456 11.25 9.44839 10.8549 10.1517 10.1517C10.8549 9.44839 11.25 8.49456 11.25 7.5C11.25 6.50544 10.8549 5.55161 10.1517 4.84835C9.44839 4.14509 8.49456 3.75 7.5 3.75ZM7.5 9.84375C6.87863 9.84301 6.28292 9.59584 5.84354 9.15646C5.40416 8.71708 5.15699 8.12137 5.15625 7.5C5.15625 6.20719 6.20812 5.15625 7.5 5.15625C8.79187 5.15625 9.84375 6.20719 9.84375 7.5C9.84375 8.79187 8.79187 9.84375 7.5 9.84375Z"
+                                                                fill="url(#paint1_linear_1236_2711)" />
+                                                            <path
+                                                                class="fill-[url(#paint0_linear_1236_2711)] group-hover:fill-white transition duration-500"
+                                                                d="M11.5312 3.96861C11.8072 3.96861 12.0309 3.7449 12.0309 3.46893C12.0309 3.19296 11.8072 2.96924 11.5312 2.96924C11.2552 2.96924 11.0315 3.19296 11.0315 3.46893C11.0315 3.7449 11.2552 3.96861 11.5312 3.96861Z"
+                                                                fill="url(#paint2_linear_1236_2711)" />
+                                                        </g>
+                                                        <defs>
+                                                            <linearGradient id="paint0_linear_1236_2711" x1="1.3725"
+                                                                y1="13.6275" x2="13.6275" y2="1.3725"
+                                                                gradientUnits="userSpaceOnUse">
+                                                                <stop stop-color="#FFC107" />
+                                                                <stop offset="0.507" stop-color="#F44336" />
+                                                                <stop offset="0.99" stop-color="#9C27B0" />
+                                                            </linearGradient>
+                                                            <linearGradient id="paint1_linear_1236_2711" x1="4.84875"
+                                                                y1="10.1512" x2="10.1512" y2="4.84875"
+                                                                gradientUnits="userSpaceOnUse">
+                                                                <stop stop-color="#FFC107" />
+                                                                <stop offset="0.507" stop-color="#F44336" />
+                                                                <stop offset="0.99" stop-color="#9C27B0" />
+                                                            </linearGradient>
+                                                            <linearGradient id="paint2_linear_1236_2711" x1="11.1777"
+                                                                y1="3.82236" x2="11.8846" y2="3.11549"
+                                                                gradientUnits="userSpaceOnUse">
+                                                                <stop stop-color="#FFC107" />
+                                                                <stop offset="0.507" stop-color="#F44336" />
+                                                                <stop offset="0.99" stop-color="#9C27B0" />
+                                                            </linearGradient>
+                                                            <clipPath id="clip0_1236_2711">
+                                                                <rect width="15" height="15" fill="white" />
+                                                            </clipPath>
+                                                        </defs>
+                                                    </svg>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div data-aos="fade-left" data-aos-duration="600">
+                            <div
+                                class="p-5 bg-white border-white border rounded-3xl shadow-[0px_4px_20px_rgba(0,0,0,0.08)] 2xl:max-w-[560px] 2xl:max-h-[270px] md:max-w-[570px] md:max-h-[285px] max-w-[300px] md:mx-0 w-full h-full md:block flex mx-auto">
+                                <div class="grid md:grid-cols-3 grid-cols-1">
+                                    <div class="flex justify-center lg:mb-0 mb-3">
+                                        <div class="md:w-full md:h-full w-[200px] h-[230px]">
+                                            <img src="img/finance/floyd-miles.png" alt="finance"
+                                                class="w-full h-full rounded-xl" />
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="col-span-2 flex flex-col justify-between md:text-left text-center md:pl-5">
+                                        <h5 class="text-[24px] font-bold">Floyd Miles</h5>
+                                        <div class="text-cobaltblue text-[18px] font-semibold">
+                                            User Researcher
+                                        </div>
+                                        <p class="text-[16px] text-black opacity-50 2xl:my-0 my-2">
+                                            Providing insight-driven transformation to investment
+                                            banks, wealth and asset managers, exchanges,
+                                        </p>
+                                        <div class="flex gap-4 md:justify-start justify-center">
+                                            <a href="javascript:void(0)"
+                                                class="bg-white w-8 h-8 flex justify-center items-center rounded-md shadow-[0px_2px_6px_rgba(0,0,0,0.08)] group hover:bg-cobaltblue">
+                                                <div class="w-[9px] h-[18px]">
+                                                    <svg viewBox="0 0 9 18" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            class="fill-[#3C5A9A] group-hover:fill-white transition duration-500"
+                                                            d="M5.84172 17.9977V9.78892H8.4952L8.89246 6.58983H5.84172V4.54731C5.84172 3.62112 6.08944 2.98987 7.3686 2.98987L9 2.98909V0.127873C8.71772 0.0890279 7.74938 0.00195312 6.62278 0.00195312C4.27066 0.00195312 2.66034 1.49274 2.66034 4.23064V6.58992H0V9.78901H2.66026V17.9978L5.84172 17.9977Z"
+                                                            fill="#3C5A9A" />
+                                                    </svg>
+                                                </div>
+                                            </a>
+                                            <a href="javascript:void(0)"
+                                                class="bg-white w-8 h-8 flex justify-center items-center rounded-md shadow-[0px_2px_6px_rgba(0,0,0,0.08)] group hover:bg-cobaltblue">
+                                                <div class="w-[15px] h-[14px]">
+                                                    <svg viewBox="0 0 15 14" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            class="fill-[#03A9F4] group-hover:fill-white transition duration-500"
+                                                            d="M15 2.31769C14.4358 2.56378 13.839 2.72734 13.2281 2.80331C13.8719 2.4214 14.3532 1.81665 14.5809 1.10363C13.9781 1.46113 13.3186 1.71288 12.6309 1.848C12.2093 1.39779 11.662 1.0848 11.0601 0.949683C10.4583 0.814566 9.82973 0.863573 9.2561 1.09034C8.68247 1.3171 8.1903 1.71114 7.84352 2.22125C7.49675 2.73137 7.3114 3.33399 7.31156 3.95081C7.31156 4.19456 7.33219 4.42894 7.38281 4.65206C6.15945 4.59208 4.96252 4.27458 3.87028 3.7203C2.77804 3.16602 1.81509 2.38745 1.04437 1.4355C0.649518 2.11224 0.527446 2.91404 0.703016 3.67763C0.878585 4.44122 1.33859 5.10918 1.98937 5.5455C1.50259 5.53245 1.02607 5.40255 0.6 5.16675V5.2005C0.600816 5.91059 0.846249 6.59872 1.29498 7.14906C1.74372 7.69939 2.36836 8.07832 3.06375 8.22206C2.80067 8.2914 2.52955 8.32544 2.2575 8.32331C2.06211 8.32679 1.86692 8.30919 1.67531 8.27081C1.87401 8.88115 2.25702 9.41488 2.77162 9.79852C3.28622 10.1822 3.90709 10.3968 4.54875 10.413C3.46026 11.2643 2.11779 11.7261 0.735938 11.7246C0.48375 11.7246 0.241875 11.7133 0 11.6824C1.40614 12.5885 3.0447 13.0678 4.7175 13.0624C10.3763 13.0624 13.47 8.37488 13.47 4.31175C13.47 4.17581 13.4653 4.04456 13.4587 3.91425C14.0653 3.48018 14.5876 2.93914 15 2.31769Z"
+                                                            fill="#03A9F4" />
+                                                    </svg>
+                                                </div>
+                                            </a>
+                                            <a href="javascript:void(0)"
+                                                class="bg-white w-8 h-8 flex justify-center items-center rounded-md shadow-[0px_2px_6px_rgba(0,0,0,0.08)] group hover:bg-cobaltblue">
+                                                <div class="w-[13px] h-[13px]">
+                                                    <svg viewBox="0 0 13 13" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            class="fill=[#1976D2] group-hover:fill-white transition duration-500"
+                                                            d="M0 4.0625H2.90712V13H0V4.0625ZM10.8258 4.16731C10.7949 4.15756 10.7656 4.147 10.7331 4.13806C10.6941 4.12923 10.6548 4.12164 10.6153 4.11531C10.4437 4.08022 10.2689 4.06252 10.0937 4.0625C8.39881 4.0625 7.32387 5.29506 6.96962 5.77119V4.0625H4.0625V13H6.96962V8.125C6.96962 8.125 9.16663 5.06512 10.0937 7.3125V13H13V6.96881C12.9988 6.32705 12.7847 5.70383 12.3912 5.19684C11.9977 4.68985 11.4471 4.32775 10.8258 4.16731Z"
+                                                            fill="#1976D2" />
+                                                        <path
+                                                            class="fill=[#1976D2] group-hover:fill-white transition duration-500"
+                                                            d="M1.42188 2.84375C2.20715 2.84375 2.84375 2.20715 2.84375 1.42188C2.84375 0.636595 2.20715 0 1.42188 0C0.636595 0 0 0.636595 0 1.42188C0 2.20715 0.636595 2.84375 1.42188 2.84375Z"
+                                                            fill="#1976D2" />
+                                                    </svg>
+                                                </div>
+                                            </a>
+                                            <a href="javascript:void(0)"
+                                                class="bg-white w-8 h-8 flex justify-center items-center rounded-md shadow-[0px_2px_6px_rgba(0,0,0,0.08)] group hover:bg-cobaltblue">
+                                                <div class="w-[15px] h-[15px]">
+                                                    <svg viewBox="0 0 15 15" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <g clip-path="url(#clip0_1236_2711)">
+                                                            <path
+                                                                class="fill-[url(#paint0_linear_1236_2711)] group-hover:fill-white transition duration-500"
+                                                                d="M10.3125 0H4.6875C3.4443 0 2.25201 0.49386 1.37294 1.37294C0.49386 2.25201 0 3.4443 0 4.6875L0 10.3125C0 11.5557 0.49386 12.748 1.37294 13.6271C2.25201 14.5061 3.4443 15 4.6875 15H10.3125C11.5557 15 12.748 14.5061 13.6271 13.6271C14.5061 12.748 15 11.5557 15 10.3125V4.6875C15 3.4443 14.5061 2.25201 13.6271 1.37294C12.748 0.49386 11.5557 0 10.3125 0V0ZM13.5938 10.3125C13.5938 12.1219 12.1219 13.5938 10.3125 13.5938H4.6875C2.87812 13.5938 1.40625 12.1219 1.40625 10.3125V4.6875C1.40625 2.87812 2.87812 1.40625 4.6875 1.40625H10.3125C12.1219 1.40625 13.5938 2.87812 13.5938 4.6875V10.3125Z"
+                                                                fill="url(#paint0_linear_1236_2711)" />
+                                                            <path
+                                                                class="fill-[url(#paint0_linear_1236_2711)] group-hover:fill-white transition duration-500"
+                                                                d="M7.5 3.75C6.50544 3.75 5.55161 4.14509 4.84835 4.84835C4.14509 5.55161 3.75 6.50544 3.75 7.5C3.75 8.49456 4.14509 9.44839 4.84835 10.1517C5.55161 10.8549 6.50544 11.25 7.5 11.25C8.49456 11.25 9.44839 10.8549 10.1517 10.1517C10.8549 9.44839 11.25 8.49456 11.25 7.5C11.25 6.50544 10.8549 5.55161 10.1517 4.84835C9.44839 4.14509 8.49456 3.75 7.5 3.75ZM7.5 9.84375C6.87863 9.84301 6.28292 9.59584 5.84354 9.15646C5.40416 8.71708 5.15699 8.12137 5.15625 7.5C5.15625 6.20719 6.20812 5.15625 7.5 5.15625C8.79187 5.15625 9.84375 6.20719 9.84375 7.5C9.84375 8.79187 8.79187 9.84375 7.5 9.84375Z"
+                                                                fill="url(#paint1_linear_1236_2711)" />
+                                                            <path
+                                                                class="fill-[url(#paint0_linear_1236_2711)] group-hover:fill-white transition duration-500"
+                                                                d="M11.5312 3.96861C11.8072 3.96861 12.0309 3.7449 12.0309 3.46893C12.0309 3.19296 11.8072 2.96924 11.5312 2.96924C11.2552 2.96924 11.0315 3.19296 11.0315 3.46893C11.0315 3.7449 11.2552 3.96861 11.5312 3.96861Z"
+                                                                fill="url(#paint2_linear_1236_2711)" />
+                                                        </g>
+                                                        <defs>
+                                                            <linearGradient id="paint0_linear_1236_2711" x1="1.3725"
+                                                                y1="13.6275" x2="13.6275" y2="1.3725"
+                                                                gradientUnits="userSpaceOnUse">
+                                                                <stop stop-color="#FFC107" />
+                                                                <stop offset="0.507" stop-color="#F44336" />
+                                                                <stop offset="0.99" stop-color="#9C27B0" />
+                                                            </linearGradient>
+                                                            <linearGradient id="paint1_linear_1236_2711" x1="4.84875"
+                                                                y1="10.1512" x2="10.1512" y2="4.84875"
+                                                                gradientUnits="userSpaceOnUse">
+                                                                <stop stop-color="#FFC107" />
+                                                                <stop offset="0.507" stop-color="#F44336" />
+                                                                <stop offset="0.99" stop-color="#9C27B0" />
+                                                            </linearGradient>
+                                                            <linearGradient id="paint2_linear_1236_2711" x1="11.1777"
+                                                                y1="3.82236" x2="11.8846" y2="3.11549"
+                                                                gradientUnits="userSpaceOnUse">
+                                                                <stop stop-color="#FFC107" />
+                                                                <stop offset="0.507" stop-color="#F44336" />
+                                                                <stop offset="0.99" stop-color="#9C27B0" />
+                                                            </linearGradient>
+                                                            <clipPath id="clip0_1236_2711">
+                                                                <rect width="15" height="15" fill="white" />
+                                                            </clipPath>
+                                                        </defs>
+                                                    </svg>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--END: Proffesional-->
+
+        <!--START: Numerical-->
+        <section class="overflow-hidden">
+            <div
+                class="bg-[url(img/finance/number-buliding-img.png)] bg-norepeat object-cover w-full h-full z-10 relative before:content:[''] before:absolute before:bg-black before:opacity-90 before:w-full before:h-full before:-z-10">
+                <div class="container">
+                    <div
+                        class="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 md:gap-0 gap-3 w-full h-full 2xl:py-36 lg:py-20 py-14">
+                        <div class="text-center md:mb-0 mb-3" data-aos="flip-left" data-aos-duration="700">
+                            <div class="flex justify-center items-center lg:mt-5 2xl:mb-8 lg:mb-5 mb-2">
+                                <div class="xl:w-[80px] xl:h-[80px] w-[60px] h-[60px]">
+                                    <img src="img/icons/time-clients (1).svg" alt="finance"
+                                        class="w-full h-full object-contain" />
+                                </div>
+                            </div>
+                            <h5
+                                class="text-white font-bold xl:text-[48px] lg:text-[40px] md:text-[30px] text-[27px] 2xl:mb-5 mb-2">
+                                14000+</h5>
+                            <div
+                                class="text-cobaltblue font-extrabold xl:text-[24px] md:text-[20px] text-[17px] 2xl:tracking-[3px] xl:tracking-[1px]">
+                                ALL TIME CLIENTS
+                            </div>
+                        </div>
+                        <div class="text-center md:mb-0 mb-3" data-aos="flip-left" data-aos-duration="700">
+                            <div class="flex justify-center items-center lg:mt-5 2xl:mb-8 lg:mb-5 mb-2">
+                                <div class="xl:w-[50px] xl:h-[80px] w-[40px] h-[60px]">
+                                    <img src="img/icons/time-clients (2).svg" alt="finance"
+                                        class="w-full h-full object-contain" />
+                                </div>
+                            </div>
+                            <h5
+                                class="text-white font-bold xl:text-[48px] lg:text-[40px] md:text-[30px] text-[27px] 2xl:mb-5 mb-2">
+                                1000</h5>
+                            <div
+                                class="text-cobaltblue font-extrabold xl:text-[24px] md:text-[20px] text-[17px] 2xl:tracking-[3px] xl:tracking-[1px]">
+                                CLIENTS IN THIS YEAR
+                            </div>
+                        </div>
+                        <div class="text-center lg:mt-0 md:mt-10 md:mb-0 mb-3" data-aos="flip-left"
+                            data-aos-duration="700">
+                            <div class="flex justify-center items-center lg:mt-5 2xl:mb-8 lg:mb-5 mb-2">
+                                <div class="xl:w-[80px] xl:h-[80px] w-[60px] h-[60px]">
+                                    <img src="img/icons/time-clients (3).svg" alt="finance"
+                                        class="w-full h-full object-contain" />
+                                </div>
+                            </div>
+                            <h5
+                                class="text-white font-bold xl:text-[48px] lg:text-[40px] md:text-[30px] text-[27px] 2xl:mb-5 mb-2">
+                                200</h5>
+                            <div
+                                class="text-cobaltblue font-extrabold xl:text-[24px] md:text-[20px] text-[17px] 2xl:tracking-[3px] xl:tracking-[1px]">
+                                NEW PROJECTS
+                            </div>
+                        </div>
+                        <div class="text-center lg:mt-0 md:mt-10" data-aos="flip-left" data-aos-duration="700">
+                            <div class="flex justify-center items-start lg:mt-5 2xl:mb-8 lg:mb-5 mb-2">
+                                <div class="xl:w-[80px] xl:h-[80px] w-[60px] h-[60px]">
+                                    <img src="img/icons/time-clients (4).svg" alt="finance"
+                                        class="w-full h-full object-contain" />
+                                </div>
+                            </div>
+                            <h5
+                                class="text-white font-bold xl:text-[48px] lg:text-[40px] md:text-[30px] text-[27px] 2xl:mb-5 mb-2">
+                                40%</h5>
+                            <div
+                                class="text-cobaltblue font-extrabold xl:text-[24px] md:text-[20px] text-[17px] 2xl:tracking-[3px] xl:tracking-[1px]">
+                                AVG PROFIT INCREASED
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--END: Numerical-->
+
+        <!--START: Annual-->
+        <section class="overflow-hidden 2xl:mt-36 lg:mt-20 mt-14">
+            <div class="container">
+                <div class="grid lg:grid-cols-2 grid-cols-1">
+                    <div data-aos="fade-right" data-aos-duration="700">
+                        <h5
+                            class="relative before:absolute before:cotent:[''] before:w-[6px] before:h-[6px] before:bg-cobaltblue 2xl:before:top-[14px] before:rounded-full
+                             xl:before:top-[12px] md:before:top-[10px] before:top-[9px] 2xl:mt-14 2xl:mb-8 xl:mb-6 lg:mb-3 lg:mt-5 mb-2">
+                            <span
+                                class="text-cobaltblue font-bold 2xl:text-[24px] 2xl:tracking-[4px] md:text-[20px] text-[18px] md:tracking-[2px] ml-4">ANNUAL
+                                STATS</span>
+                        </h5>
+                        <h3
+                            class="font-bold 2xl:text-[48px] 2xl:leading-[60px] md:text-[35px] text-[32px] 2xl:mb-10 xl:mb-6 lg:mb-4 mb-2">
+                            Why Choose Us?
+                        </h3>
+                        <p
+                            class="opacity-70 2xl:text-[24px] 2xl:leading-[40px] md:text-[21px] text-[18px] lg:leading-[30px] 2xl:mb-10 lg:mb-6 mb-3">
+                            A wonderful serenity has taken possession of my entire soul,
+                            like these sweet mornings of spring which I enjoy with my whole
+                        </p>
+                        <ul>
+                            <li
+                                class="font-bold relative before:absolute before:cotent:[''] before:w-2 before:h-2 before:bg-cobaltblue before:-left-6 before:rounded-full xl:text-[24px] md:text-[20px] text-[18px] xl:before:top-[14px] before:top-[10px] xl:mb-7 lg:mb-4 mb-2 ml-7">
+                                Premium services and beyond your expectation
+                            </li>
+                            <li
+                                class="font-bold relative before:absolute before:cotent:[''] before:w-2 before:h-2 before:bg-cobaltblue before:-left-6 before:rounded-full xl:text-[24px] md:text-[20px] text-[18px] xl:before:top-[14px] before:top-[10px] xl:mb-7 lg:mb-4 mb-2 ml-7">
+                                Get the best support among all venders
+                            </li>
+                            <li
+                                class="font-bold relative before:absolute before:cotent:[''] before:w-2 before:h-2 before:bg-cobaltblue before:-left-6 before:rounded-full xl:text-[24px] md:text-[20px] text-[18px] xl:before:top-[14px] before:top-[10px] xl:mb-7 lg:mb-4 mb-2 ml-7">
+                                Great Price Competitive
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="lg:mt-0 mt-5" data-aos="fade-left" data-aos-duration="700">
+                        <div class="relative flex items-start lg:shadow-[55px_55px_5px_rgba(244,248,255,0.5)] after:absolute after:bg-[#F4F8FF] after:blur-[17px] after:content-['']
+                             after:h-[30px] after:w-full after:bottom-[-10px] after:left-0 after:z-20 before:absolute before:bg-[#F4F8FF] before:blur-[20px] before:content-['']
+                              before:h-full before:w-[30px] before:top-0 before:right-[-5px] before:z-20">
+                            <div class="md:h-full h-[300px]">
+                                <img src="img/finance/annual-stats.png" alt="finance"
+                                    class="w-full h-full md:object-contain" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 2xl:my-36 lg:my-24 my-10">
+                    <div class="flex justify-center items-center lg:py-0 md:py-10 py-7" data-aos="fade-up"
+                        data-aos-duration="500">
+                        <div class="xl:w-[250px] xl:h-[60px] w-[180px] h-[60px]">
+                            <img src="img/finance/logotype.png" alt="finance" class="w-full h-full object-contain" />
+                        </div>
+                    </div>
+                    <div class="flex justify-center items-center lg:py-0 md:py-10 py-7" data-aos="fade-up"
+                        data-aos-duration="600">
+                        <div class="xl:w-[180px] xl:h-[60px] w-[140px] h-[60px]">
+                            <img src="img/finance/mondi.png" alt="finance" class="w-full h-full object-contain" />
+                        </div>
+                    </div>
+                    <div class="flex justify-center items-center lg:py-0 md:py-10 py-7" data-aos="fade-up"
+                        data-aos-duration="700">
+                        <div class="xl:w-[260px] xl:h-[60px] w-[180px] h-[60px]">
+                            <img src="img/finance/turbologo.png" alt="finance" class="w-full h-full object-contain" />
+                        </div>
+                    </div>
+                    <div class="flex justify-center items-center lg:py-0 md:py-10 py-7" data-aos="fade-up"
+                        data-aos-duration="800">
+                        <div class="xl:w-[180px] xl:h-[70px] w-[150px] h-[70px]">
+                            <img src="img/finance/business.png" alt="finance" class="w-full h-full object-contain" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--END: Annual-->
+
+        <!--START: Form-->
+        <section class="mb-10 overflow-hidden">
+            <div
+                class="bg-[url(img/finance/form-bg.png)] bg-norepeat object-cover w-full h-full z-10 relative before:content:[''] before:absolute before:bg-black before:opacity-90 before:w-full before:h-full before:-z-10">
+                <div class="container">
+                    <div
+                        class="grid md:grid-cols-2 grid-col-1 items-center lg:py-24 md:py-10 py-5 gap-3 max-w-5xl mx-auto">
+                        <div class="text-left md:text-right" data-aos="fade-right" data-aos-duration="700">
+                            <div
+                                class="font-semibold text-white 2xl:max-w-sm lg:max-w-md xl:text-[64px] lg:text-[55px] text-[45px] lg:mr-0 md:mr-7">
+                                Request<br />
+                                a call back
+                            </div>
+                        </div>
+                        <div class="md:mt-0 mt-10" data-aos="fade-left" data-aos-duration="700">
+                            <div class="text-white mb-5 xl:text-[34px] lg:text-[28px] text-[24px]">
+                                Fill the
+                                form:</div>
+                            <div class="mb-7">
+                                <input type="text" placeholder="Name"
+                                    class="w-full rounded-xl placeholder:text-[18px] placeholder:text-black placeholder:opacity-60 xl:max-w-md lg:max-w-sm md:max-w-xs xl:p-4 p-3" />
+                            </div>
+                            <div class="mb-7">
+                                <input type="text" placeholder="Phone"
+                                    class="w-full rounded-xl placeholder:text-[18px] placeholder:text-black placeholder:opacity-60 xl:max-w-md lg:max-w-sm md:max-w-xs xl:p-4 p-3" />
+                            </div>
+                            <div>
+                                <a href="javascript:void(0)"
+                                    class="bg-cobaltblue border-2 border-cobaltblue text-white text-[18px] w-full max-w-[130px] text-center rounded-xl block hover:bg-transparent hover:text-white hover:border-cobaltblue hover:border-2 transition duration-500 xl:py-3 py-2">Submit</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--END: Form-->
+
+        <!--START: Start-now-->
+        <section class="overflow-hidden md:py-14 py-10">
+            <div class="container">
+                <div class="grid xl:grid-cols-2 grid-cols-1">
+                    <div
+                        class="grid md:grid-rows-2 grid-rows-1 md:grid-flow-col 2xl:gap-10 lg:gap-5 xl:max-w-full md:max-w-[700px] md:mx-auto">
+                        <div class="bg-white relative rounded-md shadow-[0_50px_100px_10px_rgba(0,0,0,0.1)] 2xl:w-[330px] 2xl:h-[330px] xl:w-[300px] xl:h-[300px] lg:w-[300px] lg:h-[300px] w-[230px] h-[230px] xl:mb-0 mb-5 mx-auto"
+                            data-aos="fade-down" data-aos-duration="500">
+                            <div class="absolute flex flex-col justify-center items-center w-full h-full">
+                                <div class="bg-cobaltblue rounded-r-full rounded-t-full flex justify-center items-center lg:w-[90px] lg:h-[90px] md:w-[80px] md:h-[80px] w-[70px] h-[70px] p-2 mb-5 shadow-[0px_10px_50px_rgba(48,41,217,0.3)]
+                                    pb-4">
+                                    <div class="md:w-[47px] md:h-[47px] w-[42px] h-[42px]">
+                                        <img src="img/icons/fi-Game.svg" alt="finance"
+                                            class="w-full h-full object-cover">
+                                    </div>
+                                </div>
+                                <div
+                                    class="font-bold md:leading-[34px] leading-[28px] font-poppins max-w-[150px] text-center lg:text-[24px] md:text-[20px] text-[20px]">
+                                    Innovative Solutions
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-white relative rounded-md shadow-[0_50px_100px_10px_rgba(0,0,0,0.1)] 2xl:w-[330px] 2xl:h-[330px] xl:w-[300px] xl:h-[300px] lg:w-[300px] lg:h-[300px] w-[230px] h-[230px] xl:mb-0 mb-5 mx-auto"
+                            data-aos="fade-up" data-aos-duration="500">
+                            <div class="absolute flex flex-col justify-center items-center w-full h-full">
+                                <div
+                                    class="bg-cobaltblue rounded-r-full rounded-t-full flex justify-center items-center lg:w-[90px] lg:h-[90px] md:w-[80px] md:h-[80px] w-[70px] h-[70px] p-2 mb-5 shadow-[0px_10px_50px_rgba(48,41,217,0.3)]">
+                                    <div class="lg:w-[47px] md:h-[36px] md:w-[40px] w-[37px] h-[28px]">
+                                        <img src="img/icons/fi-call.svg" alt="finance">
+                                    </div>
+                                </div>
+                                <div
+                                    class="font-bold md:leading-[34px] leading-[28px] font-poppins max-w-[150px] text-center lg:text-[24px] md:text-[20px] text-[20px]">
+                                    24/7 Support
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row-span-2 flex justify-center items-center xl:ml-0 md:ml-5">
+                            <div class="bg-white relative rounded-md shadow-[0_50px_100px_10px_rgba(0,0,0,0.1)] 2xl:w-[330px] 2xl:h-[330px] xl:w-[300px] xl:h-[300px] lg:w-[300px] lg:h-[300px] w-[230px] h-[230px] xl:mb-0 mb-5"
+                                data-aos="fade-left" data-aos-duration="500">
+                                <div class="absolute flex flex-col justify-center items-center w-full h-full">
+                                    <div
+                                        class="bg-cobaltblue rounded-r-full rounded-t-full flex justify-center items-center lg:w-[90px] lg:h-[90px] md:w-[80px] md:h-[80px] w-[70px] h-[70px] p-2 mb-5 shadow-[0px_10px_50px_rgba(48,41,217,0.3)]">
+                                        <div class="lg:w-[48px] md:w-[44px] md:h-[36px] w-[40px] h-[30px]">
+                                            <img src="img/icons/fi-User.svg" alt="finance">
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="font-bold md:leading-[34px] leading-[28px] font-poppins lg:max-w-[300px] max-w-[150px] text-center lg:text-[24px] md:text-[20px] text-[20px]">
+                                        Professional Team
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="flex items-center xl:justify-end lg:justify-center md:justify-center xl:ml-10 lg:ml-5 xl:mt-0 mt-10">
+                        <div data-aos="zoom-in" data-aos-duration="700">
+                            <h5
+                                class="relative before:absolute before:cotent:[''] before:w-[6px] before:h-[6px] before:bg-cobaltblue before:top-[12px] before:rounded-full lg:before:top-[14px] md:before:top-[12px] xl:my-7 my-3">
+                                <span
+                                    class="text-cobaltblue font-bold 2xl:tracking-[4px] md:tracking-[2px] lg:text-[24px] text-[20px] ml-4">Start
+                                    Now</span>
+                            </h5>
+                            <h3
+                                class="font-bold w-full xl:max-w-[430px] lg:max-w-xl max-w-xl xl:text-[48px] lg:text-[40px] md:text-[35px] text-[30px] lg:leading-[65px] md:leading-[55px] leading-[45px] lg:mb-7 md:mb-3 mb-4">
+                                Start Now & Make Your Finances Clear & Organized
+                            </h3>
+                            <p
+                                class="opacity-70 w-full leading-[30px] md:leading-[33px] 2xl:max-w-[650px] xl:max-w-lg lg:max-w-2xl max-w-xl md:text-[20px] text-[18px] lg:mb-7 lg:pb-0 pb-4">
+                                Far far away, behind the word mountains, far from the countries Vokalia and
+                                Consonantia,
+                                there live the blind texts. Separated they live in Bookmarksgrove right at the coast
+                                of
+                                the Semantics
+                            </p>
+                            <p
+                                class="opacity-70 w-full leading-[30px] md:leading-[33px] 2xl:max-w-[650px] xl:max-w-lg lg:max-w-2xl max-w-xl md:text-[20px] text-[18px]">
+                                Far far away, behind the word mountains, far from the countries Vokalia and
+                                Consonantia,
+                                there live the blind texts. Separated they live in Bookmarksgrove right at the coast
+                                of
+                                the Semantics
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--END: Start-now-->
+    </main>
+    <!--END: Main-->
+
+    <!--START: Footer-->
+    <section class="overflow-hidden">
+        <div
+            class="bg-[url(img/finance/footer-img.png)] bg-norepeat bg-cover w-full h-full z-10 relative before:content:[''] before:absolute before:bg-black before:opacity-90 before:w-full before:h-full before:-z-10">
+            <div class="container">
+                <div
+                    class="grid lg:grid-cols-4 md:grid-cols-2 gide-cols-1 xl:pt-24 lg:pt-16 pt-10 xl:pb-7 pb-5 lg:px-0 px-2">
+                    <div class="flex lg:justify-start md:justify-center">
+                        <div data-aos="fade-right">
+                            <div class="flex xl:mb-10 mb-5">
+                                <img src="img/logo/finance-blue-logo.svg" alt="finance" />
+                                <div class="text-white text-[35px] font-semibold ml-5">
+                                    <span class="text-cobaltblue">Z</span>ooa
+                                </div>
+                            </div>
+                            <p
+                                class="text-white leading-[30px] xl:max-w-[260px] lg:max-w-[220px] md:max-w-[300px] xl:mb-10 lg:mb-5 mb-5">
+                                Safira partners with businesses across every major industry to make amazing products and
+                                connect the dots between people, products.
+                            </p>
+                            <ul class="flex items-center xl:gap-7 lg:gap-4 md:gap-5 gap-3">
+                                <li>
+                                    <a href="javascript:void(0)">
+                                        <div class="xl:w-[16px] xl:h-[31px] w-[14px] h-[25px]">
+                                            <svg viewBox="0 0 16 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path class="fill-[#3C6FC1] hover:fill-white transition duration-300"
+                                                    d="M13.0501 5.7587H15.7917V1.1212C14.4643 0.983167 13.1305 0.915017 11.7959 0.917036C7.82923 0.917036 5.11673 3.33787 5.11673 7.7712V11.592H0.639648V16.7837H5.11673V30.0837H10.4834V16.7837H14.9459L15.6167 11.592H10.4834V8.28162C10.4834 6.75037 10.8917 5.7587 13.0501 5.7587Z"
+                                                    fill="#3C6FC1" />
+                                            </svg>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)">
+                                        <div class="xl:w-[33px] xl:h-[23px] w-[25px] h-[18px]">
+                                            <svg viewBox="0 0 33 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path class="fill-[#FF2E2E] hover:fill-white transition duration-300"
+                                                    d="M32.5417 8.16033C32.6139 6.07295 32.1574 4.00119 31.2147 2.13742C30.575 1.37266 29.6874 0.856576 28.7063 0.679082C24.6485 0.31089 20.574 0.15998 16.5001 0.226999C12.441 0.156938 8.38111 0.302978 4.33758 0.664499C3.53815 0.809919 2.79834 1.18489 2.20841 1.74367C0.895913 2.95408 0.75008 5.02492 0.604246 6.77492C0.39266 9.92136 0.39266 13.0785 0.604246 16.2249C0.646436 17.2099 0.793092 18.1876 1.04175 19.1416C1.21759 19.8781 1.57334 20.5596 2.07716 21.1249C2.6711 21.7133 3.42814 22.1096 4.25008 22.2624C7.39412 22.6505 10.5621 22.8113 13.7292 22.7437C18.8334 22.8166 23.3105 22.7437 28.6042 22.3353C29.4464 22.1919 30.2247 21.7951 30.8355 21.1978C31.2438 20.7894 31.5487 20.2894 31.7251 19.7395C32.2466 18.1391 32.5028 16.4642 32.4834 14.7812C32.5417 13.9645 32.5417 9.03533 32.5417 8.16033ZM13.2042 15.6562V6.62908L21.8376 11.1645C19.4167 12.5062 16.223 14.0228 13.2042 15.6562Z"
+                                                    fill="#FF2E2E" />
+                                            </svg>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)">
+                                        <div class="xl:w-[31px] xl:h-[25px] w-[25px] h-[20px]">
+                                            <svg viewBox="0 0 31 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path class="fill-[#5FD3ED] hover:fill-white transition duration-300"
+                                                    d="M30.0834 3.45791C28.9872 3.93346 27.828 4.24783 26.6418 4.39124C27.8933 3.64358 28.8311 2.46738 29.2813 1.08082C28.1053 1.78092 26.8179 2.27417 25.4751 2.53916C24.5775 1.56582 23.3823 0.917922 22.0769 0.697065C20.7715 0.476208 19.4296 0.694888 18.2619 1.31881C17.0941 1.94273 16.1664 2.9366 15.6244 4.14454C15.0823 5.35249 14.9566 6.70618 15.2667 7.99332C12.8888 7.87305 10.5628 7.25388 8.43979 6.17604C6.31676 5.0982 4.44423 3.58579 2.94383 1.73707C2.41757 2.65607 2.14105 3.69681 2.14175 4.75582C2.13988 5.7393 2.38123 6.70797 2.84431 7.5756C3.30738 8.44324 3.97782 9.1829 4.79591 9.72874C3.84505 9.70287 2.9145 9.44772 2.08341 8.98499V9.05791C2.09054 10.4359 2.57341 11.7691 3.45033 12.832C4.32726 13.895 5.54441 14.6224 6.89592 14.8912C6.37566 15.0496 5.83552 15.133 5.29175 15.1392C4.91534 15.1348 4.53986 15.1006 4.16883 15.0371C4.5537 16.2224 5.29849 17.2583 6.29957 18.0006C7.30064 18.7429 8.50821 19.1547 9.75425 19.1787C7.65017 20.8343 5.05241 21.7379 2.37508 21.7454C1.88761 21.747 1.40053 21.7178 0.916748 21.6579C3.65029 23.4229 6.83585 24.3598 10.0897 24.3558C12.335 24.3791 14.5626 23.9548 16.6421 23.1076C18.7217 22.2604 20.6116 21.0073 22.2014 19.4215C23.7913 17.8358 25.0492 15.9491 25.9017 13.8717C26.7543 11.7944 27.1843 9.56792 27.1668 7.32249C27.1668 7.07457 27.1668 6.81207 27.1668 6.54957C28.3111 5.69617 29.2981 4.64998 30.0834 3.45791Z"
+                                                    fill="#5FD3ED" />
+                                            </svg>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)">
+                                        <div class="xl:w-[31px] xl:h-[31px] w-[25px] h-[25px]">
+                                            <svg viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path class="fill-[#C189DB] hover:fill-white transition duration-300"
+                                                    d="M15.5001 11.8837C14.7848 11.8837 14.0855 12.0958 13.4908 12.4932C12.896 12.8906 12.4325 13.4554 12.1587 14.1163C11.885 14.7771 11.8134 15.5043 11.9529 16.2059C12.0925 16.9075 12.4369 17.5519 12.9427 18.0577C13.4485 18.5635 14.0929 18.908 14.7945 19.0475C15.4961 19.187 16.2233 19.1154 16.8841 18.8417C17.545 18.568 18.1098 18.1044 18.5072 17.5096C18.9046 16.9149 19.1167 16.2156 19.1167 15.5003C19.1167 15.0254 19.0232 14.5551 18.8414 14.1163C18.6597 13.6775 18.3933 13.2788 18.0575 12.943C17.7216 12.6071 17.3229 12.3407 16.8841 12.159C16.4453 11.9772 15.975 11.8837 15.5001 11.8837ZM29.9813 8.31074C29.9737 7.18456 29.7663 6.06866 29.3688 5.01491C29.0761 4.24383 28.6232 3.54359 28.04 2.96039C27.4568 2.37719 26.7566 1.92429 25.9855 1.63158C24.9318 1.23413 23.8159 1.02675 22.6897 1.01908C20.8084 0.916992 20.2542 0.916992 15.5001 0.916992C10.7459 0.916992 10.1917 0.916992 8.3105 1.01908C7.18431 1.02675 6.06842 1.23413 5.01467 1.63158C4.24359 1.92429 3.54334 2.37719 2.96014 2.96039C2.37694 3.54359 1.92404 4.24383 1.63133 5.01491C1.23388 6.06866 1.0265 7.18456 1.01883 8.31074C0.916748 10.192 0.916748 10.7462 0.916748 15.5003C0.916748 20.2545 0.916748 20.8087 1.01883 22.6899C1.03453 23.8201 1.24163 24.9394 1.63133 26.0003C1.92275 26.7679 2.37527 27.4641 2.95842 28.042C3.53911 28.6287 4.24086 29.0816 5.01467 29.3691C6.06842 29.7665 7.18431 29.9739 8.3105 29.9816C10.1917 30.0837 10.7459 30.0837 15.5001 30.0837C20.2542 30.0837 20.8084 30.0837 22.6897 29.9816C23.8159 29.9739 24.9318 29.7665 25.9855 29.3691C26.7593 29.0816 27.4611 28.6287 28.0418 28.042C28.6249 27.4641 29.0774 26.7679 29.3688 26.0003C29.7659 24.9414 29.9732 23.8208 29.9813 22.6899C30.0834 20.8087 30.0834 20.2545 30.0834 15.5003C30.0834 10.7462 30.0834 10.192 29.9813 8.31074ZM26.2772 19.9774C26.2304 20.8774 26.0383 21.7638 25.7084 22.6024C25.4253 23.302 25.0044 23.9374 24.4708 24.4711C23.9372 25.0047 23.3017 25.4256 22.6022 25.7087C21.7556 26.0202 20.8642 26.1925 19.9626 26.2191C18.8105 26.2191 18.5042 26.2191 15.5001 26.2191C12.4959 26.2191 12.1897 26.2191 11.0376 26.2191C10.1359 26.1925 9.24454 26.0202 8.398 25.7087C7.67482 25.4399 7.02174 25.0112 6.48758 24.4545C5.95918 23.9313 5.5511 23.2993 5.29175 22.6024C4.97902 21.7567 4.81138 20.8643 4.79591 19.9628C4.79591 18.8107 4.79591 18.5045 4.79591 15.5003C4.79591 12.4962 4.79591 12.1899 4.79591 11.0378C4.81138 10.1363 4.97902 9.24391 5.29175 8.39824C5.56049 7.67506 5.98923 7.02198 6.54592 6.48783C7.0714 5.96228 7.70276 5.55463 8.398 5.29199C9.24454 4.9805 10.1359 4.80813 11.0376 4.78158C12.1897 4.78158 12.4959 4.78158 15.5001 4.78158C18.5042 4.78158 18.8105 4.78158 19.9626 4.78158C20.8642 4.80813 21.7556 4.9805 22.6022 5.29199C23.3254 5.56074 23.9784 5.98948 24.5126 6.54616C25.041 7.06933 25.4491 7.70135 25.7084 8.39824C26.0199 9.24479 26.1923 10.1362 26.2188 11.0378C26.2188 12.1899 26.2188 12.4962 26.2188 15.5003C26.2188 18.5045 26.3209 18.8107 26.2772 19.9628V19.9774ZM23.9438 9.12741C23.7702 8.65634 23.4964 8.22856 23.1414 7.87355C22.7864 7.51855 22.3586 7.24479 21.8876 7.07116C21.2408 6.84696 20.5595 6.73835 19.8751 6.75033C18.7376 6.75033 18.4167 6.75033 15.5001 6.75033C12.5834 6.75033 12.2626 6.75033 11.1251 6.75033C10.4371 6.75705 9.75581 6.88542 9.11258 7.12949C8.64873 7.29524 8.22547 7.55782 7.87093 7.89979C7.5164 8.24175 7.23871 8.65526 7.05633 9.11283C6.84455 9.76232 6.74108 10.4422 6.75008 11.1253C6.75008 12.2628 6.75008 12.5837 6.75008 15.5003C6.75008 18.417 6.75008 18.7378 6.75008 19.8753C6.76454 20.5625 6.89266 21.2425 7.12925 21.8878C7.30288 22.3589 7.57664 22.7867 7.93164 23.1417C8.28664 23.4967 8.71443 23.7704 9.1855 23.9441C9.80772 24.1729 10.4625 24.3009 11.1251 24.3232C12.2626 24.3232 12.5834 24.3232 15.5001 24.3232C18.4167 24.3232 18.7376 24.3232 19.8751 24.3232C20.563 24.3165 21.2444 24.1882 21.8876 23.9441C22.3586 23.7704 22.7864 23.4967 23.1414 23.1417C23.4964 22.7867 23.7702 22.3589 23.9438 21.8878C24.1879 21.2446 24.3163 20.5633 24.323 19.8753C24.323 18.7378 24.323 18.417 24.323 15.5003C24.323 12.5837 24.323 12.2628 24.323 11.1253C24.3234 10.4367 24.1948 9.75409 23.9438 9.11283V9.12741ZM15.5001 21.0712C14.7692 21.0712 14.0455 20.927 13.3704 20.6468C12.6954 20.3667 12.0822 19.9561 11.5661 19.4386C11.0499 18.9211 10.641 18.3069 10.3626 17.6311C10.0842 16.9553 9.94191 16.2312 9.94383 15.5003C9.94384 14.3979 10.2709 13.3203 10.8837 12.4038C11.4965 11.4874 12.3674 10.7734 13.3862 10.3522C14.405 9.93096 15.5258 9.82149 16.6069 10.0376C17.6879 10.2538 18.6805 10.7858 19.459 11.5663C20.2375 12.3469 20.7669 13.3409 20.9802 14.4225C21.1935 15.5041 21.0811 16.6246 20.6572 17.6423C20.2334 18.66 19.5171 19.529 18.599 20.1394C17.681 20.7498 16.6025 21.074 15.5001 21.0712ZM21.3334 11.0232C21.011 10.9891 20.7127 10.8369 20.4959 10.5959C20.279 10.3549 20.1591 10.0422 20.1591 9.71803C20.1591 9.39386 20.279 9.08115 20.4959 8.84016C20.7127 8.59917 21.011 8.44695 21.3334 8.41283C21.6558 8.44695 21.9541 8.59917 22.171 8.84016C22.3878 9.08115 22.5078 9.39386 22.5078 9.71803C22.5078 10.0422 22.3878 10.3549 22.171 10.5959C21.9541 10.8369 21.6558 10.9891 21.3334 11.0232Z"
+                                                    fill="#C189DB" />
+                                            </svg>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="flex lg:justify-center justify-start lg:ml-0 md:ml-5 md:mt-0 mt-10"
+                        data-aos="fade-right" data-aos-delay="100">
+                        <div>
+                            <h5 class="text-white lg:text-[26px] text-[23px] font-bold xl:mb-10 md:mb-5">
+                                Contact Us
+                            </h5>
+                            <ul>
+                                <li class="mb-5">
+                                    <div class="flex">
+                                        <img src="img/icons/fi-footer-location.svg" alt="finance" />
+                                        <div class="ml-3 2xl:max-w-[225px] xl:max-w-[200px] lg:max-w-[150px]">
+                                            <div class="text-white font-bold mb-2">Our Address</div>
+                                            <a href="javascript:void(0)" class="text-white py-2">27 Division St, NY
+                                                10002, USA</a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="mb-5">
+                                    <div class="flex">
+                                        <img src="img/icons/fi-footer-a.svg" alt="finance" />
+                                        <div class="ml-3 xl:max-w-[200px] lg:max-w-[150px]">
+                                            <div class="text-white font-bold mb-2">Our Email</div>
+                                            <a href="javascript:void(0)" class="text-white py-2">zooa123@gmail.com</a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="flex">
+                                        <img src="img/icons/fi-footer-phone.svg" alt="finance" />
+                                        <div class="ml-3 xl:max-w-[200px] lg:max-w-[150px]">
+                                            <div class="text-white font-bold mb-2">Our Phone</div>
+                                            <a href="javascript:void(0)" class="text-white py-2">+8 (123) 152 25
+                                                45</a>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="flex justify-start lg:justify-center md:justify-center lg:mt-0 mt-10"
+                        data-aos="fade-right" data-aos-delay="200">
+                        <div>
+                            <h5 class="text-white lg:text-[26px] text-[23px] font-bold xl:mb-10 md:mb-5">
+                                Contact Us
+                            </h5>
+                            <div class="md:mb-7 mb-3">
+                                <div
+                                    class="text-white font-bold leading-[30px] xl:max-w-[240px] lg:max-w-[160px] md:max-w-[300px] mb-2">
+                                    Top 10:AR Apps in the History of Mobile
+                                </div>
+                                <div class="text-white opacity-80 font-bold">
+                                    MARCH 22, 2020
+                                </div>
+                            </div>
+                            <div>
+                                <div
+                                    class="text-white font-bold leading-[30px] xl:max-w-[250px] lg:max-w-[160px] md:max-w-[300px] mb-2">
+                                    Tech Conference Events 2021/2022
+                                </div>
+                                <div class="text-white opacity-80 font-bold">
+                                    MARCH 22, 2020
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex xl:justify-end md:justify-center lg:mt-0  mt-10" data-aos="fade-right"
+                        data-aos-delay="300">
+                        <div>
+                            <h5 class="text-white lg:text-[26px] text-[23px] font-bold xl:mb-10 md:mb-5">Subscribe</h5>
+                            <div>
+                                <p
+                                    class="text-white leading-[30px] xl:max-w-[280px] lg:max-w-[220px] md:max-w-[320px] mb-5">
+                                    Stay always in touch! Subscribe to our newsletter.
+                                </p>
+                                <div>
+                                    <input type="email" class="px-5 py-3 rounded-lg w-full mb-5"
+                                        placeholder="Your Email*" />
+                                    <a href="javascript:void(0)"
+                                        class="text-center py-3 bg-cobaltblue border-2 border-cobaltblue text-white rounded-lg w-full block hover:bg-transparent hover:text-white hover:border-cobaltblue hover:border-2 transition duration-500">Subscribe</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid lg:grid-cols-2 grid-cols-1 border-t border-[#919191] pt-7 xl:pb-10 pb-5">
+                    <div class="text-white lg:pl-0 md:pl-7 pl-3">
+                        Copyright © 2021 Sifara by WebGeniusLab. All Rights Reserved.
+                    </div>
+                    <div class="flex lg:justify-end justify-start gap-5 xl:mt-0 mt-5 lg:ml-0 md:ml-7 ml-3">
+                        <a href="javascript:void(0)" class="text-white">Privacy Policy</a>
+                        <a href="javascript:void(0)" class="text-white">Terms of Use</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--END: Footer-->
+
+    <!-- Script -->
+    <script src="plugins/tailwindcss/tailwindcss.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="plugins/swiper/swiper-bundle.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/finance.js"></script>
+</body>
+
+</html>

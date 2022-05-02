@@ -1,0 +1,1875 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <title>Zooa - Theme Kit</title>
+
+    <!-- AOS Animation stylesheet -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- fonts googleapis stylesheet -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+
+    <!-- font-family link -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- swiper stylesheet -->
+    <link rel="stylesheet" href="plugins/swiper/swiper-bundle.min.css">
+
+    <!-- main stylesheet -->
+    <link rel="stylesheet" href="css/main.css" />
+
+    <!-- Tailwind class base mixin -->
+    <style type="text/tailwindcss">
+        @layer utilities {
+                .bg-dodgerBlue{
+                    background-color: #18A0FB;
+                }
+				.text-theme {
+					@apply text-dodgerblue;
+				}
+
+				.btn {
+					@apply lg:py-3 py-2 lg:px-12 px-4 bg-dodgerBlue text-white rounded-md inline-flex items-center transition duration-500;
+				}
+
+				.card{
+					@apply shadow-[0_2px_10px_rgba(0,0,0,0.1)];
+				}
+
+				.btn:hover {
+					@apply opacity-80;
+				}
+
+				.btn span {
+					@apply ml-2;
+				}
+
+				.container {
+					@apply mx-auto px-4;
+				}
+
+	            .dropdown:hover .dropdown-hover\:block {
+					display: block;
+				}
+
+				.position-unset {
+					position: unset;
+				}
+
+				.scroll-header{
+					@apply bg-white text-dodgerBlue shadow-lg border-b-4 border-[#18a0fbb3];
+				}
+
+				.bg-gradient{
+					background: linear-gradient(171.81deg, rgba(148, 198, 255, 0) 12.59%, #94C6FF50 28.66%, #A995FF50 48.19%, #FF96F150 68.47%, rgba(255, 150, 241, 0) 86.08%);
+				}
+                .bg-gradient-black{
+                    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 90%);
+                }
+				.menu-icon span:first-child{
+				   transform: rotate(45deg);
+				}
+	
+				.menu-icon span:last-child{
+				   top: 0;
+				   transform: rotate(-45deg);
+				}
+				.menu-icon .toggler-line{
+					display: none;
+				}
+				.left .subMenu{
+                    right: 101%;
+				}
+
+				.right .subMenu{
+                    left: 101%;
+				}
+				.collapse{
+  					max-height: 0;
+  					overflow: hidden;
+					transition-duration: 0.4s;
+				}
+				.collapse.show{
+					max-height: 100%;
+				}
+                .swiper-pagination-bullet-active{
+                    width: 10px;
+                    height: 10px;
+                    background-color: #FD4F56;
+                } 
+                @media (max-width:575px) {
+                    .avtar {
+                        position: relative;
+                        animation: mymove 1s infinite;
+                        animation-direction: alternate;
+                    } 
+                    @keyframes mymove {
+                        0%{
+                            transform: rotateY(180deg);
+                        }
+                    }  
+                }
+            }
+            @media (min-width:1280px) {
+                .avtar{
+                    margin-right:110px !important;
+                }
+                .avtar-img{
+                    margin-left:215px !important;
+                }
+            }
+            @media (min-width:1440px) {
+                .avtar{
+                     margin-right:10px !important;
+                }
+                .avtar-img{
+                    margin-left:32px !important;
+                }
+            }
+	</style>
+</head>
+
+<body class="font-[Poppins]">
+    <!-- START : loder -->
+    <div class="preloader"
+        style="position: fixed; display: flex; justify-content: center; align-items: center; width: 100%; height: 100%; background-color: #fff; z-index: 99999999999999;">
+        <img src="img/loder/seo-agency-loder.gif" alt="loder">
+    </div>
+    <!-- END : loder -->
+
+    <!-- START: Header -->
+    <header class="fixed top-0 left-0 w-full text-lg z-50 text-[#797979] transition duration-300">
+        <div class="container lg:py-4 py-2 flex items-center justify-between">
+            <a href="index.html" class="block lg:h-14 h-12">
+                <img src="img/logo/seo-agency-logo.svg" alt="Logo" class="h-full" />
+            </a>
+            <button type="button" id="menu-btn" class="w-[22px] h-[14px] align-middle relative mx-2 lg:hidden block"
+                aria-controls="mobile-menu" aria-expanded="false" data-mobile-nav="false">
+                <span class="h-[3px] w-full absolute top-0 left-0 bg-dodgerBlue transition duration-300"></span>
+                <span
+                    class="h-[3px] w-full absolute top-1/2 left-0 bg-dodgerBlue transition duration-300 toggler-line"></span>
+                <span class="h-[3px] w-full absolute top-full left-0 bg-dodgerBlue transition duration-300"></span>
+            </button>
+            <div class="lg:flex hidden items-center w-full text-center">
+                <div class="flex justify-end items-center w-full gap-10">
+                    <ul class="flex items-center gap-10">
+                        <li class="group">
+                            <a href="javascript:void(0)"
+                                class="transition duration-300 text-[#00000080] hover:text-dodgerBlue hover:underline hover:font-bold font-medium xl:px-8 px-4 py-4">Home</a>
+                            <div
+                                class="absolute top-[75%] gap-10 bg-white text-black rounded-md text-[14px] text-left shadow-lg hidden group-hover:flex py-2">
+                                <ul>
+                                    <h5 class="font-bold px-6 mb-2">Corporate</h5>
+                                    <li class="hover:text-dodgerBlue transition duration-300 px-6 py-1">
+                                        <a href="javascript:void(0)" class="whitespace-nowrap">Startup</a>
+                                    </li>
+                                    <li class="hover:text-dodgerBlue transition duration-300 px-6 py-1">
+                                        <a href="javascript:void(0)" class="whitespace-nowrap">Business</a>
+                                    </li>
+                                    <li class="hover:text-dodgerBlue transition duration-300 px-6 py-1">
+                                        <a href="javascript:void(0)" class="whitespace-nowrap">Corporate</a>
+                                    </li>
+                                    <li class="hover:text-dodgerBlue transition duration-300 px-6 py-1">
+                                        <a href="javascript:void(0)" class="whitespace-nowrap">Finance</a>
+                                    </li>
+                                    <li class="hover:text-dodgerBlue transition duration-300 px-6 py-1">
+                                        <a href="javascript:void(0)" class="whitespace-nowrap">Application</a>
+                                    </li>
+                                    <li class="hover:text-dodgerBlue transition duration-300 px-6 py-1">
+                                        <a href="javascript:void(0)" class="whitespace-nowrap">Consulting</a>
+                                    </li>
+                                    <li class="hover:text-dodgerBlue transition duration-300 px-6 py-1">
+                                        <a href="javascript:void(0)" class="whitespace-nowrap">Digital agency</a>
+                                    </li>
+                                    <li class="hover:text-dodgerBlue transition duration-300 px-6 py-1">
+                                        <a href="javascript:void(0)" class="whitespace-nowrap">SEO agency</a>
+                                    </li>
+                                    <li class="hover:text-dodgerBlue transition duration-300 px-6 py-1">
+                                        <a href="javascript:void(0)" class="whitespace-nowrap">Event & conference</a>
+                                    </li>
+                                    <li class="hover:text-dodgerBlue transition duration-300 px-6 py-1">
+                                        <a href="javascript:void(0)" class="whitespace-nowrap">Marketing agency</a>
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <h5 class="font-bold px-6 mb-2">Specialized</h5>
+                                    <li class="hover:text-dodgerBlue transition duration-300 px-6 py-1">
+                                        <a href="javascript:void(0)" class="whitespace-nowrap">Restaurant</a>
+                                    </li>
+                                    <li class="hover:text-dodgerBlue transition duration-300 px-6 py-1">
+                                        <a href="javascript:void(0)" class="whitespace-nowrap">Architecture</a>
+                                    </li>
+                                    <li class="hover:text-dodgerBlue transition duration-300 px-6 py-1">
+                                        <a href="javascript:void(0)" class="whitespace-nowrap">Hotel & resort</a>
+                                    </li>
+                                    <li class="hover:text-dodgerBlue transition duration-300 px-6 py-1">
+                                        <a href="javascript:void(0)" class="whitespace-nowrap">Travel agency</a>
+                                    </li>
+                                    <li class="hover:text-dodgerBlue transition duration-300 px-6 py-1">
+                                        <a href="javascript:void(0)" class="whitespace-nowrap">Yoga & meditation</a>
+                                    </li>
+                                    <li class="hover:text-dodgerBlue transition duration-300 px-6 py-1">
+                                        <a href="javascript:void(0)" class="whitespace-nowrap">Gym & fitness</a>
+                                    </li>
+                                    <li class="hover:text-dodgerBlue transition duration-300 px-6 py-1">
+                                        <a href="javascript:void(0)" class="whitespace-nowrap">Spa salon</a>
+                                    </li>
+                                    <li class="hover:text-dodgerBlue transition duration-300 px-6 py-1">
+                                        <a href="javascript:void(0)" class="whitespace-nowrap">Cafe</a>
+                                    </li>
+                                    <li class="hover:text-dodgerBlue transition duration-300 px-6 py-1">
+                                        <a href="javascript:void(0)" class="whitespace-nowrap">Home decor</a>
+                                    </li>
+                                    <li class="hover:text-dodgerBlue transition duration-300 px-6 py-1">
+                                        <a href="javascript:void(0)" class="whitespace-nowrap">Dentist</a>
+                                    </li>
+                                    <li class="hover:text-dodgerBlue transition duration-300 px-6 py-1">
+                                        <a href="javascript:void(0)" class="whitespace-nowrap">Interior design</a>
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <h5 class="font-bold px-6 mb-2">Portfolio</h5>
+                                    <li class="hover:text-dodgerBlue transition duration-300 px-6 py-1">
+                                        <a href="javascript:void(0)" class="whitespace-nowrap">Design agency</a>
+                                    </li>
+                                    <li class="hover:text-dodgerBlue transition duration-300 px-6 py-1">
+                                        <a href="javascript:void(0)" class="whitespace-nowrap">Web agency</a>
+                                    </li>
+                                    <li class="hover:text-dodgerBlue transition duration-300 px-6 py-1">
+                                        <a href="javascript:void(0)" class="whitespace-nowrap">Creative agency</a>
+                                    </li>
+                                    <li class="hover:text-dodgerBlue transition duration-300 px-6 py-1">
+                                        <a href="javascript:void(0)" class="whitespace-nowrap">Freelancer</a>
+                                    </li>
+                                    <li class="hover:text-dodgerBlue transition duration-300 px-6 py-1">
+                                        <a href="javascript:void(0)" class="whitespace-nowrap">Branding agency</a>
+                                    </li>
+                                    <li class="hover:text-dodgerBlue transition duration-300 px-6 py-1">
+                                        <a href="javascript:void(0)" class="whitespace-nowrap">Photography</a>
+                                    </li>
+                                    <li class="hover:text-dodgerBlue transition duration-300 px-6 py-1">
+                                        <a href="javascript:void(0)" class="whitespace-nowrap">Personal portfolio</a>
+                                    </li>
+                                    <li class="hover:text-dodgerBlue transition duration-300 px-6 py-1">
+                                        <a href="javascript:void(0)" class="whitespace-nowrap">Vertical portfolio</a>
+                                    </li>
+                                    <li class="hover:text-dodgerBlue transition duration-300 px-6 py-1">
+                                        <a href="javascript:void(0)" class="whitespace-nowrap">Interactive portfolio</a>
+                                    </li>
+                                    <li class="hover:text-dodgerBlue transition duration-300 px-6 py-1">
+                                        <a href="javascript:void(0)" class="whitespace-nowrap">Split portfolio</a>
+                                    </li>
+                                    <li class="hover:text-dodgerBlue transition duration-300 px-6 py-1">
+                                        <a href="javascript:void(0)" class="whitespace-nowrap">Creative portfolio</a>
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <h5 class="font-bold px-6 mb-2">Other</h5>
+                                    <li class="hover:text-dodgerBlue transition duration-300 px-6 py-1">
+                                        <a href="javascript:void(0)" class="whitespace-nowrap">Furniture shop</a>
+                                    </li>
+                                    <li class="hover:text-dodgerBlue transition duration-300 px-6 py-1">
+                                        <a href="javascript:void(0)" class="whitespace-nowrap">Fashion shop</a>
+                                    </li>
+                                    <li class="hover:text-dodgerBlue transition duration-300 px-6 py-1">
+                                        <a href="javascript:void(0)" class="whitespace-nowrap">Magazine</a>
+                                    </li>
+                                    <li class="hover:text-dodgerBlue transition duration-300 px-6 py-1">
+                                        <a href="javascript:void(0)" class="whitespace-nowrap">Lifestyle blog</a>
+                                    </li>
+                                    <li class="hover:text-dodgerBlue transition duration-300 px-6 py-1">
+                                        <a href="javascript:void(0)" class="whitespace-nowrap">Classic blog</a>
+                                    </li>
+                                    <li class="hover:text-dodgerBlue transition duration-300 px-6 py-1">
+                                        <a href="javascript:void(0)" class="whitespace-nowrap">Blog metro</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="group">
+                            <a href="javascript:void(0)"
+                                class="transition duration-300 hover:text-dodgerBlue text-[#00000080] hover:underline hover:font-bold font-medium xl:px-8 px-4 py-4">Product</a>
+                            <div
+                                class="absolute top-[75%] gap-10 bg-white text-black rounded-md text-[14px] text-left shadow-lg hidden group-hover:flex py-2">
+                                <ul>
+                                    <li class="dropdown relative right">
+                                        <a href="javascript:void(0)"
+                                            class="hover:text-dodgerBlue transition duration-300 px-6 py-4">Lifestyle
+                                            blog</a>
+                                        <div
+                                            class="hidden dropdown-hover:block bg-white shadow-lg rounded-md absolute top-[0] subMenu py-2">
+                                            <ul>
+                                                <li class="hover:text-dodgerBlue transition duration-300 px-6 py-1">
+                                                    <a href="javascript:void(0)" class="whitespace-nowrap">Furniture
+                                                        shop</a>
+                                                </li>
+                                                <li class="hover:text-dodgerBlue transition duration-300 px-6 py-1">
+                                                    <a href="javascript:void(0)" class="whitespace-nowrap">Fashion
+                                                        shop</a>
+                                                </li>
+                                                <li class="hover:text-dodgerBlue transition duration-300 px-6 py-1">
+                                                    <a href="javascript:void(0)" class="whitespace-nowrap">Magazine</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="relative px-6 py-1 dropdown left">
+                                        <a href="javascript:void(0)"
+                                            class="hover:text-dodgerBlue transition duration-300 whitespace-nowrap">Classic
+                                            blog</a>
+                                        <div
+                                            class="hidden dropdown-hover:block bg-white shadow-lg rounded-md absolute top-[0] subMenu py-2">
+                                            <ul>
+                                                <li class="hover:text-dodgerBlue transition duration-300 px-6 py-1">
+                                                    <a href="javascript:void(0)" class="whitespace-nowrap">Our
+                                                        services</a>
+                                                </li>
+                                                <li class="hover:text-dodgerBlue transition duration-300 px-6 py-1">
+                                                    <a href="javascript:void(0)" class="whitespace-nowrap">What we
+                                                        offer</a>
+                                                </li>
+                                                <li class="hover:text-dodgerBlue transition duration-300 px-6 py-1">
+                                                    <a href="javascript:void(0)" class="whitespace-nowrap">Our
+                                                        process</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="hover:text-dodgerBlue transition duration-300 px-6 py-1">
+                                        <a href="javascript:void(0)" class="whitespace-nowrap">Blog metro</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)"
+                                class="transition duration-300 hover:text-dodgerBlue hover:underline text-[#00000080] hover:font-bold font-medium xl:px-8 px-4 py-4">Our
+                                Work</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)"
+                                class="transition duration-300 hover:text-dodgerBlue text-[#00000080] hover:underline hover:font-bold font-medium xl:px-8 px-4 py-4">Blog</a>
+                        </li>
+                    </ul>
+                    <div class="">
+                        <a href="Javascript:void(0)" class="btn text-[14px]">Sign In</a>
+                    </div>
+                </div>
+            </div>
+            <div class="fixed inset-0 sm:w-3/4 bg-white transition duration-700 translate-x-[-110%] px-4 py-3"
+                id="mobile-menu">
+                <span class="absolute top-2 right-2 material-icons sm:hidden" id="closeMenu">close</span>
+                <a href="index.html" class="block lg:h-14 h-12">
+                    <img src="img/logo/seo-agency-logo.svg" alt="Logo" class="h-full" />
+                </a>
+                <div class="h-full overflow-auto text-[15px] py-3">
+                    <ul>
+                        <li>
+                            <div>
+                                <button
+                                    class="w-full h-full flex justify-between border-b text-left hover:bg-dodgerBlue hover:text-white transition duration-700 px-[15px] py-[9px]"
+                                    data-toggle="collapse">
+                                    <span>Home</span>
+                                    <span
+                                        class="material-icons transition duration-700 rotate-icon">keyboard_arrow_down</span>
+                                </button>
+                                <div class="collapse transition duration-700">
+                                    <div class="sm:grid grid-cols-2 text-black py-2">
+                                        <ul>
+                                            <h5 class="font-bold px-[15px]">Corporate</h5>
+                                            <li
+                                                class="hover:text-dodgerBlue transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Startup</a>
+                                            </li>
+                                            <li
+                                                class="hover:text-dodgerBlue transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Business</a>
+                                            </li>
+                                            <li
+                                                class="hover:text-dodgerBlue transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Corporate</a>
+                                            </li>
+                                            <li
+                                                class="hover:text-dodgerBlue transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Finance</a>
+                                            </li>
+                                            <li
+                                                class="hover:text-dodgerBlue transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Application</a>
+                                            </li>
+                                            <li
+                                                class="hover:text-dodgerBlue transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Consulting</a>
+                                            </li>
+                                            <li
+                                                class="hover:text-dodgerBlue transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Digital
+                                                    agency</a>
+                                            </li>
+                                            <li
+                                                class="hover:text-dodgerBlue transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">SEO agency</a>
+                                            </li>
+                                            <li
+                                                class="hover:text-dodgerBlue transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Event &amp;
+                                                    conference</a>
+                                            </li>
+                                            <li
+                                                class="hover:text-dodgerBlue transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Marketing
+                                                    agency</a>
+                                            </li>
+                                        </ul>
+                                        <ul>
+                                            <h5 class="font-bold px-[15px]">Specialized</h5>
+                                            <li
+                                                class="hover:text-dodgerBlue transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Restaurant</a>
+                                            </li>
+                                            <li
+                                                class="hover:text-dodgerBlue transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Architecture</a>
+                                            </li>
+                                            <li
+                                                class="hover:text-dodgerBlue transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Hotel &
+                                                    resort</a>
+                                            </li>
+                                            <li
+                                                class="hover:text-dodgerBlue transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Travel agency</a>
+                                            </li>
+                                            <li
+                                                class="hover:text-dodgerBlue transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Yoga &
+                                                    meditation</a>
+                                            </li>
+                                            <li
+                                                class="hover:text-dodgerBlue transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Gym & fitness</a>
+                                            </li>
+                                            <li
+                                                class="hover:text-dodgerBlue transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Spa salon
+                                                </a>
+                                            </li>
+                                            <li
+                                                class="hover:text-dodgerBlue transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Cafe</a>
+                                            </li>
+                                            <li
+                                                class="hover:text-dodgerBlue transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Home decor</a>
+                                            </li>
+                                            <li
+                                                class="hover:text-dodgerBlue transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Dentist</a>
+                                            </li>
+                                            <li
+                                                class="hover:text-dodgerBlue transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Interior
+                                                    design</a>
+                                            </li>
+                                        </ul>
+                                        <ul>
+                                            <h5 class="font-bold px-[15px]">Portfolio</h5>
+                                            <li
+                                                class="hover:text-dodgerBlue transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Design agency</a>
+                                            </li>
+                                            <li
+                                                class="hover:text-dodgerBlue transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Web agency</a>
+                                            </li>
+                                            <li
+                                                class="hover:text-dodgerBlue transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Creative
+                                                    agency</a>
+                                            </li>
+                                            <li
+                                                class="hover:text-dodgerBlue transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Freelancer</a>
+                                            </li>
+                                            <li
+                                                class="hover:text-dodgerBlue transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Branding
+                                                    agency</a>
+                                            </li>
+                                            <li
+                                                class="hover:text-dodgerBlue transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Photography</a>
+                                            </li>
+                                            <li
+                                                class="hover:text-dodgerBlue transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Personal
+                                                    portfolio</a>
+                                            </li>
+                                            <li
+                                                class="hover:text-dodgerBlue transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Vertical
+                                                    portfolio</a>
+                                            </li>
+                                            <li
+                                                class="hover:text-dodgerBlue transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Interactive
+                                                    portfolio</a>
+                                            </li>
+                                            <li
+                                                class="hover:text-dodgerBlue transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Split
+                                                    portfolio</a>
+                                            </li>
+                                            <li
+                                                class="hover:text-dodgerBlue transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Creative
+                                                    portfolio</a>
+                                            </li>
+                                        </ul>
+                                        <ul>
+                                            <h5 class="font-bold px-[15px]">Other</h5>
+                                            <li
+                                                class="hover:text-dodgerBlue transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Furniture
+                                                    shop</a>
+                                            </li>
+                                            <li
+                                                class="hover:text-dodgerBlue transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Fashion shop</a>
+                                            </li>
+                                            <li
+                                                class="hover:text-dodgerBlue transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Magazine</a>
+                                            </li>
+                                            <li
+                                                class="hover:text-dodgerBlue transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Lifestyle
+                                                    blog</a>
+                                            </li>
+                                            <li
+                                                class="hover:text-dodgerBlue transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Classic blog</a>
+                                            </li>
+                                            <li
+                                                class="hover:text-dodgerBlue transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Blog metro</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <button
+                                    class="w-full h-full flex justify-between border-b text-left hover:bg-dodgerBlue hover:text-white transition duration-700 px-[15px] py-[9px]"
+                                    data-toggle="collapse">
+                                    <span>Product</span>
+                                    <span
+                                        class="material-icons transition duration-700 rotate-icon">keyboard_arrow_down</span>
+                                </button>
+                                <div class="collapse transition duration-700">
+                                    <div class="text-black">
+                                        <ul>
+                                            <li class="px-[15px] py-[2px]">
+                                                <div>
+                                                    <button
+                                                        class="w-full h-full flex justify-between text-left py-[2px]"
+                                                        data-toggle="collapse">
+                                                        <span
+                                                            class="hover:text-dodgerBlue transition duration-700">Lifestyle
+                                                            blog</span>
+                                                        <span
+                                                            class="material-icons transition duration-700 rotate-icon">keyboard_arrow_down</span>
+                                                    </button>
+                                                    <div class="collapse transition duration-700">
+                                                        <ul>
+                                                            <li
+                                                                class="hover:text-dodgerBlue transition duration-300 px-[15px] py-[2px]">
+                                                                <a href="javascript:void(0)"
+                                                                    class="whitespace-nowrap">Furniture
+                                                                    shop</a>
+                                                            </li>
+                                                            <li
+                                                                class="hover:text-dodgerBlue transition duration-300 px-[15px] py-[2px]">
+                                                                <a href="javascript:void(0)"
+                                                                    class="whitespace-nowrap">Fashion
+                                                                    shop</a>
+                                                            </li>
+                                                            <li
+                                                                class="hover:text-dodgerBlue transition duration-300 px-[15px] py-[2px]">
+                                                                <a href="javascript:void(0)"
+                                                                    class="whitespace-nowrap">Magazine</a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="px-[15px] py-[2px]">
+                                                <div>
+                                                    <button
+                                                        class="w-full h-full flex justify-between text-left py-[2px]"
+                                                        data-toggle="collapse">
+                                                        <span
+                                                            class="hover:text-dodgerBlue transition duration-700">Classic
+                                                            blog</span>
+                                                        <span
+                                                            class="material-icons transition duration-700 rotate-icon">keyboard_arrow_down</span>
+                                                    </button>
+                                                    <div class="collapse transition duration-700">
+                                                        <ul>
+                                                            <li
+                                                                class="hover:text-dodgerBlue transition duration-300 px-[15px] py-[2px]">
+                                                                <a href="javascript:void(0)"
+                                                                    class="whitespace-nowrap">Our
+                                                                    services</a>
+                                                            </li>
+                                                            <li
+                                                                class="hover:text-dodgerBlue transition duration-300 px-[15px] py-[2px]">
+                                                                <a href="javascript:void(0)"
+                                                                    class="whitespace-nowrap">What we
+                                                                    offer</a>
+                                                            </li>
+                                                            <li
+                                                                class="hover:text-dodgerBlue transition duration-300 px-[15px] py-[2px]">
+                                                                <a href="javascript:void(0)"
+                                                                    class="whitespace-nowrap">Our
+                                                                    process</a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li
+                                                class="hover:text-dodgerBlue transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Blog metro</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)"
+                                class="block w-full h-full border-b hover:bg-dodgerBlue hover:text-white dodgerBlue transition duration-700 px-[15px] py-[9px]">Our
+                                Work</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)"
+                                class="block w-full h-full border-b hover:bg-dodgerBlue hover:text-white dodgerBlue transition duration-700 px-[15px] py-[9px]">Blog</a>
+                        </li>
+                        <li class="p-2 mb-6">
+                            <a href="Javascript:void(0)" class="btn text-[14px]">Sign In</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- END: Header -->
+
+    <!-- START: Main -->
+    <main>
+        <div
+            class="relative bg-[url('img/seo-agency/background.png')] bg-right bg-no-repeat w-full h-full xl:bg-[length:1200px] lg:bg-[length:1050px] md:bg-[length:800px] bg-[length:1100px]">
+            <span class="bg-gradient absolute top-0 left-0 w-full h-full z-[-1]"></span>
+            <!-- STATRT: Banner -->
+            <section class="lg:h-screen h-[70vh] sm:pt-[88px] pt-[75px]">
+                <div class="container w-full h-full flex items-center">
+                    <div class="grid lg:grid-cols-2 lg:items-center justify-center lg:justify-start w-full xl:gap-10">
+                        <div class="lg:max-w-[730px] max-w-xl" data-aos="fade-right">
+                            <p
+                                class="text-[#FA8D41] font-medium xl:text-[24px] md:text-[18px] text-[16px] lg:mb-5 mb-3">
+                                SEO Digital Agency</p>
+                            <h1
+                                class="2xl:text-[64px] xl:text-[55px] md:text-[45px] text-[35px] leading-tight font-semibold">
+                                Get Business Solution with SEO.Com
+                            </h1>
+                            <p
+                                class="xl:text-[24px] md:text-[18px] text-[16px] xl:my-8 lg:mt-5 lg:mb-8 my-3 text-[#14142B]">
+                                Grow your business and boost up with Divi SEO. No coding required. We host everything on
+                                our
+                                secure.</p>
+                            <div class="flex flex-wrap md:flex-nowrap xl:mt-14 mt-7 gap-4">
+                                <a href="#"
+                                    class="xl:text-[20px] xl:text-lg xl:py-3.5 py-2 lg:px-8 px-4 bg-dodgerBlue text-white hover:text-dodgerBlue hover:bg-transparent border-2 border-transparent hover:border-dodgerBlue rounded-md inline-flex items-center transition duration-500">Get
+                                    Started</a>
+                                <a href="#"
+                                    class="border-2 border-dodgerBlue hover:border-dodgerBlue group hover:text-white hover:bg-dodgerBlue text-dodgerBlue rounded-md inline-flex items-center transition duration-500 xl:py-3.5 py-2 lg:px-6 px-4">
+                                    <p class="xl:text-[20px] xl:text-lg font-medium">See Live Video</p>
+                                    <div class="w-[30px] h-[30px] ml-2">
+                                        <svg viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle
+                                                class="stroke-[#18A0FB] group-hover:stroke-white translate duration-500"
+                                                cx="17.0744" cy="16.8732" r="15.3517" stroke-width="2" />
+                                            <path class="fill-[#18A0FB] group-hover:fill-white translate duration-500"
+                                                d="M21.0249 16.0074C21.6916 16.3923 21.6916 17.3545 21.0249 17.7394L15.849 20.7277C15.1824 21.1126 14.349 20.6315 14.349 19.8617V13.8851C14.349 13.1153 15.1824 12.6342 15.849 13.0191L21.0249 16.0074Z" />
+                                        </svg>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="lg:flex hidden" data-aos="fade-left">
+                            <img src="img/seo-agency/banner.png" alt="banner" class="w-full h-full">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- END: Banner -->
+
+            <!-- START : Product  -->
+            <section class="overflow-hidden xl:pb-12">
+                <div class="container xl:py-16 lg:py-12 sm:py-10 py-5">
+                    <div class="text-center 2xl:mb-20 mb-10">
+                        <h2 class="xl:text-[48px] lg:text-[42px] text-[38px] font-semibold mb-3" data-aos="fade-up">
+                            Product</h2>
+                        <p class="text-[#818095] xl:text-[20px] md:text-[18px] text-[16px] xl:max-w-[800px] max-w-[610px] mx-auto"
+                            data-aos="fade-up" data-aos-delay="100">Lorem
+                            Ipsum is simply dummy text of the printing and
+                            typesetting industry.
+                            Lorem Ipsum has been the industry's standard dummy text ever since.</p>
+                    </div>
+                    <div
+                        class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 xl:gap-16 lg:gap-8 gap-5 max-w-[1200px] mx-auto">
+                        <div class="bg-white shadow-[0px_0px_30px_rgba(0,0,0,0.1)] w-full md:rounded-[20px] rounded-[10px] text-center px-5 lg:py-10 md:py-8 py-4"
+                            data-aos="fade-right" data-aos-delay="200">
+                            <div class="lg:w-[90px] w-[70px] mx-auto xl:my-6 my-4">
+                                <img src="img/seo-agency/digital-marketing.png" alt="digital-marketing"
+                                    class="w-full h-full">
+                            </div>
+                            <div>
+                                <p
+                                    class="font-medium xl:text-[24px] lg:text-[22px] text-[20px] transition duration-300 mb-3 text-center px-5">
+                                    Digital Marketing Audits</p>
+                                <p class="xl:text-[16px] text-[14px] text-[#00000099] max-w-[330px]">
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                                    Ipsum
+                                    has been the industry's standard dummy text ever since the 1500s.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="bg-white shadow-[0px_0px_30px_rgba(0,0,0,0.1)] w-full md:rounded-[20px] rounded-[10px] text-center px-5 lg:py-10 md:py-8 py-4"
+                            data-aos="fade-up" data-aos-delay="100">
+                            <div class="lg:w-[90px] w-[70px] mx-auto xl:my-6 my-4">
+                                <img src="img/seo-agency/ecommercce.png" alt="ecommercce" class="w-full h-full">
+                            </div>
+                            <div>
+                                <p
+                                    class="font-medium xl:text-[24px] lg:text-[22px] text-[20px] transition duration-300 mb-3 text-center">
+                                    AD-HOC Marcketing Support</p>
+                                <p class="xl:text-[16px] text-[14px] text-[#00000099] max-w-[330px]">
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                                    Ipsum
+                                    has been the industry's standard dummy text ever since the 1500s.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="bg-white shadow-[0px_0px_30px_rgba(0,0,0,0.1)] lg:w-full md:w-auto w-full md:rounded-[20px] rounded-[10px] text-center px-5 lg:py-10 md:py-8 py-4 lg:col-span-1 md:col-span-2 mx-auto"
+                            data-aos="fade-left" data-aos-delay="300">
+                            <div class="lg:w-[90px] w-[70px] mx-auto xl:my-6 my-4">
+                                <img src="img/seo-agency/newspaper.png" alt="newspaper" class="w-full h-full">
+                            </div>
+                            <div>
+                                <p
+                                    class="font-medium xl:text-[24px] lg:text-[22px] text-[20px] transition duration-300 mb-3 text-center px-5">
+                                    Digital Marketing Audits</p>
+                                <p class="xl:text-[16px] text-[14px] text-[#00000099] max-w-[330px]">
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                                    Ipsum
+                                    has been the industry's standard dummy text ever since the 1500s.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- END : Product  -->
+
+            <!-- START : Client Review  -->
+            <section class="overflow-hidden lg:pb-12">
+                <div class="container xl:py-16 lg:py-12 md:py-0 sm:py-10 py-5">
+                    <div class="text-center xl:mb-14 lg:mb-12 sm:mb-10 mb-5">
+                        <p class="text-dodgerBlue xl:text-[18px] font-semibold mb-3" data-aos="fade-up">CLIENTS REVIEW
+                        </p>
+                        <h2 class="xl:text-[43px] lg:text-[36px] sm:text-[34px] text-[28px] font-semibold"
+                            data-aos="fade-up" data-aos-delay="100">
+                            CLIENTS REVIEW</h2>
+                    </div>
+                    <div class="grid lg:grid-cols-2 md:gap-14 gap-10">
+                        <div
+                            class="md:bg-[url('img/seo-agency/element.png')] bg-center bg-no-repeat 2xl:[length:485px] xl:bg-[length:380px] md:bg-[length:300px]">
+                            <div
+                                class="flex flex-wrap md:flex-nowrap lg:justify-around md:justify-between 2xl:mx-16 lg:mx-10 md:mx-32 justify-center xl:gap-14 lg:gap-8 gap-5">
+                                <div class="lg:w-[270px] md:w-[200px] w-[220px] rounded-full border-[5px] border-[#FA8D41] p-2 mt-5"
+                                    data-aos="zoom-in" data-aos-delay="100">
+                                    <img src="img/seo-agency/img-1.png" alt="img">
+                                </div>
+                                <div class="lg:w-[270px] md:w-[200px] w-[220px] rounded-full border-[5px] border-[#FA8D41] p-2 mt-5"
+                                    data-aos="zoom-in" data-aos-delay="200">
+                                    <img src="img/seo-agency/img-2.png" alt="img">
+                                </div>
+                            </div>
+                            <div class="flex justify-center md:mt-12 mt-5" data-aos="zoom-in" data-aos-delay="300">
+                                <div
+                                    class="2xl:w-[270px] xl:w-[240px] lg:w-[180px] md:w-[200px] w-[220px] rounded-full border-[5px] border-[#FA8D41] p-2">
+                                    <img src="img/seo-agency/img-3.png" alt="img">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="2xl:mt-14 xl:mt-5 lg:mt-0 md:mt-8">
+                            <p class="xl:text-[40px] lg:text-[30px] sm:text-[34px] text-[28px] font-semibold xl:max-w-[485px] lg:max-w-[370px] max-w-[570px]"
+                                data-aos="fade-up" data-aos-delay="100">
+                                Our Happy Clients says about us</p>
+                            <p class="text-[#6E6E7E] xl:text-[20px] lg:text-[16px] text-[16px] xl:max-w-[620px] lg:max-w-[800px] max-w-[700px] my-5"
+                                data-aos="fade-up" data-aos-delay="200">Best is the most
+                                porro
+                                quisquam est, qui dolorem are one. porro quis
+                                quam est, qui dolorem
+                                ipsum quia dolor sit amet,consectetur, adipisci velit, sed quia non</p>
+                            <p class="text-dodgerBlue xl:text-[20px] lg:text-[16px] text-[16px] xl:max-w-[600px] lg:max-w-[800px] max-w-[700px]"
+                                data-aos="fade-up" data-aos-delay="300">
+                                <span class="w-[50px] h-[50px] mr-3">
+                                    <img src="img/icons/doublequote.svg" alt="doublequote" class="inline-block" />
+                                </span>Most of the most porro quisquam
+                                est, qui dolorem ipsum quia dolor sit amet consectetur adipisci velit sed quia
+                                some more than quick support with expert team
+                            </p>
+                            <p class="md:text-[18px] text-[#818095] max-w-[224px] my-5" data-aos="fade-up"
+                                data-aos-delay="400">
+                                <span class="text-[18px] text-[#FA8D41] border-r-2 border-[#818095] pr-2.5">Ahmed
+                                    Sujon</span> CEO, Dudeshape
+                            </p>
+                            <div class="md:my-8" data-aos="fade-up" data-aos-delay="500">
+                                <a href="Javascript:void(0)"
+                                    class="bg-[#FA8D41] text-white hover:-translate-y-2 hover:shadow-2xl rounded-lg inline-flex items-center transition duration-500 xl:text-lg lg:text-base md:text-lg text-sm xl:py-4 md:py-3 py-2 xl:px-14 md:px-7 px-4">See
+                                    More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- END : Client Review  -->
+        </div>
+        <div
+            class="relative bg-[url('img/seo-agency/background1.png')] bg-left bg-no-repeat w-full h-full xl:bg-[length:1200px] lg:bg-[length:1050px] md:bg-[length:800px] bg-[length:1100px]">
+            <span class="bg-gradient absolute top-0 left-0 w-full h-full z-[-1]"></span>
+            <!-- STATRT: Learn About -->
+            <section class="overflow-hidden xl:pb-12 pb-8">
+                <div class="container xl:py-16 lg:py-12 md:pb-0 sm:py-10 py-5">
+                    <div class="text-center xl:mb-14 lg:mb-12 sm:mb-10 mb-5">
+                        <p class="text-dodgerBlue xl:text-[18px] md:text-base text-[14px] font-semibold mb-2"
+                            data-aos="fade-up">
+                            LEARN ABOUT
+                            BUSINO</p>
+                        <h2 class="xl:text-[43px] lg:text-[36px] sm:text-[34px] text-[30px] font-semibold"
+                            data-aos="fade-up" data-aos-delay="100">
+                            LEARN ABOUT BUSINO</h2>
+                    </div>
+                    <div class="grid lg:grid-cols-2 xl:gap-0 lg:gap-10 gap-5">
+                        <div class="lg:order-1 order-2">
+                            <div class="2xl:ml-5">
+                                <p class="xl:text-[40px] lg:text-[30px] sm:text-[34px] text-[24px] font-semibold xl:leading-[60px] lg:leading-[40px] max-w-[600px] 2xl:mt-16 mt-4"
+                                    data-aos="fade-right" data-aos-delay="100">
+                                    Best & Creative Agency for your Company</p>
+                                <p class="text-dodgerBlue xl:text-[20px] lg:text-[18] text-[16px] xl:leading-[33px] leading-[25px] max-w-[620px] xl:my-7 lg:my-5 my-3"
+                                    data-aos="fade-right" data-aos-delay="200">Most of the most porro quisquam est, qui
+                                    dolorem are
+                                    one. ipsum quia dolor sit amet consectetur adipisci
+                                    velit sed quia.
+                                </p>
+                                <p class="text-[#6E6E7E] xl:text-[20px] lg:text-[18] text-[16px] xl:leading-[33px] leading-[25px] max-w-[600px] xl:mb-7 mb-5"
+                                    data-aos="fade-right" data-aos-delay="300">Best is the most porro quisquam est, qui
+                                    dolorem are one. porro quis quam est, qui dolorem ipsum quia
+                                    dolor sit amet, consectetur, adipisci velit, sed quia non
+                                    numquam eius modi tempora incidunt ut labore</p>
+                                <div data-aos="fade-right" data-aos-delay="400">
+                                    <a href="Javascript:void(0)"
+                                        class="xl:py-4 md:py-3 py-2 xl:px-14 md:px-7 px-5 bg-[#FA8D41] text-white rounded-lg inline-flex items-center hover:-translate-y-2 hover:shadow-2xl transition duration-500 xl:text-lg lg:text-base md:text-lg text-sm">See
+                                        More</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lg:order-2 order-1" data-aos="fade-left" data-aos-delay="200">
+                            <div class="2xl:h-[550px] xl:h-[500px] lg:h-[400px] md:h-[500px]">
+                                <img src="img/seo-agency/Agency.png" alt="agency"
+                                    class="rounded-tl-[70px] rounded-br-[70px] w-full h-full" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- END : Learn About -->
+
+            <!-- STATRT: Our Team -->
+            <section class="overflow-hidden pb-10">
+                <div class="container xl:py-16 lg:py-12 md:py-0 sm:py-10 py-5">
+                    <div class="relative text-center 2xl:mb-14 xl:mb-5 lg:mb-8 mb-5">
+                        <p class="text-dodgerBlue xl:text-[18px] font-semibold lg:mb-2" data-aos="fade-up">OUR TEAM</p>
+                        <h2 class="xl:text-[43px] lg:text-[36px] sm:text-[34px] text-[28px] font-semibold"
+                            data-aos="fade-up" data-aos-delay="100">
+                            People Behind the Scence</h2>
+                        <div class="sm:flex hidden absolute xl:top-1/2 xl:right-0 top-2/3 right-5">
+                            <div
+                                class="swiper-button-prev position-unset shadow-lg xl:w-[60px] xl:h-[60px] w-[45px] h-[45px] bg-white hover:bg-dodgerBlue rounded-full transition duration-700 after:content-['prev'] xl:after:text-[22px] after:text-[16px] after:text-dodgerBlue after:transition after:duration-700 after:font-medium hover:after:text-white">
+                            </div>
+                            <div
+                                class="swiper-button-next lg:ml-5 ml-2 position-unset shadow-lg xl:w-[60px] xl:h-[60px] w-[45px] h-[45px] bg-white hover:bg-dodgerBlue rounded-full transition duration-700 after:content-['next'] xl:after:text-[22px] after:text-[16px] after:text-dodgerBlue after:transition after:duration-700 after:font-medium hover:after:text-white">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper swiper-container px-4 pt-5">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="relative" data-aos="fade-left" data-aos-delay="100">
+                                    <img src="img/seo-agency/team-member1.png" alt="team-member1"
+                                        class="w-full h-full rounded-tl-[30px] rounded-br-[30px]" />
+                                </div>
+                                <div
+                                    class="absolute bottom-0 left-0 md:p-6 px-[6px] py-7 right-0 rounded-br-[30px] bg-gradient-black">
+                                    <h4 class="md:text-[24px] text-[18px] text-center font-bold text-[#FA8D41] mb-3">
+                                        Founder & CEO
+                                    </h4>
+                                    <p
+                                        class="text-white md:text-[18px] text-[15px] text-center font-semibold 2xl:tracking-[3px] md:tracking-[1px]">
+                                        connor@dudeshape.com
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="relative" data-aos="fade-left" data-aos-delay="200">
+                                    <img src="img/seo-agency/team-member2.png" alt="team-member2"
+                                        class="w-full h-full rounded-tl-[30px] rounded-br-[30px]" />
+                                </div>
+                                <div
+                                    class="absolute bottom-0 left-0 md:p-6 px-[6px] py-7 right-0 rounded-br-[30px] bg-gradient-black">
+                                    <h4 class="md:text-[24px] text-[18px] text-center font-bold text-[#FA8D41] mb-3">
+                                        Creative Head
+                                    </h4>
+                                    <p
+                                        class="text-white md:text-[18px] text-[15px] text-center font-semibold 2xl:tracking-[3px] md:tracking-[1px]">
+                                        alice@dudeshape.com
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="relative" data-aos="fade-left" data-aos-delay="300">
+                                    <img src="img/seo-agency/team-member3.png" alt="team-member3"
+                                        class="w-full h-full rounded-tl-[30px] rounded-br-[30px]" />
+                                </div>
+                                <div
+                                    class="absolute bottom-0 left-0 md:p-6 px-[6px] py-7 right-0 rounded-br-[30px] bg-gradient-black">
+                                    <h4 class="md:text-[24px] text-[18px] text-center font-bold text-[#FA8D41] mb-3">
+                                        Marketing Head
+                                    </h4>
+                                    <p
+                                        class="text-white md:text-[18px] text-[15px] text-center font-semibold 2xl:tracking-[3px] md:tracking-[1px]">
+                                        lucy@dudeshape.com
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="relative" data-aos="fade-left" data-aos-delay="400">
+                                    <img src="img/seo-agency/team-member4.png" alt="team-member4"
+                                        class="w-full h-full rounded-tl-[30px] rounded-br-[30px]" />
+                                </div>
+                                <div
+                                    class="absolute bottom-0 left-0 md:p-6 px-[6px] py-7 right-0 rounded-br-[30px] bg-gradient-black">
+                                    <h4 class="md:text-[24px] text-[18px] text-center font-bold text-[#FA8D41] mb-3">
+                                        Marketing Head
+                                    </h4>
+                                    <p
+                                        class="text-white md:text-[18px] text-[15px] text-center font-semibold 2xl:tracking-[3px] md:tracking-[1px]">
+                                        lucy@dudeshape.com
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="relative" data-aos="fade-left" data-aos-delay="500">
+                                    <img src="img/seo-agency/team-member1.png" alt="team-member1"
+                                        class="w-full h-full rounded-tl-[30px] rounded-br-[30px]" />
+                                    <div
+                                        class="absolute bottom-0 left-0 md:-0 ppx-[6px] py-7 -6 right-0 rounded-br-[30px] bg-gradient-black">
+                                        <h4
+                                            class="md:text-[24px] text-[18px] text-center font-bold text-[#FA8D41] mb-3">
+                                            Founder & CEO
+                                        </h4>
+                                        <p
+                                            class="text-white md:text-[18px] text-[15px] text-center font-semibold 2xl:tracking-[3md:x] :tracking-[1px]">
+                                            connor@dudeshape.com
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="relative" data-aos="fade-left" data-aos-delay="600">
+                                    <img src="img/seo-agency/team-member2.png" alt="team-member2"
+                                        class="w-full h-full rounded-tl-[30px] rounded-br-[30px]" />
+                                </div>
+                                <div
+                                    class="absolute bottom-0 left-0 md:p-6 px-[6px] py-7 right-0 rounded-br-[30px] bg-gradient-black">
+                                    <h4 class="md:text-[24px] text-[18px] text-center font-bold text-[#FA8D41] mb-3">
+                                        Creative Head
+                                    </h4>
+                                    <p
+                                        class="text-white md:text-[18px] text-[15px] text-center font-semibold 2xl:tracking-[3px] md:tracking-[1px]">
+                                        alice@dudeshape.com
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="relative" data-aos="fade-left" data-aos-delay="700">
+                                    <img src="img/seo-agency/team-member3.png" alt="team-member3"
+                                        class="w-full h-full rounded-tl-[30px] rounded-br-[30px]" />
+                                </div>
+                                <div
+                                    class="absolute bottom-0 left-0 md:p-6 px-[6px] py-7 right-0 rounded-br-[30px] bg-gradient-black">
+                                    <h4 class="md:text-[24px] text-[18px] text-center font-bold text-[#FA8D41] mb-3">
+                                        Marketing Head
+                                    </h4>
+                                    <p
+                                        class="text-white md:text-[18px] text-[15px] text-center font-semibold 2xl:tracking-[3px] md:tracking-[1px]">
+                                        lucy@dudeshape.com
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="relative" data-aos="fade-left" data-aos-delay="800">
+                                    <img src="img/seo-agency/team-member4.png" alt="team-member4"
+                                        class="w-full h-full rounded-tl-[30px] rounded-br-[30px]" />
+                                </div>
+                                <div
+                                    class="absolute bottom-0 left-0 md:p-6 px-[6px] py-7 right-0 rounded-br-[30px] bg-gradient-black">
+                                    <h4 class="md:text-[24px] text-[18px] text-center font-bold text-[#FA8D41] mb-3">
+                                        Marketing Head
+                                    </h4>
+                                    <p
+                                        class="text-white md:text-[18px] text-[15px] text-center font-semibold 2xl:tracking-[3px] md:tracking-[1px]">
+                                        lucy@dudeshape.com
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- END : Our Team  -->
+
+            <!-- STATRT: Best Pricing -->
+            <section class="overflow-hidden pb-10 ">
+                <div class="container xl:py-16 lg:py-12 md:py-10 py-5">
+                    <div class="xl:pb-16 lg:pb-12 md:pb-0 pb-5 flex justify-center">
+                        <h2 class="xl:text-[43px] lg:text-[36px] text-center lg:max-w-3xl max-w-lg sm:text-[34px] text-[28px] font-semibold"
+                            data-aos="fade-up">
+                            Best Pricing Componets for your Company</h2>
+                    </div>
+                    <div
+                        class="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 bg-white rounded-[26px] border-[0.5px] border-dodgerBlue lg:mt-16 md:mt-10 mt-5">
+                        <div class="rounded-[26px] xl:p-10 lg:px-4 lg:py-7 md:p-10 px-10 pt-10">
+                            <div data-aos="fade-right">
+                                <p class="text-[#848199]  xl:text-[17px] lg:text-[15px] text-[17px] md:mb-8 mb-4">
+                                    <span
+                                        class="text-[#231D4F] font-semibold xl:text-[36px] lg:text-[30px] text-[36px] mr-1">$20
+                                    </span>/month
+                                </p>
+                                <p
+                                    class="font-medium xl:text-[22px] lg:text-[18px] md:text-[28px] text-[20px] text-[#231D4F] mb-1">
+                                    Intro
+                                </p>
+                                <p
+                                    class="text-[#848199] xl:text-[15px] lg:text-[13px] md:text-[15px] text-[13px] mb-6 xl:max-w-[300px] lg:max-w-[180px] max-w-[300px]">
+                                    For most businesses that want
+                                    to otpimize web queries</p>
+                                <ul>
+                                    <li
+                                        class="flex gap-4 text-[#848199] xl:text-[15px] lg:text-[12px] md:text-[15px] text-[13px] items-center mb-4">
+                                        <div class="rounded-full bg-[#5243c21a] px-[5px] py-[7px]">
+                                            <div class="xl:w-[16px] xl:h-[13px] w-[12px] h-[10px]">
+                                                <svg class="fill-dodgerBlue" viewBox="0 0 16 13" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M15.1434 1.80005L7.68415 11.9118C7.50625 12.1476 7.24098 12.3021 6.94794 12.3406C6.6549 12.379 6.35867 12.2983 6.12582 12.1165L0.79915 7.86232C0.329106 7.48657 0.252994 6.80132 0.62915 6.33179C1.00531 5.86225 1.69129 5.78622 2.16133 6.16197L6.60312 9.71181L13.389 0.512266C13.6115 0.178716 13.9995 -0.00569614 14.3989 0.032246C14.7984 0.0701881 15.1447 0.324346 15.3003 0.693811C15.4559 1.06328 15.3956 1.48827 15.1434 1.80005Z" />
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        All limited links
+                                    </li>
+                                    <li
+                                        class="flex gap-4 text-[#848199] xl:text-[15px] lg:text-[12px] md:text-[15px] text-[13px] items-center mb-4">
+                                        <div class="rounded-full bg-[#5243c21a] px-[5px] py-[7px]">
+                                            <div class="xl:w-[16px] xl:h-[13px] w-[12px] h-[10px]">
+                                                <svg class="fill-dodgerBlue " viewBox="0 0 16 13" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M15.1434 1.80005L7.68415 11.9118C7.50625 12.1476 7.24098 12.3021 6.94794 12.3406C6.6549 12.379 6.35867 12.2983 6.12582 12.1165L0.79915 7.86232C0.329106 7.48657 0.252994 6.80132 0.62915 6.33179C1.00531 5.86225 1.69129 5.78622 2.16133 6.16197L6.60312 9.71181L13.389 0.512266C13.6115 0.178716 13.9995 -0.00569614 14.3989 0.032246C14.7984 0.0701881 15.1447 0.324346 15.3003 0.693811C15.4559 1.06328 15.3956 1.48827 15.1434 1.80005Z" />
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        Own analytics platform
+                                    </li>
+                                    <li
+                                        class="flex gap-4 text-[#848199] xl:text-[15px] lg:text-[12px] md:text-[15px] text-[13px] items-center mb-4">
+                                        <div class="rounded-full bg-[#5243c21a] px-[5px] py-[7px]">
+                                            <div class="xl:w-[16px] xl:h-[13px] w-[12px] h-[10px]">
+                                                <svg class="fill-dodgerBlue" viewBox="0 0 16 13" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M15.1434 1.80005L7.68415 11.9118C7.50625 12.1476 7.24098 12.3021 6.94794 12.3406C6.6549 12.379 6.35867 12.2983 6.12582 12.1165L0.79915 7.86232C0.329106 7.48657 0.252994 6.80132 0.62915 6.33179C1.00531 5.86225 1.69129 5.78622 2.16133 6.16197L6.60312 9.71181L13.389 0.512266C13.6115 0.178716 13.9995 -0.00569614 14.3989 0.032246C14.7984 0.0701881 15.1447 0.324346 15.3003 0.693811C15.4559 1.06328 15.3956 1.48827 15.1434 1.80005Z" />
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        Chat support
+                                    </li>
+                                    <li
+                                        class="flex gap-4 text-[#848199] xl:text-[15px] lg:text-[12px] md:text-[15px] text-[13px] items-center mb-4">
+                                        <div class="rounded-full bg-[#5243c21a] px-[5px] py-[7px]">
+                                            <div class="xl:w-[16px] xl:h-[13px] w-[12px] h-[10px]">
+                                                <svg class="fill-dodgerBlue " viewBox="0 0 16 13" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M15.1434 1.80005L7.68415 11.9118C7.50625 12.1476 7.24098 12.3021 6.94794 12.3406C6.6549 12.379 6.35867 12.2983 6.12582 12.1165L0.79915 7.86232C0.329106 7.48657 0.252994 6.80132 0.62915 6.33179C1.00531 5.86225 1.69129 5.78622 2.16133 6.16197L6.60312 9.71181L13.389 0.512266C13.6115 0.178716 13.9995 -0.00569614 14.3989 0.032246C14.7984 0.0701881 15.1447 0.324346 15.3003 0.693811C15.4559 1.06328 15.3956 1.48827 15.1434 1.80005Z" />
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        Optimize hashtags
+                                    </li>
+                                    <li
+                                        class="flex gap-4 text-[#848199] xl:text-[15px] lg:text-[12px] md:text-[15px] text-[13px] items-center mb-6 ">
+                                        <div class="rounded-full bg-[#5243c21a]  px-[5px] py-[7px]">
+                                            <div class="xl:w-[16px] xl:h-[13px] w-[12px] h-[10px]">
+                                                <svg class="fill-dodgerBlue " viewBox="0 0 16 13" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M15.1434 1.80005L7.68415 11.9118C7.50625 12.1476 7.24098 12.3021 6.94794 12.3406C6.6549 12.379 6.35867 12.2983 6.12582 12.1165L0.79915 7.86232C0.329106 7.48657 0.252994 6.80132 0.62915 6.33179C1.00531 5.86225 1.69129 5.78622 2.16133 6.16197L6.60312 9.71181L13.389 0.512266C13.6115 0.178716 13.9995 -0.00569614 14.3989 0.032246C14.7984 0.0701881 15.1447 0.324346 15.3003 0.693811C15.4559 1.06328 15.3956 1.48827 15.1434 1.80005Z" />
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        Unlimited users
+                                    </li>
+                                </ul>
+                                <button
+                                    class="text-[#FA8D41] bg-[#f496d11a] hover:-translate-y-2 hover:shadow-2xl transition duration-300 xl:px-16 lg:px-7 md:px-16 px-12 xl:py-3 lg:py-2 py-3 rounded-[10px] md:text-base xl:text-[14px] lg:text-[12px] text-[14px]">Choose
+                                    plan</button>
+                            </div>
+                        </div>
+                        <div class="rounded-[26px] xl:p-10 lg:px-4 lg:py-7 p-10">
+                            <div data-aos="fade-down" data-aos-delay="100">
+                                <p class="text-[#848199]  xl:text-[17px] lg:text-[15px] text-[17px] md:mb-8 mb-4">
+                                    <span
+                                        class="text-[#231D4F] font-semibold xl:text-[36px] lg:text-[30px] text-[36px] mr-1">$50
+                                    </span>/month
+                                </p>
+                                <p
+                                    class="font-medium md:text-[28px] xl:text-[22px] lg:text-[18px] text-[20px] text-[#231D4F] mb-1">
+                                    Base</p>
+                                <p
+                                    class="text-[#848199] xl:text-[15px] lg:text-[13px] md:text-[15px] text-[13px] mb-6 xl:max-w-[300px] lg:max-w-[180px] max-w-[300px]">
+                                    For most businesses that want
+                                    to otpimize web queries</p>
+                                <ul>
+                                    <li
+                                        class="flex gap-4 text-[#848199] xl:text-[15px] lg:text-[12px] md:text-[15px] text-[13px] items-center mb-4">
+                                        <div class="rounded-full bg-[#5243c21a] px-[5px] py-[7px]">
+                                            <div class="xl:w-[16px] xl:h-[13px] w-[12px] h-[10px]">
+                                                <svg class="fill-dodgerBlue " viewBox="0 0 16 13" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M15.1434 1.80005L7.68415 11.9118C7.50625 12.1476 7.24098 12.3021 6.94794 12.3406C6.6549 12.379 6.35867 12.2983 6.12582 12.1165L0.79915 7.86232C0.329106 7.48657 0.252994 6.80132 0.62915 6.33179C1.00531 5.86225 1.69129 5.78622 2.16133 6.16197L6.60312 9.71181L13.389 0.512266C13.6115 0.178716 13.9995 -0.00569614 14.3989 0.032246C14.7984 0.0701881 15.1447 0.324346 15.3003 0.693811C15.4559 1.06328 15.3956 1.48827 15.1434 1.80005Z" />
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        All limited links
+                                    </li>
+                                    <li
+                                        class="flex gap-4 text-[#848199] xl:text-[15px] lg:text-[12px] md:text-[15px] text-[13px] items-center mb-4">
+                                        <div class="rounded-full bg-[#5243c21a] px-[5px] py-[7px]">
+                                            <div class="xl:w-[16px] xl:h-[13px] w-[12px] h-[10px]">
+                                                <svg class="fill-dodgerBlue " viewBox="0 0 16 13" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M15.1434 1.80005L7.68415 11.9118C7.50625 12.1476 7.24098 12.3021 6.94794 12.3406C6.6549 12.379 6.35867 12.2983 6.12582 12.1165L0.79915 7.86232C0.329106 7.48657 0.252994 6.80132 0.62915 6.33179C1.00531 5.86225 1.69129 5.78622 2.16133 6.16197L6.60312 9.71181L13.389 0.512266C13.6115 0.178716 13.9995 -0.00569614 14.3989 0.032246C14.7984 0.0701881 15.1447 0.324346 15.3003 0.693811C15.4559 1.06328 15.3956 1.48827 15.1434 1.80005Z" />
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        Own analytics platform
+                                    </li>
+                                    <li
+                                        class="flex gap-4 text-[#848199] xl:text-[15px] lg:text-[12px] md:text-[15px] text-[13px] items-center mb-4">
+                                        <div class="rounded-full bg-[#5243c21a] px-[5px] py-[7px]">
+                                            <div class="xl:w-[16px] xl:h-[13px] w-[12px] h-[10px]">
+                                                <svg class="fill-dodgerBlue" viewBox="0 0 16 13" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M15.1434 1.80005L7.68415 11.9118C7.50625 12.1476 7.24098 12.3021 6.94794 12.3406C6.6549 12.379 6.35867 12.2983 6.12582 12.1165L0.79915 7.86232C0.329106 7.48657 0.252994 6.80132 0.62915 6.33179C1.00531 5.86225 1.69129 5.78622 2.16133 6.16197L6.60312 9.71181L13.389 0.512266C13.6115 0.178716 13.9995 -0.00569614 14.3989 0.032246C14.7984 0.0701881 15.1447 0.324346 15.3003 0.693811C15.4559 1.06328 15.3956 1.48827 15.1434 1.80005Z" />
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        Chat support
+                                    </li>
+                                    <li
+                                        class="flex gap-4 text-[#848199] xl:text-[15px] lg:text-[12px] md:text-[15px] text-[13px] items-center mb-4">
+                                        <div class="rounded-full bg-[#5243c21a] px-[5px] py-[7px]">
+                                            <div class="xl:w-[16px] xl:h-[13px] w-[12px] h-[10px]">
+                                                <svg class="fill-dodgerBlue " viewBox="0 0 16 13" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M15.1434 1.80005L7.68415 11.9118C7.50625 12.1476 7.24098 12.3021 6.94794 12.3406C6.6549 12.379 6.35867 12.2983 6.12582 12.1165L0.79915 7.86232C0.329106 7.48657 0.252994 6.80132 0.62915 6.33179C1.00531 5.86225 1.69129 5.78622 2.16133 6.16197L6.60312 9.71181L13.389 0.512266C13.6115 0.178716 13.9995 -0.00569614 14.3989 0.032246C14.7984 0.0701881 15.1447 0.324346 15.3003 0.693811C15.4559 1.06328 15.3956 1.48827 15.1434 1.80005Z" />
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        Optimize hashtags
+                                    </li>
+                                    <li
+                                        class="flex gap-4 text-[#848199] xl:text-[15px] lg:text-[12px] md:text-[15px] text-[13px] items-center mb-6 ">
+                                        <div class="rounded-full bg-[#5243c21a]  px-[5px] py-[7px]">
+                                            <div class="xl:w-[16px] xl:h-[13px] w-[12px] h-[10px]">
+                                                <svg class="fill-dodgerBlue " viewBox="0 0 16 13" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M15.1434 1.80005L7.68415 11.9118C7.50625 12.1476 7.24098 12.3021 6.94794 12.3406C6.6549 12.379 6.35867 12.2983 6.12582 12.1165L0.79915 7.86232C0.329106 7.48657 0.252994 6.80132 0.62915 6.33179C1.00531 5.86225 1.69129 5.78622 2.16133 6.16197L6.60312 9.71181L13.389 0.512266C13.6115 0.178716 13.9995 -0.00569614 14.3989 0.032246C14.7984 0.0701881 15.1447 0.324346 15.3003 0.693811C15.4559 1.06328 15.3956 1.48827 15.1434 1.80005Z" />
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        Unlimited users
+                                    </li>
+                                </ul>
+                                <button
+                                    class="text-[#FA8D41] bg-[#f496d11a] hover:-translate-y-2 hover:shadow-2xl transition duration-300 xl:px-16 lg:px-7 md:px-16 px-12 xl:py-3 lg:py-2 py-3 rounded-[10px] md:text-base xl:text-[14px] lg:text-[12px] text-[14px]">Choose
+                                    plan</button>
+                            </div>
+                        </div>
+                        <div
+                            class="rounded-[26px] xl:p-10 lg:px-4 lg:py-7 p-10 xl:-translate-y-20 lg:-translate-y-16 lg:-mb-8 shadow-[0px_4px_30px_rgba(0,0,0,0.25)] bg-dodgerBlue">
+                            <div class="" data-aos="fade-up" data-aos-delay="200">
+                                <div class="flex justify-end">
+                                    <button class="text-[#FA8D41] px-10 py-2.5 rounded-[5px] text-[10px] tracking-widest
+                                    font-semibold bg-white mb-3">MOST POPULAR</button>
+                                </div>
+                                <p class="md:mb-8 mb-4 xl:text-[17px] lg:text-[15px] text-[17px] text-white">
+                                    <span
+                                        class="text-white  font-semibold xl:text-[36px] lg:text-[30px] text-[36px] mr-1">$100
+                                    </span>/month
+                                </p>
+                                <p
+                                    class="font-medium md:text-[28px] xl:text-[22px] lg:text-[18px] text-[20px] mb-1 text-white">
+                                    Pro</p>
+                                <p
+                                    class="xl:text-[15px] lg:text-[13px] md:text-[15px] text-[13px] mb-6 xl:max-w-[300px] lg:max-w-[180px] max-w-[300px] text-white">
+                                    For
+                                    most businesses that want to
+                                    otpimize web queries</p>
+                                <ul>
+                                    <li
+                                        class="flex gap-4 text-white xl:text-[15px] lg:text-[12px] md:text-[15px] text-[13px] items-center mb-4 mt-5">
+                                        <div class="rounded-full bg-[#ffffff1a] px-[5px] py-[7px]">
+                                            <div class="xl:w-[16px] xl:h-[13px] w-[12px] h-[10px]">
+                                                <svg class="fill-white" viewBox="0 0 16 13" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M15.1434 1.80005L7.68415 11.9118C7.50625 12.1476 7.24098 12.3021 6.94794 12.3406C6.6549 12.379 6.35867 12.2983 6.12582 12.1165L0.79915 7.86232C0.329106 7.48657 0.252994 6.80132 0.62915 6.33179C1.00531 5.86225 1.69129 5.78622 2.16133 6.16197L6.60312 9.71181L13.389 0.512266C13.6115 0.178716 13.9995 -0.00569614 14.3989 0.032246C14.7984 0.0701881 15.1447 0.324346 15.3003 0.693811C15.4559 1.06328 15.3956 1.48827 15.1434 1.80005Z" />
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        All limited links
+                                    </li>
+                                    <li
+                                        class="flex gap-4 text-white xl:text-[15px] lg:text-[12px] md:text-[15px] text-[13px] items-center mb-4">
+                                        <div class="rounded-full bg-[#ffffff1a] px-[5px] py-[7px]">
+                                            <div class="xl:w-[16px] xl:h-[13px] w-[12px] h-[10px]">
+                                                <svg class="fill-white" viewBox="0 0 16 13" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M15.1434 1.80005L7.68415 11.9118C7.50625 12.1476 7.24098 12.3021 6.94794 12.3406C6.6549 12.379 6.35867 12.2983 6.12582 12.1165L0.79915 7.86232C0.329106 7.48657 0.252994 6.80132 0.62915 6.33179C1.00531 5.86225 1.69129 5.78622 2.16133 6.16197L6.60312 9.71181L13.389 0.512266C13.6115 0.178716 13.9995 -0.00569614 14.3989 0.032246C14.7984 0.0701881 15.1447 0.324346 15.3003 0.693811C15.4559 1.06328 15.3956 1.48827 15.1434 1.80005Z" />
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        Own analytics platform
+                                    </li>
+                                    <li
+                                        class="flex gap-4 text-white xl:text-[15px] lg:text-[12px] md:text-[15px] text-[13px] items-center mb-4">
+                                        <div class="rounded-full bg-[#ffffff1a] px-[5px] py-[7px]">
+                                            <div class="xl:w-[16px] xl:h-[13px] w-[12px] h-[10px]">
+                                                <svg class="fill-white" viewBox="0 0 16 13" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M15.1434 1.80005L7.68415 11.9118C7.50625 12.1476 7.24098 12.3021 6.94794 12.3406C6.6549 12.379 6.35867 12.2983 6.12582 12.1165L0.79915 7.86232C0.329106 7.48657 0.252994 6.80132 0.62915 6.33179C1.00531 5.86225 1.69129 5.78622 2.16133 6.16197L6.60312 9.71181L13.389 0.512266C13.6115 0.178716 13.9995 -0.00569614 14.3989 0.032246C14.7984 0.0701881 15.1447 0.324346 15.3003 0.693811C15.4559 1.06328 15.3956 1.48827 15.1434 1.80005Z" />
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        Chat support
+                                    </li>
+                                    <li
+                                        class="flex gap-4 text-white xl:text-[15px] lg:text-[12px] md:text-[15px] text-[13px] items-center mb-4">
+                                        <div class="rounded-full bg-[#ffffff1a] px-[5px] py-[7px]">
+                                            <div class="xl:w-[16px] xl:h-[13px] w-[12px] h-[10px]">
+                                                <svg class="fill-white" viewBox="0 0 16 13" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M15.1434 1.80005L7.68415 11.9118C7.50625 12.1476 7.24098 12.3021 6.94794 12.3406C6.6549 12.379 6.35867 12.2983 6.12582 12.1165L0.79915 7.86232C0.329106 7.48657 0.252994 6.80132 0.62915 6.33179C1.00531 5.86225 1.69129 5.78622 2.16133 6.16197L6.60312 9.71181L13.389 0.512266C13.6115 0.178716 13.9995 -0.00569614 14.3989 0.032246C14.7984 0.0701881 15.1447 0.324346 15.3003 0.693811C15.4559 1.06328 15.3956 1.48827 15.1434 1.80005Z" />
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        Optimize hashtags
+                                    </li>
+                                    <li
+                                        class="flex gap-4 text-white xl:text-[15px] lg:text-[12px] md:text-[15px] text-[13px] items-center mb-6">
+                                        <div class="rounded-full bg-[#ffffff1a] px-[5px] py-[7px]">
+                                            <div class="xl:w-[16px] xl:h-[13px] w-[12px] h-[10px]">
+                                                <svg class="fill-white" viewBox="0 0 16 13" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M15.1434 1.80005L7.68415 11.9118C7.50625 12.1476 7.24098 12.3021 6.94794 12.3406C6.6549 12.379 6.35867 12.2983 6.12582 12.1165L0.79915 7.86232C0.329106 7.48657 0.252994 6.80132 0.62915 6.33179C1.00531 5.86225 1.69129 5.78622 2.16133 6.16197L6.60312 9.71181L13.389 0.512266C13.6115 0.178716 13.9995 -0.00569614 14.3989 0.032246C14.7984 0.0701881 15.1447 0.324346 15.3003 0.693811C15.4559 1.06328 15.3956 1.48827 15.1434 1.80005Z" />
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        Unlimited users
+                                    </li>
+                                </ul>
+                                <button
+                                    class="text-[#FA8D41] bg-white hover:-translate-y-2 hover:shadow-2xl transition duration-700 2xl:px-24 xl:px-16 lg:px-14 md:px-16 px-12 xl:py-3 lg:py-2 md:py-4 py-3 rounded-[10px] md:text-base xl:text-[14px] lg:text-[12px] text-[14px]">Choose
+                                    plan</button>
+                            </div>
+                        </div>
+                        <div class="rounded-[26px] xl:p-10 lg:px-4 lg:py-7 p-10">
+                            <div data-aos="fade-left" data-aos-delay="300">
+                                <p class="text-[#848199] xl:text-[17px] lg:text-[15px] text-[17px] md:mb-8 mb-4">
+                                    <span
+                                        class="text-[#231D4F] font-semibold xl:text-[36px] lg:text-[30px] text-[36px] mr-1">$200
+                                    </span>/month
+                                </p>
+                                <p
+                                    class="font-medium md:text-[28px] xl:text-[22px] lg:text-[18px] text-[20px] text-[#231D4F] mb-1">
+                                    Enterprise</p>
+                                <p
+                                    class="text-[#848199] xl:text-[15px] lg:text-[13px] md:text-[15px] text-[13px] mb-6 xl:max-w-[300px] lg:max-w-[180px] max-w-[300px]">
+                                    For most businesses that want
+                                    to otpimize web queries</p>
+                                <ul>
+                                    <li
+                                        class="flex gap-4 text-[#848199] xl:text-[15px] lg:text-[12px] md:text-[15px] text-[13px] items-center mb-4">
+                                        <div class="rounded-full bg-[#5243c21a] px-[5px] py-[7px]">
+                                            <div class="xl:w-[16px] xl:h-[13px] w-[12px] h-[10px]">
+                                                <svg class="fill-dodgerBlue " viewBox="0 0 16 13" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M15.1434 1.80005L7.68415 11.9118C7.50625 12.1476 7.24098 12.3021 6.94794 12.3406C6.6549 12.379 6.35867 12.2983 6.12582 12.1165L0.79915 7.86232C0.329106 7.48657 0.252994 6.80132 0.62915 6.33179C1.00531 5.86225 1.69129 5.78622 2.16133 6.16197L6.60312 9.71181L13.389 0.512266C13.6115 0.178716 13.9995 -0.00569614 14.3989 0.032246C14.7984 0.0701881 15.1447 0.324346 15.3003 0.693811C15.4559 1.06328 15.3956 1.48827 15.1434 1.80005Z" />
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        All limited links
+                                    </li>
+                                    <li
+                                        class="flex gap-4 text-[#848199] xl:text-[15px] lg:text-[12px] md:text-[15px] text-[13px] items-center mb-4">
+                                        <div class="rounded-full bg-[#5243c21a] px-[5px] py-[7px]">
+                                            <div class="xl:w-[16px] xl:h-[13px] w-[12px] h-[10px]">
+                                                <svg class="fill-dodgerBlue " viewBox="0 0 16 13" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M15.1434 1.80005L7.68415 11.9118C7.50625 12.1476 7.24098 12.3021 6.94794 12.3406C6.6549 12.379 6.35867 12.2983 6.12582 12.1165L0.79915 7.86232C0.329106 7.48657 0.252994 6.80132 0.62915 6.33179C1.00531 5.86225 1.69129 5.78622 2.16133 6.16197L6.60312 9.71181L13.389 0.512266C13.6115 0.178716 13.9995 -0.00569614 14.3989 0.032246C14.7984 0.0701881 15.1447 0.324346 15.3003 0.693811C15.4559 1.06328 15.3956 1.48827 15.1434 1.80005Z" />
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        Own analytics platform
+                                    </li>
+                                    <li
+                                        class="flex gap-4 text-[#848199] xl:text-[15px] lg:text-[12px] md:text-[15px] text-[13px] items-center mb-4">
+                                        <div class="rounded-full bg-[#5243c21a] px-[5px] py-[7px]">
+                                            <div class="xl:w-[16px] xl:h-[13px] w-[12px] h-[10px]">
+                                                <svg class="fill-dodgerBlue" viewBox="0 0 16 13" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M15.1434 1.80005L7.68415 11.9118C7.50625 12.1476 7.24098 12.3021 6.94794 12.3406C6.6549 12.379 6.35867 12.2983 6.12582 12.1165L0.79915 7.86232C0.329106 7.48657 0.252994 6.80132 0.62915 6.33179C1.00531 5.86225 1.69129 5.78622 2.16133 6.16197L6.60312 9.71181L13.389 0.512266C13.6115 0.178716 13.9995 -0.00569614 14.3989 0.032246C14.7984 0.0701881 15.1447 0.324346 15.3003 0.693811C15.4559 1.06328 15.3956 1.48827 15.1434 1.80005Z" />
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        Chat support
+                                    </li>
+                                    <li
+                                        class="flex gap-4 text-[#848199] xl:text-[15px] lg:text-[12px] md:text-[15px] text-[13px] items-center mb-4">
+                                        <div class="rounded-full bg-[#5243c21a] px-[5px] py-[7px]">
+                                            <div class="xl:w-[16px] xl:h-[13px] w-[12px] h-[10px]">
+                                                <svg class="fill-dodgerBlue " viewBox="0 0 16 13" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M15.1434 1.80005L7.68415 11.9118C7.50625 12.1476 7.24098 12.3021 6.94794 12.3406C6.6549 12.379 6.35867 12.2983 6.12582 12.1165L0.79915 7.86232C0.329106 7.48657 0.252994 6.80132 0.62915 6.33179C1.00531 5.86225 1.69129 5.78622 2.16133 6.16197L6.60312 9.71181L13.389 0.512266C13.6115 0.178716 13.9995 -0.00569614 14.3989 0.032246C14.7984 0.0701881 15.1447 0.324346 15.3003 0.693811C15.4559 1.06328 15.3956 1.48827 15.1434 1.80005Z" />
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        Optimize hashtags
+                                    </li>
+                                    <li
+                                        class="flex gap-4 text-[#848199] xl:text-[15px] lg:text-[12px] md:text-[15px] text-[13px] items-center mb-6 ">
+                                        <div class="rounded-full bg-[#5243c21a]  px-[5px] py-[7px]">
+                                            <div class="xl:w-[16px] xl:h-[13px] w-[12px] h-[10px]">
+                                                <svg class="fill-dodgerBlue " viewBox="0 0 16 13" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M15.1434 1.80005L7.68415 11.9118C7.50625 12.1476 7.24098 12.3021 6.94794 12.3406C6.6549 12.379 6.35867 12.2983 6.12582 12.1165L0.79915 7.86232C0.329106 7.48657 0.252994 6.80132 0.62915 6.33179C1.00531 5.86225 1.69129 5.78622 2.16133 6.16197L6.60312 9.71181L13.389 0.512266C13.6115 0.178716 13.9995 -0.00569614 14.3989 0.032246C14.7984 0.0701881 15.1447 0.324346 15.3003 0.693811C15.4559 1.06328 15.3956 1.48827 15.1434 1.80005Z" />
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        Unlimited users
+                                    </li>
+                                </ul>
+                                <button
+                                    class="text-[#FA8D41] bg-[#f496d11a] hover:-translate-y-2 hover:shadow-2xl transition duration-300 xl:px-16 lg:px-7 md:px-16 px-12 xl:py-3 lg:py-2 py-3 rounded-[10px] md:text-base xl:text-[14px] lg:text-[12px] text-[14px]">Choose
+                                    plan</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- END: Best Pricing -->
+        </div>
+        <div class="bg-gradient">
+            <!-- STATRT: Testimonials -->
+            <section class="overflow-hidden xl:pb-24 pb-12">
+                <div class="container xl:pt-16 lg:pt-12 sm:pt-10 pt-7">
+                    <div class="text-center xl:mb-14 lg:mb-12 sm:mb-10 mb-5">
+                        <p class="text-dodgerBlue xl:text-[18px] font-semibold mb-3" data-aos="fade-up">Testimonials</p>
+                        <h2 class="xl:text-[43px] lg:text-[36px] sm:text-[34px] text-[28px] font-semibold"
+                            data-aos="fade-up" data-aos-delay="100">
+                            What Our Clients Say About Us</h2>
+                    </div>
+                </div>
+                <div
+                    class="grid md:grid-cols-3 relative z-40 after:-z-40 after:content-[''] after:absolute after:w-full after:h-full after:top-0 after:left-0 md:after:bg-[url('img/seo-agency/about-bg1.png')] after:bg-center after:bg-no-repeat after:justify-between after:2xl:bg-[length:1300px] after:xl:bg-[length:980px] after:lg:bg-[length:700px] after:md:bg-[length:520px] md:after:rotate-0 after:rotate-90">
+                    <div
+                        class="relative md:after:bg-[url('img/seo-agency/about-bg2.png')] after:content-[''] after:absolute after:top-0 after:left-0 after:w-full after:h-full after:bg-center after:bg-no-repeat after:2xl:bg-[length:510px] after:xl:bg-[length:360px] after:lg:bg-[length:300px] after:md:bg-[length:220px] md:after:rotate-0 after:rotate-90">
+                        <div
+                            class="flex flex-col h-full xl:p-[65px] lg:p-[40px] md:p-[30px] px-12 py-0 justify-between md:max-w-[610px] items-center">
+                            <div class="flex justify-between w-full">
+                                <div class="xl:h-[60px] xl:w-[60px] lg:h-[40px] lg:w-[40px] md:h-[40px] md:w-[40px] w-[60px] h-[60px] overflow-hidden 2xl:ml-10"
+                                    data-aos="flip-left" data-aos-delay="100">
+                                    <img src="img/seo-agency/avtar.png" alt="avtar"
+                                        class="w-full h-full avtar border border-[#725EFE] rounded-full" />
+                                </div>
+                                <div class="xl:h-[80px] xl:w-[80px] lg:h-[60px] lg:w-[60px] md:h-[50px] md:w-[50px] w-[60px] h-[60px] overflow-hidden lg:ml-0 md:ml-5 xl:mb-10"
+                                    data-aos="flip-right" data-aos-delay="200">
+                                    <img src="img/seo-agency/avtar1.png" alt="avtar"
+                                        class="w-full h-full avtar border border-[#725EFE] rounded-full" />
+                                </div>
+                            </div>
+                            <div class="">
+                                <div class=" avtar xl:h-[80px] xl:w-[80px] lg:h-[60px] lg:w-[60px] md:h-[50px] md:w-[50px] w-[60px] h-[60px] rounded-full overflow-hidden 2xl:ml-7  2xl:mt-0 xl:my-5 lg:my-5"
+                                    data-aos="flip-down" data-aos-delay="300">
+                                    <img src="img/seo-agency/avtar2.png" alt="avtar" class="w-full h-full " />
+                                </div>
+                            </div>
+                            <div class="flex justify-between w-full">
+                                <div class="xl:h-[75px] xl:w-[75px] lg:h-[50px] lg:w-[50px] md:h-[50px] md:w-[50px] w-[60px] h-[60px] overflow-hidden 2xl:ml-5 xl:mt-12 lg:mt-12 md:mt-5"
+                                    data-aos="flip-left" data-aos-delay="400">
+                                    <img src="img/seo-agency/avtar3.png" alt="avtar"
+                                        class="w-full h-full avtar border border-[#725EFE] rounded-full" />
+                                </div>
+                                <div class="xl:h-[50px] xl:w-[50px] lg:h-[40px] lg:w-[40px] md:h-[40px] md:w-[40px] w-[60px] h-[60px] overflow-hidden 2xl:mr-8 2xl:mb-5 xl:mr-3 xl:mt-20 lg:mt-12 md:mt-7"
+                                    data-aos="flip-right" data-aos-delay="500">
+                                    <img src="img/seo-agency/avtar4.png" alt="avtar"
+                                        class="w-full h-full avtar border border-[#725EFE] rounded-full" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-dodgerBlue rounded-full p-4 2xl:h-[600px] 2xl:w-[600px] xl:w-[450px] xl:h-[450px] lg:w-[330px] lg:h-[330px] w-[250px] h-[250px] flex justify-center items-center mx-auto text-center md:mt-10"
+                        data-aos="zoom-in" data-aos-delay="100">
+                        <div class="max-w-md">
+                            <div class="flex justify-center lg:mb-10 mb-5">
+                                <div class="2xl:w-20 2xl:h-20 lg:w-12 lg:h-12 w-10 h-10">
+                                    <img src="img/icons/white-doublequote.svg" alt="doublequote"
+                                        class="w-full h-full" />
+                                </div>
+                            </div>
+                            <p
+                                class="text-white lg:mb-10 mb-2 text-center 2xl:text-base xl:text-[14px] lg:text-[12px] text-[10px]">
+                                You made
+                                it so
+                                simple.My new site is much
+                                faster
+                                and easier to work with than my old site. I just choose
+                                the page, make the change and click save. Thanks, guya!</p>
+                            <div class="flex items-center justify-center gap-4">
+                                <div class="2xl:w-20 2xl:h-20 lg:w-12 lg:h-12 w-10 h-10">
+                                    <img src="img/seo-agency/client.png" alt="client"
+                                        class="rounded-full w-full h-full" />
+                                </div>
+                                <div class="text-left">
+                                    <h5
+                                        class="2xl:text-[24px] xl:text-[18px] lg:text-[12px] text-[10px] text-white font-medium">
+                                        Rose
+                                        Jack</h5>
+                                    <p
+                                        class="text-[#ffffff80] 2xl:text-[16px] xl:text-[14px] lg:text-[12px] text-[10px]">
+                                        CEO at
+                                        Company</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="relative md:after:bg-[url('img/seo-agency/about-bg2.png')] after:content-[''] after:absolute after:top-0 after:left-0 after:w-full after:h-full after:bg-center after:bg-no-repeat after:2xl:bg-[length:510px] after:xl:bg-[length:360px] after:lg:bg-[length:300px] after:md:bg-[length:220px] md:after:rotate-0 after:rotate-90">
+                        <div
+                            class="flex flex-col h-full xl:p-[65px] lg:p-[40px] md:p-[30px] px-12 py-0 justify-between max-w-[610px] items-center">
+                            <div class="flex justify-between w-full">
+                                <div class="xl:h-[60px] xl:w-[60px] lg:h-[40px] lg:w-[40px] md:h-[40px] md:w-[40px] w-[60px] h-[60px] rounded-full overflow-hidden 2xl:ml-12 2xl:mt-5 xl:mt-0 lg:mt-2 md:mb-5"
+                                    data-aos="flip-left" data-aos-delay="100">
+                                    <img src="img/seo-agency/avtar5.png" alt="avtar" class="w-full h-fullv avtar" />
+                                </div>
+                                <div class="xl:h-[75px] xl:w-[75px] lg:h-[50px] lg:w-[50px] md:h-[50px] md:w-[50px] w-[60px] h-[60px] rounded-full overflow-hidden"
+                                    data-aos="flip-right" data-aos-delay="200">
+                                    <img src="img/seo-agency/avtar6.png" alt="avtar" class="w-full h-full avtar" />
+                                </div>
+                            </div>
+                            <div class="">
+                                <div class="avtar avtar-img xl:h-[80px] xl:w-[80px] lg:h-[60px] lg:w-[60px] md:h-[50px] md:w-[50px] w-[60px] h-[60px] rounded-full overflow-hidden 2xl:mr-7"
+                                    data-aos="flip-down" data-aos-delay="300">
+                                    <img src="img/seo-agency/avtar9.png" alt="avtar" class="w-full h-full" />
+                                </div>
+                            </div>
+                            <div class="flex justify-between w-full">
+                                <div class="xl:h-[75px] xl:w-[75px] lg:h-[50px] lg:w-[50px] md:h-[50px] md:w-[50px] w-[60px] h-[60px] rounded-full overflow-hidden 2xl:ml-10 md:mt-5"
+                                    data-aos="flip-left" data-aos-delay="400">
+                                    <img src="img/seo-agency/avtar8.png" alt="avtar" class="w-full h-full avtar" />
+                                </div>
+                                <div class="xl:h-[53px] xl:w-[53px] lg:h-[35px] lg:w-[35px] md:h-[40px] md:w-[40px] w-[60px] h-[60px] rounded-full overflow-hidden md:mt-5"
+                                    data-aos="flip-right" data-aos-delay="500">
+                                    <img src="img/seo-agency/avtar7.png" alt="avtar1" class="w-full h-full avtar" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- END: Testimonials -->
+
+            <!-- STATRT: Our Blog Post-->
+            <section class="overflow-hidden pb-8">
+                <div class="container xl:py-16 lg:py-12 sm:py-10 py-5">
+                    <div class="text-center xl:mb-16 lg:mb-8 mb-7">
+                        <p class="text-dodgerBlue xl:text-[18px] font-semibold xl:mb-3" data-aos="fade-up"
+                            data-aos-delay="100">Our Blog Post</p>
+                        <h2 class="xl:text-[43px] lg:text-[36px] sm:text-[34px] text-[28px] font-semibold"
+                            data-aos="fade-up" data-aos-delay="200">
+                            Latest Post From Blog</h2>
+                    </div>
+                    <div class="relative">
+                        <div
+                            class="swiper swiper-blog 2xl:max-w-[78rem] xl:max-w-[68rem] lg:max-w-[53rem] max-w-[38rem]">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="relative max-w-[700px] md:h-auto h-[300px]" data-aos="fade-left"
+                                        data-aos-delay="100">
+                                        <img src="img/seo-agency/blog1.png" alt="blog1"
+                                            class="w-full h-full rounded-tl-[30px] rounded-br-[30px]" />
+                                        <div
+                                            class="absolute bottom-0 left-0 right-0 xl:p-6 p-5 rounded-br-[30px] bg-gradient-black">
+                                            <h4
+                                                class="xl:text-[24px] lg:text-[20px] md:text-[22px] font-semibold text-white mb-3">
+                                                Creative Business Training
+                                            </h4>
+                                            <p
+                                                class="xl:text-[18px] lg:text-[16px] md:text-[18px] text-[14px] text-white">
+                                                Obtain pain of because is pain, but because you
+                                                nally circumstances more than some work
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="relative  max-w-[700px] md:h-auto h-[300px]" data-aos="fade-left"
+                                        data-aos-delay="200">
+                                        <img src="img/seo-agency/blog2.png" alt="blog2"
+                                            class="w-full h-full rounded-tl-[30px] rounded-br-[30px]" />
+                                        <div
+                                            class="absolute bottom-0 left-0 right-0 xl:p-6 p-5 rounded-br-[30px] bg-gradient-black">
+                                            <h4
+                                                class="xl:text-[24px] lg:text-[20px] md:text-[22px] font-semibold text-white mb-3">
+                                                Winning Business Deals
+
+                                            </h4>
+                                            <p
+                                                class="xl:text-[18px] lg:text-[16px] md:text-[18px] text-[14px] text-white">
+                                                Obtain pain of because is pain, but because you
+                                                nally circumstances more than some work
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="relative  max-w-[700px] md:h-auto h-[300px]" data-aos="fade-left"
+                                        data-aos-delay="300">
+                                        <img src="img/seo-agency/blog1.png" alt="blog1"
+                                            class="w-full h-full rounded-tl-[30px] rounded-br-[30px]" />
+                                        <div
+                                            class="absolute bottom-0 left-0 right-0 xl:p-6 p-5 rounded-br-[30px] bg-gradient-black">
+                                            <h4
+                                                class="xl:text-[24px] lg:text-[20px] md:text-[22px] font-semibold text-white mb-3">
+                                                Creative Business Training
+                                            </h4>
+                                            <p
+                                                class="xl:text-[18px] lg:text-[16px] md:text-[18px] text-[14px] text-white">
+                                                Obtain pain of because is pain, but because you
+                                                nally circumstances more than some work
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="relative  max-w-[700px] md:h-auto h-[300px]" data-aos="fade-left"
+                                        data-aos-delay="400">
+                                        <img src="img/seo-agency/blog2.png" alt="blog2"
+                                            class="w-full h-full rounded-tl-[30px] rounded-br-[30px]" />
+                                        <div
+                                            class="absolute bottom-0 left-0 right-0 xl:p-6 p-5 rounded-br-[30px] bg-gradient-black">
+                                            <h4
+                                                class="xl:text-[24px] lg:text-[20px] md:text-[22px] font-semibold text-white mb-3">
+                                                Winning Business Deals
+
+                                            </h4>
+                                            <p
+                                                class="xl:text-[18px] lg:text-[16px] md:text-[18px] text-[14px] text-white">
+                                                Obtain pain of because is pain, but because you
+                                                nally circumstances more than some work
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sm:flex hidden justify-between absolute top-1/2 -translate-y-1/2 w-full">
+                            <div
+                                class="swiper-button-prev position-unset shadow-lg xl:w-[60px] xl:h-[60px] w-[50px] h-[50px] bg-white hover:bg-dodgerBlue rounded-full transition duration-700 after:content-['prev'] after:text-[14px] after:text-dodgerBlue after:transition after:duration-700 after:font-extrabold hover:after:text-white">
+                            </div>
+                            <div
+                                class="swiper-button-next position-unset shadow-lg xl:w-[60px] xl:h-[60px] w-[50px] h-[50px] bg-white hover:bg-dodgerBlue rounded-full transition duration-700 after:content-['next'] after:text-[14px] after:text-dodgerBlue after:transition after:duration-700 after:font-extrabold hover:after:text-white">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- END: Our Blog Post -->
+        </div>
+    </main>
+    <!-- END: Main -->
+
+    <!-- START: Footer -->
+    <footer class="bg-dodgerBlue lg:pt-12 pt-5 xl:pb-10 pb-8 overflow-hidden">
+        <div class="container">
+            <div class="border-b border-[#ffffff33] lg:text-left text-center">
+                <h3 class="xl:text-[40px] lg:text-[35px] text-[25px] font-semibold mb-2 text-white"
+                    data-aos="fade-right" data-aos-delay="0">Meet
+                    Landix</h3>
+                <p class="xl:text-[20px] text-[15px] text-white xl:mb-10 mb-5" data-aos="fade-right"
+                    data-aos-delay="100">Landix
+                    is the fastest
+                    way to build with webflow.</p>
+            </div>
+            <div
+                class="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 lg:text-left text-center lg:gap-0 gap-7 xl:pt-10 md:pt-8 pt-2 items-center">
+                <div data-aos="fade-right">
+                    <p class="font-medium text-white mt-3 mb-5 xl:text-base text-[15px]">Lorem ipsum dolor sit amet,
+                        consectetur
+                        adipiscing elit. Massa gravida posuere
+                        molestie ultrices </p>
+                    <div class="flex lg:justify-start justify-center gap-2 w-full">
+                        <a href="javascript:void(0)">
+                            <div
+                                class="rounded-full bg-[#ffffff1a] group hover:bg-white transition duration-700 p-3 flex items-center justify-center w-[45px] h-[45px]">
+                                <div class="w-[11px] h-[19px]">
+                                    <svg viewBox="0 0 11 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path class="fill-white group-hover:fill-dodgerBlue"
+                                            d="M9.62695 10.375L10.1191 7.14062H6.99023V5.03125C6.99023 4.11719 7.41211 3.27344 8.81836 3.27344H10.2598V0.496094C10.2598 0.496094 8.95898 0.25 7.72852 0.25C5.16211 0.25 3.47461 1.83203 3.47461 4.64453V7.14062H0.591797V10.375H3.47461V18.25H6.99023V10.375H9.62695Z" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="javascript:void(0)" class="">
+                            <div
+                                class="rounded-full bg-[#ffffff1a] group hover:bg-white transition duration-700 p-3 flex items-center justify-center w-[45px] h-[45px]">
+                                <div class="w-[19px] h-[16px]">
+                                    <svg viewBox="0 0 19 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path class="fill-white group-hover:fill-dodgerBlue"
+                                            d="M16.9551 4.59375C17.6582 4.06641 18.291 3.43359 18.7832 2.69531C18.1504 2.97656 17.4121 3.1875 16.6738 3.25781C17.4473 2.80078 18.0098 2.09766 18.291 1.21875C17.5879 1.64062 16.7793 1.95703 15.9707 2.13281C15.2676 1.39453 14.3184 0.972656 13.2637 0.972656C11.2246 0.972656 9.57227 2.625 9.57227 4.66406C9.57227 4.94531 9.60742 5.22656 9.67773 5.50781C6.61914 5.33203 3.87695 3.85547 2.04883 1.64062C1.73242 2.16797 1.55664 2.80078 1.55664 3.50391C1.55664 4.76953 2.18945 5.89453 3.20898 6.5625C2.61133 6.52734 2.01367 6.38672 1.52148 6.10547V6.14062C1.52148 7.93359 2.78711 9.41016 4.47461 9.76172C4.19336 9.83203 3.8418 9.90234 3.52539 9.90234C3.2793 9.90234 3.06836 9.86719 2.82227 9.83203C3.2793 11.3086 4.65039 12.3633 6.26758 12.3984C5.00195 13.3828 3.41992 13.9805 1.69727 13.9805C1.38086 13.9805 1.09961 13.9453 0.818359 13.9102C2.43555 14.9648 4.36914 15.5625 6.47852 15.5625C13.2637 15.5625 16.9551 9.97266 16.9551 5.08594C16.9551 4.91016 16.9551 4.76953 16.9551 4.59375Z" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="javascript:void(0)" class="">
+                            <div
+                                class="rounded-full bg-[#ffffff1a] group hover:bg-white transition duration-700 p-3 flex items-center justify-center w-[45px] h-[45px]">
+                                <div class="w-[20px] h-[14px]">
+                                    <svg viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path class="fill-white group-hover:fill-dodgerBlue"
+                                            d="M19.1191 2.64453C18.9082 1.80078 18.2402 1.13281 17.4316 0.921875C15.9199 0.5 9.94336 0.5 9.94336 0.5C9.94336 0.5 3.93164 0.5 2.41992 0.921875C1.61133 1.13281 0.943359 1.80078 0.732422 2.64453C0.310547 4.12109 0.310547 7.28516 0.310547 7.28516C0.310547 7.28516 0.310547 10.4141 0.732422 11.9258C0.943359 12.7695 1.61133 13.4023 2.41992 13.6133C3.93164 14 9.94336 14 9.94336 14C9.94336 14 15.9199 14 17.4316 13.6133C18.2402 13.4023 18.9082 12.7695 19.1191 11.9258C19.541 10.4141 19.541 7.28516 19.541 7.28516C19.541 7.28516 19.541 4.12109 19.1191 2.64453ZM7.97461 10.1328V4.4375L12.9668 7.28516L7.97461 10.1328Z" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="javascript:void(0)" class="">
+                            <div
+                                class="rounded-full bg-[#ffffff1a] group hover:bg-white transition duration-700 p-3 flex items-center justify-center w-[45px] h-[45px]">
+                                <div class="w-[17px] h-[17px]">
+                                    <svg viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path class="fill-white group-hover:fill-dodgerBlue"
+                                            d="M8.69336 4.20703C6.44336 4.20703 4.65039 6.03516 4.65039 8.25C4.65039 10.5 6.44336 12.293 8.69336 12.293C10.9082 12.293 12.7363 10.5 12.7363 8.25C12.7363 6.03516 10.9082 4.20703 8.69336 4.20703ZM8.69336 10.8867C7.25195 10.8867 6.05664 9.72656 6.05664 8.25C6.05664 6.80859 7.2168 5.64844 8.69336 5.64844C10.1348 5.64844 11.2949 6.80859 11.2949 8.25C11.2949 9.72656 10.1348 10.8867 8.69336 10.8867ZM13.8262 4.06641C13.8262 3.53906 13.4043 3.11719 12.877 3.11719C12.3496 3.11719 11.9277 3.53906 11.9277 4.06641C11.9277 4.59375 12.3496 5.01562 12.877 5.01562C13.4043 5.01562 13.8262 4.59375 13.8262 4.06641ZM16.498 5.01562C16.4277 3.75 16.1465 2.625 15.2324 1.71094C14.3184 0.796875 13.1934 0.515625 11.9277 0.445312C10.627 0.375 6.72461 0.375 5.42383 0.445312C4.1582 0.515625 3.06836 0.796875 2.11914 1.71094C1.20508 2.625 0.923828 3.75 0.853516 5.01562C0.783203 6.31641 0.783203 10.2188 0.853516 11.5195C0.923828 12.7852 1.20508 13.875 2.11914 14.8242C3.06836 15.7383 4.1582 16.0195 5.42383 16.0898C6.72461 16.1602 10.627 16.1602 11.9277 16.0898C13.1934 16.0195 14.3184 15.7383 15.2324 14.8242C16.1465 13.875 16.4277 12.7852 16.498 11.5195C16.5684 10.2188 16.5684 6.31641 16.498 5.01562ZM14.8105 12.8906C14.5645 13.5938 14.002 14.1211 13.334 14.4023C12.2793 14.8242 9.81836 14.7188 8.69336 14.7188C7.5332 14.7188 5.07227 14.8242 4.05273 14.4023C3.34961 14.1211 2.82227 13.5938 2.54102 12.8906C2.11914 11.8711 2.22461 9.41016 2.22461 8.25C2.22461 7.125 2.11914 4.66406 2.54102 3.60938C2.82227 2.94141 3.34961 2.41406 4.05273 2.13281C5.07227 1.71094 7.5332 1.81641 8.69336 1.81641C9.81836 1.81641 12.2793 1.71094 13.334 2.13281C14.002 2.37891 14.5293 2.94141 14.8105 3.60938C15.2324 4.66406 15.127 7.125 15.127 8.25C15.127 9.41016 15.2324 11.8711 14.8105 12.8906Z" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="flex justify-center" data-aos="fade-right" data-aos-delay="100">
+                    <ul>
+                        <p class="text-white text-[20px] font-medium px-1 lg:mb-4 mb-2">Resources</p>
+                        <li>
+                            <a href="#">
+                                <p
+                                    class="font-medium p-1 mb-1 text-[#ffffffb3] xl:text-base text-[14px] hover:text-white transition duration-300">
+                                    Saas Development
+                                </p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <p
+                                    class="font-medium p-1 mb-1 text-[#ffffffb3] xl:text-base text-[14px] hover:text-white transition duration-300">
+                                    Our Products
+                                </p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <p
+                                    class="font-medium p-1 mb-1 text-[#ffffffb3] xl:text-base text-[14px] hover:text-white transition duration-300">
+                                    User Strategy
+                                </p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <p
+                                    class="font-medium p-1 mb-1 text-[#ffffffb3] xl:text-base text-[14px] hover:text-white transition duration-300">
+                                    Blogs & Guides
+                                </p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <p
+                                    class="font-medium p-1 mb-1 text-[#ffffffb3] xl:text-base text-[14px] hover:text-white transition duration-300">
+                                    Premium Support
+                                </p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="flex justify-center" data-aos="fade-right" data-aos-delay="200">
+                    <ul>
+                        <p class="text-[20px] text-white font-medium px-1 lg:mb-4 mb-2">Company</p>
+                        <li>
+                            <a href="#">
+                                <p
+                                    class="font-medium p-1 mb-1 text-[#ffffffb3] xl:text-base text-[14px] hover:text-white transition duration-300">
+                                    About LandFit
+                                </p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <p
+                                    class="font-medium p-1 mb-1 text-[#ffffffb3] xl:text-base text-[14px] hover:text-white transition duration-300">
+                                    Contact & Support
+                                </p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <p
+                                    class="font-medium p-1 mb-1 text-[#ffffffb3] xl:text-base text-[14px] hover:text-white transition duration-300">
+                                    Success History
+                                </p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <p
+                                    class="font-medium p-1 mb-1 text-[#ffffffb3] xl:text-base text-[14px] hover:text-white transition duration-300">
+                                    Setting & Privacy
+                                </p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <p
+                                    class="font-medium p-1 mb-1 text-[#ffffffb3] xl:text-base text-[14px] hover:text-white transition duration-300">
+                                    Company History
+                                </p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="flex justify-center" data-aos="fade-right" data-aos-delay="300">
+                    <ul>
+                        <p class="text-[20px] text-white font-medium px-1 lg:mb-4 mb-2">Additional Links</p>
+                        <li>
+                            <a href="#">
+                                <p
+                                    class="font-medium p-1 mb-1 text-[#ffffffb3] xl:text-base text-[14px] hover:text-white transition duration-300">
+                                    Tokens Sales
+                                </p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <p
+                                    class="font-medium p-1 mb-1 text-[#ffffffb3] xl:text-base text-[14px] hover:text-white transition duration-300">
+                                    Roadmap
+                                </p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <p
+                                    class="font-medium p-1 mb-1 text-[#ffffffb3] xl:text-base text-[14px] hover:text-white transition duration-300">
+                                    What is Edge Token?
+                                </p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <p
+                                    class="font-medium p-1 mb-1 text-[#ffffffb3] xl:text-base text-[14px] hover:text-white transition duration-300">
+                                    Why / How?
+                                </p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <p
+                                    class="font-medium p-1 mb-1 text-[#ffffffb3] xl:text-base text-[14px] hover:text-white transition duration-300">
+                                    Edge Wallet
+                                </p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- END: Footer -->
+
+
+    <!-- Script -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="plugins/tailwindcss/tailwindcss.js"></script>
+    <script src="plugins/swiper/swiper-bundle.min.js"></script>
+    <script src="js/seo-agency.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>

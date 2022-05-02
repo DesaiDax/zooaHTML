@@ -1,0 +1,1293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Zooa - Theme Kit</title>
+
+  <!-- fonts googleapis stylesheet -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+
+  <!--google font link-->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+  <!-- swiper stylesheet -->
+  <link rel="stylesheet" href="plugins/swiper/swiper-bundle.min.css" />
+
+  <!--animation link-->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+  <!--css link-->
+  <link rel="stylesheet" href="css/main.css" />
+
+  <!-- Tailwind class base mixin -->
+  <style type="text/tailwindcss">
+    @layer utilities {
+        .bg-sunshine{
+            background-color: #F7B734;
+        }        
+        .bg-safforn {
+          @apply bg-gradient-to-r from-[#F8D833] to-[#F5B432];
+        }
+        .text-safforn {
+          @apply text-transparent bg-clip-text bg-gradient-to-r from-[#F8D833] to-[#F5B432];
+        }
+		    .text-theme {
+		      @apply text-white;
+		    }
+        .btn {
+          @apply md:py-4 py-3 md:px-7 px-4 text-white bg-sunshine font-semibold rounded-md inline-flex items-center transition duration-500;
+        }
+        .btn:hover {
+          @apply bg-opacity-50;
+        }
+        .btn span {
+          @apply ml-2;
+        }
+        .container {
+          @apply mx-auto px-4;
+        }
+        .dropdown:hover .dropdown-hover\:block {
+          display: block;
+        }
+        .menu-icon span:first-child {
+          transform: rotate(45deg);
+        }
+        .menu-icon span:last-child {
+          top: 0;
+          transform: rotate(-45deg);
+        }
+        .menu-icon .toggler-line {
+          display: none;
+        }
+        .left .subMenu {
+          right: 101%;
+        }
+        .right .subMenu {
+          left: 101%;
+        }
+        .collapse {
+          max-height: 0;
+          overflow: hidden;
+          transition-duration: 0.4s;
+        }
+        .collapse.show {
+          max-height: 100%;
+        }  
+        .swiper.mySwiper .swiper-wrapper .swiper-slide.swiper-slide-next {
+          transform: scale(1.6);
+          z-index: 9;    
+        }        
+        .swiper-pagination-bullet{
+          width: 40px;
+          height: 5px;
+          background-color: #FFCA1D;
+          border-radius:0;
+          margin-top:20px;
+          transition: all .4s;
+        }   
+        .swiper-pagination-bullet-active{
+          width:70px
+        }
+        .swiper-pagination-line{
+          width: 40px;
+          height: 5px;
+          background-color: #FFFFFF;
+          border-radius:0;
+          margin-top:20px;
+          transition: all .4s;
+        }   
+        .swiper-pagination-line-active{
+          width:70px
+        }
+                                  
+      }
+    </style>
+</head>
+
+<body class="font-[Poppins]" style="width:100%; overflow-x:hidden;">
+  <!-- START : loder -->
+  <div class="preloader" style="
+        position: fixed;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        background-color: #fff;
+        z-index: 99999999999999;
+      ">
+    <img src="img/loder/application-loder.gif" alt="loder" />
+  </div>
+  <!-- END : loder -->
+
+  <!-- START: Header -->
+  <header class="fixed top-0 left-0 w-full text-lg z-50 transition duration-300 bg-white">
+    <div class="container lg:py-4 py-2 flex items-center justify-between">
+      <a href="index.html" class="block h-14">
+        <img src="img/logo/application-logo.svg" alt="Logo" class="h-full w-full" />
+      </a>
+      <button type="button" id="menu-btn" class="w-[22px] h-[14px] align-middle relative mx-2 lg:hidden block"
+        aria-controls="mobile-menu" aria-expanded="false" data-mobile-nav="false">
+        <span class="h-[3px] w-full absolute top-0 left-0 bg-sunshine transition duration-300"></span>
+        <span class="h-[3px] w-full absolute top-1/2 left-0 bg-sunshine transition duration-300 toggler-line"></span>
+        <span class="h-[3px] w-full absolute top-full left-0 bg-sunshine transition duration-300"></span>
+      </button>
+      <div class="lg:flex hidden items-center w-full text-center">
+        <div class="flex justify-between w-full">
+          <ul class="flex items-center mx-auto">
+            <li class="group">
+              <a href="javascript:void(0)"
+                class="xl:px-8 lg:px-4 py-2 text-lg text-sunshine font-bold transition decoration-2 underline-offset-2 underline">Home</a>
+              <div
+                class="absolute top-[70%] gap-10 bg-white text-black rounded-md text-[14px] text-left shadow-lg hidden group-hover:flex py-4 px-6">
+                <ul>
+                  <h5 class="font-bold mb-2">Corporate</h5>
+                  <li class="hover:text-sunshine transition duration-300 mb-2">
+                    <a href="javascript:void(0)">Startup</a>
+                  </li>
+                  <li class="hover:text-sunshine transition duration-300 mb-2">
+                    <a href="javascript:void(0)">Business</a>
+                  </li>
+                  <li class="hover:text-sunshine transition duration-300 mb-2">
+                    <a href="javascript:void(0)">Corporate</a>
+                  </li>
+                  <li class="hover:text-sunshine transition duration-300 mb-2">
+                    <a href="javascript:void(0)">Finance</a>
+                  </li>
+                  <li class="hover:text-sunshine transition duration-300 mb-2">
+                    <a href="javascript:void(0)">Application</a>
+                  </li>
+                  <li class="hover:text-sunshine transition duration-300 mb-2">
+                    <a href="javascript:void(0)">Consulting</a>
+                  </li>
+                  <li class="hover:text-sunshine transition duration-300 mb-2">
+                    <a href="javascript:void(0)">Digital agency</a>
+                  </li>
+                  <li class="hover:text-sunshine transition duration-300 mb-2">
+                    <a href="javascript:void(0)">SEO agency</a>
+                  </li>
+                  <li class="hover:text-sunshine transition duration-300 mb-2">
+                    <a href="javascript:void(0)">Event & conference</a>
+                  </li>
+                  <li class="hover:text-sunshine transition duration-300">
+                    <a href="javascript:void(0)">Marketing agency</a>
+                  </li>
+                </ul>
+                <ul>
+                  <h5 class="font-bold mb-2">Specialized</h5>
+                  <li class="hover:text-sunshine transition duration-300 mb-2">
+                    <a href="javascript:void(0)">Restaurant</a>
+                  </li>
+                  <li class="hover:text-sunshine transition duration-300 mb-2">
+                    <a href="javascript:void(0)">Architecture</a>
+                  </li>
+                  <li class="hover:text-sunshine transition duration-300 mb-2">
+                    <a href="javascript:void(0)">Hotel & resort</a>
+                  </li>
+                  <li class="hover:text-sunshine transition duration-300 mb-2">
+                    <a href="javascript:void(0)">Travel agency</a>
+                  </li>
+                  <li class="hover:text-sunshine transition duration-300 mb-2">
+                    <a href="javascript:void(0)">Yoga & meditation</a>
+                  </li>
+                  <li class="hover:text-sunshine transition duration-300 mb-2">
+                    <a href="javascript:void(0)">Gym & fitness</a>
+                  </li>
+                  <li class="hover:text-sunshine transition duration-300 mb-2">
+                    <a href="javascript:void(0)">Spa salon</a>
+                  </li>
+                  <li class="hover:text-sunshine transition duration-300 mb-2">
+                    <a href="javascript:void(0)">Cafe</a>
+                  </li>
+                  <li class="hover:text-sunshine transition duration-300 mb-2">
+                    <a href="javascript:void(0)">Home decor</a>
+                  </li>
+                  <li class="hover:text-sunshine transition duration-300">
+                    <a href="javascript:void(0)">Dentist</a>
+                  </li>
+                  <li class="hover:text-sunshine transition duration-300">
+                    <a href="javascript:void(0)">Interior design</a>
+                  </li>
+                </ul>
+                <ul>
+                  <h5 class="font-bold mb-2">Portfolio</h5>
+                  <li class="hover:text-sunshine transition duration-300 mb-2">
+                    <a href="javascript:void(0)">Design agency</a>
+                  </li>
+                  <li class="hover:text-sunshine transition duration-300 mb-2">
+                    <a href="javascript:void(0)">Web agency</a>
+                  </li>
+                  <li class="hover:text-sunshine transition duration-300 mb-2">
+                    <a href="javascript:void(0)">Creative agency</a>
+                  </li>
+                  <li class="hover:text-sunshine transition duration-300 mb-2">
+                    <a href="javascript:void(0)">Freelancer</a>
+                  </li>
+                  <li class="hover:text-sunshine transition duration-300 mb-2">
+                    <a href="javascript:void(0)">Branding agency</a>
+                  </li>
+                  <li class="hover:text-sunshine transition duration-300 mb-2">
+                    <a href="javascript:void(0)">Photography</a>
+                  </li>
+                  <li class="hover:text-sunshine transition duration-300 mb-2">
+                    <a href="javascript:void(0)">Personal portfolio</a>
+                  </li>
+                  <li class="hover:text-sunshine transition duration-300 mb-2">
+                    <a href="javascript:void(0)">Vertical portfolio</a>
+                  </li>
+                  <li class="hover:text-sunshine transition duration-300 mb-2">
+                    <a href="javascript:void(0)">Interactive portfolio</a>
+                  </li>
+                  <li class="hover:text-sunshine transition duration-300">
+                    <a href="javascript:void(0)">Split portfolio</a>
+                  </li>
+                  <li class="hover:text-sunshine transition duration-300">
+                    <a href="javascript:void(0)">Creative portfolio</a>
+                  </li>
+                </ul>
+                <ul>
+                  <h5 class="font-bold mb-2">Other</h5>
+                  <li class="hover:text-sunshine transition duration-300 mb-2">
+                    <a href="javascript:void(0)">Furniture shop</a>
+                  </li>
+                  <li class="hover:text-sunshine transition duration-300 mb-2">
+                    <a href="javascript:void(0)">Fashion shop</a>
+                  </li>
+                  <li class="hover:text-sunshine transition duration-300 mb-2">
+                    <a href="javascript:void(0)">Magazine</a>
+                  </li>
+                  <li class="hover:text-sunshine transition duration-300 mb-2">
+                    <a href="javascript:void(0)">Lifestyle blog</a>
+                  </li>
+                  <li class="hover:text-sunshine transition duration-300 mb-2">
+                    <a href="javascript:void(0)">Classic blog</a>
+                  </li>
+                  <li class="hover:text-sunshine transition duration-300 mb-2">
+                    <a href="javascript:void(0)">Blog metro</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="group">
+              <a href="javascript:void(0)"
+                class="xl:px-8 lg:px-4 text-lg text-black font-medium hover:text-sunshine transition hover:duration-300">Features</a>
+              <div
+                class="absolute top-[70%] gap-10 bg-white text-black rounded-md text-[14px] text-left shadow-lg hidden group-hover:flex py-2">
+                <ul>
+                  <li class="dropdown relative right">
+                    <a href="javascript:void(0)" class="hover:text-sunshine transition duration-300 px-6 py-4">Lifestyle
+                      blog</a>
+                    <div
+                      class="hidden dropdown-hover:block bg-white shadow-lg rounded-md absolute top-[0] subMenu py-2">
+                      <ul>
+                        <li class="hover:text-sunshine transition duration-300 px-6 py-1">
+                          <a href="javascript:void(0)" class="whitespace-nowrap">Furniture
+                            shop</a>
+                        </li>
+                        <li class="hover:text-sunshine transition duration-300 px-6 py-1">
+                          <a href="javascript:void(0)" class="whitespace-nowrap">Fashion
+                            shop</a>
+                        </li>
+                        <li class="hover:text-sunshine transition duration-300 px-6 py-1">
+                          <a href="javascript:void(0)" class="whitespace-nowrap">Magazine</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="relative px-6 py-1 dropdown left">
+                    <a href="javascript:void(0)"
+                      class="hover:text-sunshine transition duration-300 whitespace-nowrap">Classic
+                      blog</a>
+                    <div
+                      class="hidden dropdown-hover:block bg-white shadow-lg rounded-md absolute top-[0] subMenu py-2">
+                      <ul>
+                        <li class="hover:text-sunshine transition duration-300 px-6 py-1">
+                          <a href="javascript:void(0)" class="whitespace-nowrap">Our
+                            services</a>
+                        </li>
+                        <li class="hover:text-sunshine transition duration-300 px-6 py-1">
+                          <a href="javascript:void(0)" class="whitespace-nowrap">What we
+                            offer</a>
+                        </li>
+                        <li class="hover:text-sunshine transition duration-300 px-6 py-1">
+                          <a href="javascript:void(0)" class="whitespace-nowrap">Our
+                            process</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="hover:text-sunshine transition duration-300 px-6 py-1">
+                    <a href="javascript:void(0)" class="whitespace-nowrap">Blog metro</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <a href="javascript:void(0)"
+                class="xl:px-8 lg:px-4 text-lg text-black font-medium hover:text-sunshine transition hover:duration-300">Screenshots</a>
+            </li>
+            <li>
+              <a href="javascript:void(0)"
+                class="xl:px-8 lg:px-4 text-lg text-black font-medium hover:text-sunshine transition hover:duration-300">Pricing</a>
+            </li>
+            <li>
+              <a href="javascript:void(0)"
+                class="xl:px-8 lg:px-4 text-lg text-black font-medium hover:text-sunshine transition hover:duration-300">Blog</a>
+            </li>
+            <li>
+              <a href="javascript:void(0)"
+                class="xl:px-8 lg:px-4 text-lg text-black font-medium hover:text-sunshine transition hover:duration-300">Contact</a>
+            </li>
+            <li>
+                <a href="javascript:void(0)"
+                  class="xl:px-8 lg:px-4 text-lg text-black font-medium hover:text-sunshine transition hover:duration-300">Pages</a>
+              </li>
+          </ul>
+          <div class="relative gap-5">            
+            <div class="mr-16">
+              <img src="img/icons/cart.svg" alt="digital-agency" class="w-full h-full" />
+            </div>
+            <div>
+              <button type="button" class="absolute top-[6px] right-0 w-[22px] h-[14px] align-middle mx-2"
+                aria-controls="mobile-menu" aria-expanded="false" data-mobile-nav="false">
+                <span class="h-[3px] w-full absolute top-0 left-0 bg-black transition duration-300"></span>
+                <span
+                  class="h-[3px] w-full absolute top-1/2 left-0 bg-black transition duration-300 toggler-line"></span>
+                <span class="h-[3px] w-full absolute top-full left-0 bg-black transition duration-300"></span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="fixed inset-0 sm:w-3/4 bg-white transition duration-700 translate-x-[-110%] px-4 py-3"
+        id="mobile-menu">
+        <span class="absolute top-2 right-2 material-icons sm:hidden text-sunshine" id="closeMenu">close</span>
+        <a href="index.html" class="block h-14">
+          <img src="img/logo/application-logo.svg" alt="Logo" class="h-full" />
+        </a>
+        <div class="h-full overflow-auto text-[15px] py-3">
+          <ul>
+            <li>
+              <div>
+                <button
+                  class="w-full h-full flex justify-between border-b text-left text-sunshine hover:text-black transition duration-700 px-[15px] py-[9px]"
+                  data-toggle="collapse">
+                  <span>Home</span>
+                  <span class="material-icons transition duration-700 rotate-icon">keyboard_arrow_down</span>
+                </button>
+                <div class="collapse transition duration-700">
+                  <div class="sm:grid grid-cols-2 text-black py-2">
+                    <ul>
+                      <h5 class="font-bold px-[15px]">Corporate</h5>
+                      <li class="hover:text-sunshine transition duration-300 px-[15px] py-[2px]">
+                        <a href="javascript:void(0)" class="whitespace-nowrap">Startup</a>
+                      </li>
+                      <li class="hover:text-sunshine transition duration-300 px-[15px] py-[2px]">
+                        <a href="javascript:void(0)" class="whitespace-nowrap">Business</a>
+                      </li>
+                      <li class="hover:text-sunshine transition duration-300 px-[15px] py-[2px]">
+                        <a href="javascript:void(0)" class="whitespace-nowrap">Corporate</a>
+                      </li>
+                      <li class="hover:text-sunshine transition duration-300 px-[15px] py-[2px]">
+                        <a href="javascript:void(0)" class="whitespace-nowrap">Finance</a>
+                      </li>
+                      <li class="hover:text-sunshine transition duration-300 px-[15px] py-[2px]">
+                        <a href="javascript:void(0)" class="whitespace-nowrap">Application</a>
+                      </li>
+                      <li class="hover:text-sunshine transition duration-300 px-[15px] py-[2px]">
+                        <a href="javascript:void(0)" class="whitespace-nowrap">Consulting</a>
+                      </li>
+                      <li class="hover:text-sunshine transition duration-300 px-[15px] py-[2px]">
+                        <a href="javascript:void(0)" class="whitespace-nowrap">Digital
+                          agency</a>
+                      </li>
+                      <li class="hover:text-sunshine transition duration-300 px-[15px] py-[2px]">
+                        <a href="javascript:void(0)" class="whitespace-nowrap">SEO agency</a>
+                      </li>
+                      <li class="hover:text-sunshine transition duration-300 px-[15px] py-[2px]">
+                        <a href="javascript:void(0)" class="whitespace-nowrap">Event &amp;
+                          conference</a>
+                      </li>
+                      <li class="hover:text-sunshine transition duration-300 px-[15px] py-[2px]">
+                        <a href="javascript:void(0)" class="whitespace-nowrap">Marketing
+                          agency</a>
+                      </li>
+                    </ul>
+                    <ul>
+                      <h5 class="font-bold px-[15px]">Specialized</h5>
+                      <li class="hover:text-sunshine transition duration-300 px-[15px] py-[2px]">
+                        <a href="javascript:void(0)" class="whitespace-nowrap">Restaurant</a>
+                      </li>
+                      <li class="hover:text-sunshine transition duration-300 px-[15px] py-[2px]">
+                        <a href="javascript:void(0)" class="whitespace-nowrap">Architecture</a>
+                      </li>
+                      <li class="hover:text-sunshine transition duration-300 px-[15px] py-[2px]">
+                        <a href="javascript:void(0)" class="whitespace-nowrap">Hotel &
+                          resort</a>
+                      </li>
+                      <li class="hover:text-sunshine transition duration-300 px-[15px] py-[2px]">
+                        <a href="javascript:void(0)" class="whitespace-nowrap">Travel agency</a>
+                      </li>
+                      <li class="hover:text-sunshine transition duration-300 px-[15px] py-[2px]">
+                        <a href="javascript:void(0)" class="whitespace-nowrap">Yoga &
+                          meditation</a>
+                      </li>
+                      <li class="hover:text-sunshine transition duration-300 px-[15px] py-[2px]">
+                        <a href="javascript:void(0)" class="whitespace-nowrap">Gym & fitness</a>
+                      </li>
+                      <li class="hover:text-sunshine transition duration-300 px-[15px] py-[2px]">
+                        <a href="javascript:void(0)" class="whitespace-nowrap">Spa salon
+                        </a>
+                      </li>
+                      <li class="hover:text-sunshine transition duration-300 px-[15px] py-[2px]">
+                        <a href="javascript:void(0)" class="whitespace-nowrap">Cafe</a>
+                      </li>
+                      <li class="hover:text-sunshine transition duration-300 px-[15px] py-[2px]">
+                        <a href="javascript:void(0)" class="whitespace-nowrap">Home decor</a>
+                      </li>
+                      <li class="hover:text-sunshine transition duration-300 px-[15px] py-[2px]">
+                        <a href="javascript:void(0)" class="whitespace-nowrap">Dentist</a>
+                      </li>
+                      <li class="hover:text-sunshine transition duration-300 px-[15px] py-[2px]">
+                        <a href="javascript:void(0)" class="whitespace-nowrap">Interior
+                          design</a>
+                      </li>
+                    </ul>
+                    <ul>
+                      <h5 class="font-bold px-[15px]">Portfolio</h5>
+                      <li class="hover:text-sunshine transition duration-300 px-[15px] py-[2px]">
+                        <a href="javascript:void(0)" class="whitespace-nowrap">Design agency</a>
+                      </li>
+                      <li class="hover:text-sunshine transition duration-300 px-[15px] py-[2px]">
+                        <a href="javascript:void(0)" class="whitespace-nowrap">Web agency</a>
+                      </li>
+                      <li class="hover:text-sunshine transition duration-300 px-[15px] py-[2px]">
+                        <a href="javascript:void(0)" class="whitespace-nowrap">Creative
+                          agency</a>
+                      </li>
+                      <li class="hover:text-sunshine transition duration-300 px-[15px] py-[2px]">
+                        <a href="javascript:void(0)" class="whitespace-nowrap">Freelancer</a>
+                      </li>
+                      <li class="hover:text-sunshine transition duration-300 px-[15px] py-[2px]">
+                        <a href="javascript:void(0)" class="whitespace-nowrap">Branding
+                          agency</a>
+                      </li>
+                      <li class="hover:text-sunshine transition duration-300 px-[15px] py-[2px]">
+                        <a href="javascript:void(0)" class="whitespace-nowrap">Photography</a>
+                      </li>
+                      <li class="hover:text-sunshine transition duration-300 px-[15px] py-[2px]">
+                        <a href="javascript:void(0)" class="whitespace-nowrap">Personal
+                          portfolio</a>
+                      </li>
+                      <li class="hover:text-sunshine transition duration-300 px-[15px] py-[2px]">
+                        <a href="javascript:void(0)" class="whitespace-nowrap">Vertical
+                          portfolio</a>
+                      </li>
+                      <li class="hover:text-sunshine transition duration-300 px-[15px] py-[2px]">
+                        <a href="javascript:void(0)" class="whitespace-nowrap">Interactive
+                          portfolio</a>
+                      </li>
+                      <li class="hover:text-sunshine transition duration-300 px-[15px] py-[2px]">
+                        <a href="javascript:void(0)" class="whitespace-nowrap">Split
+                          portfolio</a>
+                      </li>
+                      <li class="hover:text-sunshine transition duration-300 px-[15px] py-[2px]">
+                        <a href="javascript:void(0)" class="whitespace-nowrap">Creative
+                          portfolio</a>
+                      </li>
+                    </ul>
+                    <ul>
+                      <h5 class="font-bold px-[15px]">Other</h5>
+                      <li class="hover:text-sunshine transition duration-300 px-[15px] py-[2px]">
+                        <a href="javascript:void(0)" class="whitespace-nowrap">Furniture
+                          shop</a>
+                      </li>
+                      <li class="hover:text-sunshine transition duration-300 px-[15px] py-[2px]">
+                        <a href="javascript:void(0)" class="whitespace-nowrap">Fashion shop</a>
+                      </li>
+                      <li class="hover:text-sunshine transition duration-300 px-[15px] py-[2px]">
+                        <a href="javascript:void(0)" class="whitespace-nowrap">Magazine</a>
+                      </li>
+                      <li class="hover:text-sunshine transition duration-300 px-[15px] py-[2px]">
+                        <a href="javascript:void(0)" class="whitespace-nowrap">Lifestyle
+                          blog</a>
+                      </li>
+                      <li class="hover:text-sunshine transition duration-300 px-[15px] py-[2px]">
+                        <a href="javascript:void(0)" class="whitespace-nowrap">Classic blog</a>
+                      </li>
+                      <li class="hover:text-sunshine transition duration-300 px-[15px] py-[2px]">
+                        <a href="javascript:void(0)" class="whitespace-nowrap">Blog metro</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div>
+                <button
+                  class="w-full h-full flex justify-between border-b text-left text-sunshine hover:text-black transition duration-700 px-[15px] py-[9px]"
+                  data-toggle="collapse">
+                  <span>Features</span>
+                  <span class="material-icons transition duration-700 rotate-icon">keyboard_arrow_down</span>
+                </button>
+                <div class="collapse transition duration-700">
+                  <div class="text-black">
+                    <ul>
+                      <li class="px-[15px] py-[2px]">
+                        <div>
+                          <button class="w-full h-full flex justify-between text-left py-[2px]" data-toggle="collapse">
+                            <span class="hover:text-sunshine transition duration-700">Lifestyle
+                              blog</span>
+                            <span class="material-icons transition duration-700 rotate-icon">keyboard_arrow_down</span>
+                          </button>
+                          <div class="collapse transition duration-700">
+                            <ul>
+                              <li class="hover:text-sunshine transition duration-300 px-[15px] py-[2px]">
+                                <a href="javascript:void(0)" class="whitespace-nowrap">Furniture shop</a>
+                              </li>
+                              <li class="hover:text-sunshine transition duration-300 px-[15px] py-[2px]">
+                                <a href="javascript:void(0)" class="whitespace-nowrap">Fashion shop</a>
+                              </li>
+                              <li class="hover:text-sunshine transition duration-300 px-[15px] py-[2px]">
+                                <a href="javascript:void(0)" class="whitespace-nowrap">Magazine</a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="px-[15px] py-[2px]">
+                        <div>
+                          <button class="w-full h-full flex justify-between text-left py-[2px]" data-toggle="collapse">
+                            <span class="hover:text-sunshine transition duration-700">Classic
+                              blog</span>
+                            <span class="material-icons transition duration-700 rotate-icon">keyboard_arrow_down</span>
+                          </button>
+                          <div class="collapse transition duration-700">
+                            <ul>
+                              <li class="hover:text-sunshine transition duration-300 px-[15px] py-[2px]">
+                                <a href="javascript:void(0)" class="whitespace-nowrap">Our services</a>
+                              </li>
+                              <li class="hover:text-sunshine transition duration-300 px-[15px] py-[2px]">
+                                <a href="javascript:void(0)" class="whitespace-nowrap">What we offer</a>
+                              </li>
+                              <li class="hover:text-sunshine transition duration-300 px-[15px] py-[2px]">
+                                <a href="javascript:void(0)" class="whitespace-nowrap">Our process</a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="hover:text-sunshine transition duration-300 px-[15px] py-[2px]">
+                        <a href="javascript:void(0)" class="whitespace-nowrap">Blog metro</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <a href="javascript:void(0)"
+                class="block w-full h-full border-b text-sunshine hover:text-black transition duration-700 px-[15px] py-[9px]">Screenshots</a>
+            </li>
+            <li>
+              <a href="javascript:void(0)"
+                class="block w-full h-full border-b text-sunshine hover:text-black transition duration-700 px-[15px] py-[9px]">Pricing</a>
+            </li>
+            <li>
+              <a href="javascript:void(0)"
+                class="block w-full h-full border-b text-sunshine hover:text-black transition duration-700 px-[15px] py-[9px]">Blog</a>
+            </li>
+            <li>
+              <a href="javascript:void(0)"
+                class="block w-full h-full border-b text-sunshine hover:text-black transition duration-700 px-[15px] py-[9px]">Contact</a>
+            </li>
+            <li>
+                <a href="javascript:void(0)"
+                  class="block w-full h-full border-b text-sunshine hover:text-black transition duration-700 px-[15px] py-[9px]">Pages</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!--END: Header -->
+
+  <!-- START: Main -->
+  <main>
+    <!-- START:Banner -->
+    <section class="h-full min-h-[700px] overflow-hidden lg:pt-[88px] pt-[70px] w-full bg-cover bg-center bg-[url('img/application/banner.png')] bg-no-repeat overflow-x-hidden z-20 relative before:absolute before:content-[''] before:w-full before:h-full  before:opacity-75 before:bg-gradient-to-l before:from-black before:-z-20">
+      <div class="container h-full flex items-center">
+        <div class="grid lg:grid-cols-2 grid-cols-1 items-center h-full lg:gap-10">
+            <div class="lg:px-0 md:px-20 px-0 order-2 lg:order-1">                               
+                <div class="swiper mySwiper h-full md:py-20 py-10">
+                    <div class="swiper-wrapper py-32">
+                      <div class="swiper-slide">
+                        <div class="xl:h-[460px] md:h-[350px] h-[250px] w-full">
+                          <img src="img/application/app-mobile3.png" alt="app-mobile1"
+                              class="w-full h-full" />
+                      </div>  
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="xl:h-[460px] md:h-[350px] h-[250px] w-full">
+                          <img src="img/application/app-mobile1.png" alt="app-mobile2"
+                              class="w-full h-full" />
+                        </div>     
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="xl:h-[460px] md:h-[350px] h-[250px] w-full ">
+                          <img src="img/application/app-mobile2.png" alt="app-mobile3"
+                              class="w-full h-full" />
+                        </div>    
+                      </div>                     
+                  </div>
+                  <div
+                  class="swiper-pagination swiper-pagination-lines swiper-pagination-horizontal position-unset flex items-center justify-center xl:mb-10 lg:mb-16 mb-12">
+                  <span class="swiper-pagination-line swiper-pagination-line-active"
+                      aria-current="true"></span>
+                  </div>
+                </div>
+            </div>
+            <div class="ml-5 order-1 lg:order-2 lg:pt-0 pt-10">               
+                <h5 class="text-white font-semibold xl:text-[24px] lg:text-[20px] text-[18px]] xl:mb-5 mb-3 tracking-wider">BEST APP LANDING</h5>
+                <h1 class="text-white font-semibold xl:text-[64px] lg:text-[60px] text-[50px] xl:mb-10 mb-5 leading-normal lg:leading-relaxed">Passing Your Apps Life With Our Applic</h1>
+                <p class="text-white font-semibold xl:text-[18px] lg:text-[17px] text-base xl:pb-10 pb-5 max-w-2xl">Lorem ipsum dolor sit amet consectetur adipisicing elit, sed do eiusmod 
+                    tempor incididunt ut labore et dolore magna aliqua enim ad minim veniam 
+                    quis nostrud exercitation.</p>
+                <div class="flex gap-5 xl:mt-10 mt-5">
+                    <a href="javascript:void(0)" class="btn hover:bg-[#F9CB34] md:text-base text-[14px]">DOWNLOAD</a>
+                    <a href="javascript:void(0)" class="btn hover:bg-[#F9CB34] md:text-base text-[14px]">GET STARTED</a>
+                </div>               
+            </div>           
+        </div>
+      </div> 
+    </section>
+    <!-- END:Banner -->
+
+    <!-- START: Clean Design  --> 
+    <section class="relative md:py-20 pt-20 pb-5">
+        <span class="absolute right-0 top-0">
+            <img src="img/application/bg-design.svg" class="h-full w-full object-cover" alt="bg"/>
+        </span>
+        <div class="container">
+            <div class="grid lg:grid-cols-2 grid-cols-1 lg:gap-10 items-center h-full justify-between">
+                <div class="lg:px-0 md:px-20 px-0 order-2 lg:order-1">                    
+                  <div class="swiper mySwiper py-28">
+                    <div class="swiper-wrapper xl:py-10 lg:py-8 md:py-5 py-0">
+                        <div class="swiper-slide">
+                          <div class="xl:h-[460px] md:h-[350px] h-[250px] w-full">
+                            <img src="img/application/app-mobile2.png" alt="app-mobile1"
+                                class="w-full h-full" />
+                          </div>  
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="xl:h-[460px] md:h-[350px] h-[250px] w-full">
+                            <img src="img/application/app-mobile4.png" alt="app-mobile2"
+                                class="w-full h-full" />
+                          </div>     
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="xl:h-[460px] md:h-[350px] h-[250px] w-full">
+                            <img src="img/application/app-mobile3.png" alt="app-mobile3"
+                                class="w-full h-full" />
+                          </div>    
+                        </div>                     
+                    </div>
+                    <div class="swiper-pagination"></div>
+                  </div>
+                </div>
+                <div class="order-1 lg:order-2">               
+                    <h5 class="text-safforn font-semibold xl:text-[24px] md:text-[20px] text-[17px] xl:mb-5 mb-3 tracking-widest">CLEAN DESIGN</h5>
+                    <h2 class="font-semibold xl:text-[48px] md:text-[42px] text-[38px] xl:mb-10 mb-5 lg:max-w-md">Applic Apps 
+                        Screenshot</h2>
+                    <p class="text-[#00000099]  xl:text-[24px] md:text-[21px] text-[19px] xl:pb-10 pb-5 max-w-lg">Lorem ipsum dolor sit amet, consectetur 
+                        adipisicing elit, sed do eiusmod tempor 
+                        incididunt ut labore et dolore magna aliqua. Ut 
+                        enim ad minim veniam quis no strud 
+                        exercitation ullamco laboris nisi ut aliquip 
+                        exea commodo consequat.</p>                               
+                </div>           
+            </div>
+          </div>
+    </section>
+    <!-- END: Clean Design -->
+
+    <!-- START: About -->
+    <section class="md:py-10 py-5">
+      <div class="container">
+        <h5 class="text-safforn font-semibold xl:text-[24px] md:text-[20px] text-[17px] xl:mb-5 mb-3 text-center tracking-widest">TESTMONIALS</h5>
+        <h2 class="text-center font-semibold xl:text-[48px] md:text-[42px] text-[38px]  mx-auto max-w-2xl xl:mb-20 mb-10">What Our Client’s Say
+          About Us</h2>         
+        <div class="swiper about px-12">
+          <div class="swiper-wrapper mb-10">
+            <div class="swiper-slide py-10">
+              <div class="relative before:h-[154px] before:-z-10 before:w-[154px] before:bg-[#FADA99] before:content-[''] before:absolute before:right-0 before:top-0 before:translate-x-10 before:-translate-y-10">              
+                <div class="shadow-[-15px_15px_50px_rgba(0,0,0,0.06)] p-7 bg-[#ffffff]">
+                    <div class="flex gap-5 my-5">
+                        <div class="bg-[#ECECEC] rounded-full w-[60px] h-[60px] object-center">
+                          <img src="img/application/client1.png" alt="client" class="h-full w-full rounded-full"/>
+                        </div>
+                        <div>
+                          <h5 class="font-semibold text-[24px] mb-2">Raidu Rossow</h5>
+                          <p class="text-safforn">Web Designer</p>
+                        </div>
+                    </div>
+                    <p class="text-[#00000099] mb-3 tracking-wider leading-8 max-w-sm">Lorem ipsum dolor sit amet 
+                      consectetur adipisicing elit sed do 
+                      eiusmod temporse incididunt utses 
+                      labore et dolore magna aliqua. Ut 
+                      enim minim veniam quis.</p>
+                    <div class="flex justify-end">
+                      <img src="img/application/doublequote-gray.svg" alt=""/>
+                    </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide py-10">
+              <div class="relative before:h-[154px] before:-z-10 before:w-[154px] before:bg-[#FADA99] before:content-[''] before:absolute before:left-0 before:bottom-0 before:-translate-x-10 before:translate-y-10">              
+                <div class="shadow-[-15px_15px_50px_rgba(0,0,0,0.06)] p-7 bg-[#ffffff]">
+                  <div class="flex gap-5 my-5">
+                    <div class="bg-[#ECECEC] rounded-full w-[60px] h-[60px] object-center">
+                      <img src="img/application/client2.png" alt="client" class="h-full w-full rounded-full"/>
+                    </div>
+                    <div class="">
+                      <h5 class="font-semibold text-[24px] mb-2">Raidu Rossow</h5>
+                      <p class="text-safforn">Web Designer</p>
+                    </div>
+                  </div>
+                  <p class="max-w-sm text-[#00000099] mb-3 tracking-wider leading-8">Lorem ipsum dolor sit amet 
+                    consectetur adipisicing elit sed do 
+                    eiusmod temporse incididunt utses 
+                    labore et dolore magna aliqua. Ut 
+                    enim minim veniam quis.</p>
+                  <div class="flex justify-end">
+                    <img src="img/application/doublequote-gray.svg" alt=""/>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide py-10">
+              <div class="relative before:h-[154px] before:-z-10 before:w-[154px] before:bg-[#FADA99] before:content-[''] before:absolute before:right-0 before:top-0 before:translate-x-10 before:-translate-y-10">              
+                <div class="shadow-[-15px_15px_50px_rgba(0,0,0,0.06)] p-7 bg-[#ffffff]">
+                  <div class="flex gap-5 my-5">
+                    <div class="bg-[#ECECEC] rounded-full w-[60px] h-[60px] object-center">
+                      <img src="img/application/client3.png" alt="client" class="h-full w-full rounded-full"/>
+                    </div>
+                    <div class="">
+                      <h5 class="font-semibold text-[24px] mb-2">Raidu Rossow</h5>
+                      <p class="text-safforn">Web Designer</p>
+                    </div>
+                  </div>
+                  <p class="max-w-sm text-[#00000099] mb-3 tracking-wider leading-8">Lorem ipsum dolor sit amet 
+                    consectetur adipisicing elit sed do 
+                    eiusmod temporse incididunt utses 
+                    labore et dolore magna aliqua. Ut 
+                    enim minim veniam quis.</p>
+                  <div class="flex justify-end">
+                    <img src="img/application/doublequote-gray.svg" alt=""/>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide py-10">
+              <div class="relative before:h-[154px] before:-z-10 before:w-[154px] before:bg-[#FADA99] before:content-[''] before:absolute before:left-0 before:bottom-0 before:-translate-x-10 before:translate-y-10">              
+                <div class="shadow-[-15px_15px_50px_rgba(0,0,0,0.06)] p-7 bg-[#ffffff]">
+                  <div class="flex gap-5 my-5">
+                    <div class="bg-[#ECECEC] rounded-full w-[60px] h-[60px] object-center">
+                      <img src="img/application/client2.png" alt="client" class="h-full w-full rounded-full"/>
+                    </div>
+                    <div class="">
+                      <h5 class="font-semibold text-[24px] mb-2">Raidu Rossow</h5>
+                      <p class="text-safforn">Web Designer</p>
+                    </div>
+                  </div>
+                  <p class="max-w-sm text-[#00000099] mb-3 tracking-wider leading-8">Lorem ipsum dolor sit amet 
+                    consectetur adipisicing elit sed do 
+                    eiusmod temporse incididunt utses 
+                    labore et dolore magna aliqua. Ut 
+                    enim minim veniam quis.</p>
+                  <div class="flex justify-end">
+                    <img src="img/application/doublequote-gray.svg" alt=""/>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide py-10">
+              <div class="relative before:h-[154px] before:-z-10 before:w-[154px] before:bg-[#FADA99] before:content-[''] before:absolute before:right-0 before:top-0 before:translate-x-10 before:-translate-y-10">              
+                <div class="shadow-[-15px_15px_50px_rgba(0,0,0,0.06)] p-7 bg-[#ffffff]">
+                  <div class="flex gap-5 my-5">
+                    <div class="bg-[#ECECEC] rounded-full w-[60px] h-[60px] object-center">
+                      <img src="img/application/client3.png" alt="client" class="h-full w-full rounded-full"/>
+                    </div>
+                    <div class="">
+                      <h5 class="font-semibold text-[24px] mb-2">Raidu Rossow</h5>
+                      <p class="text-safforn">Web Designer</p>
+                    </div>
+                  </div>
+                  <p class="max-w-sm text-[#00000099] mb-3 tracking-wider leading-8">Lorem ipsum dolor sit amet 
+                    consectetur adipisicing elit sed do 
+                    eiusmod temporse incididunt utses 
+                    labore et dolore magna aliqua. Ut 
+                    enim minim veniam quis.</p>
+                  <div class="flex justify-end">
+                    <img src="img/application/doublequote-gray.svg" alt=""/>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+                class="swiper-pagination swiper-pagination-bullets swiper-pagination-horizontal position-unset flex items-center justify-center">
+                <span class="swiper-pagination-bullet swiper-pagination-bullet-active"
+                    aria-current="true"></span>
+          </div>
+        </div> 
+      </div>
+    </section>    
+    <!-- END: About -->
+
+    <!-- START: products & features -->
+    <section class="my-20">
+      <div class="container">
+        <h5 class="text-safforn font-semibold xl:text-[24px] md:text-[20px] text-[17px] mb-5 text-center tracking-widest">APP FEATURES</h5>
+        <h2 class="text-center font-semibold xl:text-[48px] md:text-[42px] text-[40px]  mx-auto max-w-xl mb-16">Powerful Set Of Products 
+          & Features</h2>
+        <div class="grid xl:grid-cols-5 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-12">
+            <div class="relative flex justify-center items-center bg-[url(img/application/bg-features.png)] hover:before:content-[''] hover:before:bg-[#f5df95] hover:before:-z-10 hover:before:absolute hover:before:top-0 hover:before:left-0 hover:before:w-full hover:before:h-full hover:before:translate-y-8 hover:before:translate-x-8 transition duration-300">
+                <div class="py-14">
+                  <div class="flex justify-center">
+                    <img src="img/icons/bell-b-border.svg" alt/>
+                  </div>
+                  <h4 class="text-[26px] text-center max-w-[10rem] mt-5 font-semibold">Mobile Application</h4> 
+                </div>                            
+            </div>
+            <div class="relative flex justify-center items-center bg-[url(img/application/bg-features.png)] hover:before:content-[''] hover:before:bg-[#f5df95] hover:before:-z-10 hover:before:absolute hover:before:top-0 hover:before:left-0 hover:before:w-full hover:before:h-full hover:before:translate-y-8 hover:before:translate-x-8 translate duration-300">
+              <div class="py-14">
+                <div class="flex justify-center">
+                  <img src="img/icons/headfone-b-border.svg" alt/>
+                </div>
+                <h4 class="text-[26px] text-center max-w-[13rem] mt-5 font-semibold">Operator
+                  Assisted Calls</h4>
+              </div>                            
+            </div>
+            <div class="relative flex justify-center items-center bg-[url(img/application/bg-features.png)] hover:before:content-[''] hover:before:bg-[#f5df95] hover:before:-z-10 hover:before:absolute hover:before:top-0 hover:before:left-0 hover:before:w-full hover:before:h-full hover:before:translate-y-8 hover:before:translate-x-8 translate duration-300">
+              <div class="py-14">
+                <div class="flex justify-center">
+                  <img src="img/icons/clock-b-border.svg" alt/>
+                </div>
+                <h4 class="text-[26px] text-center max-w-[10rem] mt-5 font-semibold">Online
+                  Meeting</h4>
+              </div>                            
+            </div>
+            <div class="relative flex justify-center items-center bg-[url(img/application/bg-features.png)] hover:before:content-[''] hover:before:bg-[#f5df95] hover:before:-z-10 hover:before:absolute hover:before:top-0 hover:before:left-0 hover:before:w-full hover:before:h-full hover:before:translate-y-8 hover:before:translate-x-8 translate duration-300">
+              <div class="py-14">
+                <div class="flex justify-center">
+                  <img src="img/icons/cloud-b-black.svg" alt/>
+                </div>
+                <h4 class="text-[26px] text-center max-w-[10rem] mt-5 font-semibold">Cloud
+                  Record</h4> 
+              </div>                            
+            </div>
+            <div class="relative flex justify-center items-center bg-[url(img/application/bg-features.png)] hover:before:content-[''] hover:before:bg-[#f5df95] hover:before:-z-10 hover:before:absolute hover:before:top-0 hover:before:left-0 hover:before:w-full hover:before:h-full hover:before:translate-y-8 hover:before:translate-x-8 translate duration-300">
+              <div class="py-14">
+                <div class="flex justify-center">
+                  <img src="img/icons/sharing-b-border.svg" alt/>
+                </div>
+                <h4 class="text-[26px] text-center max-w-[10rem] mt-5 font-semibold">Screen
+                  Shareing</h4> 
+              </div>                            
+            </div>      
+        </div>
+      </div>     
+    </section>
+    <!-- END: products & features -->
+
+    <!-- START: Processing Works -->
+    <section class="py-10">
+      <div class="container">
+        <h5 class="text-safforn font-semibold xl:text-[24px] md:text-[20px] text-[17px] mb-5 text-center tracking-widest">WORKING PROGRESS</h5>
+        <h2 class="text-center font-semibold xl:text-[48px] md:text-[42px] text-[40px]  mx-auto max-w-xl mb-16">How Does Applic Apps 
+          Processing Works</h2>
+          <div class="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-14 mb-10">
+              <div class="">
+                <div class="relative">
+                  <img src="img/application/Habil Z. Keliban.png" alt="person"/>
+                  <!-- <div class="absolute bottom-5 right-5 group"> 
+                    <div class="group-hover:rounded-full group-hover:bg-[#FFC403] group-hover:h-10 group-hover:w-10 group-hover:p-1 group-hover:flex group-hover:justify-center group-hover:items-center group-hover:mb-2 group-hover:drop-shadow-[0_2px_6px_rgba(255,196,3,0.8)]">
+                      <div>
+                        <svg class="group-hover:w-[20px] w-0 h-0 group-hover:h-[14px]" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M20 5.75H17.5V3.25H16.25V5.75H13.75V7H16.25V9.5H17.5V7H20V5.75ZM6.25 8.25H9.78625C9.52677 8.98064 9.04762 9.61312 8.41452 10.0607C7.78141 10.5083 7.02534 10.7491 6.25 10.75C4.1825 10.75 2.5 9.0675 2.5 7C2.5 4.9325 4.1825 3.25 6.25 3.25C7.14625 3.25 8.00875 3.57125 8.67875 4.155L10.3212 2.27C9.19229 1.28825 7.74612 0.748328 6.25 0.750004C2.80375 0.750004 0 3.55375 0 7C0 10.4463 2.80375 13.25 6.25 13.25C9.69625 13.25 12.5 10.4463 12.5 7V5.75H6.25V8.25Z" fill="black"/>
+                        </svg>                         
+                      </div>       
+                    </div> 
+                    <div class="group-hover:rounded-full group-hover:bg-[#FFC403] group-hover:h-10 group-hover:w-10 group-hover:p-1 group-hover:flex group-hover:justify-center group-hover:items-center group-hover:mb-2 group-hover:drop-shadow-[0_2px_6px_rgba(255,196,3,0.8)]">
+                      <div>
+                        <svg class="group-hover:w-[18px] h-0 w-0 group-hover:h-[14px]" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M17.3337 1.83351C16.7073 2.10525 16.0449 2.28489 15.367 2.36684C16.0821 1.93961 16.6181 1.26749 16.8753 0.475175C16.2033 0.875227 15.4676 1.15709 14.7003 1.30851C14.1874 0.752318 13.5045 0.382088 12.7585 0.255884C12.0125 0.12968 11.2458 0.25464 10.5785 0.611166C9.91119 0.967692 9.3811 1.53562 9.07136 2.22587C8.76162 2.91613 8.68974 3.68967 8.86699 4.42517C7.50818 4.35645 6.17903 4.00264 4.96587 3.38673C3.75272 2.77082 2.6827 1.90659 1.82533 0.850175C1.52461 1.37531 1.36659 1.97003 1.36699 2.57517C1.36593 3.13716 1.50384 3.69069 1.76846 4.18648C2.03307 4.68227 2.41617 5.10493 2.88366 5.41684C2.34031 5.40206 1.80856 5.25626 1.33366 4.99184V5.03351C1.33773 5.82092 1.61365 6.58275 2.11475 7.19015C2.61586 7.79754 3.31137 8.21321 4.08366 8.36684C3.78637 8.45731 3.47772 8.50501 3.16699 8.50851C2.9519 8.506 2.73734 8.48649 2.52533 8.45017C2.74525 9.12752 3.17085 9.71946 3.74289 10.1436C4.31493 10.5678 5.00497 10.8031 5.71699 10.8168C4.51466 11.7629 3.03023 12.2792 1.50033 12.2835C1.22177 12.2844 0.943439 12.2677 0.666992 12.2335C2.22902 13.2421 4.04934 13.7774 5.90866 13.7752C7.19174 13.7885 8.46461 13.546 9.65292 13.0619C10.8412 12.5778 11.9212 11.8617 12.8297 10.9556C13.7381 10.0494 14.457 8.97133 14.9441 7.78426C15.4313 6.59719 15.677 5.32495 15.667 4.04184C15.667 3.90017 15.667 3.75017 15.667 3.60017C16.3209 3.11252 16.8849 2.5147 17.3337 1.83351Z" fill="black"/>
+                        </svg>                         
+                      </div>       
+                    </div>
+                    <div class="rounded-full bg-[#FFC403] h-10 w-10 p-1 flex justify-center items-center drop-shadow-[0_2px_6px_rgba(255,196,3,0.8)]">
+                      <div>
+                        <svg class="w-[10px] h-[18px]" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M7.60046 3.43368H9.16712V0.783684C8.40858 0.704806 7.64642 0.665864 6.88379 0.667017C4.61712 0.667017 3.06712 2.05035 3.06712 4.58368V6.76702H0.508789V9.73368H3.06712V17.3337H6.13379V9.73368H8.68379L9.06712 6.76702H6.13379V4.87535C6.13379 4.00035 6.36712 3.43368 7.60046 3.43368Z" fill="black"/>
+                        </svg>                          
+                      </div>       
+                    </div>              
+                  </div> -->
+                  <div class="absolute bottom-5 right-5 hover:h-auto transition duration-500 h-10 overflow-hidden"> 
+                    <div class="rounded-full bg-[#FFC403] h-10 w-10 p-1 flex justify-center items-center mb-2 shadow-[0_2px_6px_rgba(255,196,3,0.8)]">
+                      <div>
+                        <svg class="w-[20px] h-[14px]" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M20 5.75H17.5V3.25H16.25V5.75H13.75V7H16.25V9.5H17.5V7H20V5.75ZM6.25 8.25H9.78625C9.52677 8.98064 9.04762 9.61312 8.41452 10.0607C7.78141 10.5083 7.02534 10.7491 6.25 10.75C4.1825 10.75 2.5 9.0675 2.5 7C2.5 4.9325 4.1825 3.25 6.25 3.25C7.14625 3.25 8.00875 3.57125 8.67875 4.155L10.3212 2.27C9.19229 1.28825 7.74612 0.748328 6.25 0.750004C2.80375 0.750004 0 3.55375 0 7C0 10.4463 2.80375 13.25 6.25 13.25C9.69625 13.25 12.5 10.4463 12.5 7V5.75H6.25V8.25Z" fill="black"/>
+                        </svg>                         
+                      </div>       
+                    </div> 
+                    <div class="rounded-full bg-[#FFC403] h-10 w-10 p-1 flex justify-center items-center mb-2 shadow-[0_2px_6px_rgba(255,196,3,0.8)]">
+                      <div>
+                        <svg class="w-[18px] h-[14px]" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M17.3337 1.83351C16.7073 2.10525 16.0449 2.28489 15.367 2.36684C16.0821 1.93961 16.6181 1.26749 16.8753 0.475175C16.2033 0.875227 15.4676 1.15709 14.7003 1.30851C14.1874 0.752318 13.5045 0.382088 12.7585 0.255884C12.0125 0.12968 11.2458 0.25464 10.5785 0.611166C9.91119 0.967692 9.3811 1.53562 9.07136 2.22587C8.76162 2.91613 8.68974 3.68967 8.86699 4.42517C7.50818 4.35645 6.17903 4.00264 4.96587 3.38673C3.75272 2.77082 2.6827 1.90659 1.82533 0.850175C1.52461 1.37531 1.36659 1.97003 1.36699 2.57517C1.36593 3.13716 1.50384 3.69069 1.76846 4.18648C2.03307 4.68227 2.41617 5.10493 2.88366 5.41684C2.34031 5.40206 1.80856 5.25626 1.33366 4.99184V5.03351C1.33773 5.82092 1.61365 6.58275 2.11475 7.19015C2.61586 7.79754 3.31137 8.21321 4.08366 8.36684C3.78637 8.45731 3.47772 8.50501 3.16699 8.50851C2.9519 8.506 2.73734 8.48649 2.52533 8.45017C2.74525 9.12752 3.17085 9.71946 3.74289 10.1436C4.31493 10.5678 5.00497 10.8031 5.71699 10.8168C4.51466 11.7629 3.03023 12.2792 1.50033 12.2835C1.22177 12.2844 0.943439 12.2677 0.666992 12.2335C2.22902 13.2421 4.04934 13.7774 5.90866 13.7752C7.19174 13.7885 8.46461 13.546 9.65292 13.0619C10.8412 12.5778 11.9212 11.8617 12.8297 10.9556C13.7381 10.0494 14.457 8.97133 14.9441 7.78426C15.4313 6.59719 15.677 5.32495 15.667 4.04184C15.667 3.90017 15.667 3.75017 15.667 3.60017C16.3209 3.11252 16.8849 2.5147 17.3337 1.83351Z" fill="black"/>
+                        </svg>                         
+                      </div>       
+                    </div>
+                    <div class="rounded-full bg-[#FFC403] h-10 w-10 p-1 flex justify-center items-center shadow-[0_2px_6px_rgba(255,196,3,0.8)]">
+                      <div>
+                        <svg class="w-[10px] h-[18px]" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M7.60046 3.43368H9.16712V0.783684C8.40858 0.704806 7.64642 0.665864 6.88379 0.667017C4.61712 0.667017 3.06712 2.05035 3.06712 4.58368V6.76702H0.508789V9.73368H3.06712V17.3337H6.13379V9.73368H8.68379L9.06712 6.76702H6.13379V4.87535C6.13379 4.00035 6.36712 3.43368 7.60046 3.43368Z" fill="black"/>
+                        </svg>                          
+                      </div>       
+                    </div>              
+                  </div>
+                </div>               
+                <h5 class="text-[24px] mt-5 font-bold text-center">Habil Z. Keliban</h5>
+                <p class="text-[18px] text-safforn mt-3 font-medium text-center tracking-widest">CEO</p>
+              </div>
+              <div clas="">
+                <div class="relative">
+                  <img src="img/application/Habilo Z. Keliban.png" alt="person"/>
+                  <div class="absolute bottom-5 right-5 group"> 
+                    <div class="group-hover:rounded-full group-hover:bg-[#FFC403] group-hover:h-10 group-hover:w-10 group-hover:p-1 group-hover:flex group-hover:justify-center group-hover:items-center group-hover:mb-2 group-hover:drop-shadow-[0_2px_6px_rgba(255,196,3,0.8)]">
+                      <div>
+                        <svg class="group-hover:w-[20px] h-0 w-0 group-hover:h-[14px]" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M20 5.75H17.5V3.25H16.25V5.75H13.75V7H16.25V9.5H17.5V7H20V5.75ZM6.25 8.25H9.78625C9.52677 8.98064 9.04762 9.61312 8.41452 10.0607C7.78141 10.5083 7.02534 10.7491 6.25 10.75C4.1825 10.75 2.5 9.0675 2.5 7C2.5 4.9325 4.1825 3.25 6.25 3.25C7.14625 3.25 8.00875 3.57125 8.67875 4.155L10.3212 2.27C9.19229 1.28825 7.74612 0.748328 6.25 0.750004C2.80375 0.750004 0 3.55375 0 7C0 10.4463 2.80375 13.25 6.25 13.25C9.69625 13.25 12.5 10.4463 12.5 7V5.75H6.25V8.25Z" fill="black"/>
+                        </svg>                         
+                      </div>       
+                    </div> 
+                    <div class="group-hover:rounded-full group-hover:bg-[#FFC403] group-hover:h-10 group-hover:w-10 group-hover:p-1 group-hover:flex group-hover:justify-center group-hover:items-center group-hover:mb-2 group-hover:drop-shadow-[0_2px_6px_rgba(255,196,3,0.8)]">
+                      <div>
+                        <svg class="group-hover:w-[18px] h-0 w-0 group-hover:h-[14px]" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M17.3337 1.83351C16.7073 2.10525 16.0449 2.28489 15.367 2.36684C16.0821 1.93961 16.6181 1.26749 16.8753 0.475175C16.2033 0.875227 15.4676 1.15709 14.7003 1.30851C14.1874 0.752318 13.5045 0.382088 12.7585 0.255884C12.0125 0.12968 11.2458 0.25464 10.5785 0.611166C9.91119 0.967692 9.3811 1.53562 9.07136 2.22587C8.76162 2.91613 8.68974 3.68967 8.86699 4.42517C7.50818 4.35645 6.17903 4.00264 4.96587 3.38673C3.75272 2.77082 2.6827 1.90659 1.82533 0.850175C1.52461 1.37531 1.36659 1.97003 1.36699 2.57517C1.36593 3.13716 1.50384 3.69069 1.76846 4.18648C2.03307 4.68227 2.41617 5.10493 2.88366 5.41684C2.34031 5.40206 1.80856 5.25626 1.33366 4.99184V5.03351C1.33773 5.82092 1.61365 6.58275 2.11475 7.19015C2.61586 7.79754 3.31137 8.21321 4.08366 8.36684C3.78637 8.45731 3.47772 8.50501 3.16699 8.50851C2.9519 8.506 2.73734 8.48649 2.52533 8.45017C2.74525 9.12752 3.17085 9.71946 3.74289 10.1436C4.31493 10.5678 5.00497 10.8031 5.71699 10.8168C4.51466 11.7629 3.03023 12.2792 1.50033 12.2835C1.22177 12.2844 0.943439 12.2677 0.666992 12.2335C2.22902 13.2421 4.04934 13.7774 5.90866 13.7752C7.19174 13.7885 8.46461 13.546 9.65292 13.0619C10.8412 12.5778 11.9212 11.8617 12.8297 10.9556C13.7381 10.0494 14.457 8.97133 14.9441 7.78426C15.4313 6.59719 15.677 5.32495 15.667 4.04184C15.667 3.90017 15.667 3.75017 15.667 3.60017C16.3209 3.11252 16.8849 2.5147 17.3337 1.83351Z" fill="black"/>
+                        </svg>                         
+                      </div>       
+                    </div>
+                    <div class="rounded-full bg-[#FFC403] h-10 w-10 p-1 flex justify-center items-center drop-shadow-[0_2px_6px_rgba(255,196,3,0.8)]">
+                      <div>
+                        <svg class="w-[10px] h-[18px]" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M7.60046 3.43368H9.16712V0.783684C8.40858 0.704806 7.64642 0.665864 6.88379 0.667017C4.61712 0.667017 3.06712 2.05035 3.06712 4.58368V6.76702H0.508789V9.73368H3.06712V17.3337H6.13379V9.73368H8.68379L9.06712 6.76702H6.13379V4.87535C6.13379 4.00035 6.36712 3.43368 7.60046 3.43368Z" fill="black"/>
+                        </svg>                          
+                      </div>       
+                    </div>              
+                  </div>
+                </div>      
+                <h5 class="text-[24px] mt-5 font-bold text-center">Habilo Z. Keliban</h5>
+                <p class="text-[18px] text-safforn mt-3 font-medium text-center tracking-widest">CEO</p>
+              </div>
+              <div class="">
+                <div class="relative">
+                  <img src="img/application/Rosalina D. Williamson.png" alt="person"/>
+                  <div class="absolute bottom-5 right-5 group"> 
+                    <div class="group-hover:rounded-full group-hover:bg-[#FFC403] group-hover:h-10 group-hover:w-10 group-hover:p-1 group-hover:flex group-hover:justify-center group-hover:items-center group-hover:mb-2 group-hover:drop-shadow-[0_2px_6px_rgba(255,196,3,0.8)]">
+                      <div>
+                        <svg class="group-hover:w-[20px] h-0 w-0 group-hover:h-[14px]" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M20 5.75H17.5V3.25H16.25V5.75H13.75V7H16.25V9.5H17.5V7H20V5.75ZM6.25 8.25H9.78625C9.52677 8.98064 9.04762 9.61312 8.41452 10.0607C7.78141 10.5083 7.02534 10.7491 6.25 10.75C4.1825 10.75 2.5 9.0675 2.5 7C2.5 4.9325 4.1825 3.25 6.25 3.25C7.14625 3.25 8.00875 3.57125 8.67875 4.155L10.3212 2.27C9.19229 1.28825 7.74612 0.748328 6.25 0.750004C2.80375 0.750004 0 3.55375 0 7C0 10.4463 2.80375 13.25 6.25 13.25C9.69625 13.25 12.5 10.4463 12.5 7V5.75H6.25V8.25Z" fill="black"/>
+                        </svg>                         
+                      </div>       
+                    </div> 
+                    <div class="group-hover:rounded-full group-hover:bg-[#FFC403] group-hover:h-10 group-hover:w-10 group-hover:p-1 group-hover:flex group-hover:justify-center group-hover:items-center group-hover:mb-2 group-hover:drop-shadow-[0_2px_6px_rgba(255,196,3,0.8)]">
+                      <div>
+                        <svg class="group-hover:w-[18px] h-0 w-0 group-hover:h-[14px]" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M17.3337 1.83351C16.7073 2.10525 16.0449 2.28489 15.367 2.36684C16.0821 1.93961 16.6181 1.26749 16.8753 0.475175C16.2033 0.875227 15.4676 1.15709 14.7003 1.30851C14.1874 0.752318 13.5045 0.382088 12.7585 0.255884C12.0125 0.12968 11.2458 0.25464 10.5785 0.611166C9.91119 0.967692 9.3811 1.53562 9.07136 2.22587C8.76162 2.91613 8.68974 3.68967 8.86699 4.42517C7.50818 4.35645 6.17903 4.00264 4.96587 3.38673C3.75272 2.77082 2.6827 1.90659 1.82533 0.850175C1.52461 1.37531 1.36659 1.97003 1.36699 2.57517C1.36593 3.13716 1.50384 3.69069 1.76846 4.18648C2.03307 4.68227 2.41617 5.10493 2.88366 5.41684C2.34031 5.40206 1.80856 5.25626 1.33366 4.99184V5.03351C1.33773 5.82092 1.61365 6.58275 2.11475 7.19015C2.61586 7.79754 3.31137 8.21321 4.08366 8.36684C3.78637 8.45731 3.47772 8.50501 3.16699 8.50851C2.9519 8.506 2.73734 8.48649 2.52533 8.45017C2.74525 9.12752 3.17085 9.71946 3.74289 10.1436C4.31493 10.5678 5.00497 10.8031 5.71699 10.8168C4.51466 11.7629 3.03023 12.2792 1.50033 12.2835C1.22177 12.2844 0.943439 12.2677 0.666992 12.2335C2.22902 13.2421 4.04934 13.7774 5.90866 13.7752C7.19174 13.7885 8.46461 13.546 9.65292 13.0619C10.8412 12.5778 11.9212 11.8617 12.8297 10.9556C13.7381 10.0494 14.457 8.97133 14.9441 7.78426C15.4313 6.59719 15.677 5.32495 15.667 4.04184C15.667 3.90017 15.667 3.75017 15.667 3.60017C16.3209 3.11252 16.8849 2.5147 17.3337 1.83351Z" fill="black"/>
+                        </svg>                         
+                      </div>       
+                    </div>
+                    <div class="rounded-full bg-[#FFC403] h-10 w-10 p-1 flex justify-center items-center drop-shadow-[0_2px_6px_rgba(255,196,3,0.8)]">
+                      <div>
+                        <svg class="w-[10px] h-[18px]" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M7.60046 3.43368H9.16712V0.783684C8.40858 0.704806 7.64642 0.665864 6.88379 0.667017C4.61712 0.667017 3.06712 2.05035 3.06712 4.58368V6.76702H0.508789V9.73368H3.06712V17.3337H6.13379V9.73368H8.68379L9.06712 6.76702H6.13379V4.87535C6.13379 4.00035 6.36712 3.43368 7.60046 3.43368Z" fill="black"/>
+                        </svg>                          
+                      </div>       
+                    </div>              
+                  </div>
+                </div>              
+                <h5 class="text-[24px] mt-5 font-bold text-center">Rosalina D. Williamson</h5>
+                <p class="text-[18px] text-safforn mt-3 font-medium text-center tracking-widest">Founder</p>
+              </div>
+              <div class="">
+                <div class="relative">
+                  <img src="img/application/Saclibar D. Doadia.png" alt="person"/>
+                  <div class="absolute bottom-5 right-5 group"> 
+                    <div class="group-hover:rounded-full group-hover:bg-[#FFC403] group-hover:h-10 group-hover:w-10 group-hover:p-1 group-hover:flex group-hover:justify-center group-hover:items-center group-hover:mb-2 group-hover:drop-shadow-[0_2px_6px_rgba(255,196,3,0.8)]">
+                      <div>
+                        <svg class="group-hover:w-[20px] h-0 w-0 group-hover:h-[14px]" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M20 5.75H17.5V3.25H16.25V5.75H13.75V7H16.25V9.5H17.5V7H20V5.75ZM6.25 8.25H9.78625C9.52677 8.98064 9.04762 9.61312 8.41452 10.0607C7.78141 10.5083 7.02534 10.7491 6.25 10.75C4.1825 10.75 2.5 9.0675 2.5 7C2.5 4.9325 4.1825 3.25 6.25 3.25C7.14625 3.25 8.00875 3.57125 8.67875 4.155L10.3212 2.27C9.19229 1.28825 7.74612 0.748328 6.25 0.750004C2.80375 0.750004 0 3.55375 0 7C0 10.4463 2.80375 13.25 6.25 13.25C9.69625 13.25 12.5 10.4463 12.5 7V5.75H6.25V8.25Z" fill="black"/>
+                        </svg>                         
+                      </div>       
+                    </div> 
+                    <div class="group-hover:rounded-full group-hover:bg-[#FFC403] group-hover:h-10 group-hover:w-10 group-hover:p-1 group-hover:flex group-hover:justify-center group-hover:items-center group-hover:mb-2 group-hover:drop-shadow-[0_2px_6px_rgba(255,196,3,0.8)]">
+                      <div>
+                        <svg class="group-hover:w-[18px] h-0 w-0 group-hover:h-[14px]" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M17.3337 1.83351C16.7073 2.10525 16.0449 2.28489 15.367 2.36684C16.0821 1.93961 16.6181 1.26749 16.8753 0.475175C16.2033 0.875227 15.4676 1.15709 14.7003 1.30851C14.1874 0.752318 13.5045 0.382088 12.7585 0.255884C12.0125 0.12968 11.2458 0.25464 10.5785 0.611166C9.91119 0.967692 9.3811 1.53562 9.07136 2.22587C8.76162 2.91613 8.68974 3.68967 8.86699 4.42517C7.50818 4.35645 6.17903 4.00264 4.96587 3.38673C3.75272 2.77082 2.6827 1.90659 1.82533 0.850175C1.52461 1.37531 1.36659 1.97003 1.36699 2.57517C1.36593 3.13716 1.50384 3.69069 1.76846 4.18648C2.03307 4.68227 2.41617 5.10493 2.88366 5.41684C2.34031 5.40206 1.80856 5.25626 1.33366 4.99184V5.03351C1.33773 5.82092 1.61365 6.58275 2.11475 7.19015C2.61586 7.79754 3.31137 8.21321 4.08366 8.36684C3.78637 8.45731 3.47772 8.50501 3.16699 8.50851C2.9519 8.506 2.73734 8.48649 2.52533 8.45017C2.74525 9.12752 3.17085 9.71946 3.74289 10.1436C4.31493 10.5678 5.00497 10.8031 5.71699 10.8168C4.51466 11.7629 3.03023 12.2792 1.50033 12.2835C1.22177 12.2844 0.943439 12.2677 0.666992 12.2335C2.22902 13.2421 4.04934 13.7774 5.90866 13.7752C7.19174 13.7885 8.46461 13.546 9.65292 13.0619C10.8412 12.5778 11.9212 11.8617 12.8297 10.9556C13.7381 10.0494 14.457 8.97133 14.9441 7.78426C15.4313 6.59719 15.677 5.32495 15.667 4.04184C15.667 3.90017 15.667 3.75017 15.667 3.60017C16.3209 3.11252 16.8849 2.5147 17.3337 1.83351Z" fill="black"/>
+                        </svg>                         
+                      </div>       
+                    </div>
+                    <div class="rounded-full bg-[#FFC403] h-10 w-10 p-1 flex justify-center items-center drop-shadow-[0_2px_6px_rgba(255,196,3,0.8)]">
+                      <div>
+                        <svg class="w-[10px] h-[18px]" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M7.60046 3.43368H9.16712V0.783684C8.40858 0.704806 7.64642 0.665864 6.88379 0.667017C4.61712 0.667017 3.06712 2.05035 3.06712 4.58368V6.76702H0.508789V9.73368H3.06712V17.3337H6.13379V9.73368H8.68379L9.06712 6.76702H6.13379V4.87535C6.13379 4.00035 6.36712 3.43368 7.60046 3.43368Z" fill="black"/>
+                        </svg>                          
+                      </div>       
+                    </div>              
+                  </div>
+                </div>               
+                <h5 class="text-[24px] mt-5 font-bold text-center">Saclibar D. Doadia</h5>
+                <p class="text-[18px] text-safforn mt-3 font-medium text-center tracking-widest">Consultant</p>
+              </div>
+          </div>
+      </div>
+    </section>
+    <!-- END: Processing Works -->
+
+    <!-- START: Pricing Plan -->
+    <section class="pt-10 pb-20">
+      <div class="container">
+        <h5 class="text-safforn font-semibold xl:text-[24px] md:text-[20px] text-[17px] mb-5 text-center tracking-widest">PRICING PLAN </h5>
+        <h2 class="text-center font-semibold xl:text-[48px] md:text-[42px] text-[40px]  mx-auto max-w-xl mb-16">Our Latest Pricing Plan</h2>
+        <div class="swiper swiper-container py-7">
+          <div class="swiper-wrapper">           
+            <div class="swiper-slide">
+              <div class="px-16 py-14 text-black bg-gradient-to-b from-[#F9D434] to-[#FFC606] text-center">
+                <p class="text-[26px] mb-4">Most popular</p>
+                <p class="text-[26px] font-semibold mb-7">STANDARD PLAY</p>
+                <p class="text-[64px] font-semibold">$39</p>
+                <p class="text-lg font-semibold mb-10">PER YEAR</p>
+                <p class="py-4 border-b-2 border-white text-[18px] font-semibold">Pixel perfect design</p>
+                <p class="py-4 border-b-2 border-white text-[18px] font-semibold">Personal applications</p>
+                <p class="py-4 border-b-2 border-white text-[18px] font-semibold">Responsive app layout</p>
+                <p class="py-4 text-[18px] font-semibold mb-10">Step by step support</p>
+                <a href="javascript:void(0)" class="bg-white px-8 py-4 border border-white tracking-[0.2em] text-black text-[14px]">CHOOSE PACKAGE</a>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="px-16 py-20 text-black bg-gradient-to-b from-[#F9D434] to-[#FFC606] text-center">
+                <p class="text-[26px] mb-4">Huge features</p>
+                <p class="text-[26px] font-semibold mb-8">PREMIUM PLAN</p>
+                <p class="text-[64px] font-semibold">$49</p>
+                <p class="text-lg font-semibold mb-10">PER YEAR</p>
+                <p class="py-4 border-b-2 border-white text-[18px] font-semibold">Pixel perfect design</p>
+                <p class="py-4 border-b-2 border-white text-[18px] font-semibold">Personal applications</p>
+                <p class="py-4 text-[18px] font-semibold mb-12">Step by step support</p>
+                <a href="javascript:void(0)" class="bg-white px-8 py-4 border border-white tracking-[0.2em] text-black text-[14px]">CHOOSE PACKAGE</a>
+              </div>
+            </div>  
+            <div class="swiper-slide">
+              <div class="px-16 py-20 text-black bg-gradient-to-b from-[#F9D434] to-[#FFC606] text-center">
+                  <p class="text-[26px] mb-4">Core features</p>
+                  <p class="text-[26px] font-semibold mb-8">BASIC PLAN</p>
+                  <p class="text-[64px] font-semibold">$29</p>
+                  <p class="text-lg font-semibold mb-10">PER YEAR</p>
+                  <p class="py-4 border-b-2 border-white text-[18px] font-semibold">Pixel perfect design</p>
+                  <p class="py-4 border-b-2 border-white text-[18px] font-semibold">Personal applications</p>
+                  <p class="py-4 text-[18px] font-semibold mb-12">Step by step support</p>
+                  <a href="javascript:void(0)" class="bg-white px-8 py-4 border border-white tracking-[0.2em] text-black text-[14px]">CHOOSE PACKAGE</a>
+              </div>
+            </div>                         
+          </div>         
+        </div>
+      </div>
+    </section>
+    <!-- END: Pricing Plan -->   
+  </main>
+  <!--END: Main-->
+
+    <!-- START: Footer -->
+    <footer class="bg-safforn">    
+      <div class="container">
+        <div class="grid lg:grid-cols-6 gap-1 py-20">
+          <div class="ml-10 col-span-2">
+            <div class="flex mb-10 items-center gap-5">
+              <div class="w-[50px] h-[50px]">
+                <img src="img/logo/white-corporate-logo.svg" alt="finance" class="w-full h-full "/>
+              </div>              
+              <div class="text-black text-[35px] font-semibold">
+                <span class="text-theme">Z</span>ooa
+              </div>
+            </div>
+            <p class="text-black  font-medium max-w-[18rem] leading-[30px] mb-5">Lorem ipsum is simply dummy text 
+              of the printing and industry lorem 
+              ipsum has been the industry.</p>
+              <ul class="flex items-center xl:gap-7 lg:gap-4 md:gap-5 gap-3 pt-5 mb-10">
+                <li>
+                  <a href="javascript:void(0)">
+                    <div class="xl:w-[16px] xl:h-[30px] w-[14px] h-[25px]">
+                      <svg viewBox="0 0 16 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path class="fill-black hover:fill-white transition duration-300"
+                          d="M13.0501 5.7587H15.7917V1.1212C14.4643 0.983167 13.1305 0.915017 11.7959 0.917036C7.82923 0.917036 5.11673 3.33787 5.11673 7.7712V11.592H0.639648V16.7837H5.11673V30.0837H10.4834V16.7837H14.9459L15.6167 11.592H10.4834V8.28162C10.4834 6.75037 10.8917 5.7587 13.0501 5.7587Z"
+                          fill="#3C6FC1" />
+                      </svg>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:void(0)">
+                    <div class="xl:w-[32px] xl:h-[22px] w-[25px] h-[18px]">
+                      <svg class="w-full h-full" viewBox="0 0 24 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_1322_1867)">
+                            <path class="fill-black hover:fill-white transition duration-300" d="M23.4699 3.40151C23.3335 2.86855 23.0663 2.38261 22.6951 1.99234C22.324 1.60206 21.8619 1.32114 21.355 1.17768C19.4884 0.646485 11.9879 0.646484 11.9879 0.646484C11.9879 0.646484 4.48729 0.646485 2.62071 1.17768C2.11385 1.32114 1.65172 1.60206 1.28057 1.99234C0.90941 2.38261 0.642248 2.86855 0.50582 3.40151C0.157288 5.4032 -0.0118455 7.43486 0.000644257 9.46978C-0.0118455 11.5047 0.157288 13.5364 0.50582 15.538C0.642248 16.071 0.90941 16.5569 1.28057 16.9472C1.65172 17.3375 2.11385 17.6184 2.62071 17.7619C4.48729 18.2931 11.9879 18.2931 11.9879 18.2931C11.9879 18.2931 19.4884 18.2931 21.355 17.7619C21.8619 17.6184 22.324 17.3375 22.6951 16.9472C23.0663 16.5569 23.3335 16.071 23.4699 15.538C23.8184 13.5364 23.9876 11.5047 23.9751 9.46978C23.9876 7.43486 23.8184 5.4032 23.4699 3.40151ZM9.59041 13.2512V5.68837L15.8152 9.46978L9.59041 13.2512Z"></path>
+                        </g>
+                      </svg>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:void(0)">
+                    <div class="xl:w-[30px] xl:h-[25px] w-[25px] h-[20px]">
+                      <svg viewBox="0 0 30 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path class="fill-black hover:fill-white transition duration-300"
+                          d="M30.0834 3.45791C28.9872 3.93346 27.828 4.24783 26.6418 4.39124C27.8933 3.64358 28.8311 2.46738 29.2813 1.08082C28.1053 1.78092 26.8179 2.27417 25.4751 2.53916C24.5775 1.56582 23.3823 0.917922 22.0769 0.697065C20.7715 0.476208 19.4296 0.694888 18.2619 1.31881C17.0941 1.94273 16.1664 2.9366 15.6244 4.14454C15.0823 5.35249 14.9566 6.70618 15.2667 7.99332C12.8888 7.87305 10.5628 7.25388 8.43979 6.17604C6.31676 5.0982 4.44423 3.58579 2.94383 1.73707C2.41757 2.65607 2.14105 3.69681 2.14175 4.75582C2.13988 5.7393 2.38123 6.70797 2.84431 7.5756C3.30738 8.44324 3.97782 9.1829 4.79591 9.72874C3.84505 9.70287 2.9145 9.44772 2.08341 8.98499V9.05791C2.09054 10.4359 2.57341 11.7691 3.45033 12.832C4.32726 13.895 5.54441 14.6224 6.89592 14.8912C6.37566 15.0496 5.83552 15.133 5.29175 15.1392C4.91534 15.1348 4.53986 15.1006 4.16883 15.0371C4.5537 16.2224 5.29849 17.2583 6.29957 18.0006C7.30064 18.7429 8.50821 19.1547 9.75425 19.1787C7.65017 20.8343 5.05241 21.7379 2.37508 21.7454C1.88761 21.747 1.40053 21.7178 0.916748 21.6579C3.65029 23.4229 6.83585 24.3598 10.0897 24.3558C12.335 24.3791 14.5626 23.9548 16.6421 23.1076C18.7217 22.2604 20.6116 21.0073 22.2014 19.4215C23.7913 17.8358 25.0492 15.9491 25.9017 13.8717C26.7543 11.7944 27.1843 9.56792 27.1668 7.32249C27.1668 7.07457 27.1668 6.81207 27.1668 6.54957C28.3111 5.69617 29.2981 4.64998 30.0834 3.45791Z"
+                          fill="#5FD3ED" />
+                      </svg>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:void(0)">
+                    <div class="xl:w-[30px] xl:h-[30px] w-[25px] h-[25px]">
+                      <svg viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path class="fill-black hover:fill-white transition duration-300"
+                          d="M15.5001 11.8837C14.7848 11.8837 14.0855 12.0958 13.4908 12.4932C12.896 12.8906 12.4325 13.4554 12.1587 14.1163C11.885 14.7771 11.8134 15.5043 11.9529 16.2059C12.0925 16.9075 12.4369 17.5519 12.9427 18.0577C13.4485 18.5635 14.0929 18.908 14.7945 19.0475C15.4961 19.187 16.2233 19.1154 16.8841 18.8417C17.545 18.568 18.1098 18.1044 18.5072 17.5096C18.9046 16.9149 19.1167 16.2156 19.1167 15.5003C19.1167 15.0254 19.0232 14.5551 18.8414 14.1163C18.6597 13.6775 18.3933 13.2788 18.0575 12.943C17.7216 12.6071 17.3229 12.3407 16.8841 12.159C16.4453 11.9772 15.975 11.8837 15.5001 11.8837ZM29.9813 8.31074C29.9737 7.18456 29.7663 6.06866 29.3688 5.01491C29.0761 4.24383 28.6232 3.54359 28.04 2.96039C27.4568 2.37719 26.7566 1.92429 25.9855 1.63158C24.9318 1.23413 23.8159 1.02675 22.6897 1.01908C20.8084 0.916992 20.2542 0.916992 15.5001 0.916992C10.7459 0.916992 10.1917 0.916992 8.3105 1.01908C7.18431 1.02675 6.06842 1.23413 5.01467 1.63158C4.24359 1.92429 3.54334 2.37719 2.96014 2.96039C2.37694 3.54359 1.92404 4.24383 1.63133 5.01491C1.23388 6.06866 1.0265 7.18456 1.01883 8.31074C0.916748 10.192 0.916748 10.7462 0.916748 15.5003C0.916748 20.2545 0.916748 20.8087 1.01883 22.6899C1.03453 23.8201 1.24163 24.9394 1.63133 26.0003C1.92275 26.7679 2.37527 27.4641 2.95842 28.042C3.53911 28.6287 4.24086 29.0816 5.01467 29.3691C6.06842 29.7665 7.18431 29.9739 8.3105 29.9816C10.1917 30.0837 10.7459 30.0837 15.5001 30.0837C20.2542 30.0837 20.8084 30.0837 22.6897 29.9816C23.8159 29.9739 24.9318 29.7665 25.9855 29.3691C26.7593 29.0816 27.4611 28.6287 28.0418 28.042C28.6249 27.4641 29.0774 26.7679 29.3688 26.0003C29.7659 24.9414 29.9732 23.8208 29.9813 22.6899C30.0834 20.8087 30.0834 20.2545 30.0834 15.5003C30.0834 10.7462 30.0834 10.192 29.9813 8.31074ZM26.2772 19.9774C26.2304 20.8774 26.0383 21.7638 25.7084 22.6024C25.4253 23.302 25.0044 23.9374 24.4708 24.4711C23.9372 25.0047 23.3017 25.4256 22.6022 25.7087C21.7556 26.0202 20.8642 26.1925 19.9626 26.2191C18.8105 26.2191 18.5042 26.2191 15.5001 26.2191C12.4959 26.2191 12.1897 26.2191 11.0376 26.2191C10.1359 26.1925 9.24454 26.0202 8.398 25.7087C7.67482 25.4399 7.02174 25.0112 6.48758 24.4545C5.95918 23.9313 5.5511 23.2993 5.29175 22.6024C4.97902 21.7567 4.81138 20.8643 4.79591 19.9628C4.79591 18.8107 4.79591 18.5045 4.79591 15.5003C4.79591 12.4962 4.79591 12.1899 4.79591 11.0378C4.81138 10.1363 4.97902 9.24391 5.29175 8.39824C5.56049 7.67506 5.98923 7.02198 6.54592 6.48783C7.0714 5.96228 7.70276 5.55463 8.398 5.29199C9.24454 4.9805 10.1359 4.80813 11.0376 4.78158C12.1897 4.78158 12.4959 4.78158 15.5001 4.78158C18.5042 4.78158 18.8105 4.78158 19.9626 4.78158C20.8642 4.80813 21.7556 4.9805 22.6022 5.29199C23.3254 5.56074 23.9784 5.98948 24.5126 6.54616C25.041 7.06933 25.4491 7.70135 25.7084 8.39824C26.0199 9.24479 26.1923 10.1362 26.2188 11.0378C26.2188 12.1899 26.2188 12.4962 26.2188 15.5003C26.2188 18.5045 26.3209 18.8107 26.2772 19.9628V19.9774ZM23.9438 9.12741C23.7702 8.65634 23.4964 8.22856 23.1414 7.87355C22.7864 7.51855 22.3586 7.24479 21.8876 7.07116C21.2408 6.84696 20.5595 6.73835 19.8751 6.75033C18.7376 6.75033 18.4167 6.75033 15.5001 6.75033C12.5834 6.75033 12.2626 6.75033 11.1251 6.75033C10.4371 6.75705 9.75581 6.88542 9.11258 7.12949C8.64873 7.29524 8.22547 7.55782 7.87093 7.89979C7.5164 8.24175 7.23871 8.65526 7.05633 9.11283C6.84455 9.76232 6.74108 10.4422 6.75008 11.1253C6.75008 12.2628 6.75008 12.5837 6.75008 15.5003C6.75008 18.417 6.75008 18.7378 6.75008 19.8753C6.76454 20.5625 6.89266 21.2425 7.12925 21.8878C7.30288 22.3589 7.57664 22.7867 7.93164 23.1417C8.28664 23.4967 8.71443 23.7704 9.1855 23.9441C9.80772 24.1729 10.4625 24.3009 11.1251 24.3232C12.2626 24.3232 12.5834 24.3232 15.5001 24.3232C18.4167 24.3232 18.7376 24.3232 19.8751 24.3232C20.563 24.3165 21.2444 24.1882 21.8876 23.9441C22.3586 23.7704 22.7864 23.4967 23.1414 23.1417C23.4964 22.7867 23.7702 22.3589 23.9438 21.8878C24.1879 21.2446 24.3163 20.5633 24.323 19.8753C24.323 18.7378 24.323 18.417 24.323 15.5003C24.323 12.5837 24.323 12.2628 24.323 11.1253C24.3234 10.4367 24.1948 9.75409 23.9438 9.11283V9.12741ZM15.5001 21.0712C14.7692 21.0712 14.0455 20.927 13.3704 20.6468C12.6954 20.3667 12.0822 19.9561 11.5661 19.4386C11.0499 18.9211 10.641 18.3069 10.3626 17.6311C10.0842 16.9553 9.94191 16.2312 9.94383 15.5003C9.94384 14.3979 10.2709 13.3203 10.8837 12.4038C11.4965 11.4874 12.3674 10.7734 13.3862 10.3522C14.405 9.93096 15.5258 9.82149 16.6069 10.0376C17.6879 10.2538 18.6805 10.7858 19.459 11.5663C20.2375 12.3469 20.7669 13.3409 20.9802 14.4225C21.1935 15.5041 21.0811 16.6246 20.6572 17.6423C20.2334 18.66 19.5171 19.529 18.599 20.1394C17.681 20.7498 16.6025 21.074 15.5001 21.0712ZM21.3334 11.0232C21.011 10.9891 20.7127 10.8369 20.4959 10.5959C20.279 10.3549 20.1591 10.0422 20.1591 9.71803C20.1591 9.39386 20.279 9.08115 20.4959 8.84016C20.7127 8.59917 21.011 8.44695 21.3334 8.41283C21.6558 8.44695 21.9541 8.59917 22.171 8.84016C22.3878 9.08115 22.5078 9.39386 22.5078 9.71803C22.5078 10.0422 22.3878 10.3549 22.171 10.5959C21.9541 10.8369 21.6558 10.9891 21.3334 11.0232Z"
+                          fill="#C189DB" />
+                      </svg>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+          </div>
+          <div class="col-span-2">
+            <div class="grid grid-cols-2">
+              <div>
+                <ul>
+                  <p class="text-[24px] font-semibold mb-10">Company</p>
+                  <li>
+                    <a href="javascript:void(0)">
+                      <p class="text-[16px] font-medium text-black mb-5 hover:text-theme transition duration-300">
+                        About company
+                      </p>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0)">
+                      <p class="text-[16px] font-medium text-black mb-5 hover:text-theme transition duration-300">
+                        Our services
+                      </p>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0)">
+                      <p class="text-[16px] font-medium text-black mb-5 hover:text-theme transition duration-300">
+                        Job opportunities
+                      </p>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0)">
+                      <p class="text-[16px] font-medium text-black mb-5 hover:text-theme transition duration-300">
+                        Contact us
+                      </p>
+                    </a>
+                  </li>              
+                </ul>
+              </div>
+              <div class="flex flex-wrap justify-center">
+                <ul class="">
+                  <p class="text-[24px] font-semibold mb-10">Customer</p>
+                  <li>
+                    <a href="javascript:void(0)">
+                      <p class="text-[16px] font-medium text-black mb-5 hover:text-theme transition duration-300">
+                        Client support
+                      </p>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0)">
+                      <p class="text-[16px] font-medium text-black mb-5 hover:text-theme transition duration-300">
+                        Pricing packages
+                      </p>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0)">
+                      <p class="text-[16px] font-medium text-black mb-5 hover:text-theme transition duration-300">
+                        Company story
+                      </p>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0)">
+                      <p class="text-[16px] font-medium text-black mb-5 hover:text-theme transition duration-300">
+                        Latest news
+                      </p>
+                    </a>
+                  </li>              
+                </ul>
+              </div>
+            </div>           
+          </div>          
+          <div class="col-span-2 w-full flex flex-wrap justify-center">            
+            <div class="">
+              <p class="text-[24px] font-semibold mb-10">Download for free</p>
+              <a href="javascript:void(0)">
+                <img src="img/application/google-play.png" alt=""/>
+              </a>
+            </div>
+            <div class="">
+              <a href="javascript:void(0)"> 
+                <img src="img/application/app-store.png" alt=""/>
+              </a>
+            </div>           
+          </div>
+        </div>
+      </div>
+      <div class="border-t-[1px] border-[#E4E4E4]">
+        <div class="container">
+          <div class="flex flex-wrap justify-between px-4">
+            <div class="my-10">
+              <ul class="flex justify-around gap-10">
+                <li><a href="javascript:void(0)" class="font-medium">About us</a></li>
+                <li><a href="javascript:void(0)" class="font-medium">Our services</a></li>
+                <li><a href="javascript:void(0)" class="font-medium">Team</a></li>
+                <li><a href="javascript:void(0)" class="font-medium">Contact us</a></li>
+              </ul>
+            </div>
+            <div class="my-10 font-medium">
+              © 2022 Litho is Proudly Powered by <a href="javascript:void(0)" class="underline decoration-2 font-medium">ThemeZaa</a>
+            </div>
+          </div>
+        </div>
+    </footer>
+    <!-- END: Footer -->
+
+  <!-- Script -->
+  <script src="plugins/tailwindcss/tailwindcss.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="plugins/swiper/swiper-bundle.min.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/application.js"></script>
+ 
+</body>
+
+</html>

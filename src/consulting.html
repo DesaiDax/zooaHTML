@@ -1,0 +1,1800 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <title>Zooa - Theme Kit</title>
+
+    <!-- AOS Animation stylesheet -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- fonts googleapis stylesheet -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+
+    <!-- swiper stylesheet -->
+    <link rel="stylesheet" href="plugins/swiper/swiper-bundle.min.css">
+
+    <!-- main stylesheet -->
+    <link rel="stylesheet" href="css/main.css" />
+
+    <!-- Tailwind class base mixin -->
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .bg-softRed{
+                background-color: #FD4F56;
+            }
+				.text-theme {
+					@apply text-white;
+				}
+
+				.btn {
+					@apply lg:py-3 py-2 lg:px-7 px-4 bg-softRed text-white rounded-lg inline-flex items-center transition duration-500;
+				}
+
+				.card{
+					@apply shadow-[0_2px_10px_rgba(0,0,0,0.1)];
+				}
+
+				.btn:hover {
+					@apply opacity-80;
+				}
+
+				.btn span {
+					@apply ml-2;
+				}
+
+				.container {
+					@apply mx-auto px-4;
+				}
+
+	            .dropdown:hover .dropdown-hover\:block {
+					display: block;
+				}
+
+				.position-unset {
+					position: unset;
+				}
+
+				.scroll-header{
+					@apply bg-white text-softRed shadow-lg;
+				}
+
+				.gradient-black{
+					background: linear-gradient(180deg, rgba(196, 196, 196, 0) 0%, rgba(17, 17, 17, 0.54) 48.96%, rgba(0, 0, 0, 0.81) 100%);
+				}
+				.menu-icon span:first-child{
+				   transform: rotate(45deg);
+				}
+	
+				.menu-icon span:last-child{
+				   top: 0;
+				   transform: rotate(-45deg);
+				}
+				.menu-icon .toggler-line{
+					display: none;
+				}
+				.left .subMenu{
+                    right: 101%;
+				}
+
+				.right .subMenu{
+                    left: 101%;
+				}
+				.collapse{
+  					max-height: 0;
+  					overflow: hidden;
+					transition-duration: 0.4s;
+				}
+				.collapse.show{
+					max-height: 100%;
+				}
+                .swiper-pagination-bullet-active{
+                    width: 10px;
+                    height: 10px;
+                    background-color: #FD4F56;
+                }
+			}
+		</style>
+</head>
+
+<body style="width: 100%; overflow-x: hidden;">
+    <!-- START : loder -->
+    <div class="preloader" style="
+        position: fixed;
+        display: flex; 
+        justify-content: center; 
+        align-items: center;
+        width: 100%; 
+        height: 100%;
+        background-color: #fff;
+        z-index: 99999999999999;">
+        <img src="img/loder/consulting-loder.gif" alt="loder">
+    </div>
+    <!-- END : loder -->
+
+    <!-- START: Header -->
+    <header class="fixed top-0 left-0 w-full text-lg z-50 text-[#797979] transition duration-300 bg-[#F2F2F2]">
+        <div class="container lg:py-4 py-2 flex items-center justify-between">
+            <a href="index.html" class="block lg:h-14 h-12">
+                <img src="img/logo/consulting-logo.svg" alt="Logo" class="h-full w-full" />
+            </a>
+            <button type="button" id="menu-btn" class="w-[22px] h-[14px] align-middle relative mx-2 lg:hidden block"
+                aria-controls="mobile-menu" aria-expanded="false" data-mobile-nav="false">
+                <span class="h-[3px] w-full absolute top-0 left-0 bg-softRed transition duration-300"></span>
+                <span
+                    class="h-[3px] w-full absolute top-1/2 left-0 bg-softRed transition duration-300 toggler-line"></span>
+                <span class="h-[3px] w-full absolute top-full left-0 bg-softRed transition duration-300"></span>
+            </button>
+            <div class="lg:flex hidden items-center w-full text-center">
+                <div class="flex justify-between items-center w-full">
+                    <ul class="flex items-center mx-auto">
+                        <li class="group">
+                            <a href="javascript:void(0)"
+                                class="transition duration-300 text-softRed underline hover:text-softRed hover:underline font-extrabold bold xl:px-8 lg:px-4 py-4">Home</a>
+                            <div
+                                class="absolute top-[75%] gap-10 bg-white text-black rounded-md text-[14px] text-left shadow-lg hidden group-hover:flex py-2">
+                                <ul>
+                                    <h5 class="font-bold px-6 mb-2">Corporate</h5>
+                                    <li class="hover:text-softRed transition duration-300 px-6 py-1">
+                                        <a href="javascript:void(0)" class="whitespace-nowrap">Startup</a>
+                                    </li>
+                                    <li class="hover:text-softRed transition duration-300 px-6 py-1">
+                                        <a href="javascript:void(0)" class="whitespace-nowrap">Business</a>
+                                    </li>
+                                    <li class="hover:text-softRed transition duration-300 px-6 py-1">
+                                        <a href="javascript:void(0)" class="whitespace-nowrap">Corporate</a>
+                                    </li>
+                                    <li class="hover:text-softRed transition duration-300 px-6 py-1">
+                                        <a href="javascript:void(0)" class="whitespace-nowrap">Finance</a>
+                                    </li>
+                                    <li class="hover:text-softRed transition duration-300 px-6 py-1">
+                                        <a href="javascript:void(0)" class="whitespace-nowrap">Application</a>
+                                    </li>
+                                    <li class="hover:text-softRed transition duration-300 px-6 py-1">
+                                        <a href="javascript:void(0)" class="whitespace-nowrap">Consulting</a>
+                                    </li>
+                                    <li class="hover:text-softRed transition duration-300 px-6 py-1">
+                                        <a href="javascript:void(0)" class="whitespace-nowrap">Digital agency</a>
+                                    </li>
+                                    <li class="hover:text-softRed transition duration-300 px-6 py-1">
+                                        <a href="javascript:void(0)" class="whitespace-nowrap">SEO agency</a>
+                                    </li>
+                                    <li class="hover:text-softRed transition duration-300 px-6 py-1">
+                                        <a href="javascript:void(0)" class="whitespace-nowrap">Event & conference</a>
+                                    </li>
+                                    <li class="hover:text-softRed transition duration-300 px-6 py-1">
+                                        <a href="javascript:void(0)" class="whitespace-nowrap">Marketing agency</a>
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <h5 class="font-bold px-6 mb-2">Specialized</h5>
+                                    <li class="hover:text-softRed transition duration-300 px-6 py-1">
+                                        <a href="javascript:void(0)" class="whitespace-nowrap">Restaurant</a>
+                                    </li>
+                                    <li class="hover:text-softRed transition duration-300 px-6 py-1">
+                                        <a href="javascript:void(0)" class="whitespace-nowrap">Architecture</a>
+                                    </li>
+                                    <li class="hover:text-softRed transition duration-300 px-6 py-1">
+                                        <a href="javascript:void(0)" class="whitespace-nowrap">Hotel & resort</a>
+                                    </li>
+                                    <li class="hover:text-softRed transition duration-300 px-6 py-1">
+                                        <a href="javascript:void(0)" class="whitespace-nowrap">Travel agency</a>
+                                    </li>
+                                    <li class="hover:text-softRed transition duration-300 px-6 py-1">
+                                        <a href="javascript:void(0)" class="whitespace-nowrap">Yoga & meditation</a>
+                                    </li>
+                                    <li class="hover:text-softRed transition duration-300 px-6 py-1">
+                                        <a href="javascript:void(0)" class="whitespace-nowrap">Gym & fitness</a>
+                                    </li>
+                                    <li class="hover:text-softRed transition duration-300 px-6 py-1">
+                                        <a href="javascript:void(0)" class="whitespace-nowrap">Spa salon</a>
+                                    </li>
+                                    <li class="hover:text-softRed transition duration-300 px-6 py-1">
+                                        <a href="javascript:void(0)" class="whitespace-nowrap">Cafe</a>
+                                    </li>
+                                    <li class="hover:text-softRed transition duration-300 px-6 py-1">
+                                        <a href="javascript:void(0)" class="whitespace-nowrap">Home decor</a>
+                                    </li>
+                                    <li class="hover:text-softRed transition duration-300 px-6 py-1">
+                                        <a href="javascript:void(0)" class="whitespace-nowrap">Dentist</a>
+                                    </li>
+                                    <li class="hover:text-softRed transition duration-300 px-6 py-1">
+                                        <a href="javascript:void(0)" class="whitespace-nowrap">Interior design</a>
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <h5 class="font-bold px-6 mb-2">Portfolio</h5>
+                                    <li class="hover:text-softRed transition duration-300 px-6 py-1">
+                                        <a href="javascript:void(0)" class="whitespace-nowrap">Design agency</a>
+                                    </li>
+                                    <li class="hover:text-softRed transition duration-300 px-6 py-1">
+                                        <a href="javascript:void(0)" class="whitespace-nowrap">Web agency</a>
+                                    </li>
+                                    <li class="hover:text-softRed transition duration-300 px-6 py-1">
+                                        <a href="javascript:void(0)" class="whitespace-nowrap">Creative agency</a>
+                                    </li>
+                                    <li class="hover:text-softRed transition duration-300 px-6 py-1">
+                                        <a href="javascript:void(0)" class="whitespace-nowrap">Freelancer</a>
+                                    </li>
+                                    <li class="hover:text-softRed transition duration-300 px-6 py-1">
+                                        <a href="javascript:void(0)" class="whitespace-nowrap">Branding agency</a>
+                                    </li>
+                                    <li class="hover:text-softRed transition duration-300 px-6 py-1">
+                                        <a href="javascript:void(0)" class="whitespace-nowrap">Photography</a>
+                                    </li>
+                                    <li class="hover:text-softRed transition duration-300 px-6 py-1">
+                                        <a href="javascript:void(0)" class="whitespace-nowrap">Personal portfolio</a>
+                                    </li>
+                                    <li class="hover:text-softRed transition duration-300 px-6 py-1">
+                                        <a href="javascript:void(0)" class="whitespace-nowrap">Vertical portfolio</a>
+                                    </li>
+                                    <li class="hover:text-softRed transition duration-300 px-6 py-1">
+                                        <a href="javascript:void(0)" class="whitespace-nowrap">Interactive portfolio</a>
+                                    </li>
+                                    <li class="hover:text-softRed transition duration-300 px-6 py-1">
+                                        <a href="javascript:void(0)" class="whitespace-nowrap">Split portfolio</a>
+                                    </li>
+                                    <li class="hover:text-softRed transition duration-300 px-6 py-1">
+                                        <a href="javascript:void(0)" class="whitespace-nowrap">Creative portfolio</a>
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <h5 class="font-bold px-6 mb-2">Other</h5>
+                                    <li class="hover:text-softRed transition duration-300 px-6 py-1">
+                                        <a href="javascript:void(0)" class="whitespace-nowrap">Furniture shop</a>
+                                    </li>
+                                    <li class="hover:text-softRed transition duration-300 px-6 py-1">
+                                        <a href="javascript:void(0)" class="whitespace-nowrap">Fashion shop</a>
+                                    </li>
+                                    <li class="hover:text-softRed transition duration-300 px-6 py-1">
+                                        <a href="javascript:void(0)" class="whitespace-nowrap">Magazine</a>
+                                    </li>
+                                    <li class="hover:text-softRed transition duration-300 px-6 py-1">
+                                        <a href="javascript:void(0)" class="whitespace-nowrap">Lifestyle blog</a>
+                                    </li>
+                                    <li class="hover:text-softRed transition duration-300 px-6 py-1">
+                                        <a href="javascript:void(0)" class="whitespace-nowrap">Classic blog</a>
+                                    </li>
+                                    <li class="hover:text-softRed transition duration-300 px-6 py-1">
+                                        <a href="javascript:void(0)" class="whitespace-nowrap">Blog metro</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="group">
+                            <a href="javascript:void(0)"
+                                class="transition duration-300 text-[#7d7d7d] hover:text-softRed hover:underline font-extrabold bold xl:px-8 lg:px-4 py-4">About
+                                Us</a>
+                            <div
+                                class="absolute top-[75%] gap-10 bg-white text-black rounded-md text-[14px] text-left shadow-lg hidden group-hover:flex py-2">
+                                <ul>
+                                    <li class="dropdown relative right">
+                                        <a href="javascript:void(0)"
+                                            class="hover:text-softRed transition duration-300 px-6 py-4">Lifestyle
+                                            blog</a>
+                                        <div
+                                            class="hidden dropdown-hover:block bg-white shadow-lg rounded-md absolute top-[0] subMenu py-2">
+                                            <ul>
+                                                <li class="hover:text-softRed transition duration-300 px-6 py-1">
+                                                    <a href="javascript:void(0)" class="whitespace-nowrap">Furniture
+                                                        shop</a>
+                                                </li>
+                                                <li class="hover:text-softRed transition duration-300 px-6 py-1">
+                                                    <a href="javascript:void(0)" class="whitespace-nowrap">Fashion
+                                                        shop</a>
+                                                </li>
+                                                <li class="hover:text-softRed transition duration-300 px-6 py-1">
+                                                    <a href="javascript:void(0)" class="whitespace-nowrap">Magazine</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="relative px-6 py-1 dropdown left">
+                                        <a href="javascript:void(0)"
+                                            class="hover:text-softRed transition duration-300 whitespace-nowrap">Classic
+                                            blog</a>
+                                        <div
+                                            class="hidden dropdown-hover:block bg-white shadow-lg rounded-md absolute top-[0] subMenu py-2">
+                                            <ul>
+                                                <li class="hover:text-softRed transition duration-300 px-6 py-1">
+                                                    <a href="javascript:void(0)" class="whitespace-nowrap">Our
+                                                        services</a>
+                                                </li>
+                                                <li class="hover:text-softRed transition duration-300 px-6 py-1">
+                                                    <a href="javascript:void(0)" class="whitespace-nowrap">What we
+                                                        offer</a>
+                                                </li>
+                                                <li class="hover:text-softRed transition duration-300 px-6 py-1">
+                                                    <a href="javascript:void(0)" class="whitespace-nowrap">Our
+                                                        process</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="hover:text-softRed transition duration-300 px-6 py-1">
+                                        <a href="javascript:void(0)" class="whitespace-nowrap">Blog metro</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)"
+                                class="transition duration-300 text-[#7d7d7d] hover:text-softRed hover:underline font-extrabold bold xl:px-8 lg:px-4 py-4">Our
+                                Services</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)"
+                                class="transition duration-300 text-[#7d7d7d] hover:text-softRed hover:underline font-extrabold bold xl:px-8 lg:px-4 py-4">Contact
+                                Us</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)"
+                                class="transition duration-300 text-[#7d7d7d] hover:text-softRed hover:underline font-extrabold bold xl:px-8 lg:px-4 py-4">Testimonials</a>
+                        </li>
+                    </ul>
+                    <div>
+                        <a href="Javascript:void(0)"
+                            class="btn text-[15px] border-2 border-softRed hover:bg-transparent hover:border-softRed hover:border-2 hover:text-softRed">Request
+                            A Quote<span class="material-icons">trending_flat</span></a>
+                    </div>
+                </div>
+            </div>
+            <div class="fixed inset-0 sm:w-3/4 bg-white transition duration-700 translate-x-[-110%] px-4 py-3"
+                id="mobile-menu">
+                <span class="absolute top-2 right-2 material-icons sm:hidden" id="closeMenu">close</span>
+                <a href="index.html" class="block lg:h-14 h-12">
+                    <img src="img/logo/consulting-logo.svg" alt="Logo" class="h-full" />
+                </a>
+                <div class="h-full overflow-auto text-[15px] py-3">
+                    <ul>
+                        <li>
+                            <div>
+                                <button
+                                    class="w-full h-full flex justify-between border-b text-left hover:bg-softRed hover:text-white transition duration-700 px-[15px] py-[9px]"
+                                    data-toggle="collapse">
+                                    <span>Home</span>
+                                    <span
+                                        class="material-icons transition duration-700 rotate-icon">keyboard_arrow_down</span>
+                                </button>
+                                <div class="collapse transition duration-700">
+                                    <div class="sm:grid grid-cols-2 text-black py-2">
+                                        <ul>
+                                            <h5 class="font-bold px-[15px]">Corporate</h5>
+                                            <li class="hover:text-softRed transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Startup</a>
+                                            </li>
+                                            <li class="hover:text-softRed transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Business</a>
+                                            </li>
+                                            <li class="hover:text-softRed transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Corporate</a>
+                                            </li>
+                                            <li class="hover:text-softRed transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Finance</a>
+                                            </li>
+                                            <li class="hover:text-softRed transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Application</a>
+                                            </li>
+                                            <li class="hover:text-softRed transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Consulting</a>
+                                            </li>
+                                            <li class="hover:text-softRed transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Digital
+                                                    agency</a>
+                                            </li>
+                                            <li class="hover:text-softRed transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">SEO agency</a>
+                                            </li>
+                                            <li class="hover:text-softRed transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Event &amp;
+                                                    conference</a>
+                                            </li>
+                                            <li class="hover:text-softRed transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Marketing
+                                                    agency</a>
+                                            </li>
+                                        </ul>
+                                        <ul>
+                                            <h5 class="font-bold px-[15px]">Specialized</h5>
+                                            <li class="hover:text-softRed transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Restaurant</a>
+                                            </li>
+                                            <li class="hover:text-softRed transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Architecture</a>
+                                            </li>
+                                            <li class="hover:text-softRed transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Hotel &
+                                                    resort</a>
+                                            </li>
+                                            <li class="hover:text-softRed transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Travel agency</a>
+                                            </li>
+                                            <li class="hover:text-softRed transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Yoga &
+                                                    meditation</a>
+                                            </li>
+                                            <li class="hover:text-softRed transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Gym & fitness</a>
+                                            </li>
+                                            <li class="hover:text-softRed transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Spa salon
+                                                </a>
+                                            </li>
+                                            <li class="hover:text-softRed transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Cafe</a>
+                                            </li>
+                                            <li class="hover:text-softRed transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Home decor</a>
+                                            </li>
+                                            <li class="hover:text-softRed transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Dentist</a>
+                                            </li>
+                                            <li class="hover:text-softRed transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Interior
+                                                    design</a>
+                                            </li>
+                                        </ul>
+                                        <ul>
+                                            <h5 class="font-bold px-[15px]">Portfolio</h5>
+                                            <li class="hover:text-softRed transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Design agency</a>
+                                            </li>
+                                            <li class="hover:text-softRed transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Web agency</a>
+                                            </li>
+                                            <li class="hover:text-softRed transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Creative
+                                                    agency</a>
+                                            </li>
+                                            <li class="hover:text-softRed transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Freelancer</a>
+                                            </li>
+                                            <li class="hover:text-softRed transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Branding
+                                                    agency</a>
+                                            </li>
+                                            <li class="hover:text-softRed transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Photography</a>
+                                            </li>
+                                            <li class="hover:text-softRed transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Personal
+                                                    portfolio</a>
+                                            </li>
+                                            <li class="hover:text-softRed transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Vertical
+                                                    portfolio</a>
+                                            </li>
+                                            <li class="hover:text-softRed transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Interactive
+                                                    portfolio</a>
+                                            </li>
+                                            <li class="hover:text-softRed transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Split
+                                                    portfolio</a>
+                                            </li>
+                                            <li class="hover:text-softRed transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Creative
+                                                    portfolio</a>
+                                            </li>
+                                        </ul>
+                                        <ul>
+                                            <h5 class="font-bold px-[15px]">Other</h5>
+                                            <li class="hover:text-softRed transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Furniture
+                                                    shop</a>
+                                            </li>
+                                            <li class="hover:text-softRed transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Fashion shop</a>
+                                            </li>
+                                            <li class="hover:text-softRed transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Magazine</a>
+                                            </li>
+                                            <li class="hover:text-softRed transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Lifestyle
+                                                    blog</a>
+                                            </li>
+                                            <li class="hover:text-softRed transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Classic blog</a>
+                                            </li>
+                                            <li class="hover:text-softRed transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Blog metro</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <button
+                                    class="w-full h-full flex justify-between border-b text-left hover:bg-softRed hover:text-white transition duration-700 px-[15px] py-[9px]"
+                                    data-toggle="collapse">
+                                    <span>About Us</span>
+                                    <span
+                                        class="material-icons transition duration-700 rotate-icon">keyboard_arrow_down</span>
+                                </button>
+                                <div class="collapse transition duration-700">
+                                    <div class="text-black">
+                                        <ul>
+                                            <li class="px-[15px] py-[2px]">
+                                                <div>
+                                                    <button
+                                                        class="w-full h-full flex justify-between text-left py-[2px]"
+                                                        data-toggle="collapse">
+                                                        <span
+                                                            class="hover:text-softRed transition duration-700">Lifestyle
+                                                            blog</span>
+                                                        <span
+                                                            class="material-icons transition duration-700 rotate-icon">keyboard_arrow_down</span>
+                                                    </button>
+                                                    <div class="collapse transition duration-700">
+                                                        <ul>
+                                                            <li
+                                                                class="hover:text-softRed transition duration-300 px-[15px] py-[2px]">
+                                                                <a href="javascript:void(0)"
+                                                                    class="whitespace-nowrap">Furniture
+                                                                    shop</a>
+                                                            </li>
+                                                            <li
+                                                                class="hover:text-softRed transition duration-300 px-[15px] py-[2px]">
+                                                                <a href="javascript:void(0)"
+                                                                    class="whitespace-nowrap">Fashion
+                                                                    shop</a>
+                                                            </li>
+                                                            <li
+                                                                class="hover:text-softRed transition duration-300 px-[15px] py-[2px]">
+                                                                <a href="javascript:void(0)"
+                                                                    class="whitespace-nowrap">Magazine</a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="px-[15px] py-[2px]">
+                                                <div>
+                                                    <button
+                                                        class="w-full h-full flex justify-between text-left py-[2px]"
+                                                        data-toggle="collapse">
+                                                        <span class="hover:text-softRed transition duration-700">Classic
+                                                            blog</span>
+                                                        <span
+                                                            class="material-icons transition duration-700 rotate-icon">keyboard_arrow_down</span>
+                                                    </button>
+                                                    <div class="collapse transition duration-700">
+                                                        <ul>
+                                                            <li
+                                                                class="hover:text-softRed transition duration-300 px-[15px] py-[2px]">
+                                                                <a href="javascript:void(0)"
+                                                                    class="whitespace-nowrap">Our
+                                                                    services</a>
+                                                            </li>
+                                                            <li
+                                                                class="hover:text-softRed transition duration-300 px-[15px] py-[2px]">
+                                                                <a href="javascript:void(0)"
+                                                                    class="whitespace-nowrap">What we
+                                                                    offer</a>
+                                                            </li>
+                                                            <li
+                                                                class="hover:text-softRed transition duration-300 px-[15px] py-[2px]">
+                                                                <a href="javascript:void(0)"
+                                                                    class="whitespace-nowrap">Our
+                                                                    process</a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="hover:text-softRed transition duration-300 px-[15px] py-[2px]">
+                                                <a href="javascript:void(0)" class="whitespace-nowrap">Blog metro</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)"
+                                class="block w-full h-full border-b hover:bg-softRed hover:text-white softRed transition duration-700 px-[15px] py-[9px]">Our
+                                Services</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)"
+                                class="block w-full h-full border-b hover:bg-softRed hover:text-white softRed transition duration-700 px-[15px] py-[9px]">Contact
+                                Us</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)"
+                                class="block w-full h-full border-b hover:bg-softRed hover:text-white softRed transition duration-700 px-[15px] py-[9px]">Testimonials</a>
+                        </li>
+                        <li class="p-2 mb-6">
+                            <a href="Javascript:void(0)" class="btn text-[15px]">Request A Quote<span
+                                    class="material-icons">trending_flat</span></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- END: Header -->
+
+    <!-- START: Main -->
+    <main>
+        <!-- STATRT: Banner -->
+        <section
+            class="xl:min-h-screen h-full lg:min-h-[75vh] md:min-h-[50vh] min-h-[55vh] sm:pt-[88px] pt-[65px] flex flex-col justify-center">
+            <div class="relative w-full h-full flex items-center py-5">
+                <div class="grid lg:grid-cols-2 lg:items-center w-full">
+                    <div class="container lg:max-w-[665px]">
+                        <h1 class="2xl:text-[56px] xl:text-[52px] lg:text-[42px] md:text-[35px] text-[28px] leading-tight font-bold"
+                            data-aos="fade-up">
+                            Put An End To Personal & Business Debt
+                        </h1>
+                        <p class="xl:text-[22px] lg:text-[18px] md:text-[20px] text-[16px] font-bold 2xl:my-10 xl:my-8 lg:my-5 my-7"
+                            data-aos="fade-up" data-aos-delay="100">
+                            Let us negotiate with creditors, settle disputes, and set you up for long-term success.</p>
+                        <div data-aos="fade-up" data-aos-delay="200">
+                            <a href="#"
+                                class="btn border-2 border-softRed hover:bg-transparent hover:border-softRed hover:border-2 hover:text-softRed">Get
+                                started today</a>
+                        </div>
+                    </div>
+                    <div
+                        class="lg:flex hidden flex-col items-center 2xl:w-[100px] xl:w-[90px] lg:w-[60px] w-[50px] absolute bottom-10 left-1/2 -translate-x-1/2">
+                        <div class="2xl:w-[45px] xl:w-[35px] lg:w-[25px] w-[20px] mb-3" data-aos="flip-left"
+                            data-aos-delay="300">
+                            <img src="img/consulting/img-1.png" alt="img">
+                        </div>
+                        <div class="2xl:w-[65px] xl:w-[55px] lg:w-[40px] w-[30px] mb-3" data-aos="flip-right"
+                            data-aos-delay="400">
+                            <img src="img/consulting/img-2.png" alt="img">
+                        </div>
+                        <div class="2xl:w-[100px] xl:w-[90px] lg:w-[60px] w-[50px]" data-aos="flip-left"
+                            data-aos-delay="500">
+                            <img src="img/consulting/img-3.png" alt="img">
+                        </div>
+                    </div>
+                    <div class="2xl:pl-20 lg:pl-16 lg:w-full lg:h-full md:w-[600px] md:h-[400px] ml-auto lg:mt-0 md:mt-5 md:flex hidden"
+                        data-aos="fade-left">
+                        <img src="img/consulting/banner-img.png" alt="banner" class="w-full h-full">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- END: Banner -->
+
+        <!-- START : feecher -->
+        <section class="bg-softRed overflow-hidden">
+            <div class="container">
+                <div class="grid lg:grid-cols-4 sm:grid-cols-2 xl:gap-7 gap-4 2xl:py-12 md:py-8 py-4">
+                    <div class="flex items-center justify-center rounded-md bg-[#F2F2F2] transition duration-300 group px-4 sm:py-5 py-3"
+                        data-aos="zoom-in-up" data-aos-offset="0">
+                        <div
+                            class="xl:max-w-[40px] w-full sm:max-w-[35px] max-w-[30px] xl:h-[40px] sm:h-[35px] h-[30px] mr-2">
+                            <svg class="w-full h-full" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 43 43"
+                                fill="none">
+                                <path d="M8.1167 21.4998H21.4507V8.1665" stroke="black"
+                                    class="group-hover:stroke-softRed transition duration-300" stroke-width="2"
+                                    stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                                <path
+                                    d="M41.4502 21.5C41.4502 32.5453 32.4949 41.5 21.4509 41.5C10.4049 41.5 1.4502 32.5453 1.4502 21.5C1.4502 10.4527 10.4049 1.5 21.4509 1.5C32.4949 1.5 41.4502 10.4527 41.4502 21.5Z"
+                                    stroke="black" class="group-hover:stroke-softRed transition duration-300"
+                                    stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M21.4507 31.4971V34.8304V31.4971Z" stroke="black"
+                                    class="group-hover:stroke-softRed transition duration-300" stroke-width="2"
+                                    stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M31.4482 21.498H34.7829H31.4482Z" stroke="black"
+                                    class="group-hover:stroke-softRed transition duration-300" stroke-width="2"
+                                    stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M28.5195 28.5693L30.8762 30.926L28.5195 28.5693Z" stroke="black"
+                                    class="group-hover:stroke-softRed transition duration-300" stroke-width="2"
+                                    stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M12.0239 12.0723L14.3799 14.4289L12.0239 12.0723Z" stroke="black"
+                                    class="group-hover:stroke-softRed transition duration-300" stroke-width="2"
+                                    stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M28.5195 14.4286L30.8762 12.0713L28.5195 14.4286Z" stroke="black"
+                                    class="group-hover:stroke-softRed transition duration-300" stroke-width="2"
+                                    stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M12.0239 30.926L14.3799 28.5693L12.0239 30.926Z" stroke="black"
+                                    class="group-hover:stroke-softRed transition duration-300" stroke-width="2"
+                                    stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        <p
+                            class="font-bold xl:text-[16px] text-[14px] lg:whitespace-nowrap group-hover:text-softRed transition duration-300">
+                            Online Instant Approvals
+                        </p>
+                    </div>
+                    <div class="flex items-center justify-center rounded-md bg-[#F2F2F2] transition duration-300 group px-4 sm:py-5 py-3"
+                        data-aos="zoom-in-up" data-aos-delay="100" data-aos-offset="0">
+                        <div
+                            class="xl:max-w-[40px] w-full sm:max-w-[35px] max-w-[30px] xl:h-[40px] sm:h-[35px] h-[30px] mr-2">
+                            <svg class="w-full h-full" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 43 43"
+                                fill="none">
+                                <path
+                                    d="M35.3552 36.44C35.0672 36.3195 34.8102 36.145 34.5937 35.9295C34.1697 35.504 33.9062 34.919 33.9062 34.2715V33.7325C35.6962 32.535 36.9522 29.748 36.9522 26.499C36.9522 23.738 34.7127 21.5 31.9512 21.5C29.1907 21.5 26.9517 23.738 26.9517 26.499C26.9517 29.748 28.2072 32.535 29.9962 33.7325V34.2715C29.9962 34.9195 29.7347 35.5045 29.3107 35.9295C29.0937 36.145 28.8352 36.319 28.5482 36.44L21.9517 39.1705L15.3562 36.44C15.0682 36.3195 14.8097 36.145 14.5932 35.9295C14.1692 35.504 13.9077 34.919 13.9077 34.2715V33.7325C15.6962 32.537 16.9502 29.748 16.9502 26.499C16.9502 23.738 14.7127 21.5 11.9497 21.5C9.1902 21.5 6.9507 23.738 6.9507 26.499C6.9507 29.748 8.20619 32.537 9.99419 33.7325V34.2715C9.99419 34.9195 9.73269 35.5045 9.30869 35.9295C9.09169 36.145 8.8332 36.319 8.5457 36.44L1.9502 39.1705V41.4995H41.9502V39.1705L35.3552 36.44Z"
+                                    stroke="black" class="group-hover:stroke-softRed transition duration-300"
+                                    stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path
+                                    d="M26.206 20.174C25.8455 20.024 25.5235 19.809 25.253 19.5385C24.7225 19.008 24.3955 18.274 24.3955 17.4645V16.791C26.633 15.2955 28.2005 11.811 28.2005 7.751C28.2005 4.2985 25.403 1.5 21.9505 1.5C18.4985 1.5 15.701 4.299 15.701 7.751C15.701 11.811 17.27 15.2955 19.506 16.791V17.4645C19.506 18.274 19.179 19.008 18.6485 19.5385C18.376 19.809 18.0545 20.0245 17.696 20.174L13.71 21.8245C15.6015 22.537 16.95 24.358 16.95 26.499H26.951C26.951 24.358 28.299 22.537 30.1905 21.824L26.206 20.174Z"
+                                    stroke="black" class="group-hover:stroke-softRed transition duration-300"
+                                    stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        <p
+                            class="font-bold xl:text-[lg text-[14px] xl:whitespace-nowrap group-hover:text-softRed transition duration-300">
+                            500,000 Customers</p>
+                    </div>
+                    <div class="flex items-center justify-center rounded-md bg-[#F2F2F2] transition duration-300 group px-4 sm:py-5 py-3"
+                        data-aos="zoom-in-up" data-aos-delay="200" data-aos-offset="0">
+                        <div
+                            class="xl:max-w-[40px] w-full sm:max-w-[35px] max-w-[30px] xl:h-[40px] sm:h-[35px] h-[30px] mr-2">
+                            <svg class="w-full h-full" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 42 42">
+                                <g id="Group_1" data-name="Group 1" transform="translate(-421 -429)">
+                                    <g id="Group_15" data-name="Group 15" transform="translate(420.55 428.5)">
+                                        <path id="Path_1" data-name="Path 1"
+                                            d="M37.45,21.5a16,16,0,1,1-16-16A16,16,0,0,1,37.45,21.5Z" fill="none"
+                                            stroke="#000000" class="group-hover:stroke-softRed transition duration-300"
+                                            stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"
+                                            stroke-width="2" />
+                                        <path id="Path_2" data-name="Path 2"
+                                            d="M41.45,21.5a20,20,0,1,1-20-20A20,20,0,0,1,41.45,21.5Z" fill="none"
+                                            stroke="#000000" class="group-hover:stroke-softRed transition duration-300"
+                                            stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"
+                                            stroke-width="2" />
+                                        <path id="Path_3" data-name="Path 3"
+                                            d="M17.185,25.5a4,4,0,1,0,4-4h.005m0,0a4,4,0,0,1-4-4m4,4a4,4,0,0,1-4-4m0,0a4,4,0,0,1,4-4m-4,4a4,4,0,0,1,4-4m0,0a4,4,0,0,1,4,4A4,4,0,0,0,21.186,13.5Z"
+                                            fill="none" stroke="#000000"
+                                            class="group-hover:stroke-softRed transition duration-300"
+                                            stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"
+                                            stroke-width="2" />
+                                    </g>
+                                    <path id="Vector_1" data-name="Vector 1" d="M1.45,1.5v22"
+                                        transform="translate(440.55 437.5)" fill="none" stroke="#000000"
+                                        class="group-hover:stroke-softRed transition duration-300"
+                                        stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                                </g>
+                            </svg>
+                        </div>
+                        <p
+                            class="font-bold xl:text-[lg text-[14px] xl:whitespace-nowrap group-hover:text-softRed transition duration-300">
+                            No Prepayment Fees</p>
+                    </div>
+                    <div class="flex items-center justify-center rounded-md bg-[#F2F2F2] transition duration-300 group px-4 sm:py-5 py-3"
+                        data-aos="zoom-in-up" data-aos-delay="300" data-aos-offset="0">
+                        <div
+                            class="xl:max-w-[40px] w-full sm:max-w-[35px] max-w-[30px] xl:h-[40px] sm:h-[35px] h-[30px] mr-2">
+                            <svg class="w-full h-full" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 39"
+                                fill="none">
+                                <path
+                                    d="M1.4502 18.0005C1.4502 22.1423 4.8072 25.4993 8.9496 25.4993C13.0914 25.4993 16.4508 22.1423 16.4508 18.0005H1.4502Z"
+                                    stroke="black" class="group-hover:stroke-softRed transition duration-300"
+                                    stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M8.95084 4.50098L1.45264 18.0004L16.4502 17.998L8.95084 4.50098Z"
+                                    stroke="black" class="group-hover:stroke-softRed transition duration-300"
+                                    stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M8.95068 4.50098V18.0004V4.50098Z" stroke="black"
+                                    class="group-hover:stroke-softRed transition duration-300" stroke-width="2"
+                                    stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                                <path
+                                    d="M31.4502 18.0005C31.4502 22.1423 34.8072 25.4993 38.949 25.4993C43.0908 25.4993 46.4502 22.1423 46.4502 18.0005H31.4502Z"
+                                    stroke="black" class="group-hover:stroke-softRed transition duration-300"
+                                    stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M38.9508 4.50098L31.4502 18.0004L46.4502 17.998L38.9508 4.50098Z"
+                                    stroke="black" class="group-hover:stroke-softRed transition duration-300"
+                                    stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M38.9507 4.50098V18.0004V4.50098Z" stroke="black"
+                                    class="group-hover:stroke-softRed transition duration-300" stroke-width="2"
+                                    stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                                <path
+                                    d="M26.9508 4.5012C26.9508 6.1566 25.6068 7.5006 23.949 7.5006C22.2936 7.5 20.9502 6.1566 20.9502 4.5012C20.9502 2.8434 22.2936 1.5 23.949 1.5C25.6068 1.5 26.9508 2.8434 26.9508 4.5012Z"
+                                    stroke="black" class="group-hover:stroke-softRed transition duration-300"
+                                    stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M25.4496 34.5006V7.5H22.4508V34.5006H14.9502V37.5H32.9508V34.5006H25.4496Z"
+                                    stroke="black" class="group-hover:stroke-softRed transition duration-300"
+                                    stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M26.9507 4.50098H38.9489H26.9507Z" stroke="black"
+                                    class="group-hover:stroke-softRed transition duration-300" stroke-width="2"
+                                    stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M8.95068 4.50098H20.9501H8.95068Z" stroke="black"
+                                    class="group-hover:stroke-softRed transition duration-300" stroke-width="2"
+                                    stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        <p
+                            class="font-bold xl:text-[lg text-[14px] xl:whitespace-nowrap group-hover:text-softRed transition duration-300">
+                            Flexible Payments</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- END : feecher -->
+
+        <!-- START : about our costs  -->
+        <section class="bg-[#F2F2F2] overflow-hidden">
+            <div class="container xl:py-16 lg:py-12 sm:py-10 py-5">
+                <div class="text-center xl:mb-16 lg:mb-12 sm:mb-10 mb-5">
+                    <h1 class="xl:text-[42px] lg:text-[36px] sm:text-[34px] text-[28px] mb-3 font-bold"
+                        data-aos="fade-up">
+                        Things to know about
+                        our costs</h1>
+                    <p class="text-[#7c7c7c] xl:text-[22px] lg:text-[20px] text-[16px] font-semibold" data-aos="fade-up"
+                        data-aos-delay="100">Transparent and
+                        fair costs, with
+                        no hidden fees</p>
+                </div>
+                <div class="swiper about">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="bg-white text-center rounded-md group px-4 2xl:w-[350px] 2xl:h-[380px] xl:pt-20 lg:pt-16 pt-10 pb-10"
+                                data-aos="flip-down">
+                                <div
+                                    class="xl:w-[65px] lg:w-[58px] w-[55px] xl:h-[65px] lg:h-[58px] h-[45px] mx-auto xl:mb-6 mb-4">
+                                    <svg class="w-full h-full" viewBox="0 0 78 55" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M52.6627 17.3475C51.2451 15.9575 49.3846 15.1879 47.4067 15.1791V7.87929C47.4067 5.54765 46.3662 3.25712 44.6232 1.75321C43.1558 0.486639 41.3546 -0.0638156 39.5511 0.201718C31.5292 1.38428 24.3745 1.38428 16.3533 0.201718C14.5492 -0.0644032 12.7486 0.486051 11.2817 1.75263C9.53928 3.25653 8.49888 5.54706 8.49888 7.87929V15.1791C7.4338 15.1844 6.40163 15.4106 5.4329 15.8483C4.86482 16.1044 4.6128 16.7723 4.86893 17.3404C5.12507 17.9085 5.7936 18.1611 6.36109 17.9044C7.08426 17.5777 7.85972 17.4221 8.6616 17.4362C8.9148 17.4415 9.16389 17.465 9.40769 17.5055C9.42531 17.509 9.44293 17.512 9.46114 17.5149C11.9608 17.9608 13.8812 20.2202 13.8812 22.8925V36.7173C13.8812 38.5632 15.3828 40.0647 17.2292 40.0647H38.6758C40.5216 40.0647 42.0231 38.5632 42.0231 36.7173V22.8925C42.0231 19.9417 44.3648 17.4937 47.2433 17.4362C48.6903 17.4091 50.0526 17.9479 51.0836 18.9583C52.1152 19.9693 52.6833 21.3211 52.6833 22.7651C52.6833 24.8282 51.4731 26.7252 49.6008 27.5975C49.2031 27.7826 48.9493 28.1815 48.9493 28.6197V43.6195C48.9493 45.4788 47.4372 46.9909 45.5779 46.9909H10.3265C8.46774 46.9909 6.95502 45.4788 6.95502 43.6195V28.6197C6.95502 28.1815 6.70124 27.7832 6.30352 27.5975C4.43127 26.7252 3.22168 24.8282 3.22168 22.7651C3.22168 21.9608 3.39557 21.1889 3.73924 20.471C4.00771 19.9088 3.76979 19.235 3.20758 18.9665C2.64538 18.698 1.97215 18.936 1.70368 19.4982C1.21373 20.5227 0.96582 21.6219 0.96582 22.7651C0.96582 25.4545 2.40981 27.9447 4.69916 29.2988V43.6195C4.69916 46.7225 7.22349 49.2468 10.3265 49.2468H11.3845V52.6829C11.3845 53.8848 12.3626 54.8635 13.5646 54.8635H15.3875C16.59 54.8635 17.5682 53.8848 17.5682 52.6829V49.2468H38.3362V52.6829C38.3362 53.8848 39.3143 54.8635 40.5169 54.8635H42.3398C43.5423 54.8635 44.5204 53.8848 44.5204 52.6829V49.2468H45.5779C48.6809 49.2468 51.2058 46.7225 51.2058 43.6195V29.2988C53.4951 27.9447 54.9391 25.4539 54.9391 22.7651C54.9391 20.7101 54.1308 18.7862 52.6627 17.3475ZM39.7673 36.7173C39.7673 37.3189 39.2773 37.8089 38.6758 37.8089H17.2292C16.627 37.8089 16.1371 37.3189 16.1371 36.7173V31.9689H39.7673V36.7173ZM39.7673 22.8925V29.713H16.1371V22.8925C16.1371 19.4447 13.8589 16.4833 10.7547 15.514V7.87929C10.7547 6.21912 11.5214 4.52546 12.7562 3.4598C13.4371 2.87233 14.5568 2.21613 16.0243 2.4335C24.2735 3.64896 31.6309 3.64896 39.8806 2.4335C41.3481 2.21672 42.4678 2.87233 43.1493 3.46038C44.3836 4.52605 45.1508 6.21912 45.1508 7.87929V15.514C42.046 16.4827 39.7673 19.4447 39.7673 22.8925ZM15.3123 52.6077H13.6404V49.2468H15.3123V52.6077ZM42.2646 52.6077H40.5921V49.2468H42.2646V52.6077Z"
+                                            fill="#4E4E4E" class="group-hover:fill-softRed transition duration-300" />
+                                        <path
+                                            d="M21.9902 11.8933H21.5955V11.4985C21.5955 10.8752 21.0902 10.3706 20.4675 10.3706C19.8448 10.3706 19.3396 10.8752 19.3396 11.4985V11.8933H18.9448C18.3221 11.8933 17.8169 12.3979 17.8169 13.0212C17.8169 13.644 18.3221 14.1492 18.9448 14.1492H19.3396V14.5439C19.3396 15.1667 19.8448 15.6719 20.4675 15.6719C21.0902 15.6719 21.5955 15.1667 21.5955 14.5439V14.1492H21.9902C22.613 14.1492 23.1182 13.644 23.1182 13.0212C23.1182 12.3979 22.613 11.8933 21.9902 11.8933Z"
+                                            fill="#4E4E4E" class="group-hover:fill-softRed transition duration-300" />
+                                        <path
+                                            d="M36.9599 11.8933H36.5657V11.4985C36.5657 10.8752 36.0605 10.3706 35.4378 10.3706C34.8145 10.3706 34.3098 10.8752 34.3098 11.4985V11.8933H33.915C33.2917 11.8933 32.7871 12.3979 32.7871 13.0212C32.7871 13.644 33.2917 14.1492 33.915 14.1492H34.3098V14.5439C34.3098 15.1667 34.8145 15.6719 35.4378 15.6719C36.0605 15.6719 36.5657 15.1667 36.5657 14.5439V14.1492H36.9599C37.5832 14.1492 38.0878 13.644 38.0878 13.0212C38.0878 12.3979 37.5832 11.8933 36.9599 11.8933Z"
+                                            fill="#4E4E4E" class="group-hover:fill-softRed transition duration-300" />
+                                        <path
+                                            d="M75.568 24.7173H68.2658V19.6328H72.25C72.9167 19.6328 73.5435 19.3067 73.9266 18.7604C74.309 18.2147 74.4018 17.5138 74.1739 16.887L71.6954 10.0577C71.4022 9.25112 70.6291 8.70947 69.7709 8.70947H64.5048C63.6465 8.70947 62.8734 9.25112 62.5803 10.0583L60.1018 16.887C59.8738 17.5138 59.9667 18.2147 60.3491 18.7604C60.7321 19.3067 61.359 19.6328 62.0257 19.6328H66.0099V24.7173H57.608C56.2856 24.7173 55.21 25.7929 55.21 27.1153V28.4706C55.21 29.793 56.2856 30.8686 57.608 30.8686H57.6415V33.0258C57.6415 33.6491 58.1461 34.1537 58.7694 34.1537C59.3921 34.1537 59.8973 33.6491 59.8973 33.0258V30.8686H73.2786V38.3576H59.8973V37.5375C59.8973 36.9142 59.3921 36.4096 58.7694 36.4096C58.1461 36.4096 57.6415 36.9142 57.6415 37.5375V48.5178C57.6415 49.2886 58.1173 49.9501 58.7911 50.2244V52.9902C58.7911 54.023 59.6318 54.8636 60.6646 54.8636H62.3318C63.3646 54.8636 64.2052 54.023 64.2052 52.9902V50.359H68.5666V52.9902C68.5666 54.023 69.4072 54.8636 70.44 54.8636H72.1072C73.14 54.8636 73.9806 54.023 73.9806 52.9902V50.3366C74.8601 50.1986 75.5345 49.4355 75.5345 48.5178V30.8686H75.568C76.8903 30.8686 77.966 29.793 77.966 28.4706V27.1153C77.966 25.7929 76.8903 24.7173 75.568 24.7173ZM64.6511 10.9653H69.6246L71.9521 17.3769H62.3236L64.6511 10.9653ZM73.2786 40.6135V48.1031H59.8973V40.6135H73.2786ZM61.9494 52.6072H61.047V50.359H61.9494V52.6072ZM71.7248 52.6072H70.8224V50.359H71.7248V52.6072ZM75.7101 28.4706C75.7101 28.5487 75.6461 28.6128 75.568 28.6128H57.608C57.5299 28.6128 57.4658 28.5487 57.4658 28.4706V27.1153C57.4658 27.0366 57.5299 26.9732 57.608 26.9732H75.568C75.6461 26.9732 75.7101 27.0366 75.7101 27.1153V28.4706Z"
+                                            fill="#4E4E4E" class="group-hover:fill-softRed transition duration-300" />
+                                        <path
+                                            d="M67.3885 33.8911C68.0113 33.8911 68.5165 33.3865 68.5165 32.7632C68.5165 32.1399 68.0113 31.6353 67.3885 31.6353H65.7871C65.1644 31.6353 64.6592 32.1399 64.6592 32.7632C64.6592 33.3865 65.1644 33.8911 65.7871 33.8911H67.3885Z"
+                                            fill="#4E4E4E" class="group-hover:fill-softRed transition duration-300" />
+                                        <path
+                                            d="M65.7871 43.6665H67.3885C68.0113 43.6665 68.5165 43.1619 68.5165 42.5386C68.5165 41.9153 68.0113 41.4106 67.3885 41.4106H65.7871C65.1644 41.4106 64.6592 41.9153 64.6592 42.5386C64.6592 43.1619 65.1644 43.6665 65.7871 43.6665Z"
+                                            fill="#4E4E4E" class="group-hover:fill-softRed transition duration-300" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <p
+                                        class="font-bold xl:text-[24px] lg:text-[22px] text-[20px] text-[#4E4E4E] group-hover:text-black transition duration-300 mb-2">
+                                        Spectacular Interiors</p>
+                                    <p class="xl:text-[16px] text-[14px] text-[#6A6A6A] max-w-[190px] mx-auto">Flusterd
+                                        impressive farcrud open
+                                        inside
+                                        owing
+                                        punitively
+                                        around after wasteful.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="bg-white text-center rounded-md group px-4 2xl:w-[350px] 2xl:h-[380px]  xl:pt-20 lg:pt-16 pt-10 pb-10"
+                                data-aos="flip-down" data-aos-delay="100">
+                                <div
+                                    class="xl:w-[60px] lg:w-[50px] w-[45px] xl:h-[60px] lg:h-[50px] h-[45px] mx-auto xl:mb-6 mb-4">
+                                    <svg class="w-full h-full" viewBox="0 0 61 61" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_2408_537)">
+                                            <path
+                                                d="M30.0059 0C13.4375 0 0.00585938 13.6555 0.00585938 30.5C0.00585938 47.3445 13.4375 61 30.0059 61C46.5742 61 60.0059 47.3445 60.0059 30.5C59.9873 13.6634 46.5664 0.018864 30.0059 0ZM30.0059 58.9667C14.542 58.9667 2.00586 46.2216 2.00586 30.5C2.00586 14.7784 14.542 2.03333 30.0059 2.03333C45.4697 2.03333 58.0059 14.7784 58.0059 30.5C57.9883 46.2141 45.4624 58.9488 30.0059 58.9667Z"
+                                                fill="#4E4E4E"
+                                                class="group-hover:fill-softRed transition duration-300" />
+                                            <path
+                                                d="M30.0059 5.0835C16.1987 5.0835 5.00586 16.4629 5.00586 30.5002C5.00586 44.5374 16.1987 55.9168 30.0059 55.9168C43.813 55.9168 55.0059 44.5374 55.0059 30.5002C54.9902 16.4694 43.8066 5.09938 30.0059 5.0835ZM30.0059 53.8835C17.3032 53.8835 7.00586 43.4145 7.00586 30.5002C7.00586 17.5858 17.3032 7.11683 30.0059 7.11683C42.7085 7.11683 53.0059 17.5858 53.0059 30.5002C52.9917 43.4086 42.7026 53.8691 30.0059 53.8835Z"
+                                                fill="#4E4E4E"
+                                                class="group-hover:fill-softRed transition duration-300" />
+                                            <path
+                                                d="M44.7338 15.5262C44.4154 15.2035 43.9247 15.1365 43.5336 15.3624L25.6805 25.7211C25.6698 25.7286 25.6649 25.7405 25.6537 25.7469C25.5394 25.8467 25.4325 25.9554 25.3339 26.0721C25.3275 26.083 25.3158 26.0885 25.3089 26.0994L15.1166 44.25C14.8934 44.6481 14.9598 45.1485 15.2782 45.4727C15.597 45.7963 16.0892 45.8638 16.4808 45.637L34.3309 35.2782C34.3417 35.2708 34.3465 35.2588 34.3578 35.2524C34.472 35.1526 34.579 35.0439 34.6776 34.9272C34.684 34.9163 34.6957 34.9108 34.7025 34.8999L44.8949 16.7523C45.12 16.3537 45.0541 15.8508 44.7338 15.5262ZM18.6698 42.0245L26.3959 28.2683L32.2059 34.1697L18.6698 42.0245ZM33.6156 32.7365L27.8158 26.8396L41.3465 18.9847L33.6156 32.7365Z"
+                                                fill="#4E4E4E"
+                                                class="group-hover:fill-softRed transition duration-300" />
+                                            <path
+                                                d="M14.0059 29.4834H10.0059C9.45361 29.4834 9.00586 29.9386 9.00586 30.5001C9.00586 31.0615 9.45361 31.5167 10.0059 31.5167H14.0059C14.5581 31.5167 15.0059 31.0615 15.0059 30.5001C15.0059 29.9386 14.5581 29.4834 14.0059 29.4834Z"
+                                                fill="#4E4E4E"
+                                                class="group-hover:fill-softRed transition duration-300" />
+                                            <path
+                                                d="M50.0059 29.4834H46.0059C45.4536 29.4834 45.0059 29.9386 45.0059 30.5001C45.0059 31.0615 45.4536 31.5167 46.0059 31.5167H50.0059C50.5581 31.5167 51.0059 31.0615 51.0059 30.5001C51.0059 29.9386 50.5581 29.4834 50.0059 29.4834Z"
+                                                fill="#4E4E4E"
+                                                class="group-hover:fill-softRed transition duration-300" />
+                                            <path
+                                                d="M30.0059 15.2499C30.5581 15.2499 31.0059 14.7947 31.0059 14.2332V10.1666C31.0059 9.60512 30.5581 9.1499 30.0059 9.1499C29.4536 9.1499 29.0059 9.60512 29.0059 10.1666V14.2332C29.0059 14.7947 29.4536 15.2499 30.0059 15.2499Z"
+                                                fill="#4E4E4E"
+                                                class="group-hover:fill-softRed transition duration-300" />
+                                            <path
+                                                d="M30.0059 45.75C29.4536 45.75 29.0059 46.2052 29.0059 46.7667V50.8333C29.0059 51.3948 29.4536 51.85 30.0059 51.85C30.5581 51.85 31.0059 51.3948 31.0059 50.8333V46.7667C31.0059 46.2052 30.5581 45.75 30.0059 45.75Z"
+                                                fill="#4E4E4E"
+                                                class="group-hover:fill-softRed transition duration-300" />
+                                        </g>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <p
+                                        class="font-bold xl:text-[24px] lg:text-[22px] text-[20px] text-[#4E4E4E] group-hover:text-black transition duration-300 mb-2">
+                                        Accuntuate Vision</p>
+                                    <p class="xl:text-[16px] text-[14px] text-[#6A6A6A] max-w-[190px] mx-auto">Flusterd
+                                        impressive
+                                        farcrud open inside owing
+                                        punitively around after
+                                        wasteful.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="bg-white text-center rounded-md group px-4 2xl:w-[350px] 2xl:h-[380px] xl:pt-20 lg:pt-16 pt-10 pb-10"
+                                data-aos="flip-down" data-aos-delay="200">
+                                <div
+                                    class="xl:w-[60px] lg:w-[50px] w-[45px] xl:h-[60px] lg:h-[50px] h-[45px] mx-auto xl:mb-6 mb-4">
+                                    <svg class="w-full h-full" viewBox="0 0 61 61" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_2408_534)">
+                                            <path
+                                                d="M53.2068 43.42H51.863V39.4746C51.863 29.5769 45.1693 21.2391 36.1425 18.8934V13.4916C36.1425 12.8336 35.6178 12.3002 34.9707 12.3002H32.122V1.19141C32.122 0.533393 31.5972 0 30.9501 0C30.3029 0 29.7782 0.533393 29.7782 1.19141V12.3002H26.9295C26.2823 12.3002 25.7576 12.8336 25.7576 13.4916V18.8934C16.7309 21.2391 10.0371 29.5769 10.0371 39.4746V43.42H8.69336C8.04613 43.42 7.52148 43.9534 7.52148 44.6114V50.4963C7.52148 51.1543 8.04613 51.6877 8.69336 51.6877H22.2644C22.2557 51.849 22.2513 52.0106 22.2513 52.1723C22.2513 57.0399 26.1536 61 30.9501 61C35.7466 61 39.6489 57.0399 39.6489 52.1723C39.6489 52.0106 39.6445 51.8489 39.6358 51.6877H53.2067C53.8538 51.6877 54.3786 51.1543 54.3786 50.4963V44.6114C54.3787 43.9534 53.854 43.42 53.2068 43.42ZM28.1015 14.683H33.7988V18.4296C32.8737 18.3018 31.93 18.2344 30.9711 18.2344H30.9293C29.9703 18.2344 29.0267 18.3018 28.1016 18.4296V14.683H28.1015ZM12.3809 39.4746C12.3809 29.0766 20.7016 20.6172 30.9292 20.6172H30.9709C41.1985 20.6172 49.5193 29.0765 49.5193 39.4746V43.42H12.3809V39.4746ZM37.3053 52.1723C37.3053 55.726 34.4543 58.6172 30.9502 58.6172C27.4459 58.6172 24.5951 55.726 24.5951 52.1723C24.5951 52.0104 24.6011 51.8487 24.6128 51.6877H37.2876C37.2993 51.8487 37.3053 52.0104 37.3053 52.1723ZM52.0349 49.3049H9.86523V45.8028H52.0349V49.3049Z"
+                                                fill="#4E4E4E"
+                                                class="group-hover:fill-softRed transition duration-300" />
+                                        </g>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <p
+                                        class="font-bold xl:text-[24px] lg:text-[22px] text-[20px] text-[#4E4E4E] group-hover:text-black transition duration-300 mb-2">
+                                        Proper Decorations</p>
+                                    <p class="xl:text-[16px] text-[14px] text-[#6A6A6A] max-w-[190px] mx-auto">Flusterd
+                                        impressive
+                                        farcrud open inside owing
+                                        punitively around after
+                                        wasteful.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="bg-white text-center rounded-md group px-4 2xl:w-[350px] 2xl:h-[380px] xl:pt-20 lg:pt-16 pt-10 pb-10"
+                                data-aos="flip-down" data-aos-delay="300">
+                                <div
+                                    class="xl:w-[60px] lg:w-[50px] w-[45px] xl:h-[60px] lg:h-[50px] h-[45px] mx-auto xl:mb-6 mb-4">
+                                    <svg class="w-full h-full" viewBox="0 0 63 64" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_2408_526)">
+                                            <path
+                                                d="M45.8099 22.96C45.3139 22.96 44.836 22.6613 44.6241 22.1573C44.3426 21.4827 44.6396 20.6987 45.2958 20.4027L58.0704 14.6667L31.6016 2.78667L5.13273 14.6667L17.9073 20.4027C18.5635 20.696 18.8606 21.4827 18.579 22.1573C18.2948 22.8347 17.5276 23.144 16.8791 22.848L1.37915 15.888C0.906396 15.6773 0.601562 15.1973 0.601562 14.6667C0.601562 14.136 0.906396 13.656 1.37915 13.4453L31.0875 0.112C31.4156 -0.0373333 31.7876 -0.0373333 32.1156 0.112L61.824 13.4453C62.2967 13.656 62.6016 14.136 62.6016 14.6667C62.6016 15.1973 62.2967 15.6773 61.824 15.888L46.324 22.848C46.1586 22.9253 45.9804 22.96 45.8099 22.96Z"
+                                                fill="#4E4E4E"
+                                                class="group-hover:fill-softRed transition duration-300" />
+                                            <path
+                                                d="M31.6016 64.0002C31.4259 64.0002 31.2502 63.9628 31.0875 63.8882L1.37915 50.5548C0.906396 50.3442 0.601562 49.8642 0.601562 49.3335V14.6668C0.601562 13.9308 1.18023 13.3335 1.89323 13.3335C2.60623 13.3335 3.1849 13.9308 3.1849 14.6668V48.4588L31.6016 61.2108L60.0182 48.4588V14.6668C60.0182 13.9308 60.5969 13.3335 61.3099 13.3335C62.0229 13.3335 62.6016 13.9308 62.6016 14.6668V49.3335C62.6016 49.8642 62.2967 50.3442 61.824 50.5548L32.1156 63.8882C31.9529 63.9628 31.7772 64.0002 31.6016 64.0002Z"
+                                                fill="#4E4E4E"
+                                                class="group-hover:fill-softRed transition duration-300" />
+                                            <path
+                                                d="M31.6017 64.0003C30.8887 64.0003 30.3101 63.403 30.3101 62.667V44.0003C30.3101 43.2643 30.8887 42.667 31.6017 42.667C32.3147 42.667 32.8934 43.2643 32.8934 44.0003V62.667C32.8934 63.403 32.3147 64.0003 31.6017 64.0003Z"
+                                                fill="#4E4E4E"
+                                                class="group-hover:fill-softRed transition duration-300" />
+                                            <path
+                                                d="M31.6016 45.3335C31.4207 45.3335 31.2347 45.2935 31.0668 45.2135L16.8585 38.5468C16.3961 38.3308 16.1016 37.8562 16.1016 37.3335C16.1016 36.8108 16.3961 36.3362 16.8585 36.1202L31.0668 29.4535C31.4052 29.2935 31.7979 29.2935 32.1363 29.4535L46.3446 36.1202C46.8071 36.3362 47.1016 36.8108 47.1016 37.3335C47.1016 37.8562 46.8071 38.3308 46.3446 38.5468L32.1363 45.2135C31.9684 45.2935 31.7824 45.3335 31.6016 45.3335ZM20.5139 37.3335L31.6016 42.5362L42.6892 37.3335L31.6016 32.1308L20.5139 37.3335Z"
+                                                fill="#4E4E4E"
+                                                class="group-hover:fill-softRed transition duration-300" />
+                                            <path
+                                                d="M45.8099 38.6668C45.0969 38.6668 44.5182 38.0695 44.5182 37.3335V22.1922L31.6016 16.1335L18.6849 22.1922V37.3335C18.6849 38.0695 18.1062 38.6668 17.3932 38.6668C16.6802 38.6668 16.1016 38.0695 16.1016 37.3335V21.3335C16.1016 20.8108 16.3961 20.3362 16.8585 20.1202L31.0668 13.4535C31.4052 13.2935 31.7979 13.2935 32.1363 13.4535L46.3446 20.1202C46.8071 20.3362 47.1016 20.8108 47.1016 21.3335V37.3335C47.1016 38.0695 46.5229 38.6668 45.8099 38.6668Z"
+                                                fill="#4E4E4E"
+                                                class="group-hover:fill-softRed transition duration-300" />
+                                            <path
+                                                d="M31.6017 32.0002C30.8887 32.0002 30.3101 31.4028 30.3101 30.6668V14.6668C30.3101 13.9308 30.8887 13.3335 31.6017 13.3335C32.3147 13.3335 32.8934 13.9308 32.8934 14.6668V30.6668C32.8934 31.4028 32.3147 32.0002 31.6017 32.0002Z"
+                                                fill="#4E4E4E"
+                                                class="group-hover:fill-softRed transition duration-300" />
+                                        </g>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <p
+                                        class="font-bold xl:text-[24px] lg:text-[22px] text-[20px] text-[#4E4E4E] group-hover:text-black transition duration-300 mb-2">
+                                        Affordable Works</p>
+                                    <p class="xl:text-[16px] text-[14px] text-[#6A6A6A] max-w-[190px] mx-auto">Flusterd
+                                        impressive
+                                        farcrud open inside owing
+                                        punitively around after
+                                        wasteful.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="bg-white text-center rounded-md group px-4 2xl:w-[350px] 2xl:h-[380px] xl:pt-20 lg:pt-16 pt-10 pb-10"
+                                data-aos="flip-down">
+                                <div
+                                    class="xl:w-[65px] lg:w-[58px] w-[55px] xl:h-[65px] lg:h-[58px] h-[45px] mx-auto xl:mb-6 mb-4">
+                                    <svg class="w-full h-full" viewBox="0 0 78 55" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M52.6627 17.3475C51.2451 15.9575 49.3846 15.1879 47.4067 15.1791V7.87929C47.4067 5.54765 46.3662 3.25712 44.6232 1.75321C43.1558 0.486639 41.3546 -0.0638156 39.5511 0.201718C31.5292 1.38428 24.3745 1.38428 16.3533 0.201718C14.5492 -0.0644032 12.7486 0.486051 11.2817 1.75263C9.53928 3.25653 8.49888 5.54706 8.49888 7.87929V15.1791C7.4338 15.1844 6.40163 15.4106 5.4329 15.8483C4.86482 16.1044 4.6128 16.7723 4.86893 17.3404C5.12507 17.9085 5.7936 18.1611 6.36109 17.9044C7.08426 17.5777 7.85972 17.4221 8.6616 17.4362C8.9148 17.4415 9.16389 17.465 9.40769 17.5055C9.42531 17.509 9.44293 17.512 9.46114 17.5149C11.9608 17.9608 13.8812 20.2202 13.8812 22.8925V36.7173C13.8812 38.5632 15.3828 40.0647 17.2292 40.0647H38.6758C40.5216 40.0647 42.0231 38.5632 42.0231 36.7173V22.8925C42.0231 19.9417 44.3648 17.4937 47.2433 17.4362C48.6903 17.4091 50.0526 17.9479 51.0836 18.9583C52.1152 19.9693 52.6833 21.3211 52.6833 22.7651C52.6833 24.8282 51.4731 26.7252 49.6008 27.5975C49.2031 27.7826 48.9493 28.1815 48.9493 28.6197V43.6195C48.9493 45.4788 47.4372 46.9909 45.5779 46.9909H10.3265C8.46774 46.9909 6.95502 45.4788 6.95502 43.6195V28.6197C6.95502 28.1815 6.70124 27.7832 6.30352 27.5975C4.43127 26.7252 3.22168 24.8282 3.22168 22.7651C3.22168 21.9608 3.39557 21.1889 3.73924 20.471C4.00771 19.9088 3.76979 19.235 3.20758 18.9665C2.64538 18.698 1.97215 18.936 1.70368 19.4982C1.21373 20.5227 0.96582 21.6219 0.96582 22.7651C0.96582 25.4545 2.40981 27.9447 4.69916 29.2988V43.6195C4.69916 46.7225 7.22349 49.2468 10.3265 49.2468H11.3845V52.6829C11.3845 53.8848 12.3626 54.8635 13.5646 54.8635H15.3875C16.59 54.8635 17.5682 53.8848 17.5682 52.6829V49.2468H38.3362V52.6829C38.3362 53.8848 39.3143 54.8635 40.5169 54.8635H42.3398C43.5423 54.8635 44.5204 53.8848 44.5204 52.6829V49.2468H45.5779C48.6809 49.2468 51.2058 46.7225 51.2058 43.6195V29.2988C53.4951 27.9447 54.9391 25.4539 54.9391 22.7651C54.9391 20.7101 54.1308 18.7862 52.6627 17.3475ZM39.7673 36.7173C39.7673 37.3189 39.2773 37.8089 38.6758 37.8089H17.2292C16.627 37.8089 16.1371 37.3189 16.1371 36.7173V31.9689H39.7673V36.7173ZM39.7673 22.8925V29.713H16.1371V22.8925C16.1371 19.4447 13.8589 16.4833 10.7547 15.514V7.87929C10.7547 6.21912 11.5214 4.52546 12.7562 3.4598C13.4371 2.87233 14.5568 2.21613 16.0243 2.4335C24.2735 3.64896 31.6309 3.64896 39.8806 2.4335C41.3481 2.21672 42.4678 2.87233 43.1493 3.46038C44.3836 4.52605 45.1508 6.21912 45.1508 7.87929V15.514C42.046 16.4827 39.7673 19.4447 39.7673 22.8925ZM15.3123 52.6077H13.6404V49.2468H15.3123V52.6077ZM42.2646 52.6077H40.5921V49.2468H42.2646V52.6077Z"
+                                            fill="#4E4E4E" class="group-hover:fill-softRed transition duration-300" />
+                                        <path
+                                            d="M21.9902 11.8933H21.5955V11.4985C21.5955 10.8752 21.0902 10.3706 20.4675 10.3706C19.8448 10.3706 19.3396 10.8752 19.3396 11.4985V11.8933H18.9448C18.3221 11.8933 17.8169 12.3979 17.8169 13.0212C17.8169 13.644 18.3221 14.1492 18.9448 14.1492H19.3396V14.5439C19.3396 15.1667 19.8448 15.6719 20.4675 15.6719C21.0902 15.6719 21.5955 15.1667 21.5955 14.5439V14.1492H21.9902C22.613 14.1492 23.1182 13.644 23.1182 13.0212C23.1182 12.3979 22.613 11.8933 21.9902 11.8933Z"
+                                            fill="#4E4E4E" class="group-hover:fill-softRed transition duration-300" />
+                                        <path
+                                            d="M36.9599 11.8933H36.5657V11.4985C36.5657 10.8752 36.0605 10.3706 35.4378 10.3706C34.8145 10.3706 34.3098 10.8752 34.3098 11.4985V11.8933H33.915C33.2917 11.8933 32.7871 12.3979 32.7871 13.0212C32.7871 13.644 33.2917 14.1492 33.915 14.1492H34.3098V14.5439C34.3098 15.1667 34.8145 15.6719 35.4378 15.6719C36.0605 15.6719 36.5657 15.1667 36.5657 14.5439V14.1492H36.9599C37.5832 14.1492 38.0878 13.644 38.0878 13.0212C38.0878 12.3979 37.5832 11.8933 36.9599 11.8933Z"
+                                            fill="#4E4E4E" class="group-hover:fill-softRed transition duration-300" />
+                                        <path
+                                            d="M75.568 24.7173H68.2658V19.6328H72.25C72.9167 19.6328 73.5435 19.3067 73.9266 18.7604C74.309 18.2147 74.4018 17.5138 74.1739 16.887L71.6954 10.0577C71.4022 9.25112 70.6291 8.70947 69.7709 8.70947H64.5048C63.6465 8.70947 62.8734 9.25112 62.5803 10.0583L60.1018 16.887C59.8738 17.5138 59.9667 18.2147 60.3491 18.7604C60.7321 19.3067 61.359 19.6328 62.0257 19.6328H66.0099V24.7173H57.608C56.2856 24.7173 55.21 25.7929 55.21 27.1153V28.4706C55.21 29.793 56.2856 30.8686 57.608 30.8686H57.6415V33.0258C57.6415 33.6491 58.1461 34.1537 58.7694 34.1537C59.3921 34.1537 59.8973 33.6491 59.8973 33.0258V30.8686H73.2786V38.3576H59.8973V37.5375C59.8973 36.9142 59.3921 36.4096 58.7694 36.4096C58.1461 36.4096 57.6415 36.9142 57.6415 37.5375V48.5178C57.6415 49.2886 58.1173 49.9501 58.7911 50.2244V52.9902C58.7911 54.023 59.6318 54.8636 60.6646 54.8636H62.3318C63.3646 54.8636 64.2052 54.023 64.2052 52.9902V50.359H68.5666V52.9902C68.5666 54.023 69.4072 54.8636 70.44 54.8636H72.1072C73.14 54.8636 73.9806 54.023 73.9806 52.9902V50.3366C74.8601 50.1986 75.5345 49.4355 75.5345 48.5178V30.8686H75.568C76.8903 30.8686 77.966 29.793 77.966 28.4706V27.1153C77.966 25.7929 76.8903 24.7173 75.568 24.7173ZM64.6511 10.9653H69.6246L71.9521 17.3769H62.3236L64.6511 10.9653ZM73.2786 40.6135V48.1031H59.8973V40.6135H73.2786ZM61.9494 52.6072H61.047V50.359H61.9494V52.6072ZM71.7248 52.6072H70.8224V50.359H71.7248V52.6072ZM75.7101 28.4706C75.7101 28.5487 75.6461 28.6128 75.568 28.6128H57.608C57.5299 28.6128 57.4658 28.5487 57.4658 28.4706V27.1153C57.4658 27.0366 57.5299 26.9732 57.608 26.9732H75.568C75.6461 26.9732 75.7101 27.0366 75.7101 27.1153V28.4706Z"
+                                            fill="#4E4E4E" class="group-hover:fill-softRed transition duration-300" />
+                                        <path
+                                            d="M67.3885 33.8911C68.0113 33.8911 68.5165 33.3865 68.5165 32.7632C68.5165 32.1399 68.0113 31.6353 67.3885 31.6353H65.7871C65.1644 31.6353 64.6592 32.1399 64.6592 32.7632C64.6592 33.3865 65.1644 33.8911 65.7871 33.8911H67.3885Z"
+                                            fill="#4E4E4E" class="group-hover:fill-softRed transition duration-300" />
+                                        <path
+                                            d="M65.7871 43.6665H67.3885C68.0113 43.6665 68.5165 43.1619 68.5165 42.5386C68.5165 41.9153 68.0113 41.4106 67.3885 41.4106H65.7871C65.1644 41.4106 64.6592 41.9153 64.6592 42.5386C64.6592 43.1619 65.1644 43.6665 65.7871 43.6665Z"
+                                            fill="#4E4E4E" class="group-hover:fill-softRed transition duration-300" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <p
+                                        class="font-bold xl:text-[24px] lg:text-[22px] text-[20px] text-[#4E4E4E] group-hover:text-black transition duration-300 mb-2">
+                                        Spectacular Interiors</p>
+                                    <p class="xl:text-[16px] text-[14px] text-[#6A6A6A] max-w-[190px] mx-auto">Flusterd
+                                        impressive farcrud open
+                                        inside
+                                        owing
+                                        punitively
+                                        around after wasteful.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="bg-white text-center rounded-md group px-4 2xl:w-[350px] 2xl:h-[380px] xl:pt-20 lg:pt-16 pt-10 pb-10"
+                                data-aos="flip-down" data-aos-delay="100">
+                                <div
+                                    class="xl:w-[60px] lg:w-[50px] w-[45px] xl:h-[60px] lg:h-[50px] h-[45px] mx-auto xl:mb-6 mb-4">
+                                    <svg class="w-full h-full" viewBox="0 0 61 61" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_2408_537)">
+                                            <path
+                                                d="M30.0059 0C13.4375 0 0.00585938 13.6555 0.00585938 30.5C0.00585938 47.3445 13.4375 61 30.0059 61C46.5742 61 60.0059 47.3445 60.0059 30.5C59.9873 13.6634 46.5664 0.018864 30.0059 0ZM30.0059 58.9667C14.542 58.9667 2.00586 46.2216 2.00586 30.5C2.00586 14.7784 14.542 2.03333 30.0059 2.03333C45.4697 2.03333 58.0059 14.7784 58.0059 30.5C57.9883 46.2141 45.4624 58.9488 30.0059 58.9667Z"
+                                                fill="#4E4E4E"
+                                                class="group-hover:fill-softRed transition duration-300" />
+                                            <path
+                                                d="M30.0059 5.0835C16.1987 5.0835 5.00586 16.4629 5.00586 30.5002C5.00586 44.5374 16.1987 55.9168 30.0059 55.9168C43.813 55.9168 55.0059 44.5374 55.0059 30.5002C54.9902 16.4694 43.8066 5.09938 30.0059 5.0835ZM30.0059 53.8835C17.3032 53.8835 7.00586 43.4145 7.00586 30.5002C7.00586 17.5858 17.3032 7.11683 30.0059 7.11683C42.7085 7.11683 53.0059 17.5858 53.0059 30.5002C52.9917 43.4086 42.7026 53.8691 30.0059 53.8835Z"
+                                                fill="#4E4E4E"
+                                                class="group-hover:fill-softRed transition duration-300" />
+                                            <path
+                                                d="M44.7338 15.5262C44.4154 15.2035 43.9247 15.1365 43.5336 15.3624L25.6805 25.7211C25.6698 25.7286 25.6649 25.7405 25.6537 25.7469C25.5394 25.8467 25.4325 25.9554 25.3339 26.0721C25.3275 26.083 25.3158 26.0885 25.3089 26.0994L15.1166 44.25C14.8934 44.6481 14.9598 45.1485 15.2782 45.4727C15.597 45.7963 16.0892 45.8638 16.4808 45.637L34.3309 35.2782C34.3417 35.2708 34.3465 35.2588 34.3578 35.2524C34.472 35.1526 34.579 35.0439 34.6776 34.9272C34.684 34.9163 34.6957 34.9108 34.7025 34.8999L44.8949 16.7523C45.12 16.3537 45.0541 15.8508 44.7338 15.5262ZM18.6698 42.0245L26.3959 28.2683L32.2059 34.1697L18.6698 42.0245ZM33.6156 32.7365L27.8158 26.8396L41.3465 18.9847L33.6156 32.7365Z"
+                                                fill="#4E4E4E"
+                                                class="group-hover:fill-softRed transition duration-300" />
+                                            <path
+                                                d="M14.0059 29.4834H10.0059C9.45361 29.4834 9.00586 29.9386 9.00586 30.5001C9.00586 31.0615 9.45361 31.5167 10.0059 31.5167H14.0059C14.5581 31.5167 15.0059 31.0615 15.0059 30.5001C15.0059 29.9386 14.5581 29.4834 14.0059 29.4834Z"
+                                                fill="#4E4E4E"
+                                                class="group-hover:fill-softRed transition duration-300" />
+                                            <path
+                                                d="M50.0059 29.4834H46.0059C45.4536 29.4834 45.0059 29.9386 45.0059 30.5001C45.0059 31.0615 45.4536 31.5167 46.0059 31.5167H50.0059C50.5581 31.5167 51.0059 31.0615 51.0059 30.5001C51.0059 29.9386 50.5581 29.4834 50.0059 29.4834Z"
+                                                fill="#4E4E4E"
+                                                class="group-hover:fill-softRed transition duration-300" />
+                                            <path
+                                                d="M30.0059 15.2499C30.5581 15.2499 31.0059 14.7947 31.0059 14.2332V10.1666C31.0059 9.60512 30.5581 9.1499 30.0059 9.1499C29.4536 9.1499 29.0059 9.60512 29.0059 10.1666V14.2332C29.0059 14.7947 29.4536 15.2499 30.0059 15.2499Z"
+                                                fill="#4E4E4E"
+                                                class="group-hover:fill-softRed transition duration-300" />
+                                            <path
+                                                d="M30.0059 45.75C29.4536 45.75 29.0059 46.2052 29.0059 46.7667V50.8333C29.0059 51.3948 29.4536 51.85 30.0059 51.85C30.5581 51.85 31.0059 51.3948 31.0059 50.8333V46.7667C31.0059 46.2052 30.5581 45.75 30.0059 45.75Z"
+                                                fill="#4E4E4E"
+                                                class="group-hover:fill-softRed transition duration-300" />
+                                        </g>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <p
+                                        class="font-bold xl:text-[24px] lg:text-[22px] text-[20px] text-[#4E4E4E] group-hover:text-black transition duration-300 mb-2">
+                                        Accuntuate Vision</p>
+                                    <p class="xl:text-[16px] text-[14px] text-[#6A6A6A] max-w-[190px] mx-auto">Flusterd
+                                        impressive
+                                        farcrud open inside owing
+                                        punitively around after
+                                        wasteful.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="bg-white text-center rounded-md group px-4 2xl:w-[350px] 2xl:h-[380px] xl:pt-20 lg:pt-16 pt-10 pb-10"
+                                data-aos="flip-down" data-aos-delay="200">
+                                <div
+                                    class="xl:w-[60px] lg:w-[50px] w-[45px] xl:h-[60px] lg:h-[50px] h-[45px] mx-auto xl:mb-6 mb-4">
+                                    <svg class="w-full h-full" viewBox="0 0 61 61" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_2408_534)">
+                                            <path
+                                                d="M53.2068 43.42H51.863V39.4746C51.863 29.5769 45.1693 21.2391 36.1425 18.8934V13.4916C36.1425 12.8336 35.6178 12.3002 34.9707 12.3002H32.122V1.19141C32.122 0.533393 31.5972 0 30.9501 0C30.3029 0 29.7782 0.533393 29.7782 1.19141V12.3002H26.9295C26.2823 12.3002 25.7576 12.8336 25.7576 13.4916V18.8934C16.7309 21.2391 10.0371 29.5769 10.0371 39.4746V43.42H8.69336C8.04613 43.42 7.52148 43.9534 7.52148 44.6114V50.4963C7.52148 51.1543 8.04613 51.6877 8.69336 51.6877H22.2644C22.2557 51.849 22.2513 52.0106 22.2513 52.1723C22.2513 57.0399 26.1536 61 30.9501 61C35.7466 61 39.6489 57.0399 39.6489 52.1723C39.6489 52.0106 39.6445 51.8489 39.6358 51.6877H53.2067C53.8538 51.6877 54.3786 51.1543 54.3786 50.4963V44.6114C54.3787 43.9534 53.854 43.42 53.2068 43.42ZM28.1015 14.683H33.7988V18.4296C32.8737 18.3018 31.93 18.2344 30.9711 18.2344H30.9293C29.9703 18.2344 29.0267 18.3018 28.1016 18.4296V14.683H28.1015ZM12.3809 39.4746C12.3809 29.0766 20.7016 20.6172 30.9292 20.6172H30.9709C41.1985 20.6172 49.5193 29.0765 49.5193 39.4746V43.42H12.3809V39.4746ZM37.3053 52.1723C37.3053 55.726 34.4543 58.6172 30.9502 58.6172C27.4459 58.6172 24.5951 55.726 24.5951 52.1723C24.5951 52.0104 24.6011 51.8487 24.6128 51.6877H37.2876C37.2993 51.8487 37.3053 52.0104 37.3053 52.1723ZM52.0349 49.3049H9.86523V45.8028H52.0349V49.3049Z"
+                                                fill="#4E4E4E"
+                                                class="group-hover:fill-softRed transition duration-300" />
+                                        </g>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <p
+                                        class="font-bold xl:text-[24px] lg:text-[22px] text-[20px] text-[#4E4E4E] group-hover:text-black transition duration-300 mb-2">
+                                        Proper Decorations</p>
+                                    <p class="xl:text-[16px] text-[14px] text-[#6A6A6A] max-w-[190px] mx-auto">Flusterd
+                                        impressive
+                                        farcrud open inside owing
+                                        punitively around after
+                                        wasteful.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="bg-white text-center rounded-md group px-4 2xl:w-[350px] 2xl:h-[380px]  xl:pt-20 lg:pt-16 pt-10 pb-10"
+                                data-aos="flip-down" data-aos-delay="300">
+                                <div
+                                    class="xl:w-[60px] lg:w-[50px] w-[45px] xl:h-[60px] lg:h-[50px] h-[45px] mx-auto xl:mb-6 mb-4">
+                                    <svg class="w-full h-full" viewBox="0 0 63 64" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_2408_526)">
+                                            <path
+                                                d="M45.8099 22.96C45.3139 22.96 44.836 22.6613 44.6241 22.1573C44.3426 21.4827 44.6396 20.6987 45.2958 20.4027L58.0704 14.6667L31.6016 2.78667L5.13273 14.6667L17.9073 20.4027C18.5635 20.696 18.8606 21.4827 18.579 22.1573C18.2948 22.8347 17.5276 23.144 16.8791 22.848L1.37915 15.888C0.906396 15.6773 0.601562 15.1973 0.601562 14.6667C0.601562 14.136 0.906396 13.656 1.37915 13.4453L31.0875 0.112C31.4156 -0.0373333 31.7876 -0.0373333 32.1156 0.112L61.824 13.4453C62.2967 13.656 62.6016 14.136 62.6016 14.6667C62.6016 15.1973 62.2967 15.6773 61.824 15.888L46.324 22.848C46.1586 22.9253 45.9804 22.96 45.8099 22.96Z"
+                                                fill="#4E4E4E"
+                                                class="group-hover:fill-softRed transition duration-300" />
+                                            <path
+                                                d="M31.6016 64.0002C31.4259 64.0002 31.2502 63.9628 31.0875 63.8882L1.37915 50.5548C0.906396 50.3442 0.601562 49.8642 0.601562 49.3335V14.6668C0.601562 13.9308 1.18023 13.3335 1.89323 13.3335C2.60623 13.3335 3.1849 13.9308 3.1849 14.6668V48.4588L31.6016 61.2108L60.0182 48.4588V14.6668C60.0182 13.9308 60.5969 13.3335 61.3099 13.3335C62.0229 13.3335 62.6016 13.9308 62.6016 14.6668V49.3335C62.6016 49.8642 62.2967 50.3442 61.824 50.5548L32.1156 63.8882C31.9529 63.9628 31.7772 64.0002 31.6016 64.0002Z"
+                                                fill="#4E4E4E"
+                                                class="group-hover:fill-softRed transition duration-300" />
+                                            <path
+                                                d="M31.6017 64.0003C30.8887 64.0003 30.3101 63.403 30.3101 62.667V44.0003C30.3101 43.2643 30.8887 42.667 31.6017 42.667C32.3147 42.667 32.8934 43.2643 32.8934 44.0003V62.667C32.8934 63.403 32.3147 64.0003 31.6017 64.0003Z"
+                                                fill="#4E4E4E"
+                                                class="group-hover:fill-softRed transition duration-300" />
+                                            <path
+                                                d="M31.6016 45.3335C31.4207 45.3335 31.2347 45.2935 31.0668 45.2135L16.8585 38.5468C16.3961 38.3308 16.1016 37.8562 16.1016 37.3335C16.1016 36.8108 16.3961 36.3362 16.8585 36.1202L31.0668 29.4535C31.4052 29.2935 31.7979 29.2935 32.1363 29.4535L46.3446 36.1202C46.8071 36.3362 47.1016 36.8108 47.1016 37.3335C47.1016 37.8562 46.8071 38.3308 46.3446 38.5468L32.1363 45.2135C31.9684 45.2935 31.7824 45.3335 31.6016 45.3335ZM20.5139 37.3335L31.6016 42.5362L42.6892 37.3335L31.6016 32.1308L20.5139 37.3335Z"
+                                                fill="#4E4E4E"
+                                                class="group-hover:fill-softRed transition duration-300" />
+                                            <path
+                                                d="M45.8099 38.6668C45.0969 38.6668 44.5182 38.0695 44.5182 37.3335V22.1922L31.6016 16.1335L18.6849 22.1922V37.3335C18.6849 38.0695 18.1062 38.6668 17.3932 38.6668C16.6802 38.6668 16.1016 38.0695 16.1016 37.3335V21.3335C16.1016 20.8108 16.3961 20.3362 16.8585 20.1202L31.0668 13.4535C31.4052 13.2935 31.7979 13.2935 32.1363 13.4535L46.3446 20.1202C46.8071 20.3362 47.1016 20.8108 47.1016 21.3335V37.3335C47.1016 38.0695 46.5229 38.6668 45.8099 38.6668Z"
+                                                fill="#4E4E4E"
+                                                class="group-hover:fill-softRed transition duration-300" />
+                                            <path
+                                                d="M31.6017 32.0002C30.8887 32.0002 30.3101 31.4028 30.3101 30.6668V14.6668C30.3101 13.9308 30.8887 13.3335 31.6017 13.3335C32.3147 13.3335 32.8934 13.9308 32.8934 14.6668V30.6668C32.8934 31.4028 32.3147 32.0002 31.6017 32.0002Z"
+                                                fill="#4E4E4E"
+                                                class="group-hover:fill-softRed transition duration-300" />
+                                        </g>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <p
+                                        class="font-bold xl:text-[24px] lg:text-[22px] text-[20px] text-[#4E4E4E] group-hover:text-black transition duration-300 mb-2">
+                                        Affordable Works</p>
+                                    <p class="xl:text-[16px] text-[14px] text-[#6A6A6A] max-w-[190px] mx-auto">Flusterd
+                                        impressive
+                                        farcrud open inside owing
+                                        punitively around after
+                                        wasteful.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="swiper-pagination swiper-pagination-bullets swiper-pagination-horizontal position-unset flex items-center justify-center mt-5">
+                        <span class="swiper-pagination-bullet swiper-pagination-bullet-active"
+                            aria-current="true"></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- END : about our costs  -->
+
+        <!-- START : Custom Interior Design  -->
+        <section class="overflow-hidden">
+            <div class="container xl:py-16 lg:py-12 sm:py-10 py-5">
+                <div class="grid lg:grid-cols-2">
+                    <div class="lg:order-1 order-2 lg:max-h-max max-h-[500px]" data-aos="fade-right">
+                        <img src="img/consulting/custom-interior.png" alt="custom" class="w-full h-full object-cover">
+                    </div>
+                    <div class="bg-softRed text-white xl:px-12 px-6 xl:py-16 lg:py-8 py-6 lg:order-2 order-1"
+                        data-aos="fade-left">
+                        <div class="flex flex-col justify-between h-full">
+                            <div class="lg:mb-0 mb-3">
+                                <p class="md:text-[16px] text-[14px] xl:mb-5 lg:mb-3 mb-1 xl:tracking-[7px] md:tracking-[4px]"
+                                    data-aos="fade-up" data-aos-delay="100">
+                                    PROJECT AL HABSI</p>
+                                <h1 class="xl:text-[40px] lg:text-[32px] sm:text-[28px] text-[24px] font-semibold lg:max-w-[500px] xl:mb-8 lg:mb-2 mb-1"
+                                    data-aos="fade-up" data-aos-delay="200">
+                                    Custom
+                                    Interior
+                                    Design With
+                                    Best
+                                    Results
+                                </h1>
+                                <p class="xl:text-[16px] text-[14px] xl:leading-loose leading-normal xl:mb-8 lg:mb-5 mb-3"
+                                    data-aos="fade-up" data-aos-delay="300">Along
+                                    goodness hey
+                                    this sed ipsum dui
+                                    manatee
+                                    for
+                                    asfers since far
+                                    flustered impressive
+                                    your
+                                    longtails opened insides ipsum epunitively nehil moderatius vimpot. Lorem ipsum
+                                    dolor
+                                    sit amet,
+                                    consectetur adipiscing elit. Tempus erat tellus proin in dui, pharetra vitae,
+                                    viverra.
+                                    Nisl id duis
+                                    consectetur faucibusLorem ipsum dolor</p>
+                                <div class="flex justify-between sm:flex-row flex-col sm:gap-0 gap-8 items-center md:border border-white rounded-md xl:px-8 px-4 xl:py-6 py-4 lg:mt-10"
+                                    data-aos="fade-up" data-aos-delay="400">
+                                    <div class="text-center">
+                                        <div class="xl:w-[45px] w-[40px] xl:h-[45px] h-[40px] mx-auto sm:mb-3 mb-1">
+                                            <img src="img/icons/cube.svg" alt="cube" class="w-full h-full">
+                                        </div>
+                                        <p class="font-bold xl:text-[20px] text-[16px]">3D Design</p>
+                                    </div>
+                                    <div class="text-center">
+                                        <div class="xl:w-[60px] w-[55px] xl:h-[45px] h-[40px] mx-auto sm:mb-3 mb-1">
+                                            <img src="img/icons/360-degree.svg" alt="cube" class="w-full h-full">
+                                        </div>
+                                        <p class="font-bold xl:text-[20px] text-[16px]">360 Captured</p>
+                                    </div>
+                                    <div class="text-center">
+                                        <div class="xl:w-[45px] w-[40px] xl:h-[45px] h-[40px] mx-auto sm:mb-3 mb-1">
+                                            <img src="img/icons/civil-support.svg" alt="cube" class="w-full h-full">
+                                        </div>
+                                        <p class="font-bold xl:text-[20px] text-[16px]">Civil Support</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex md:justify-start justify-center">
+                                <a href="#"
+                                    class="inline-block border border-white rounded-sm hover:bg-white hover:text-softRed transition duration-300 lg:mt-5 lg:py-3 py-2 lg:px-7 px-4"
+                                    data-aos="fade-up" data-aos-delay="500">View
+                                    full
+                                    projects</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- END : Custom Interior Design  -->
+
+        <!-- START : Customers left satisfied  -->
+        <section class="bg-[#F2F2F2] overflow-hidden">
+            <div class="container xl:py-16 lg:py-12 sm:py-10 py-5">
+                <div class="text-center xl:mb-16 lg:mb-12 sm:mb-10 mb-5">
+                    <h1 class="xl:text-[42px] lg:text-[36px] sm:text-[34px] text-[28px] font-bold" data-aos="fade-up">
+                        Customers left
+                        satisfied</h1>
+                    <p class="text-[#7c7c7c] xl:text-[22px] lg:text-[20px] text-[18px] font-semibold" data-aos="fade-up"
+                        data-aos-delay="100">Transparent and
+                        fair costs, with
+                        no hidden fees</p>
+                </div>
+                <div class="swiper about">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="relative lg:max-h-[440px] max-h-[375px] rounded-lg overflow-hidden"
+                                data-aos="fade-left" data-aos-delay="100">
+                                <img src="img/consulting/profile-img.png" class="w-full h-full object-cover"
+                                    alt="profile">
+                                <div
+                                    class="absolute bottom-0 left-0 w-full text-white gradient-black rounded-b-lg px-4 py-4">
+                                    <p class="xl:text-[30px] lg:text-[26px] text-[24px] font-bold leading-tight">Anna
+                                        Fali
+                                    </p>
+                                    <p class="opacity-50 xl:text-[16px] text-[14px]">Accounting</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="relative lg:max-h-[440px] max-h-[375px] rounded-lg overflow-hidden"
+                                data-aos="fade-left" data-aos-delay="200">
+                                <img src="img/consulting/profile-img-1.png" class="w-full h-full object-cover"
+                                    alt="profile">
+                                <div
+                                    class="absolute bottom-0 left-0 w-full text-white gradient-black rounded-b-lg px-4 py-4">
+                                    <p class="xl:text-[30px] lg:text-[26px] text-[24px] font-bold leading-tight">Ivan
+                                        Cornejo</p>
+                                    <p class="opacity-50 xl:text-[16px] text-[14px]">Consulting</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="relative lg:max-h-[440px] max-h-[375px] rounded-lg overflow-hidden"
+                                data-aos="fade-left" data-aos-delay="300">
+                                <img src="img/consulting/profile-img-2.png" class="w-full h-full object-cover"
+                                    alt="profile">
+                                <div
+                                    class="absolute bottom-0 left-0 w-full text-white gradient-black rounded-b-lg px-4 py-4">
+                                    <p class="xl:text-[30px] lg:text-[26px] text-[24px] font-bold leading-tight">Dusana
+                                        Semenova</p>
+                                    <p class="opacity-50 xl:text-[16px] text-[14px]">Finance</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="relative lg:max-h-[440px] max-h-[375px] rounded-lg overflow-hidden"
+                                data-aos="fade-left" data-aos-delay="400">
+                                <img src="img/consulting/profile-img-3.png" class="w-full h-full object-cover"
+                                    alt="profile">
+                                <div
+                                    class="absolute bottom-0 left-0 w-full text-white gradient-black rounded-b-lg px-4 py-4">
+                                    <p class="xl:text-[30px] lg:text-[26px] text-[24px] font-bold leading-tight">Pol
+                                        Soria
+                                    </p>
+                                    <p class="opacity-50 xl:text-[16px] text-[14px]">Human Resources</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="relative lg:max-h-[440px] max-h-[375px] rounded-lg overflow-hidden"
+                                data-aos="fade-left" data-aos-delay="500">
+                                <img src="img/consulting/profile-img.png" class="w-full h-full object-cover"
+                                    alt="profile">
+                                <div
+                                    class="absolute bottom-0 left-0 w-full text-white gradient-black rounded-b-lg px-4 py-4">
+                                    <p class="xl:text-[30px] lg:text-[26px] text-[24px] font-bold leading-tight">Anna
+                                        Fali
+                                    </p>
+                                    <p class="opacity-50 xl:text-[16px] text-[14px]">Accounting</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="relative lg:max-h-[440px] max-h-[375px] rounded-lg overflow-hidden"
+                                data-aos="fade-left" data-aos-delay="600">
+                                <img src="img/consulting/profile-img-1.png" class="w-full h-full object-cover"
+                                    alt="profile">
+                                <div
+                                    class="absolute bottom-0 left-0 w-full text-white gradient-black rounded-b-lg px-4 py-4">
+                                    <p class="xl:text-[30px] lg:text-[26px] text-[24px] font-bold leading-tight">Ivan
+                                        Cornejo</p>
+                                    <p class="opacity-50 xl:text-[16px] text-[14px]">Consulting</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="relative lg:max-h-[440px] max-h-[375px] rounded-lg overflow-hidden"
+                                data-aos="fade-left" data-aos-delay="700">
+                                <img src="img/consulting/profile-img-2.png" class="w-full h-full object-cover"
+                                    alt="profile">
+                                <div
+                                    class="absolute bottom-0 left-0 w-full text-white gradient-black rounded-b-lg px-4 py-4">
+                                    <p class="xl:text-[30px] lg:text-[26px] text-[24px] font-bold leading-tight">Dusana
+                                        Semenova</p>
+                                    <p class="opacity-50 xl:text-[16px] text-[14px]">Finance</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="relative lg:max-h-[440px] max-h-[375px] rounded-lg overflow-hidden"
+                                data-aos="fade-left" data-aos-delay="800">
+                                <img src="img/consulting/profile-img-3.png" class="w-full h-full object-cover"
+                                    alt="profile">
+                                <div
+                                    class="absolute bottom-0 left-0 w-full text-white gradient-black rounded-b-lg px-4 py-4">
+                                    <p class="xl:text-[30px] lg:text-[26px] text-[24px] font-bold leading-tight">Pol
+                                        Soria
+                                    </p>
+                                    <p class="opacity-50 xl:text-[16px] text-[14px]">Human Resources</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="swiper-pagination swiper-pagination-bullets swiper-pagination-horizontal position-unset flex items-center justify-center mt-5">
+                        <span class="swiper-pagination-bullet swiper-pagination-bullet-active"
+                            aria-current="true"></span>
+                    </div>
+                </div>
+        </section>
+        <!-- END : Customers left satisfied  -->
+
+        <!-- START : Early Digital Explorations  -->
+        <section class="overflow-hidden">
+            <div class="container xl:py-16 lg:py-12 sm:py-10 py-5">
+                <div class="max-w-[500px] mx-auto text-center xl:mb-16 lg:mb-12 sm:mb-10 mb-5">
+                    <h1 class="xl:text-[42px] lg:text-[36px] sm:text-[34px] text-[28px] font-bold" data-aos="fade-up">
+                        Early Digital
+                        Explorations
+                        From Our Daily Blog</h1>
+                    <p class="text-[#7c7c7c] xl:text-[22px] lg:text-[20px] text-[18px] font-semibold" data-aos="fade-up"
+                        data-aos-delay="100">About Our Company
+                    </p>
+                </div>
+                <div class="grid lg:grid-cols-3 sm:grid-cols-2 lg:gap-10 gap-5 pb-[3.5rem]">
+                    <div class="max-w-[420px] sm:h-auto h-[220px] w-full relative mx-auto" data-aos="fade-right"
+                        data-aos-delay="100">
+                        <div class="rounded-md h-full">
+                            <img src="img/consulting/image-1.jpg"
+                                class="w-full h-full drop-shadow-[0_0_50px_rgba(0,0,0,0.1)]" alt="Image">
+                        </div>
+                        <div class="absolute bottom-[-3.5rem] w-full flex justify-center">
+                            <div
+                                class="shadow-md bg-white rounded-md xl:max-w-[300px] lg:max-w-[245px] max-w-[300px] md:h-full h-[135px] hover:bg-softRed overflow-hidden transition duration-300 group py-3 px-4">
+                                <div
+                                    class="md:translate-y-[45px] translate-y-[27px] group-hover:translate-y-[0] transition duration-300">
+                                    <p class="text-[#636363] group-hover:text-white transition duration-300 mb-2">by
+                                        <span class="text-softRed transition duration-300 group-hover:text-white">Monju
+                                            Aflame</span>, 3 days ago
+                                    </p>
+                                    <p class="font-bold group-hover:text-white transition duration-300">Beef Meat sit
+                                        amet, cte tur adipiscing....</p>
+                                    <span
+                                        class='material-icons group-hover:text-white transition duration-300 mt-3'>arrow_forward</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="max-w-[420px] sm:h-auto h-[220px] w-full relative mx-auto sm:mt-0 mt-14"
+                        data-aos="fade-up" data-aos-delay="100">
+                        <div class="rounded-md h-full">
+                            <img src="img/consulting/image-2.jpg"
+                                class="w-full h-full drop-shadow-[0_0_50px_rgba(0,0,0,0.1)]" alt="Image">
+                        </div>
+                        <div class="absolute bottom-[-3.5rem] w-full flex justify-center">
+                            <div
+                                class="shadow-md bg-white rounded-md xl:max-w-[300px] lg:max-w-[245px] max-w-[300px] md:h-full h-[135px] hover:bg-softRed overflow-hidden transition duration-300 group py-3 px-4">
+                                <div
+                                    class="md:translate-y-[45px] translate-y-[27px] group-hover:translate-y-[0] transition duration-300">
+                                    <p class="text-[#636363] group-hover:text-white transition duration-300 mb-2">by
+                                        <span class="text-softRed transition duration-300 group-hover:text-white">Monju
+                                            Aflame</span>, 3 days ago
+                                    </p>
+                                    <p class="font-bold group-hover:text-white transition duration-300">Beef Meat sit
+                                        amet, cte tur adipiscing....</p>
+                                    <span
+                                        class='material-icons group-hover:text-white transition duration-300 mt-3'>arrow_forward</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lg:col-span-1 sm:col-span-2 lg:max-w-[420px] sm:h-auto h-[220px] w-full max-w-[370px] relative mx-auto lg:mt-0 mt-14"
+                        data-aos="fade-left" data-aos-delay="100">
+                        <div class="rounded-md h-full">
+                            <img src="img/consulting/image-3.jpg"
+                                class="w-full h-full drop-shadow-[0_0_50px_rgba(0,0,0,0.1)]" alt="Image">
+                        </div>
+                        <div class="absolute bottom-[-3.5rem] w-full flex justify-center">
+                            <div
+                                class="shadow-md bg-white rounded-md xl:max-w-[300px] lg:max-w-[245px] max-w-[300px] md:h-full h-[135px] hover:bg-softRed overflow-hidden transition duration-300 group py-3 px-4">
+                                <div
+                                    class="md:translate-y-[45px] translate-y-[27px] group-hover:translate-y-[0] transition duration-300">
+                                    <p class="text-[#636363] group-hover:text-white transition duration-300 mb-2">by
+                                        <span class="text-softRed transition duration-300 group-hover:text-white">Monju
+                                            Aflame</span>, 3 days ago
+                                    </p>
+                                    <p class="font-bold group-hover:text-white transition duration-300">Beef Meat sit
+                                        amet, cte tur adipiscing....</p>
+                                    <span
+                                        class='material-icons group-hover:text-white transition duration-300 mt-3'>arrow_forward</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- END : Early Digital Explorations  -->
+
+        <!-- START : Our Business Projects -->
+        <section class="bg-[#F2F2F2] overflow-hidden">
+            <div class="container xl:py-16 lg:py-12 sm:py-10 py-5">
+                <div class="relative lg:text-center sm:text-left text-center xl:mb-16 lg:mb-12 sm:mb-10 mb-5">
+                    <div class="sm:mb-0 mb-2">
+                        <h1 class="xl:text-[42px] lg:text-[36px] sm:text-[34px] text-[28px] font-bold"
+                            data-aos="fade-up">Our Business
+                            Projects</h1>
+                        <p class="text-[#7c7c7c] xl:text-[22px] lg:text-[20px] text-[18px] font-semibold lg:max-w-[600px] max-w-[580px] lg:mx-auto"
+                            data-aos="fade-up" data-aos-delay="100">
+                            Business
+                            ethics is the study of
+                            appropriate business policies
+                            and practices regarding potentially controversial subjects including
+                            corporate governance.</p>
+                    </div>
+                    <div class="sm:absolute top-0 right-0 h-full flex items-center lg:justify-start justify-center"
+                        data-aos="fade-left" data-aos-delay="100">
+                        <a href="javascript:void(0)"
+                            class="text-softRed flex items-center group transition duration-300 hover:text-[#f8cccc]">
+                            <p class="text-[#757575] mr-2">See More</p>
+                            <div
+                                class="xl:w-[45px] w-[40px] xl:h-[45px] h-[40px] rounded-full flex justify-center items-center border border-[#f8cccc] group-hover:bg-softRed transition duration-300">
+                                <span class='material-icons xl:text-[20px] text-[18px]'>arrow_forward_ios</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="grid sm:grid-cols-2 gap-5">
+                    <div class="sm:col-span-2 relative rounded-md overflow-hidden sm:h-auto h-[270px]"
+                        data-aos="flip-left" data-aos-delay="100">
+                        <img src="img/consulting/bitmap.png" class="w-full h-full object-cover" alt="bitmap">
+                        <div
+                            class="absolute bottom-0 left-0 xl:max-w-[500px] lg:max-w-[400px] sm:max-w-[300px] max-w-[230px] w-full bg-softRed rounded-tr-xl text-white xl:p-8 lg:p-5 p-4 xl:py-8 lg:py-5 py-3">
+                            <p class="xl:text-[48px] lg:text-[30px] sm:text-[26px] text-[20px] font-bold xl:mb-2 lg:mb-1 mb-0.5"
+                                data-aos="fade-up" data-aos-delay="200">
+                                Saepe
+                                Eveniet
+                            </p>
+                            <p class="xl:text-[34px] lg:text-[20px] sm:text-[18px] text-[16px] !opacity-50"
+                                data-aos="fade-up" data-aos-delay="300">Voluptates
+                            </p>
+                        </div>
+                    </div>
+                    <div class="relative rounded-md overflow-hidden sm:h-auto h-[270px]" data-aos="flip-left"
+                        data-aos-delay="100">
+                        <img src="img/consulting/bitmap1.png" class="w-full h-full object-cover" alt="bitmap">
+                        <div
+                            class="absolute bottom-0 left-0 xl:max-w-[400px] lg:max-w-[300px] max-w-[230px] w-full bg-softRed rounded-tr-xl text-white xl:p-8 lg:p-5 p-4 xl:py-8 lg:py-5 py-3">
+                            <p class="xl:text-[34px] lg:text-[28px] text-[20px] font-bold xl:mb-2 lg:mb-1 mb-0.5"
+                                data-aos="fade-up" data-aos-delay="200">
+                                Repudiandae Sint</p>
+                            <p class="xl:text-[22px] lg:text-[18px] text-[16px] !opacity-50" data-aos="fade-up"
+                                data-aos-delay="300">Molestiae</p>
+                        </div>
+                    </div>
+                    <div class="relative rounded-md overflow-hidden sm:h-auto h-[270px]" data-aos="flip-right"
+                        data-aos-delay="100">
+                        <img src="img/consulting/bitmap2.png" class="w-full h-full object-cover" alt="bitmap">
+                        <div
+                            class="absolute bottom-0 left-0 xl:max-w-[400px] lg:max-w-[300px] max-w-[230px] w-full bg-softRed rounded-tr-xl text-white xl:p-8 lg:p-5 p-4 xl:py-8 lg:py-5 py-3">
+                            <p class="xl:text-[34px] lg:text-[28px] text-[20px] font-bold xl:mb-2 lg:mb-1 mb-0.5"
+                                data-aos="fade-up" data-aos-delay="200">Itaque
+                                earum rerum
+                            </p>
+                            <p class="xl:text-[22px] lg:text-[18px] text-[16px] !opacity-50" data-aos="fade-up"
+                                data-aos-delay="300">Tenetur</p>
+                        </div>
+                    </div>
+                    <div class="sm:col-span-2 relative rounded-md overflow-hidden sm:h-auto h-[270px]"
+                        data-aos="flip-left" data-aos-delay="100">
+                        <img src="img/consulting/bitmap3.png" class="w-full h-full object-cover" alt="bitmap">
+                        <div
+                            class="absolute bottom-0 left-0 xl:max-w-[500px] lg:max-w-[400px] sm:max-w-[300px] max-w-[230px] w-full bg-softRed rounded-tr-xl text-white xl:p-8 lg:p-5 p-4 xl:py-8 lg:py-5 py-3">
+                            <p class="xl:text-[48px] lg:text-[30px] sm:text-[26px] text-[20px] font-bold xl:mb-2 lg:mb-1 mb-0.5"
+                                data-aos="fade-up" data-aos-delay="200">
+                                Sapiente
+                                Delectus</p>
+                            <p class="xl:text-[34px] lg:text-[20px] sm:text-[18px] text-[16px] !opacity-50"
+                                data-aos="fade-up" data-aos-delay="300">Reiciendis
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- END : Our Business Projects -->
+
+        <!-- START : Need more help? -->
+        <section class="overflow-hidden">
+            <div class="container xl:py-16 lg:py-12 sm:py-10 py-5">
+                <div class="text-center xl:mb-16 lg:mb-12 sm:mb-10 mb-5">
+                    <h1 class="xl:text-[42px] lg:text-[36px] sm:text-[34px] text-[28px] font-bold" data-aos="fade-up">
+                        Need more help?</h1>
+                    <p class="text-[#7c7c7c] xl:text-[22px] lg:text-[20px] text-[18px] font-semibold" data-aos="fade-up"
+                        data-aos-delay="100">Feel free to ask
+                        us about it!</p>
+                </div>
+                <div class="grid lg:grid-cols-3 sm:grid-cols-2 lg:gap-8 gap-5">
+                    <div class="bg-[#F9F9F8] text-center shadow-[0px_0px_10px_rgba(0,0,0,0.1)] rounded-lg xl:p-8 p-5"
+                        data-aos="fade-right" data-aos-delay="200">
+                        <div class="max-w-[290px] mx-auto">
+                            <p class="xl:text-[24px] text-[20px] font-bold xl:mb-4 mb-2">Live help</p>
+                            <p class="text-[#191919] xl:text-[16px] text-[14px]">Get an answer on the spot. We’re online
+                                8am – 7pm Mon to Fri and
+                                9am – 3pm on Sat and
+                                Sun.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="bg-[#F9F9F8] text-center shadow-[0px_0px_10px_rgba(0,0,0,0.1)] rounded-lg xl:p-8 p-5"
+                        data-aos="fade-up" data-aos-delay="200">
+                        <div class="max-w-[290px] mx-auto">
+                            <p class="xl:text-[24px] text-[20px] font-bold xl:mb-4 mb-2">Call us</p>
+                            <p class="text-[#191919] xl:text-[16px] text-[14px]">anytime during business hours.</p>
+                            <p class="text-[#191919] xl:text-[16px] text-[14px]">(123) 456-78-90</p>
+                            <p class="text-[#191919] xl:text-[16px] text-[14px]">(123) 456-78-70</p>
+                        </div>
+                    </div>
+                    <div class="lg:col-span-1 sm:col-span-2 lg:w-auto sm:w-1/2 bg-[#F9F9F8] text-center shadow-[0px_0px_10px_rgba(0,0,0,0.1)] rounded-lg xl:p-8 p-5 lg:mx-0 sm:mx-auto"
+                        data-aos="fade-left" data-aos-delay="200">
+                        <div class="max-w-[290px] mx-auto">
+                            <p class="xl:text-[24px] text-[20px] font-bold xl:mb-4 mb-2">See our FAQs</p>
+                            <p class="text-[#191919] xl:text-[16px] text-[14px]">See answers to questions on how to use
+                                our services</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- END : Need more help? -->
+    </main>
+    <!-- END: Main -->
+
+    <!-- START: Footer -->
+    <footer class="overflow-hidden">
+        <div class="bg-softRed text-white">
+            <div class="container">
+                <div
+                    class="grid lg:grid-cols-5 sm:grid-cols-2 lg:text-left text-center gap-5 xl:pt-24 lg:pt-16 pt-5 sm:pb-5 pb-3 2xl:px-0 xl:px-4">
+                    <div class="lg:col-span-1 sm:col-span-2 flex items-center xl:justify-center lg:justify-start justify-center"
+                        data-aos="fade-right">
+                        <a href="#" class="flex sm:justify-start justify-center items-center xl:px-0 px-4 sm:mb-0 mb-3">
+                            <div class="h-14 mr-3">
+                                <img src="img/logo/white-corporate-logo.svg" alt="Logo" class="h-full">
+                            </div>
+                            <p class="text-[32px]">Zooa</p>
+                        </a>
+                    </div>
+                    <div data-aos="fade-right" data-aos-delay="100">
+                        <p class="lg:text-[24px] text-[20px] font-bold lg:mb-3 mb-4">Get In Touch</p>
+                        <p class="text-[14px] mb-5">the quick fox jumps over the
+                            lazy dog</p>
+                        <div class="flex items-center lg:justify-start justify-center md:mb-0 mb-5">
+                            <a href="#" class="w-[24px] h-[24px] mr-4 hover:-translate-y-1 transition duration-300">
+                                <svg class="w-full h-full" viewBox="0 0 24 25" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_1322_1861)">
+                                        <path
+                                            d="M23.04 0.469727H0.96C0.429 0.469727 0 0.898727 0 1.42973V23.5097C0 24.0407 0.429 24.4697 0.96 24.4697H23.04C23.571 24.4697 24 24.0407 24 23.5097V1.42973C24 0.898727 23.571 0.469727 23.04 0.469727ZM20.268 7.47473H18.351C16.848 7.47473 16.557 8.18873 16.557 9.23873V11.5517H20.145L19.677 15.1727H16.557V24.4697H12.816V15.1757H9.687V11.5517H12.816V8.88173C12.816 5.78273 14.709 4.09373 17.475 4.09373C18.801 4.09373 19.938 4.19273 20.271 4.23773V7.47473H20.268Z"
+                                            fill="white" />
+                                    </g>
+                                </svg>
+                            </a>
+                            <a href="#" class="w-[24px] h-[24px] mr-4 hover:-translate-y-1 transition duration-300">
+                                <svg class="w-full h-full" viewBox="0 0 24 25" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_1322_1863)">
+                                        <path
+                                            d="M12.0016 6.31741C8.59659 6.31741 5.84859 9.06541 5.84859 12.4704C5.84859 15.8754 8.59659 18.6234 12.0016 18.6234C15.4066 18.6234 18.1546 15.8754 18.1546 12.4704C18.1546 9.06541 15.4066 6.31741 12.0016 6.31741ZM12.0016 16.4694C9.79959 16.4694 8.00259 14.6724 8.00259 12.4704C8.00259 10.2684 9.79959 8.47141 12.0016 8.47141C14.2036 8.47141 16.0006 10.2684 16.0006 12.4704C16.0006 14.6724 14.2036 16.4694 12.0016 16.4694ZM18.4066 4.63141C17.6116 4.63141 16.9696 5.27341 16.9696 6.06841C16.9696 6.86341 17.6116 7.50541 18.4066 7.50541C19.2016 7.50541 19.8436 6.86641 19.8436 6.06841C19.8438 5.87963 19.8068 5.69266 19.7347 5.51821C19.6625 5.34376 19.5567 5.18525 19.4232 5.05177C19.2897 4.91828 19.1312 4.81244 18.9568 4.74031C18.7823 4.66818 18.5954 4.63117 18.4066 4.63141ZM23.9956 12.4704C23.9956 10.8144 24.0106 9.17341 23.9176 7.52041C23.8246 5.60041 23.3866 3.89641 21.9826 2.49241C20.5756 1.08541 18.8746 0.650408 16.9546 0.557408C15.2986 0.464408 13.6576 0.479408 12.0046 0.479408C10.3486 0.479408 8.70759 0.464408 7.05459 0.557408C5.13459 0.650408 3.43059 1.08841 2.02659 2.49241C0.619588 3.89941 0.184588 5.60041 0.0915876 7.52041C-0.0014124 9.17641 0.0135876 10.8174 0.0135876 12.4704C0.0135876 14.1234 -0.0014124 15.7674 0.0915876 17.4204C0.184588 19.3404 0.622588 21.0444 2.02659 22.4484C3.43359 23.8554 5.13459 24.2904 7.05459 24.3834C8.71059 24.4764 10.3516 24.4614 12.0046 24.4614C13.6606 24.4614 15.3016 24.4764 16.9546 24.3834C18.8746 24.2904 20.5786 23.8524 21.9826 22.4484C23.3896 21.0414 23.8246 19.3404 23.9176 17.4204C24.0136 15.7674 23.9956 14.1264 23.9956 12.4704ZM21.3556 19.5444C21.1366 20.0904 20.8726 20.4984 20.4496 20.9184C20.0266 21.3414 19.6216 21.6054 19.0756 21.8244C17.4976 22.4514 13.7506 22.3104 12.0016 22.3104C10.2526 22.3104 6.50259 22.4514 4.92459 21.8274C4.37859 21.6084 3.97059 21.3444 3.55059 20.9214C3.12759 20.4984 2.86359 20.0934 2.64459 19.5474C2.02059 17.9664 2.16159 14.2194 2.16159 12.4704C2.16159 10.7214 2.02059 6.97141 2.64459 5.39341C2.86359 4.84741 3.12759 4.43941 3.55059 4.01941C3.97359 3.59941 4.37859 3.33241 4.92459 3.11341C6.50259 2.48941 10.2526 2.63041 12.0016 2.63041C13.7506 2.63041 17.5006 2.48941 19.0786 3.11341C19.6246 3.33241 20.0326 3.59641 20.4526 4.01941C20.8756 4.44241 21.1396 4.84741 21.3586 5.39341C21.9826 6.97141 21.8416 10.7214 21.8416 12.4704C21.8416 14.2194 21.9826 17.9664 21.3556 19.5444Z"
+                                            fill="white" />
+                                    </g>
+                                </svg>
+                            </a>
+                            <a href="#" class="w-[24px] h-[24px] mr-4 hover:-translate-y-1 transition duration-300">
+                                <svg class="w-full h-full" viewBox="0 0 24 21" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_1322_1865)">
+                                        <path
+                                            d="M24.0004 2.93471C23.1188 3.32065 22.1594 3.59841 21.1711 3.70659C22.1971 3.08802 22.9655 2.11079 23.332 0.958245C22.3692 1.53946 21.3145 1.94702 20.2146 2.16284C19.7549 1.66412 19.1989 1.26682 18.5813 0.995691C17.9636 0.724563 17.2976 0.585418 16.6247 0.586926C13.902 0.586926 11.7123 2.82653 11.7123 5.57488C11.7123 5.96082 11.7584 6.34676 11.8333 6.71807C7.7565 6.50172 4.12048 4.52525 1.7032 1.49914C1.26274 2.26258 1.03193 3.13185 1.03477 4.01651C1.03477 5.74738 1.902 7.27359 3.22444 8.17119C2.44511 8.14004 1.68402 7.92266 1.00308 7.53673V7.59813C1.00308 10.0219 2.69143 12.0306 4.94161 12.4925C4.51912 12.6039 4.08449 12.6609 3.64797 12.6621C3.32817 12.6621 3.02565 12.6299 2.72024 12.5861C3.34257 14.5626 5.15482 15.9981 7.3128 16.0449C5.62444 17.3869 3.50968 18.1763 1.2134 18.1763C0.801397 18.1763 0.421085 18.1617 0.0263672 18.1149C2.20452 19.533 4.78891 20.3516 7.5721 20.3516C16.6074 20.3516 21.5514 12.7557 21.5514 6.16256C21.5514 5.9462 21.5514 5.72984 21.537 5.51348C22.4936 4.803 23.332 3.92295 24.0004 2.93471Z"
+                                            fill="white" />
+                                    </g>
+                                </svg>
+                            </a>
+                            <a href="#" class="w-[24px] h-[24px] mr-4 hover:-translate-y-1 transition duration-300">
+                                <svg class="w-full h-full" viewBox="0 0 24 19" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_1322_1867)">
+                                        <path
+                                            d="M23.4699 3.40151C23.3335 2.86855 23.0663 2.38261 22.6951 1.99234C22.324 1.60206 21.8619 1.32114 21.355 1.17768C19.4884 0.646485 11.9879 0.646484 11.9879 0.646484C11.9879 0.646484 4.48729 0.646485 2.62071 1.17768C2.11385 1.32114 1.65172 1.60206 1.28057 1.99234C0.90941 2.38261 0.642248 2.86855 0.50582 3.40151C0.157288 5.4032 -0.0118455 7.43486 0.000644257 9.46978C-0.0118455 11.5047 0.157288 13.5364 0.50582 15.538C0.642248 16.071 0.90941 16.5569 1.28057 16.9472C1.65172 17.3375 2.11385 17.6184 2.62071 17.7619C4.48729 18.2931 11.9879 18.2931 11.9879 18.2931C11.9879 18.2931 19.4884 18.2931 21.355 17.7619C21.8619 17.6184 22.324 17.3375 22.6951 16.9472C23.0663 16.5569 23.3335 16.071 23.4699 15.538C23.8184 13.5364 23.9876 11.5047 23.9751 9.46978C23.9876 7.43486 23.8184 5.4032 23.4699 3.40151ZM9.59041 13.2512V5.68837L15.8152 9.46978L9.59041 13.2512Z"
+                                            fill="white" />
+                                    </g>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div data-aos="fade-right" data-aos-delay="200">
+                        <ul>
+                            <p class="lg:text-[24px] text-[20px] font-bold px-1 lg:mb-3 mb-2">Company info</p>
+                            <li>
+                                <a href="#">
+                                    <p class="text-[16px] p-1 mb-1 hover:opacity-50 transition duration-300">
+                                        About Us
+                                    </p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <p class="text-[16px] p-1 mb-1 hover:opacity-50 transition duration-300">
+                                        Carrier
+                                    </p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <p class="text-[16px] p-1 mb-1 hover:opacity-50 transition duration-300">
+                                        We are hiring
+                                    </p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <p class="text-[16px] p-1 mb-1 hover:opacity-50 transition duration-300">
+                                        Blog
+                                    </p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div data-aos="fade-right" data-aos-delay="300">
+                        <ul>
+                            <p class="lg:text-[24px] text-[20px] font-bold px-1 lg:mb-3 mb-2">Features</p>
+                            <li>
+                                <a href="#">
+                                    <p class="text-[16px] p-1 mb-1 hover:opacity-50 transition duration-300">
+                                        Business Marketing
+                                    </p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <p class="text-[16px] p-1 mb-1 hover:opacity-50 transition duration-300">
+                                        User Analytic
+                                    </p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <p class="text-[16px] p-1 mb-1 hover:opacity-50 transition duration-300">
+                                        Live Chat
+                                    </p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <p class="text-[16px] p-1 mb-1 hover:opacity-50 transition duration-300">
+                                        Unlimited Support
+                                    </p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div data-aos="fade-right" data-aos-delay="400">
+                        <ul>
+                            <p class="lg:text-[24px] text-[20px] font-bold px-1 lg:mb-3 mb-2">Resources</p>
+                            <li>
+                                <a href="#">
+                                    <p class="text-[16px] p-1 mb-1 hover:opacity-50 transition duration-300">
+                                        IOS & Android
+                                    </p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <p class="text-[16px] p-1 mb-1 hover:opacity-50 transition duration-300">
+                                        Watch a Demo
+                                    </p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <p class="text-[16px] p-1 mb-1 hover:opacity-50 transition duration-300">
+                                        Customers
+                                    </p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <p class="text-[16px] p-1 mb-1 hover:opacity-50 transition duration-300">
+                                        API
+                                    </p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="sm:text-right text-center pb-4" data-aos="fade-right" data-aos-delay="500"
+                    data-aos-offset="0">
+                    <p
+                        class="border-t opacity-70 pt-4 lg:text-right text-center cursor-pointer md:text-base text-[14px]">
+                        Copyright © 2021 Zooa
+                        Theme Kit All
+                        Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- END: Footer -->
+
+
+    <!-- Script -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="plugins/tailwindcss/tailwindcss.js"></script>
+    <script src="plugins/swiper/swiper-bundle.min.js"></script>
+    <script src="js/consulting.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
